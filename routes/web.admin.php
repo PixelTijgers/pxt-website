@@ -22,16 +22,24 @@ Route::redirect('/admin', '/admin/login');
 Route::redirect('/login', '/admin/login');
 Route::redirect('/login/admin', '/admin/login');
 
+// Change the language of the admin.
+Route::get('/admin/change-language/{language}', ['as' => 'change.language', 'uses' => 'App\Http\Controllers\Admin\AdminController@changeAdminLanguage']);
+
+// Logout route.
+Route::get('/admin/logout', function(){
+    \Auth::logout();
+    return \Redirect::to('login');
+});
+
 // Protect modules with middleware.
 Route::group([
     'namespace' => 'Admin',
     'prefix' => 'admin'
 ], function(){
 
-    Route::get('/logout', function(){
-        \Auth::logout();
-        return \Redirect::to('login');
-    });
+
+
+
 
     // Create the namespace for the admin.
     Route::group([

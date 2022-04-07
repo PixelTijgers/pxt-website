@@ -20,8 +20,8 @@ return [
 
     // Supported languages (for ML use.)
     'app_locales' => [
-        'nl',
-        'en',
+        'nl' => 'nl',
+        'en' => 'gb',
     ],
 
     // I.P. adresses that are whitelisted.

@@ -1,3 +1,34 @@
 {
-    "Login": "Inloggen"
+    "Login": "Inloggen",
+    "Email": "E-mailadres",
+    "Password": "Wachtwoord",
+    "Remember Me": "Onthoud gegevens",
+    "New Password": "Nieuw wachtwoord",
+    "Repeat Password": "Herhaal wachtwoord",
+
+    "Search": "Zoeken",
+
+    "Profile": "Profiel",
+    "Logout": "Uitloggen",
+
+    "Dashboard": "Dashboard",
+    "Dashboard Description": "Het dashboard biedt een overzicht van [...]",
+
+    "Send Password": "Stuur wachtwoord herstel link",
+    "Back To Login": "Terug naar login pagina",
+    "Forgot Password": "Wachtwoord vergeten",
+    "Reset Password": "Herstel wachtwoord",
+
+    "auth.failed": "Het opgegeven e-mail adres bestaat niet.",
+    "auth.password": "Het opgegeven wachtwoord is niet juist.",
+    "auth.throttle": "Te veel inlog pogingen. Probeer het nog eens over :seconds seconden.",
+
+    "passwords.reset": "Het wachtwoord van uw account is gewijzigd.",
+    "passwords.sent": "We hebben een e-mail verstuurd met instructies om een nieuw wachtwoord in te stellen.",
+    "passwords.throttled": "Gelieve even te wachten voor u het opnieuw probeert.",
+    "passwords.token": "Dit wachtwoordhersteltoken is niet geldig.",
+    "passwords.user": "Geen gebruiker bekend met het e-mailadres.",
+
+    "nl": "Nederlands",
+    "en": "Engels"
 }

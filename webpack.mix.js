@@ -31,15 +31,21 @@ const ResourceMix = require('./resources/js/common/ResourceMix.js');
         .nodeModuleDists([
             // Scripts
             '@fortawesome/fontawesome-pro/js/all.min.js',
+            '@popperjs/core/dist/umd/popper.js',
+            'bootstrap/dist/js/bootstrap.min.js',
+            'jquery/dist/jquery.min.js',
             'jquery-sticky/jquery.sticky.js',
             'mburger-css/dist/mburger.js',
             'mmenu-js/dist/mmenu.js',
             'mmenu-light/dist/mmenu-light.js',
             'mmenu-light/dist/mmenu-light.polyfills.js',
+            'perfect-scrollbar/dist/perfect-scrollbar.min.js',
 
             // Styles
+            'bootstrap/dist/css/bootstrap.min.css',
             'flag-icons/css/flag-icons.min.css',
             'mburger-css/dist/mburger.css',
             'mmenu-js/dist/mmenu.css',
             'mmenu-light/dist/mmenu-light.css',
+            'perfect-scrollbar/css/perfect-scrollbar.css',
         ]);

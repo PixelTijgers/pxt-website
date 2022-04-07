@@ -27,7 +27,12 @@ class AdministratorSeeder extends Seeder
             ],
         ];
 
-        foreach($administrators as $administrator)
-            Administrator::create($administrator);
+        foreach($administrators as $administrator) {
+            $crAdministrator = Administrator::create($administrator);
+
+            // Add avatar to database.
+            $crAdministrator->addMediaFromBase64(\Avatar::create($crAdministrator['name'])->toBase64())
+                ->toMediaCollection('avatar');
+        }
     }
 }

@@ -25,6 +25,7 @@
     },
     "dependencies": {
         "@fortawesome/fontawesome-pro": "^6.0.0",
+        "bootstrap": "^5.1.3",
         "flag-icons": "^6.1.1",
         "fs": "^0.0.1-security",
         "fs-extra": "^10.0.1",
@@ -32,6 +33,8 @@
         "jquery-sticky": "^1.0.4",
         "mburger-css": "^2.0.0",
         "mmenu-js": "^9.0.5",
-        "mmenu-light": "^3.1.1"
+        "mmenu-light": "^3.1.1",
+        "perfect-scrollbar": "^1.5.5",
+        "popper": "^1.0.1"
     }
 }

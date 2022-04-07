@@ -6,18 +6,29 @@
     "New Password": "New password",
     "Repeat Password": "Repeat password",
 
+    "Search": "Search",
+
+    "Profile": "Profile",
+    "Logout": "Logout",
+
+    "Dashboard": "Dashboard",
+    "Dashboard Description": "The dashboard provides an overview of [...]",
+
     "Send Password": "Send password reset link",
     "Back To Login": "Back to login",
     "Forgot Password": "Forgot password",
     "Reset Password": "Reset password",
 
     "auth.failed": "Incorrect user or credentials.",
-    "auth.failed": "The provided password is incorrect.",
+    "auth.password": "The provided password is incorrect.",
     "auth.throttle": "Too many login attempts. Please try again in :seconds seconds.",
 
     "passwords.reset": "Your password has been reset!",
     "passwords.sent": "We have emailed your password reset link!",
     "passwords.throttled": "Please wait before retrying.",
     "passwords.token": "This password reset token is invalid.",
-    "passwords.user": "We cannot find a user with that email address."
+    "passwords.user": "We cannot find a user with that email address.",
+
+    "nl": "Dutch",
+    "en": "English"
 }
