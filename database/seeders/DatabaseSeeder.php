@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
         $this->call([
             // Administrator seeders.
             AdministratorSeeder::class,
+            AdministratorPermissionsSeeder::class,
 
             // Navigation seeders.
             NavigationMenuSeeder::class,

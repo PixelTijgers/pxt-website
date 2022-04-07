@@ -3,6 +3,9 @@
 // Facades.
 use Illuminate\Support\Facades\Route;
 
+// Controllers.
+use App\Http\Controllers\Admin\Modules\DashboardController;
+
 /*
 |--------------------------------------------------------------------------
 | Admin Routes
@@ -38,7 +41,7 @@ Route::group([
     ], function(){
 
         // Init dashboard route(s).
-        // Route::get('dashboard', 'DashboardController@index');
+        Route::get('dashboard', [DashboardController::class, 'index']);
 
         // Init page route(s).
         Route::post(
