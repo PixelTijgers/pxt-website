@@ -1,0 +1,13 @@
+{
+    "Login": "Login",
+    "Email": "Email address",
+    "Password": "Password",
+    "Remember Me": "Remember me",
+
+    "Send Password": "Send password reset link",
+    "Back To Login": "Back to login",
+    "Forgot Password": "Forgot password",
+
+    "Auth Failed": "Incorrect user or credentials.",
+    "Auth Unknown User": "User does not exist."
+}

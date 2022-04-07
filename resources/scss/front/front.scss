@@ -1,0 +1,51 @@
+// Import ultilities.
+@use './abstracts/' as *;
+@use './components/' as *;
+@use './layouts/' as *;
+@use './mixins/' as *;
+@use './modules/' as *;
+@use './plugins/' as *;
+
+// Import Tailwind.
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// Default Styles
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+body {
+    background: #FFF;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    header {
+        position: sticky;
+            top: 0;
+    }
+
+    main {
+        flex: 1;
+    }
+
+    footer {
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+    }
+
+    p {
+
+    }
+}

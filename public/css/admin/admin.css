@@ -1,0 +1,17 @@
+.components-auth-Layout .auth-side-wrapper {
+  height: 100%;
+  background-position: center center;
+  background-size: cover;
+  width: auto;
+}
+.components-auth-Layout .alert ul {
+  margin: 0;
+  padding: 0;
+}
+.components-auth-Layout .alert ul li {
+  list-style: none;
+}
+.components-auth-Layout .auth-form-wrapper .noble-ui-logo figure img {
+  height: auto;
+  width: 60% !important;
+}
