@@ -38,7 +38,12 @@
                                         @if ($errors->any())
 
                                         <div class="alert alert-fill-danger">
-                                            {{ __('Auth Failed') }}
+                                            <ul>
+                                            @foreach ($errors->all() as $error)
+    <li>{{ $error }}</li>
+                                            @endforeach
+</ul>
+
                                         </div>
                                         @endif
 

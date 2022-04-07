@@ -1,5 +1,5 @@
 @section('meta')
-<title>{{ config('app.name') }} | {{ __('auth.title_rs_forget') }}</title>
+<title>{{ config('app.name') }} | {{ __('Reset Password') }}</title>
     <meta name="keywords" content="Pixeltijgers, CMS, Pixeltijgers CMS, Dashboard">
 @endsection
 <x-authLayout>
@@ -57,32 +57,32 @@
 
                                             <div class="mb-3">
 
-                                                <label for="email" class="form-label">{{ __('auth.lbl_email') }}</label>
-                                                <input type="email" class="form-control" name="email" id="email" value="{{ old('email', request()->email) }}" placeholder="{{ __('auth.lbl_email') }}" required autofocus>
+                                                <label for="email" class="form-label">{{ __('Email') }}</label>
+                                                <input type="email" class="form-control" name="email" id="email" value="{{ old('email', request()->email) }}" placeholder="{{ __('Email') }}" required autofocus>
 
                                             </div>
 
                                             <div class="mb-3">
 
-                                                <label for="password" class="form-label">{{ __('auth.lbl_new_password') }}</label>
-                                                <input type="password" class="form-control" name="password" id="password" placeholder="{{ __('auth.lbl_new_password') }}" autocomplete="new-password" required>
+                                                <label for="password" class="form-label">{{ __('New Password') }}</label>
+                                                <input type="password" class="form-control" name="password" id="password" placeholder="{{ __('New Password') }}" autocomplete="new-password" required>
 
                                             </div>
 
                                             <div class="mb-3">
 
-                                                <label for="password_confirmation" class="form-label">{{ __('auth.lbl_password_confirmation') }}</label>
-                                                <input type="password" class="form-control" name="password_confirmation" id="password_confirmation" placeholder="{{ __('auth.lbl_password_confirmation') }}" autocomplete="new-password" required>
+                                                <label for="password_confirmation" class="form-label">{{ __('Repeat Password') }}</label>
+                                                <input type="password" class="form-control" name="password_confirmation" id="password_confirmation" placeholder="{{ __('Repeat Password') }}" autocomplete="new-password" required>
 
                                             </div>
 
                                             <div>
 
-                                                <button class="btn btn-primary mr-2 mb-2 mb-md-0">{{ __('auth.lbl_reset_login') }}</button>
+                                                <button class="btn btn-primary mr-2 mb-2 mb-md-0">{{ __('Reset Password') }}</button>
 
                                             </div>
 
-                                            <a class="d-block mt-3" href="{{ url('admin/login') }}">{{ __('auth.lbl_back_login') }}</a>
+                                            <a class="d-block mt-3" href="{{ url('admin/login') }}">{{ __('Back To Login') }}</a>
 
                                         </form>
 

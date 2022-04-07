@@ -1,5 +1,5 @@
 @section('meta')
-<title>{{ config('app.name') }} | {{ __('auth.title_pw_forget') }}</title>
+<title>{{ config('app.name') }} | {{ __('Reset Password') }}</title>
     <meta name="keywords" content="Pixeltijgers, CMS, Pixeltijgers CMS, Dashboard">
 @endsection
 <x-authLayout>
@@ -38,7 +38,13 @@
                                         @if ($errors->any())
 
                                         <div class="alert alert-fill-danger">
-                                            {{ __('Auth Unknown User') }}
+
+                                            <ul>
+                                            @foreach ($errors->all() as $error)
+    <li>{{ $error }}</li>
+                                            @endforeach
+</ul>
+
                                         </div>
                                         @endif
 
