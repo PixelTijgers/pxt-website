@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 // Controllers.
 use App\Http\Controllers\Admin\Modules\DashboardController;
+use App\Http\Controllers\Admin\Modules\AdministratorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,34 +23,20 @@ Route::redirect('/admin', '/admin/login');
 Route::redirect('/login', '/admin/login');
 Route::redirect('/login/admin', '/admin/login');
 
-// Change the language of the admin.
-Route::get('/admin/change-language/{language}', ['as' => 'change.language', 'uses' => 'App\Http\Controllers\Admin\AdminController@changeAdminLanguage']);
+// Route group: Admin.
+Route::middleware(['auth:sanctum', 'verified', 'admin.permission'])->prefix('admin')->group(function () {
 
-// Logout route.
-Route::get('/admin/logout', function(){
-    \Auth::logout();
-    return \Redirect::to('login');
-});
+    // Change the language of the admin.
+    Route::get('/change-language/{language}', ['as' => 'change.language', 'uses' => 'App\Http\Controllers\Admin\AdminController@changeAdminLanguage']);
 
-// Protect modules with middleware.
-Route::group([
-    'namespace' => 'Admin',
-    'prefix' => 'admin'
-], function(){
-
-
-
-
-
-    // Create the namespace for the admin.
-    Route::group([
-        'middleware' => ['auth:sanctum', 'verified', 'admin.permission'],
-        'namespace' => 'Modules',
-        'prefix' => 'modules'
-    ], function(){
+    // Route group: Admin.
+    Route::prefix('modules')->group(function () {
 
         // Init dashboard route(s).
         Route::get('dashboard', [DashboardController::class, 'index']);
+
+        // Init administrators route(s).
+        Route::resource('administrators', AdministratorController::class, ['names' => 'administrator'])->except(['show']);
 
     });
 

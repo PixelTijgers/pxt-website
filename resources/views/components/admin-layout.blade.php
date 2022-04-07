@@ -48,6 +48,8 @@
 
     <div class="{{ $cssNs }} main-wrapper" id="app">
 
+        @include('admin.layouts.sidebar')
+
         <div class="page-wrapper">
 
             @include('admin.layouts.topbar')
@@ -57,6 +59,8 @@
                 {{ $slot }}
 
             </div>
+
+            @include('admin.layouts.footer')
 
         </div>
 

@@ -5,5 +5,16 @@
 
 <x-admin-layout>
 
+    <div class="{{ $cssNs }}">
+
+                    @include('admin.layouts.breadcrumb', [
+                        'title' => __('Dashboard'),
+                        'description' => __('Dashboard Description'),
+                        'breadcrum' => [
+                            __('Dashboard') => '#',
+                        ],
+                    ])
+
+                </div>
 
 </x-admin-layout>

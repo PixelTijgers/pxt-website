@@ -20,40 +20,38 @@
 
                 <ul class="nav">
 
-                    <li class="nav-item nav-category">{{ __('sidebar.website') }}</li>
+                    <li class="nav-item nav-category">{{ __('Website') }}</li>
                     @can('modules.dashboard.index')
 
                     <li class="nav-item {{ active(['*/dashboard']) }}">
                         <a href="{{ url('/admin/modules/dashboard') }}" class="nav-link">
-                            <i class="link-icon fa-regular fa-gauge"></i><span class="link-title">{{ __('sidebar.dashboard') }}</span>
+                            <i class="link-icon fa-regular fa-gauge"></i><span class="link-title">{{ __('Dashboard') }}</span>
                         </a>
                     </li>
                     @endcan
 
-                    @can('modules.category.index')
-
-                    <li class="nav-item {{ active(['*/categories/', '*/categories/create', '*/categories/*/edit']) }}">
-                        <a href="{{ route('category.index') }}" class="nav-link">
-                            <i class="link-icon fa-regular fa-list-ul"></i><span class="link-title">{{ __('sidebar.category') }}</span>
-                        </a>
-                    </li>
-                    @endcan
-
-                    <li class="nav-item nav-category">{{ __('sidebar.users') }}</li>
-
+                    <li class="nav-item nav-category">{{ __('Admin') }}</li>
                     @can('modules.administrator.index')
 
-                    <li class="nav-item {{ active(['*/administrators', '*/administrators/create', '*/administrators/*/edit']) }}">
-                        <a href="{{ route('administrator.index') }}" class="nav-link">
-                            <i class="link-icon fa-regular fa-users"></i><span class="link-title">{{ __('sidebar.users') }}</span>
+                    <li class="nav-item {{ active(['*/administrators']) }}">
+                        <a href="{{ url('/admin/modules/administrators') }}" class="nav-link">
+                            <i class="link-icon fa-regular fa-user-group"></i><span class="link-title">{{ __('Users') }}</span>
                         </a>
                     </li>
                     @endcan
 
                     <li class="nav-item">
-                        <a href="{{ route('logout') }}" class="nav-link">
-                            <i class="link-icon fa-regular fa-right-from-bracket"></i><span class="link-title">{{ __('sidebar.logout') }}</span>
-                        </a>
+
+                        <form method="post" action="{{ route('logout') }}" id="logoutForm">
+
+                            @csrf
+
+                            <a href="#" class="nav-link" onclick="document.getElementById('logoutForm').submit();">
+                                <i class="link-icon fa-regular fa-right-from-bracket"></i><span class="link-title">{{ __('Logout') }}</span>
+                            </a>
+
+                        </form>
+
                     </li>
 
                 </ul>

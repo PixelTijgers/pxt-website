@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8fcefc847d775aa928674b3acc1eb35b",
+    "content-hash": "f53484a9501158bd43cf170c3273cdd0",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -993,6 +993,65 @@
                 }
             ],
             "time": "2022-03-20T21:55:58+00:00"
+        },
+        {
+            "name": "imbue/laravel-active",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/imbue/laravel-active.git",
+                "reference": "f18ab549980cd7dd599746331d2db99153947069"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/imbue/laravel-active/zipball/f18ab549980cd7dd599746331d2db99153947069",
+                "reference": "f18ab549980cd7dd599746331d2db99153947069",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": ">=5.5",
+                "php": ">=7.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Tijdmachine\\Active\\ActiveServiceProvider"
+                    ],
+                    "aliases": {
+                        "Active": "Tijdmachine\\Active\\Facade"
+                    }
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
+                "psr-4": {
+                    "Tijdmachine\\Active\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Liam",
+                    "email": "hello@liamm.nl"
+                }
+            ],
+            "description": "Helper to check if the current route is active.",
+            "keywords": [
+                "active",
+                "laravel",
+                "route"
+            ],
+            "support": {
+                "issues": "https://github.com/imbue/laravel-active/issues",
+                "source": "https://github.com/imbue/laravel-active/tree/1.0.0"
+            },
+            "time": "2018-01-14T22:22:03+00:00"
         },
         {
             "name": "intervention/image",

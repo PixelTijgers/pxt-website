@@ -8,11 +8,18 @@
 
     "Search": "Zoeken",
 
+    "Website": "Website",
+    "Dashboard": "Dashboard",
+    "Dashboard Description": "Het dashboard biedt een overzicht van [...]",
+
+    "Admin": "Beheer",
+    "Users": "Gebruikers",
     "Profile": "Profiel",
     "Logout": "Uitloggen",
 
-    "Dashboard": "Dashboard",
-    "Dashboard Description": "Het dashboard biedt een overzicht van [...]",
+
+    "Feedback": "Feedback?",
+    "Send Feedback": "Laat het ons weten!",
 
     "Send Password": "Stuur wachtwoord herstel link",
     "Back To Login": "Terug naar login pagina",
