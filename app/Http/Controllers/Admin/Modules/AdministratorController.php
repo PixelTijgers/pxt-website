@@ -41,17 +41,17 @@ class AdministratorController extends Controller
             return DataTables::of(Administrator::query())
             ->editColumn('name', function(Administrator $administrator) {
 
-                $avatarName = '<img src="' . $administrator->getFirstMediaUrl('avatar') . '" width="20" height="20" />';
+                $avatarName = '<img src="' . $administrator->getFirstMediaUrl('avatar') . '" width="20" height="20"/>';
 
-                $avatarName .= $administrator->name;
+                $avatarName .= '<span class="d-inline-flex px-2">' . $administrator->name . '</span>';
 
                 return $avatarName;
             })
             ->editColumn('email', function(Administrator $administrator) {
                 return '<a href="mailto:' . $administrator->email . '">' . $administrator->email . '</a>';
             })
-            ->editColumn('id', function(Administrator  $administrator) {
-                return __('admin.' . \Arr::first(@$administrator->roles->pluck('name')->toArray()));
+            ->editColumn('id', function(Administrator $administrator) {
+                return __(\Str::ucfirst(\Arr::first(@$administrator->roles->pluck('name')->toArray())));
             })
             ->addColumn('action', function (Administrator $administrator) {
                 return
@@ -72,23 +72,23 @@ class AdministratorController extends Controller
         // Set values.
         $html = $builder
                     ->addColumn([
-                        'title' => __('form.name'),
+                        'title' => __('Name'),
                         'data' => 'name'
                     ])
                     ->addColumn([
-                        'title' => __('form.email'),
+                        'title' => __('Email'),
                         'data' => 'email',
                     ])
                     ->addColumn([
-                        'title' => __('form.phone'),
+                        'title' => __('Phone'),
                         'data' => 'phone',
                     ])
                     ->addColumn([
-                        'title' => __('form.usertype'),
+                        'title' => __('Usertype'),
                         'data' => 'id',
                     ])
                     ->addAction([
-                        'title' => __('form.action'),
+                        'title' => __('Actions'),
                         'class' => 'actionHandler'
                     ])
                     ->parameters([

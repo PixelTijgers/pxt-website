@@ -1,3 +1,53 @@
+.table-responsive {
+  overflow: hidden;
+}
+.table-responsive .actionHandler {
+  width: 70px !important;
+}
+.table-responsive .published {
+  width: 40px !important;
+}
+.table-responsive .btn {
+  border-radius: 50% !important;
+  margin-right: 5px !important;
+  height: 30px !important;
+  width: 30px !important;
+}
+.table-responsive .btn svg {
+  color: #FFF;
+  height: 12px !important;
+}
+.table-responsive .dataTables_wrapper.dt-bootstrap4 .dataTables_length select {
+  width: 50px !important;
+}
+.table-responsive .col-sm-12 {
+  padding-left: 0 !important;
+}
+.table-responsive .col-sm-12 .dataTable {
+  margin-bottom: 25px !important;
+}
+.table-responsive .col-sm-12 .dataTable th,
+.table-responsive .col-sm-12 .dataTable td {
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+  vertical-align: baseline;
+}
+.table-responsive .col-sm-12 .dataTable th .btn,
+.table-responsive .col-sm-12 .dataTable td .btn {
+  border-radius: 50% !important;
+  margin-right: 5px !important;
+  height: 30px !important;
+  width: 30px !important;
+}
+.table-responsive .col-sm-12 .dataTable th .btn svg,
+.table-responsive .col-sm-12 .dataTable td .btn svg {
+  color: #FFF;
+  height: 12px !important;
+}
+.table-responsive .col-sm-12 ul.pagination {
+  font-size: 12px !important;
+}
+
 .components-auth-Layout .auth-side-wrapper {
   height: 100%;
   background-position: center center;
@@ -26,4 +76,24 @@
   height: auto;
   margin: 0 0 0 -10px;
   width: 100% !important;
+}
+
+a {
+  transition: all 0.15s ease-in 0s !important;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+ul li {
+  list-style: none;
+  padding: 0;
+}
+
+textarea {
+  height: 125px !important;
+  resize: none !important;
+  line-height: 150% !important;
+  word-spacing: 2px !important;
 }

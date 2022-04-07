@@ -175,14 +175,20 @@ class AdministratorPermissionsSeeder extends Seeder
 
     protected function createRoles($groupedPermissions)
     {
+        // Demo permissions.
+        $demo = Role::updateOrCreate(['name' => 'demo'], ['name' => 'demo']);
+
         // User permissions.
-        Role::updateOrCreate(['name' => 'user'], ['name' => 'user']);
+        $user = Role::updateOrCreate(['name' => 'user'], ['name' => 'user']);
+
+        // Editor permissions.
+        $editor = Role::updateOrCreate(['name' => 'editor'], ['name' => 'editor']);
 
         // Moderator permissions.
-        Role::updateOrCreate(['name' => 'moderator'], ['name' => 'moderator']);
+        $moderator = Role::updateOrCreate(['name' => 'moderator'], ['name' => 'moderator']);
 
         // Admin permissions.
-        Role::updateOrCreate(['name' => 'administrator'], ['name' => 'administrator']);
+        $administrator = Role::updateOrCreate(['name' => 'administrator'], ['name' => 'administrator']);
 
         // Superadmin permissions.
         $superadmin = Role::updateOrCreate(['name' => 'superadmin'], ['name' => 'superadmin']);
@@ -190,6 +196,7 @@ class AdministratorPermissionsSeeder extends Seeder
 
         // Give the user superadmin role.
         Administrator::find(1)->assignRole($superadmin);
+        Administrator::find(2)->assignRole($demo);
     }
 
     protected function syncDirectAdministratorPermissions($currentPermissions)

@@ -33,6 +33,8 @@ const ResourceMix = require('./resources/js/common/ResourceMix.js');
             '@fortawesome/fontawesome-pro/js/all.min.js',
             '@popperjs/core/dist/umd/popper.js',
             'bootstrap/dist/js/bootstrap.min.js',
+            'datatables.net/js/jquery.dataTables.min.js',
+            'datatables.net-bs4/js/dataTables.bootstrap4.min.js',
             'jquery/dist/jquery.min.js',
             'jquery-sticky/jquery.sticky.js',
             'mburger-css/dist/mburger.js',
@@ -40,12 +42,15 @@ const ResourceMix = require('./resources/js/common/ResourceMix.js');
             'mmenu-light/dist/mmenu-light.js',
             'mmenu-light/dist/mmenu-light.polyfills.js',
             'perfect-scrollbar/dist/perfect-scrollbar.min.js',
+            'sweetalert2/dist/sweetalert2.all.min.js',
 
             // Styles
             'bootstrap/dist/css/bootstrap.min.css',
+            'datatables.net-bs4/css/dataTables.bootstrap4.min.css',
             'flag-icons/css/flag-icons.min.css',
             'mburger-css/dist/mburger.css',
             'mmenu-js/dist/mmenu.css',
             'mmenu-light/dist/mmenu-light.css',
             'perfect-scrollbar/css/perfect-scrollbar.css',
+            'sweetalert2/dist/sweetalert2.min.css',
         ]);

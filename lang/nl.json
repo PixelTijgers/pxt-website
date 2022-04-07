@@ -5,18 +5,31 @@
     "Remember Me": "Onthoud gegevens",
     "New Password": "Nieuw wachtwoord",
     "Repeat Password": "Herhaal wachtwoord",
+    "Name": "Naam",
+    "Phone": "Telefoonnummer",
+    "Usertype": "Gebruikerstype",
+    "Actions": "Acties",
+
+    "Demo": "Demo Gebruiker",
+    "Admin": "Administrator",
+    "Superadmin": "Super Administrator",
 
     "Search": "Zoeken",
 
     "Website": "Website",
+
     "Dashboard": "Dashboard",
     "Dashboard Description": "Het dashboard biedt een overzicht van [...]",
 
     "Admin": "Beheer",
+
+    "User": "Gebruiker",
     "Users": "Gebruikers",
+    "Users Description": "Een overzicht met alle gebruikers en hun rechten. Hier kun je ook gebruikers wijzigen of verwijderen.",
+    "Users Index": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis hendrerit, diam et ultrices mollis, ipsum metus ullamcorper sem, et iaculis elit nulla quis nisi. Nullam ultrices condimentum scelerisque.",
+
     "Profile": "Profiel",
     "Logout": "Uitloggen",
-
 
     "Feedback": "Feedback?",
     "Send Feedback": "Laat het ons weten!",
@@ -35,6 +48,9 @@
     "passwords.throttled": "Gelieve even te wachten voor u het opnieuw probeert.",
     "passwords.token": "Dit wachtwoordhersteltoken is niet geldig.",
     "passwords.user": "Geen gebruiker bekend met het e-mailadres.",
+
+    "Add": "Toevoegen",
+    "Edit": "Wijzig",
 
     "nl": "Nederlands",
     "en": "Engels"

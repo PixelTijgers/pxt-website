@@ -1,0 +1,64 @@
+:root {
+
+}
+
+// Datatables.
+.table-responsive {
+    overflow: hidden;
+    
+    .actionHandler {
+        width: 70px !important;
+    }
+    .published {
+        width: 40px !important;
+    }
+    .btn {
+        border-radius: 50% !important;
+        margin-right: 5px !important;
+        height: 30px !important;
+        width: 30px !important;
+
+        svg {
+            color: #FFF;
+            height: 12px !important;
+        }
+    }
+
+    .dataTables_wrapper.dt-bootstrap4 {
+        .dataTables_length {
+            select {
+                width: 50px !important;
+            }
+        }
+    }
+    .col-sm-12 {
+        padding-left: 0 !important;
+
+        .dataTable {
+            margin-bottom: 25px !important;
+
+            th,
+            td {
+                padding-top: 8px !important;
+                padding-bottom: 8px !important;
+                vertical-align: baseline;
+
+                .btn {
+                    border-radius: 50% !important;
+                    margin-right: 5px !important;
+                    height: 30px !important;
+                    width: 30px !important;
+
+                    svg {
+                        color: #FFF;
+                        height: 12px !important;
+                    }
+                }
+            }
+        }
+
+        ul.pagination {
+            font-size: 12px !important;
+        }
+    }
+}

@@ -23,7 +23,14 @@ class AdministratorSeeder extends Seeder
             [
                 'name' => 'Michiel Elshout',
                 'email' => 'info@pixeltijgers.nl',
+                'phone' => '+31 (0)6 23 38 47 06',
                 'password' => \Hash::make('PXTmichiel2019!'),
+            ],
+            [
+                'name' => 'Demo Gebruiker',
+                'email' => 'demo@pixeltijgers.nl',
+                'phone' => '+31 (0)6 13 54 22 34',
+                'password' => \Hash::make('DemoW8woord'),
             ],
         ];
 
