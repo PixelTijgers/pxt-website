@@ -28,6 +28,7 @@
         "bootstrap": "^5.1.3",
         "datatables.net": "^1.11.5",
         "datatables.net-bs4": "^1.11.5",
+        "dropify": "^0.2.2",
         "flag-icons": "^6.1.1",
         "fs": "^0.0.1-security",
         "fs-extra": "^10.0.1",

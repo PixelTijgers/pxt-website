@@ -2,17 +2,30 @@
     "Login": "Inloggen",
     "Email": "E-mailadres",
     "Password": "Wachtwoord",
+    "Password Description Edit": "Wanneer je je wachtwoord wijzigt, wordt je uit veiligheidsoverwegingen uitgelogd.",
     "Remember Me": "Onthoud gegevens",
     "New Password": "Nieuw wachtwoord",
     "Repeat Password": "Herhaal wachtwoord",
     "Name": "Naam",
     "Phone": "Telefoonnummer",
     "Usertype": "Gebruikerstype",
+    "Image": "Afbeelding",
+    "Image Description": "Afbeelding beschrijving",
     "Actions": "Acties",
+    "General": "Algemene gegevens",
 
     "Demo": "Demo Gebruiker",
+    "Editor": "Redacteur",
+    "Moderator": "Moderator",
+    "User": "Gebruiker",
     "Admin": "Administrator",
     "Superadmin": "Super Administrator",
+
+    "Dropify Default": "Sleep of klik hier om een bestand te uploaden.",
+    "Dropify Replace": "Sleep of klik hier om een bestand te vervangen.",
+    "Dropify Remove": "Verwijderen",
+    "Dropify Image Format": "Bestandstype is niet toegestaan.",
+    "Dropify Error": "Er is iets mis gegaan.",
 
     "Search": "Zoeken",
 
@@ -26,13 +39,20 @@
     "User": "Gebruiker",
     "Users": "Gebruikers",
     "Users Description": "Een overzicht met alle gebruikers en hun rechten. Hier kun je ook gebruikers wijzigen of verwijderen.",
-    "Users Index": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis hendrerit, diam et ultrices mollis, ipsum metus ullamcorper sem, et iaculis elit nulla quis nisi. Nullam ultrices condimentum scelerisque.",
+    "Users Add": "Voeg een nieuwe gebruiker toe en wijzig zijn of haar rechten.",
+    "Users Edit": "Wijzig je eigen gegevens of de gegevens van een andere gebruiker.",
+    "Users Edit Description": "Wanneer een nieuwe gebruiker wordt toegevoegd, moet je zijn of haar gegevens invoeren. Het wachtwoord wordt niet per e-mail verzonden. Deze zul je zelf moeten doorgeven aan de gebruiker. De gebruiker zal dan nadien het wachtwoord zelf kunnen wijzigen. Enkel de Superadmin zal de rechten kunnen verdelen van de gebruiker.",
 
     "Profile": "Profiel",
     "Logout": "Uitloggen",
 
     "Feedback": "Feedback?",
     "Send Feedback": "Laat het ons weten!",
+
+    "Item Add": "Item is met succes toegevoegd.",
+    "Item Edit": "Item is met succes gewijzigd.",
+    "Item Delete": "Item is met succes verwijderd.",
+    "Item Delete User": "Je kunt jezelf niet verwijderen als gebruiker.",
 
     "Send Password": "Stuur wachtwoord herstel link",
     "Back To Login": "Terug naar login pagina",

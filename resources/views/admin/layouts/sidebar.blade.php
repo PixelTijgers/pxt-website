@@ -33,7 +33,7 @@
                     <li class="nav-item nav-category">{{ __('Admin') }}</li>
                     @can('modules.administrator.index')
 
-                    <li class="nav-item {{ active(['*/administrators']) }}">
+                    <li class="nav-item {{ active(['*/administrators', '*/administrators/*']) }}">
                         <a href="{{ url('/admin/modules/administrators') }}" class="nav-link">
                             <i class="link-icon fa-regular fa-user-group"></i><span class="link-title">{{ __('Users') }}</span>
                         </a>

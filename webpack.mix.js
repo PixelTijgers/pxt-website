@@ -35,6 +35,7 @@ const ResourceMix = require('./resources/js/common/ResourceMix.js');
             'bootstrap/dist/js/bootstrap.min.js',
             'datatables.net/js/jquery.dataTables.min.js',
             'datatables.net-bs4/js/dataTables.bootstrap4.min.js',
+            'dropify/dist/js/dropify.min.js',
             'jquery/dist/jquery.min.js',
             'jquery-sticky/jquery.sticky.js',
             'mburger-css/dist/mburger.js',
@@ -47,6 +48,7 @@ const ResourceMix = require('./resources/js/common/ResourceMix.js');
             // Styles
             'bootstrap/dist/css/bootstrap.min.css',
             'datatables.net-bs4/css/dataTables.bootstrap4.min.css',
+            'dropify/dist/css/dropify.min.css',
             'flag-icons/css/flag-icons.min.css',
             'mburger-css/dist/mburger.css',
             'mmenu-js/dist/mmenu.css',

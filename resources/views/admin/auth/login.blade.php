@@ -38,7 +38,7 @@
                                         @if ($errors->any())
 
                                         <div class="alert alert-fill-danger">
-                                            
+
                                             <ul>
                                             @foreach ($errors->all() as $error)
     <li>{{ $error }}</li>
@@ -70,7 +70,7 @@
                                             <div class="form-check mb-3">
 
                                                   <input type="checkbox" class="form-check-input" name="remember" id="remember">
-                                                  <label class="form-check-label" for="remember">{{ __('Remember me') }}</label>
+                                                  <label class="form-check-label" for="remember">{{ __('Remember Me') }}</label>
 
                                             </div>
 

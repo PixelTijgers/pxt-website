@@ -14,12 +14,14 @@
     @yield('meta')
     <!-- Plugins Styles -->
     <link href="{{ URL::asset('plugins/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet" />
+    <link href="{{ URL::asset('plugins/dropify/dist/css/dropify.min.css') }}" rel="stylesheet" />
     <link href="{{ URL::asset('plugins/flag-icons/css/flag-icons.min.css') }}" rel="stylesheet" />
     <link href="{{ URL::asset('plugins/perfect-scrollbar/css/perfect-scrollbar.css') }}" rel="stylesheet" />
 
     <!-- Plugins Scripts -->
     <script src="{{ URL::asset('plugins/jquery/dist/jquery.min.js') }}"></script>
     <script src="{{ URL::asset('plugins/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+    <script src="{{ URL::asset('plugins/dropify/dist/js/dropify.min.js') }}"></script>
     <script src="{{ URL::asset('plugins/perfect-scrollbar/dist/perfect-scrollbar.min.js') }}"></script>
     <script src="{{ URL::asset('plugins/@fortawesome/fontawesome-pro/js/all.min.js') }}"></script>
     <script src="{{ URL::asset('plugins/@popperjs/core/dist/umd/popper.js') }}"></script>

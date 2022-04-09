@@ -139,7 +139,7 @@ class AdministratorController extends Controller
         // Return back with message.
         return redirect()->route('administrator.index')->with([
                 'type' => 'success',
-                'message' => __('form.administrator') . __('admin.msg_edit_success')
+                'message' => __('Item Add')
             ]
         );
     }
@@ -200,7 +200,7 @@ class AdministratorController extends Controller
         // Return back with message.
         return redirect()->route('administrator.index')->with([
                 'type' => 'success',
-                'message' => __('form.administrator') . __('admin.msg_edit_success')
+                'message' => __('Item Edit')
             ]
         );
     }
@@ -218,7 +218,7 @@ class AdministratorController extends Controller
             // Return back with message.
             return redirect()->back()->with([
                 'type' => 'danger',
-                'message' => __('admin.msg_alert_error_user')
+                'message' => __('Item Delete User')
             ]);
 
         // Delete the avatar.
@@ -230,7 +230,7 @@ class AdministratorController extends Controller
         // Return back with message.
         return redirect()->back()->with([
             'type' => 'success',
-            'message' => __('form.administrator') . __('admin.msg_delete_success')
+            'message' => __('Item Delete')
         ]);
     }
 }

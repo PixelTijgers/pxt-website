@@ -182,6 +182,7 @@ return [
         /*
          * Custom Service Providers...
          */
+         App\Providers\RuleServiceProvider::class,
          App\Providers\ViewComposerServiceProvider::class,
 
     ],

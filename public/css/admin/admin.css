@@ -1,3 +1,21 @@
+.components-auth-Layout .auth-side-wrapper {
+  height: 100%;
+  background-position: center center;
+  background-size: cover;
+  width: auto;
+}
+.components-auth-Layout .alert ul {
+  margin: 0;
+  padding: 0;
+}
+.components-auth-Layout .alert ul li {
+  list-style: none;
+}
+.components-auth-Layout .auth-form-wrapper .noble-ui-logo figure img {
+  height: auto;
+  width: 60% !important;
+}
+
 .table-responsive {
   overflow: hidden;
 }
@@ -48,22 +66,22 @@
   font-size: 12px !important;
 }
 
-.components-auth-Layout .auth-side-wrapper {
-  height: 100%;
-  background-position: center center;
-  background-size: cover;
-  width: auto;
+.dropify-container .dropify-wrapper .dropify-message .file-icon:before {
+  display: none;
 }
-.components-auth-Layout .alert ul {
-  margin: 0;
-  padding: 0;
-}
-.components-auth-Layout .alert ul li {
-  list-style: none;
-}
-.components-auth-Layout .auth-form-wrapper .noble-ui-logo figure img {
-  height: auto;
-  width: 60% !important;
+
+:root form.form-content .form-submit {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.75);
+  width: 100%;
+  height: 65px;
+  display: flex;
+  justify-content: flex-end;
+  padding: 15px;
+  border-top: 1px solid #EEE;
+  z-index: 2;
 }
 
 .admin-layouts-Sidebar .sidebar-header a.sidebar-brand {
