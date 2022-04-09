@@ -10,7 +10,7 @@
     "Phone": "Telefoonnummer",
     "Usertype": "Gebruikerstype",
     "Image": "Afbeelding",
-    "Image Description": "Afbeelding beschrijving",
+    "Image Description": "Je kunt enkel .jpg, .jpeg of .png bestanden uploaden.",
     "Actions": "Acties",
     "General": "Algemene gegevens",
 
@@ -41,7 +41,7 @@
     "Users Description": "Een overzicht met alle gebruikers en hun rechten. Hier kun je ook gebruikers wijzigen of verwijderen.",
     "Users Add": "Voeg een nieuwe gebruiker toe en wijzig zijn of haar rechten.",
     "Users Edit": "Wijzig je eigen gegevens of de gegevens van een andere gebruiker.",
-    "Users Edit Description": "Wanneer een nieuwe gebruiker wordt toegevoegd, moet je zijn of haar gegevens invoeren. Het wachtwoord wordt niet per e-mail verzonden. Deze zul je zelf moeten doorgeven aan de gebruiker. De gebruiker zal dan nadien het wachtwoord zelf kunnen wijzigen. Enkel de Superadmin zal de rechten kunnen verdelen van de gebruiker.",
+    "Users Edit Description": "Wanneer een nieuwe gebruiker wordt toegevoegd, moet je zijn of haar gegevens invoeren. Het wachtwoord wordt niet per e-mail verzonden. Deze zul je zelf moeten doorgeven aan de gebruiker. De gebruiker zal dan nadien het wachtwoord zelf kunnen wijzigen. Enkel de Super Administrator zal de rechten kunnen verdelen van de gebruiker.",
 
     "Profile": "Profiel",
     "Logout": "Uitloggen",
@@ -69,8 +69,13 @@
     "passwords.token": "Dit wachtwoordhersteltoken is niet geldig.",
     "passwords.user": "Geen gebruiker bekend met het e-mailadres.",
 
+    "Index": "Overzicht",
     "Add": "Toevoegen",
     "Edit": "Wijzig",
+    "Destroy": "Verwijderen",
+
+    "Icon Dashboard": "gauge",
+    "Icon Administrator": "user-group",
 
     "nl": "Nederlands",
     "en": "Engels"

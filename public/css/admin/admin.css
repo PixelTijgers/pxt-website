@@ -70,7 +70,10 @@
   display: none;
 }
 
-:root form.form-content .form-submit {
+form.form-content span.required {
+  color: rgb(101, 113, 255);
+}
+form.form-content .form-submit {
   position: fixed;
   bottom: 0;
   right: 0;

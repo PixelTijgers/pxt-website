@@ -1,17 +1,24 @@
 :root {
-    form.form-content {
-        .form-submit {
-            position: fixed;
-            bottom: 0;
-            right: 0;
-            background: rgba(255, 255, 255, 0.75);
-            width: 100%;
-            height: 65px;
-            display: flex;
-            justify-content: flex-end;
-            padding: 15px;
-            border-top: 1px solid #EEE;
-            z-index: 2;
-        }
+
+}
+
+form.form-content {
+
+    span.required {
+        color: rgb(101, 113, 255);
+    }
+
+    .form-submit {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        background: rgba(255, 255, 255, 0.75);
+        width: 100%;
+        height: 65px;
+        display: flex;
+        justify-content: flex-end;
+        padding: 15px;
+        border-top: 1px solid #EEE;
+        z-index: 2;
     }
 }

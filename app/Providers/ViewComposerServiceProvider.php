@@ -14,6 +14,7 @@ class ViewComposerServiceProvider extends ServiceProvider
         view::composer('*', \App\Http\Viewcomposers\NameSpaceViewComposer::class);
         view::composer('front/layouts/*', \App\Http\Viewcomposers\NavigationMenuViewComposer::class);
         view::composer('front/modules/*', \App\Http\Viewcomposers\PageViewComposer::class);
+        view::composer('admin.modules.administrator.createEdit', \App\Http\Viewcomposers\SyncPermissionsViewComposer::class);
     }
 
     /**
