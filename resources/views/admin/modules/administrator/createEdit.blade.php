@@ -15,10 +15,16 @@
                             (@$administrator ? __('Edit') . ' ' . \Str::Lower(__('User')) . ': ' . $administrator->name : __('User') . ' ' . \Str::Lower(__('Add'))) => '#'
                         ],
                     ])
-                    @if ($errors->any())
+                    @if(session('type'))
+
+                    <div class="alert alert-fill-{{ session('type') }} alert-dismissible fade show" role="alert">
+                        {{ session('message') }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="btn-close"></button>
+                    </div>
+                    @elseif ($errors->any())
 
                     <div class="alert alert-fill-danger alert-dismissible fade show" role="alert">
-                        {{ __('modules.msg_alert_error') }}
+                        {{ __('Item Error') }}
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="btn-close"></button>
                     </div>
                     @endif
@@ -116,22 +122,20 @@
 
                                                         <x-form.radio
                                                             name="role"
-                                                            wrapperClass="admin-permissions-switcher"
+                                                            wrapperClass="admin-permissions-switcher mb-5"
                                                             :label="__('Usertype')"
                                                             :value="(@$administrator ? \Arr::first($administrator->roles->pluck('name')->toArray()) : null)"
                                                             :options="[
                                                                 'superadmin'    => __('Superadmin'),
                                                                 'administrator' => __('Administrator'),
-                                                                'moderator'     => __('Moderator'),
                                                                 'editor'        => __('Editor'),
                                                                 'user'          => __('User'),
-                                                                'demo'          => __('Demo'),
                                                             ]"
                                                         />
 
                                                         @endrole
 
-                                                        <h6 class="card-title mt-5">{{ __('Image') }}</h6>
+                                                        <h6 class="card-title">{{ __('Image') }}</h6>
 
                                                         <x-form.file
                                                             name="avatar"
@@ -147,7 +151,7 @@
                                             </div>
 
                                         </div>
-                                        
+
                                     </div>
 
                                 </div>
@@ -155,8 +159,9 @@
                             </div>
 
                         </div>
+                        @if(auth()->user()->roles->pluck('name')->first() === 'superadmin')
 
-                        <div class="row">
+                        <div class="row admin-permissions">
 
                             <div class="col-md-12 grid-margin stretch-card">
 
@@ -164,7 +169,7 @@
 
                                     <div class="card-body">
 
-                                        <div class="col-md-12 admin-permissions {{ @$administrator ? (\Arr::first(@$administrator->roles->pluck('name')->toArray()) == 'superadmin' ? 'd-none' : null) : null }}">
+                                        <div class="col-md-12">
 
                                             <div>
 
@@ -218,6 +223,7 @@
                             </div>
 
                         </div>
+                        @endif()
 
                         <div class="form-submit">
                             <button type="submit" class="btn btn-primary">{{ (@$administrator ? __('Edit') : __('Add')) }}</button>

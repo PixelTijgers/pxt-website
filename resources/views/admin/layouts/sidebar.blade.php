@@ -46,7 +46,7 @@
 
                             @csrf
 
-                            <a href="#" class="nav-link" onclick="document.getElementById('logoutForm').submit();">
+                            <a href="{{ route('logout') }}" class="nav-link" onclick="event.preventDefault(); this.closest('form').submit();" role="button">
                                 <i class="link-icon fa-regular fa-right-from-bracket"></i><span class="link-title">{{ __('Logout') }}</span>
                             </a>
 

@@ -178,13 +178,25 @@ class AdministratorController extends Controller
             $administrator->update(array_filter($request->validated()));
         }
 
-        // Remove older role.
-        $administrator->removeRole(\Arr::first($administrator->roles->pluck('name')->toArray()));
+        // If the selected user is Michiel, you can't change the user rights.
+        if($administrator->id > 1 || auth()->user()->roles->pluck('name')->first() === 'superadmin')
+        {
+            // Remove older role.
+            $administrator->removeRole(\Arr::first($administrator->roles->pluck('name')->toArray()));
 
-        // If the user role is Super Admin, no new permissions will be added to the database.
-        // This is because the Super Admin has all rights.
-        // Set role to administrator
-        $administrator->assignRole($request->role);
+            // If the user role is Super Admin, no new permissions will be added to the database.
+            // This is because the Super Admin has all rights.
+            // Set role to administrator
+            $administrator->assignRole($request->role);
+        }
+        else
+        {
+            // Return back with message.
+            return redirect()->back()->with([
+                'type' => 'danger',
+                'message' => __('Item Delete Michiel')
+            ]);
+        }
 
         // Add new permissions.
         if($request->role != 'superadmin')

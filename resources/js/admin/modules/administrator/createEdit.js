@@ -3,26 +3,12 @@ common.View.create('admin.modules.administrator.CreateEdit', {
     onDOMLoad()
     {
         this.initTest();
-        this.showPermissions();
         this.userPermissions();
         this.changeUserInput();
     },
 
     initTest() {
         console.log('Init: admin-modules-administrator.CreateEdit');
-    },
-
-    showPermissions()
-    {
-        $('.admin-permissions-switcher input').on('change', function(){
-
-            var role = $('input[name="role"]:checked').val();
-
-            if(role != 'superadmin')
-                $('.admin-permissions').removeClass('d-none').addClass('d-block');
-            else
-                $('.admin-permissions').removeClass('d-block').addClass('d-none');
-        });
     },
 
     userPermissions()

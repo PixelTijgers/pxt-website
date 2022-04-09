@@ -70,7 +70,7 @@
 
                                     <li class="dropdown-item py-2">
 
-                                        <a href="{{ url('/general/profile') }}" class="text-body ms-0">
+                                        <a href="{{ url('/admin/modules/administrators/' . auth()->user()->id .  '/edit') }}" class="text-body ms-0">
                                             <i class="me-2 icon-md fa-regular fa-user"></i><span>{{ __('Profile') }}</span>
                                         </a>
 
@@ -78,9 +78,15 @@
 
                                     <li class="dropdown-item py-2">
 
-                                        <a href="{{ route('logout') }}" class="text-body ms-0">
-                                            <i class="me-2 icon-md fa-regular fa-right-from-bracket"></i><span>{{ __('Logout') }}</span>
-                                        </a>
+                                        <form method="post" action="{{ route('logout') }}" id="logoutForm">
+
+                                            @csrf
+
+                                            <a href="{{ route('logout') }}" class="text-body ms-0" onclick="event.preventDefault(); this.closest('form').submit();" role="button">
+                                                <i class="me-2 icon-md fa-regular fa-right-from-bracket"></i><span>{{ __('Logout') }}</span>
+                                            </a>
+
+                                        </form>
 
                                     </li>
 

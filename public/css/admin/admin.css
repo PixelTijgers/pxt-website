@@ -104,6 +104,11 @@ form.form-content .form-submit {
   width: 100% !important;
 }
 
+.svg.icon-md {
+  height: 16px !important;
+  width: 16px !important;
+}
+
 a {
   transition: all 0.15s ease-in 0s !important;
 }
