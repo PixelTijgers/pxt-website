@@ -7,7 +7,7 @@ $(document).on('click', '.delete-item-form button', function(e){
         title: 'Item verwijderen',
         text: "Als het item eenmaal verwijderd is, kun je het niet meer terughalen.",
         icon: 'warning',
-        confirmButtonColor: '#fc3869',
+        confirmButtonColor: '#05a34a',
         confirmButtonText: 'Ja, verwijder item',
         showCancelButton: true,
         cancelButtonText: 'Annuleren',

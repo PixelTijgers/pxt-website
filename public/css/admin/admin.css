@@ -87,6 +87,11 @@ form.form-content .form-submit {
   z-index: 2;
 }
 
+.swal2-actions .swal2-styled {
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
 .admin-layouts-Sidebar .sidebar-header a.sidebar-brand {
   width: 75%;
 }
