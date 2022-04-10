@@ -29,6 +29,14 @@
                         </a>
                     </li>
                     @endcan
+                    @can('modules.administrator.index')
+
+                    <li class="nav-item {{ active(['*/socials', '*/socials/*']) }}">
+                        <a href="{{ url('/admin/modules/socials') }}" class="nav-link">
+                            <i class="link-icon fa-regular fa-share-nodes"></i><span class="link-title">{{ __('Social Media') }}</span>
+                        </a>
+                    </li>
+                    @endcan
 
                     <li class="nav-item nav-category">{{ __('Admin') }}</li>
                     @can('modules.administrator.index')

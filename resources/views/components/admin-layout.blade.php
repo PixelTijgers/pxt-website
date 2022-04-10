@@ -17,12 +17,15 @@
     <link href="{{ URL::asset('plugins/dropify/dist/css/dropify.min.css') }}" rel="stylesheet" />
     <link href="{{ URL::asset('plugins/flag-icons/css/flag-icons.min.css') }}" rel="stylesheet" />
     <link href="{{ URL::asset('plugins/perfect-scrollbar/css/perfect-scrollbar.css') }}" rel="stylesheet" />
+    <link href="{{ URL::asset('plugins/select2/dist/css/select2.min.css') }}" rel="stylesheet" />
+    <link href="{{ URL::asset('plugins/@ttskch/select2-bootstrap4-theme/dist/select2-bootstrap4.min.css') }}" rel="stylesheet" />
 
     <!-- Plugins Scripts -->
     <script src="{{ URL::asset('plugins/jquery/dist/jquery.min.js') }}"></script>
     <script src="{{ URL::asset('plugins/bootstrap/dist/js/bootstrap.min.js') }}"></script>
     <script src="{{ URL::asset('plugins/dropify/dist/js/dropify.min.js') }}"></script>
     <script src="{{ URL::asset('plugins/perfect-scrollbar/dist/perfect-scrollbar.min.js') }}"></script>
+    <script src="{{ URL::asset('plugins/select2/dist/js/select2.full.min.js') }}"></script>
     <script src="{{ URL::asset('plugins/@fortawesome/fontawesome-pro/js/all.min.js') }}"></script>
     <script src="{{ URL::asset('plugins/@popperjs/core/dist/umd/popper.js') }}"></script>
 

@@ -1,3 +1,7 @@
+.alert.alert-dismissible {
+  margin-top: 15px;
+}
+
 .components-auth-Layout .auth-side-wrapper {
   height: 100%;
   background-position: center center;
@@ -16,8 +20,16 @@
   width: 60% !important;
 }
 
+.button-group a,
+.button-group button {
+  margin-left: 15px;
+}
+
 .table-responsive {
   overflow: hidden;
+}
+.table-responsive > :not(:first-child) {
+  border: none;
 }
 .table-responsive .actionHandler {
   width: 70px !important;
@@ -65,6 +77,9 @@
 .table-responsive .col-sm-12 ul.pagination {
   font-size: 12px !important;
 }
+.table-responsive .sortable-ui tr {
+  border-bottom: 1px solid #EEE;
+}
 
 .dropify-container .dropify-wrapper .dropify-message .file-icon:before {
   display: none;
@@ -87,9 +102,144 @@ form.form-content .form-submit {
   z-index: 2;
 }
 
+.ui-sortable-handle {
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+.ui-sortable-handle:active {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+.ui-sortable-handle .sortableHandler {
+  color: #727cf5;
+  font-size: 15px;
+}
+.ui-sortable-handle .sortableHandler svg {
+  margin-right: -2px;
+  margin-bottom: -2px;
+  font-size: 20px !important;
+}
+.ui-sortable-handle svg {
+  font-size: 20px !important;
+  margin-bottom: -2px !important;
+}
+
+.sortableLists,
+#s-l-base {
+  background: #FFF;
+  border: 1px solid #e8ebf1;
+  border-top: none;
+}
+.sortableLists .btn,
+#s-l-base .btn {
+  border-radius: 50% !important;
+  height: 30px !important;
+  width: 30px !important;
+}
+.sortableLists .btn svg,
+#s-l-base .btn svg {
+  color: #FFF;
+  height: 12px !important;
+}
+.sortableLists li,
+#s-l-base li {
+  align-items: center;
+  border-top: 1px solid #e8ebf1 !important;
+}
+.sortableLists li ul li div.pageElement,
+#s-l-base li ul li div.pageElement {
+  height: 45px;
+}
+.sortableLists li ul li div.pageElement .pageTitle,
+#s-l-base li ul li div.pageElement .pageTitle {
+  padding-left: 50px;
+}
+.sortableLists li ul li div.pageElement .pageTitle:before,
+#s-l-base li ul li div.pageElement .pageTitle:before {
+  font-family: "Font Awesome 5 Free";
+  color: rgba(80, 97, 238, 0.55);
+  content: "\f148";
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: 900;
+  transform: rotate(90deg);
+  margin-right: 10px;
+  margin-top: 1px;
+}
+.sortableLists li ul ul li div.pageElement .pageTitle,
+#s-l-base li ul ul li div.pageElement .pageTitle {
+  padding-left: 70px;
+}
+.sortableLists li.dragedElement,
+#s-l-base li.dragedElement {
+  background: #FFF;
+  border: 1px solid #e8ebf1;
+  cursor: move;
+  opacity: 0.65;
+}
+.sortableLists li.placeholderElement,
+#s-l-base li.placeholderElement {
+  background: rgba(80, 97, 238, 0.55);
+}
+.sortableLists li.hintClass,
+#s-l-base li.hintClass {
+  background: rgba(80, 97, 238, 0.15);
+}
+.sortableLists li div.pageElement,
+#s-l-base li div.pageElement {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+.sortableLists li div.pageElement .sortableHandler,
+#s-l-base li div.pageElement .sortableHandler {
+  align-items: center;
+  border-right: 1px solid #e8ebf1;
+  color: #5061EE;
+  cursor: move;
+  display: flex;
+  font-size: 20px;
+  height: 45px;
+  justify-content: center;
+  width: 40px;
+}
+.sortableLists li div.pageElement .sortableHandler svg,
+#s-l-base li div.pageElement .sortableHandler svg {
+  margin-right: 2px !important;
+}
+.sortableLists li div.pageElement .pageTitle,
+#s-l-base li div.pageElement .pageTitle {
+  padding-left: 20px;
+}
+.sortableLists li div.pageElement .actionHandler,
+#s-l-base li div.pageElement .actionHandler {
+  align-items: center;
+  border-left: 1px solid #e8ebf1;
+  cursor: move;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 45px;
+  padding: 0 5px;
+  position: absolute;
+  right: 0;
+  width: 80px;
+}
+
 .swal2-actions .swal2-styled {
   border: 0 !important;
   box-shadow: none !important;
+}
+
+#toast-container > .toast-success {
+  background: #05a34a !important;
+  background-image: none !important;
+}
+
+.admin-modules-administrator-CreateEdit .grouped-permissions h6 {
+  border-bottom: 1px solid #EFEFEF;
+  padding-bottom: 7px;
 }
 
 .admin-layouts-Sidebar .sidebar-header a.sidebar-brand {

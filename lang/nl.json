@@ -11,8 +11,11 @@
     "Usertype": "Gebruikerstype",
     "Image": "Afbeelding",
     "Image Description": "Je kunt enkel .jpg, .jpeg of .png bestanden uploaden.",
+    "Icon": "Icoon",
+    "Url": "URL",
     "Actions": "Acties",
     "General": "Algemene gegevens",
+    "Select Icon": "Selecteer icoon",
 
     "Demo": "Demo Gebruiker",
     "Editor": "Redacteur",
@@ -33,6 +36,11 @@
 
     "Dashboard": "Dashboard",
     "Dashboard Description": "Het dashboard biedt een overzicht van [...]",
+
+    "Social Media": "Social Media",
+    "Social Media Description": "Een overzicht met alle actieve social media kanalen. Je kunt de volgorde wijzigen door deze te verslepen en op te slaan.",
+    "Social Media Add": "Voeg een nieuw social media kanaal toe.",
+    "Social Media Edit": "Wijzig hier het geselecteerde social media kanaal.",
 
     "Admin": "Beheer",
 
@@ -75,10 +83,17 @@
     "Add": "Toevoegen",
     "Edit": "Wijzig",
     "Destroy": "Verwijderen",
+    "SaveOrder": "Volgorde opslaan",
+    "UpdateSortable": "Volgorde opslaan",
 
     "Icon Dashboard": "gauge",
     "Icon Administrator": "user-group",
+    "Icon Social": "share-nodes",
 
     "nl": "Nederlands",
-    "en": "Engels"
+    "en": "Engels",
+
+    "validation.numeric": ":Attribute moet een getal zijn.",
+    "validation.required": ":Attribute is verplicht.",
+    "validation.url": ":Attribute moet een geldige URL zijn."
 }

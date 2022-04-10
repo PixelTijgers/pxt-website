@@ -29,7 +29,7 @@
                     </div>
                     @endif
 
-                    <form class="form-content row" method="post" action="{{ (@$administrator ? route('administrator.update', $administrator) : route('administrator.store')) }}" enctype="multipart/form-data">
+                    <form class="form-content" method="post" action="{{ (@$administrator ? route('administrator.update', $administrator) : route('administrator.store')) }}" enctype="multipart/form-data">
 
                         <div class="row">
 

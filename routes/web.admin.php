@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 // Controllers.
 use App\Http\Controllers\Admin\Modules\DashboardController;
 use App\Http\Controllers\Admin\Modules\AdministratorController;
+use App\Http\Controllers\Admin\Modules\SocialController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,10 +34,14 @@ Route::middleware(['auth:sanctum', 'verified', 'admin.permission'])->prefix('adm
     Route::prefix('modules')->group(function () {
 
         // Init dashboard route(s).
-        Route::get('dashboard', [DashboardController::class, 'index']);
+        Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
+        // Init social media route(s).
+        Route::resource('socials', SocialController::class, ['names' => 'social'])->except(['show']);
+        Route::post('socials/updateSortable', [SocialController::class, 'updateSortable']);
 
         // Init administrators route(s).
-        Route::resource('administrators', AdministratorController::class, ['names' => 'administrator'])->except(['show']);
+        Route::resource('administrators', AdministratorController::class, ['names' => 'administrator']);
 
     });
 

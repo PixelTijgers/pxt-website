@@ -38,21 +38,28 @@ const ResourceMix = require('./resources/js/common/ResourceMix.js');
             'dropify/dist/js/dropify.min.js',
             'jquery/dist/jquery.min.js',
             'jquery-sticky/jquery.sticky.js',
+            'jquery-ui-dist/jquery-ui.min.js',
             'mburger-css/dist/mburger.js',
             'mmenu-js/dist/mmenu.js',
             'mmenu-light/dist/mmenu-light.js',
             'mmenu-light/dist/mmenu-light.polyfills.js',
             'perfect-scrollbar/dist/perfect-scrollbar.min.js',
+            'select2/dist/js/select2.full.min.js',
             'sweetalert2/dist/sweetalert2.all.min.js',
+            'toastr/build/toastr.min.js',
 
             // Styles
+            '@ttskch/select2-bootstrap4-theme/dist/select2-bootstrap4.min.css',
             'bootstrap/dist/css/bootstrap.min.css',
             'datatables.net-bs4/css/dataTables.bootstrap4.min.css',
             'dropify/dist/css/dropify.min.css',
             'flag-icons/css/flag-icons.min.css',
+            'jquery-ui-dist/jquery-ui.min.css',
             'mburger-css/dist/mburger.css',
             'mmenu-js/dist/mmenu.css',
             'mmenu-light/dist/mmenu-light.css',
             'perfect-scrollbar/css/perfect-scrollbar.css',
+            'select2/dist/css/select2.min.css',
             'sweetalert2/dist/sweetalert2.min.css',
+            'toastr/build/toastr.min.css'
         ]);

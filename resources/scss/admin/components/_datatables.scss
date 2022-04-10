@@ -5,7 +5,11 @@
 // Datatables.
 .table-responsive {
     overflow: hidden;
-    
+
+    & > :not(:first-child) {
+        border: none;
+    }
+
     .actionHandler {
         width: 70px !important;
     }
@@ -59,6 +63,12 @@
 
         ul.pagination {
             font-size: 12px !important;
+        }
+    }
+
+    .sortable-ui {
+        tr {
+            border-bottom: 1px solid #EEE;
         }
     }
 }

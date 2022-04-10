@@ -80,7 +80,7 @@ class SocialController extends Controller
         // Return back with message.
         return redirect()->route('social.index')->with([
                 'type' => 'success',
-                'message' => __('form.social') . __('admin.msg_add_success')
+                'message' => __('Item Add')
             ]
         );
     }
@@ -115,7 +115,7 @@ class SocialController extends Controller
         // Return back with message.
         return redirect()->route('social.index')->with([
                 'type' => 'success',
-                'message' => __('form.social') . __('admin.msg_edit_success')
+                'message' => __('Item Edit')
             ]
         );
     }
@@ -135,7 +135,7 @@ class SocialController extends Controller
         // Return back with message.
         return redirect()->back()->with([
             'type' => 'success',
-            'message' => __('form.social') . __('admin.msg_delete_success')
+            'message' => __('Item Delete')
         ]);
     }
 }
