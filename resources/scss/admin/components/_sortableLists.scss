@@ -6,6 +6,10 @@
 .ui-sortable-handle {
     cursor: grab;
 
+    td {
+        vertical-align: middle;
+    }
+
     &:active {
         cursor: grabbing;
     }

@@ -106,6 +106,9 @@ form.form-content .form-submit {
   cursor: -webkit-grab;
   cursor: grab;
 }
+.ui-sortable-handle td {
+  vertical-align: middle;
+}
 .ui-sortable-handle:active {
   cursor: -webkit-grabbing;
   cursor: grabbing;
