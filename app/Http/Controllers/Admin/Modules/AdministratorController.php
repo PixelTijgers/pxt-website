@@ -30,6 +30,22 @@ class AdministratorController extends Controller
     use MediaHandlerTrait;
 
     /**
+     * Update the user role and privileges.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    private function updateRoles($administrator, $request)
+    {
+        // Remove older role.
+        $administrator->removeRole(\Arr::first($administrator->roles->pluck('name')->toArray()));
+
+        // If the user role is Super Admin, no new permissions will be added to the database.
+        // This is because the Super Admin has all rights.
+        // Set role to administrator
+        $administrator->assignRole($request->role);
+    }
+
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -179,15 +195,25 @@ class AdministratorController extends Controller
         }
 
         // If the selected user is Michiel, you can't change the user rights.
-        if($administrator->id > 1 || auth()->user()->roles->pluck('name')->first() === 'superadmin')
+        if(auth()->user()->id === 1)
         {
-            // Remove older role.
-            $administrator->removeRole(\Arr::first($administrator->roles->pluck('name')->toArray()));
+            if($request->role === 'superadmin')
+            {
+                $this->updateRoles($administrator, $request);
+            }
+            else
+            {
+                // Return back with message.
+                return redirect()->back()->with([
+                    'type' => 'danger',
+                    'message' => __('Item Delete Michiel')
+                ]);
+            }
 
-            // If the user role is Super Admin, no new permissions will be added to the database.
-            // This is because the Super Admin has all rights.
-            // Set role to administrator
-            $administrator->assignRole($request->role);
+        }
+        elseif($administrator->id > 1 || auth()->user()->roles->pluck('name')->first() === 'superadmin')
+        {
+            $this->updateRoles($administrator, $request);
         }
         else
         {
