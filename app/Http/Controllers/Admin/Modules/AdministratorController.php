@@ -197,7 +197,7 @@ class AdministratorController extends Controller
         // If the selected user is Michiel, you can't change the user rights.
         if(auth()->user()->id === 1)
         {
-            if($request->role === 'superadmin')
+            if($administrator->id > 1)
             {
                 $this->updateRoles($administrator, $request);
             }
