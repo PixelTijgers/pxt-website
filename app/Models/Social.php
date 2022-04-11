@@ -8,13 +8,17 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Kalnoy\Nestedset\NodeTrait;
 
+// Traits.
+use Spatie\Permission\Traits\HasRoles;
+
 class Social extends Model
 {
     /**
      * Traits
      *
      */
-    use NodeTrait;
+    use HasRoles,
+        NodeTrait;
 
     protected $fillable = [
         'social_media_id',

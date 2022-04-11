@@ -29,7 +29,39 @@
                         </a>
                     </li>
                     @endcan
-                    @can('modules.administrator.index')
+                    @can(['modules.post.index', 'modules.category.index'])
+
+                    <li class="nav-item {{ active(['*/posts/categories', '*/posts/categories/*']) }}">
+                        <a class="nav-link" data-bs-toggle="collapse" href="#posts" role="button" aria-expanded="false" aria-controls="posts">
+                            <i class="link-icon fa-regular fa-newspaper"></i>
+                            <span class="link-title">{{ __('Articles') }}</span>
+                             <i class="link-arrow fa-regular fa-chevron-down"></i>
+                        </a>
+
+                        <div class="collapse" id="posts">
+
+                            <ul class="nav sub-menu">
+                                @can('modules.post.index')
+
+                                <li class="nav-item">
+                                    <a href="{{ url('/admin/modules/posts') }}" class="nav-link ">{{ __('Post') }}</a>
+                                </li>
+                                @endcan
+                                @can('modules.category.index')
+
+                                <li class="nav-item">
+                                    <a href="{{ url('/admin/modules/posts/categories') }}" class="nav-link ">{{ __('Categories') }}</a>
+                                </li>
+                                @endcan
+                                
+                            </ul>
+
+                        </div>
+
+                    </li>
+                    @endcan
+
+                    @can('modules.social.index')
 
                     <li class="nav-item {{ active(['*/socials', '*/socials/*']) }}">
                         <a href="{{ url('/admin/modules/socials') }}" class="nav-link">

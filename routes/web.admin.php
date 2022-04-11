@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 
 // Controllers.
 use App\Http\Controllers\Admin\Modules\DashboardController;
+use App\Http\Controllers\Admin\Modules\PostController;
+use App\Http\Controllers\Admin\Modules\CategoryController;
 use App\Http\Controllers\Admin\Modules\AdministratorController;
 use App\Http\Controllers\Admin\Modules\SocialController;
 
@@ -35,6 +37,12 @@ Route::middleware(['auth:sanctum', 'verified', 'admin.permission'])->prefix('adm
 
         // Init dashboard route(s).
         Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
+        // Init posts.
+        Route::resource('posts', PostController::class, ['names' => 'post'])->except(['show']);
+
+        // Init categories.
+        Route::resource('posts/categories', CategoryController::class, ['names' => 'category']);
 
         // Init social media route(s).
         Route::resource('socials', SocialController::class, ['names' => 'social'])->except(['show']);

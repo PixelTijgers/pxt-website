@@ -25,10 +25,19 @@ class DatabaseSeeder extends Seeder
             NavigationMenuSeeder::class,
             Menu\MainSeeder::class,
 
+            // Website seeders.
+            CategorySeeder::class,
+
             // Social media seeder.
             SocialMediaSeeder::class,
             SocialSeeder::class,
         ]);
-        // \App\Models\User::factory(10)->create();
+
+        // Only run factories on local or staging env.
+        if (\App::environment(['local', 'staging'])) {
+
+            // Call factories.
+            \App\Models\Post::factory()->count(150)->create();
+        }
     }
 }

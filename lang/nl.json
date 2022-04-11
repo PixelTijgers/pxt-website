@@ -37,6 +37,12 @@
     "Dashboard": "Dashboard",
     "Dashboard Description": "Het dashboard biedt een overzicht van [...]",
 
+    "Articles": "Artikelen",
+    "Post": "Bericht",
+    "Category": "Categorie",
+    "Categories": "Categorieën",
+    "Categories Description": "Een overzicht met alle categorieën voor die je kunt selecteren bij de artikelen.",
+
     "Social Media": "Social Media",
     "Social Media Description": "Een overzicht met alle actieve social media kanalen. Je kunt de volgorde wijzigen door deze te verslepen en op te slaan.",
     "Social Media Add": "Voeg een nieuw social media kanaal toe.",

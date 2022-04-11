@@ -40,9 +40,9 @@ class CategoryController extends Controller
             ->addColumn('action', function (Category $category) {
                 return
                     '<div class="d-flex">' .
-                    $this->setAction('category.index', $category, 'view', 'categories', false) .
-                    $this->setAction('category.edit', $category, 'update', 'categories') .
-                    $this->setAction('category.destroy', $category, 'destroy', 'categories') .
+                    $this->setAction('category.index', $category, 'view', 'posts/categories', false) .
+                    $this->setAction('category.edit', $category, 'update', 'posts/categories') .
+                    $this->setAction('category.destroy', $category, 'destroy', 'posts/categories') .
                     '</div>';
             })
             ->make(true);
@@ -51,11 +51,11 @@ class CategoryController extends Controller
         // Set values.
         $html = $builder
                     ->addColumn([
-                        'title' => __('form.name'),
+                        'title' => __('Name'),
                         'data' => 'name'
                     ])
                     ->addAction([
-                        'title' => __('form.action'),
+                        'title' => __('Actions'),
                         'class' => 'actionHandler'
                     ])
                     ->parameters([
@@ -92,7 +92,7 @@ class CategoryController extends Controller
         // Return back with message.
         return redirect()->route('category.index')->with([
                 'type' => 'success',
-                'message' => __('form.category') . __('admin.msg_add_success')
+                'message' => __('Item Add')
             ]
         );
     }
@@ -127,7 +127,7 @@ class CategoryController extends Controller
         // Return back with message.
         return redirect()->route('category.index')->with([
                 'type' => 'success',
-                'message' => __('form.category') . __('admin.msg_edit_success')
+                'message' => __('Item Edit')
             ]
         );
     }
@@ -146,7 +146,7 @@ class CategoryController extends Controller
         // Return back with message.
         return redirect()->back()->with([
             'type' => 'success',
-            'message' => __('form.category') . __('admin.msg_delete_success')
+            'message' => __('Item Delete')
         ]);
     }
 }
