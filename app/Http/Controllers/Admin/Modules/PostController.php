@@ -91,28 +91,28 @@ class PostController extends Controller
         // Set values.
         $html = $builder
                     ->addColumn([
-                        'title' => __('form.title'),
+                        'title' => __('Title'),
                         'data' => 'title',
                     ])
                     ->addColumn([
-                        'title' => __('form.category'),
+                        'title' => __('Category'),
                         'data' => 'category.name',
                     ])
                     ->addColumn([
-                        'title' => __('form.author'),
+                        'title' => __('Author'),
                         'data' => 'administrator.name',
                     ])
                     ->addColumn([
-                        'title' => __('form.published_at'),
+                        'title' => __('Published At'),
                         'data' => 'published_at',
                     ])
                     ->addColumn([
-                        'title' => __('form.published'),
+                        'title' => __('Published'),
                         'data' => 'published',
                         'class' => 'published'
                     ])
                     ->addAction([
-                        'title' => __('form.action'),
+                        'title' => __('Actions'),
                         'class' => 'actionHandler'
                     ])
                     ->parameters([
