@@ -27,6 +27,7 @@ class DatabaseSeeder extends Seeder
 
             // Website seeders.
             CategorySeeder::class,
+            LocaleSeeder::class,
 
             // Social media seeder.
             SocialMediaSeeder::class,

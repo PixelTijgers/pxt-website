@@ -33,11 +33,14 @@ const ResourceMix = require('./resources/js/common/ResourceMix.js');
             '@fortawesome/fontawesome-pro/js/all.min.js',
             '@popperjs/core/dist/umd/popper.js',
             'bootstrap/dist/js/bootstrap.min.js',
+            'bootstrap-maxlength/dist/bootstrap-maxlength.min.js',
             'datatables.net/js/jquery.dataTables.min.js',
             'datatables.net-bs4/js/dataTables.bootstrap4.min.js',
             'dropify/dist/js/dropify.min.js',
             'jquery/dist/jquery.min.js',
+            'jquery-slugify/dist/slugify.min.js',
             'jquery-sticky/jquery.sticky.js',
+            'jquery-tags-input/dist/jquery.tagsinput.min.js',
             'jquery-ui-dist/jquery-ui.min.js',
             'mburger-css/dist/mburger.js',
             'mmenu-js/dist/mmenu.js',
@@ -45,7 +48,9 @@ const ResourceMix = require('./resources/js/common/ResourceMix.js');
             'mmenu-light/dist/mmenu-light.polyfills.js',
             'perfect-scrollbar/dist/perfect-scrollbar.min.js',
             'select2/dist/js/select2.full.min.js',
+            'speakingurl/lib/speakingurl.js',
             'sweetalert2/dist/sweetalert2.all.min.js',
+            'tempusdominus-bootstrap-4/build/js/tempusdominus-bootstrap-4.min.js',
             'toastr/build/toastr.min.js',
 
             // Styles
@@ -54,6 +59,7 @@ const ResourceMix = require('./resources/js/common/ResourceMix.js');
             'datatables.net-bs4/css/dataTables.bootstrap4.min.css',
             'dropify/dist/css/dropify.min.css',
             'flag-icons/css/flag-icons.min.css',
+            'jquery-tags-input/dist/jquery.tagsinput.min.css',
             'jquery-ui-dist/jquery-ui.min.css',
             'mburger-css/dist/mburger.css',
             'mmenu-js/dist/mmenu.css',
@@ -61,5 +67,6 @@ const ResourceMix = require('./resources/js/common/ResourceMix.js');
             'perfect-scrollbar/css/perfect-scrollbar.css',
             'select2/dist/css/select2.min.css',
             'sweetalert2/dist/sweetalert2.min.css',
+            'tempusdominus-bootstrap-4/build/css/tempusdominus-bootstrap-4.min.css',
             'toastr/build/toastr.min.css'
         ]);

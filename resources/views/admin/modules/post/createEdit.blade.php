@@ -1,0 +1,132 @@
+@section('meta')
+<title>{{ config('app.name') }} | {{ (@$post ? __('Edit') . ' ' . \Str::Lower(__('Post')) . ': ' . $post->title : __('Post') . ' ' . __('Add')) }}</title>
+    <meta name="description" content="{{ (@$post ? __('Edit') . ' ' . \Str::Lower(__('Post')) . ': ' . $post->title : __('Post') . ' ' . __('Add')) }}" />
+@endsection
+
+<x-adminLayout>
+
+    <div class="{{ $cssNs }}">
+
+                    @include('admin.layouts.breadcrumb', [
+                        'title' => __('Post'),
+                        'description' => (@$post ? __('Edit') . ' ' . \Str::Lower(__('Post')) : __('Post') . ' ' . __('Add')),
+                        'breadcrum' => [
+                            __('Post') => route('post.index'),
+                            (@$post ? __('Edit') . ' ' . \Str::Lower(__('Post')) . ': ' . $post->title : __('Post') . ' ' . __('Add')) => '#'
+                        ],
+                    ])
+                    @if ($errors->any())
+
+                    <div class="alert alert-fill-danger alert-dismissible fade show" role="alert">
+                        {{ __('Item Error') }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="btn-close"></button>
+                    </div>
+                    @endif
+
+                    <form class="form-content" method="post" action="{{ (@$post ? route('post.update', $post) : route('post.store')) }}">
+
+                        <div class="row">
+
+                            <div class="col-md-12 grid-margin stretch-card">
+
+                                <div class="card">
+
+                                    <div class="card-body">
+
+                                        <div class="col-md-12">
+
+                                            @csrf
+
+                                            @if(@$post)
+
+                                            @method('PATCH')
+
+                                            @endif
+
+                                            <ul class="nav nav-tabs nav-tabs-line" id="lineTab" role="tablist">
+
+                                                <li class="nav-item">
+                                                    <a class="nav-link active" id="content-line-tab" data-bs-toggle="tab" data-bs-target="#content_tab" role="tab" aria-controls="content" aria-selected="true">{{ __('Content') }}</a>
+                                                </li>
+
+                                                <li class="nav-item">
+                                                    <a class="nav-link" id="publication-line-tab" data-bs-toggle="tab" data-bs-target="#publication" role="tab" aria-controls="publication" aria-selected="true">{{ __('Publication') }}</a>
+                                                </li>
+
+                                                <li class="nav-item">
+                                                    <a class="nav-link" id="og-line-tab" data-bs-toggle="tab" data-bs-target="#og" role="tab" aria-controls="og" aria-selected="true">{{ __('Meta') }}</a>
+                                                </li>
+
+                                            </ul>
+
+                                            <div class="tab-content mt-3" id="lineTabContent">
+
+                                                <div class="tab-pane fade show active" id="content_tab" role="tabpanel" aria-labelledby="content-line-tab">
+
+                                                    @include('admin.modules.post.includes.content')
+
+                                                </div>
+
+                                                <div class="tab-pane fade" id="publication" role="tabpanel" aria-labelledby="publication-line-tab">
+
+                                                    @include('admin.modules.post.includes.publication')
+
+                                                </div>
+
+                                                <div class="tab-pane fade" id="og" role="tabpanel" aria-labelledby="og-line-tab">
+
+                                                    @include('admin.modules.post.includes.meta')
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-md-12 grid-margin stretch-card">
+
+                                <div class="card">
+
+                                    <div class="card-body">
+
+                                        <div class="col-md-12">
+
+                                            <h6 class="card-title mt-4">{{ __('Image') }}</h6>
+
+                                            <x-form.file
+                                                name="postImage"
+                                                :label="__('Image')"
+                                                :file="(@$post ? $post->getFirstMediaUrl('postImage') : null)"
+                                                extensions="jpg jpeg png"
+                                                :description="__('Image Description')"
+                                            />
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="form-submit">
+                            <button type="submit" class="btn btn-primary">{{ (@$post ? __('Edit') : __('Add')) }}</button>
+                        </div>
+
+                    </form>
+
+                </div>
+
+</x-adminLayout>

@@ -2,7 +2,7 @@
 
                                 <label for="{{ @$id ? $id : $name }}" class="form-label">
 
-                                    <span>{{ $label }}:</span> @if($required === true)<span class="required">*</span>@endif
+                                    <span>{{ $label }}:</span> @if(@$required === true)<span class="required">*</span>@endif
 
                                 </label>
 

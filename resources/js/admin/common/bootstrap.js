@@ -8,7 +8,6 @@ window._ = require('lodash');
 
 try {
 
-    /*
     // Init moment
     window.moment = require('moment');
     window.moment.locale('nl');
@@ -16,7 +15,7 @@ try {
 
     // Init ckEditor
     window.ClassicEditor = require('@ckeditor/ckeditor5-build-classic');
-    */
+
 
 } catch (e) {}
 
