@@ -28,6 +28,13 @@
                             __('Posts') => '#',
                         ],
                     ])
+                    @if(session('type'))
+
+                    <div class="alert alert-fill-{{ session('type') }} alert-dismissible fade show" role="alert">
+                        {{ session('message') }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="btn-close"></button>
+                    </div>
+                    @endif
 
                     <div class="row">
 
@@ -48,13 +55,6 @@
                                         @endcan
 
                                     </div>
-                                    @if(session('type'))
-
-                                    <div class="alert alert-fill-{{ session('type') }} alert-dismissible fade show" role="alert">
-                                        {{ session('message') }}
-                                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="btn-close"></button>
-                                    </div>
-                                    @endif
 
                                     <div class="table-responsive">
 

@@ -40,9 +40,9 @@ class CategoryController extends Controller
             ->addColumn('action', function (Category $category) {
                 return
                     '<div class="d-flex">' .
-                    $this->setAction('category.index', $category, 'view', 'posts/categories', false) .
-                    $this->setAction('category.edit', $category, 'update', 'posts/categories') .
-                    $this->setAction('category.destroy', $category, 'destroy', 'posts/categories') .
+                    $this->setAction('category.index', $category, 'view', 'categories', false) .
+                    $this->setAction('category.edit', $category, 'update', 'categories') .
+                    $this->setAction('category.destroy', $category, 'destroy', 'categories') .
                     '</div>';
             })
             ->make(true);

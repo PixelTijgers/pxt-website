@@ -28,6 +28,13 @@
                             __('Users') => '#',
                         ],
                     ])
+                    @if(session('type'))
+
+                    <div class="alert alert-fill-{{ session('type') }} alert-dismissible fade show" role="alert">
+                        {{ session('message') }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="btn-close"></button>
+                    </div>
+                    @endif
 
                     <div class="row">
 
@@ -42,19 +49,12 @@
 
                                         <div class="col-md-12 d-flex justify-content-end mb-4">
 
-                                            <a href="{{ route('administrator.create') }}" class="btn btn-primary">{{ __('User') }} {{ __('Add') }}</a>
+                                            <a href="{{ route('administrator.create') }}" class="btn btn-primary">{{ __('User') }} {{ \Str::Lower(__('Add')) }}</a>
 
                                         </div>
                                         @endcan
 
                                     </div>
-                                    @if(session('type'))
-
-                                    <div class="alert alert-fill-{{ session('type') }} alert-dismissible fade show" role="alert">
-                                        {{ session('message') }}
-                                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="btn-close"></button>
-                                    </div>
-                                    @endif
 
                                     <div class="table-responsive">
 

@@ -31,7 +31,7 @@
                     @endcan
                     @can(['modules.post.index', 'modules.category.index'])
 
-                    <li class="nav-item {{ active(['*/posts', '*/posts/*', '*/posts/categories', '*/posts/categories/*']) }}">
+                    <li class="nav-item {{ active(['*/posts', '*/posts/*', '*/categories', '*/categories/create','*/categories/*/edit']) }}">
                         <a class="nav-link" data-bs-toggle="collapse" href="#posts" role="button" aria-expanded="false" aria-controls="posts">
                             <i class="link-icon fa-regular fa-newspaper"></i>
                             <span class="link-title">{{ __('Articles') }}</span>
@@ -50,7 +50,7 @@
                                 @can('modules.category.index')
 
                                 <li class="nav-item">
-                                    <a href="{{ url('/admin/modules/posts/categories') }}" class="nav-link {{ active(['*/posts/categories', '*/posts/categories/*']) }}">{{ __('Categories') }}</a>
+                                    <a href="{{ url('/admin/modules/categories') }}" class="nav-link {{ active(['*/categories', '*/categories/create','*/categories/*/edit']) }}">{{ __('Categories') }}</a>
                                 </li>
                                 @endcan
 

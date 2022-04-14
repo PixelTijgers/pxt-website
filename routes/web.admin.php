@@ -42,7 +42,7 @@ Route::middleware(['auth:sanctum', 'verified', 'admin.permission'])->prefix('adm
         Route::resource('posts', PostController::class, ['names' => 'post'])->except(['show']);
 
         // Init categories.
-        Route::resource('posts/categories', CategoryController::class, ['names' => 'category']);
+        Route::resource('categories', CategoryController::class, ['names' => 'category']);
 
         // Init social media route(s).
         Route::resource('socials', SocialController::class, ['names' => 'social'])->except(['show']);

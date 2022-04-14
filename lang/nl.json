@@ -74,6 +74,7 @@
     "Category": "Categorie",
     "Categories": "Categorieën",
     "Categories Description": "Een overzicht met alle categorieën voor die je kunt selecteren bij de artikelen.",
+    "Category Add": "Voeg een nieuwe categorie toe.",
 
     "Social Media": "Social Media",
     "Social Media Description": "Een overzicht met alle actieve social media kanalen. Je kunt de volgorde wijzigen door deze te verslepen en op te slaan.",
@@ -127,6 +128,8 @@
     "Icon Dashboard": "gauge",
     "Icon Administrator": "user-group",
     "Icon Social": "share-nodes",
+    "Icon Post": "newspaper",
+    "Icon Category": "tags",
 
     "nl": "Nederlands",
     "en": "Engels",

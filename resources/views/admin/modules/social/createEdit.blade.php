@@ -1,5 +1,5 @@
 @section('meta')
-<title>{{ config('app.name') }} | {{ (@$social ? __('Edit') . ' ' . \Str::Lower(__('Social Media')) . ': ' . $social->name : __('Social Media') . ' ' . __('Add')) }}</title>
+<title>{{ config('app.name') }} | {{ (@$social ? __('Edit') . ' ' . \Str::Lower(__('Social Media')) . ': ' . $social->socialmedia->name : __('Social Media') . ' ' . \Str::Lower(__('Add'))) }}</title>
     <meta name="description" content="{{ (@$social ? __('Social Media Edit') : __('Social Media Add')) }}" />
 @endsection
 
@@ -9,10 +9,10 @@
 
                     @include('admin.layouts.breadcrumb', [
                         'title' => __('Social Media'),
-                        'description' => (@$social ? __('Edit') . ' ' . \Str::Lower(__('Social Media')) : __('Social Media') . ' ' . __('Add')),
+                        'description' => (@$social ? __('Edit') . ' ' . \Str::Lower(__('Social Media')) . ': ' . $social->socialmedia->name : __('Social Media') . ' ' . \Str::Lower(__('Add'))),
                         'breadcrum' => [
                             __('Social Media') => route('social.index'),
-                            (@$social ? __('Edit') . ' ' . \Str::Lower(__('Social Media')) : __('Social Media') . ' ' . __('Add')) => '#'
+                            (@$social ? __('Edit') . ' ' . \Str::Lower(__('Social Media')) . ': ' . $social->socialmedia->name : __('Social Media') . ' ' . \Str::Lower(__('Add'))) => '#'
                         ],
                     ])
                     @if ($errors->any())
@@ -25,6 +25,14 @@
 
                     <form class="form-content" method="post" action="{{ (@$social ? route('social.update', $social) : route('social.store')) }}">
 
+                        @csrf
+
+                        @if(@$social)
+
+                        @method('PATCH')
+
+                        @endif
+
                         <div class="row">
 
                             <div class="col-md-12 grid-margin stretch-card">
@@ -35,38 +43,22 @@
 
                                         <div class="col-md-6">
 
-                                            @csrf
+                                            <x-form.select
+                                                name="social_media_id"
+                                                :required="true"
+                                                :label="__('Social Media')"
+                                                :value="(old('social_media_id') ? old('social_media_id') : (@$social ? $social->social_media_id : null))"
+                                                :options="\App\Models\SocialMedia::all()->sortBy('type')"
+                                                :valueWrapper="['id', 'name']"
+                                                :disabledOption="__('Select Icon')"
+                                            />
 
-                                            @if(@$social)
-
-                                            @method('PATCH')
-
-                                            @endif
-
-                                            <div>
-
-                                                <div>
-
-                                                    <x-form.select
-                                                        name="social_media_id"
-                                                        :required="true"
-                                                        :label="__('Social Media')"
-                                                        :value="(old('social_media_id') ? old('social_media_id') : (@$social ? $social->social_media_id : null))"
-                                                        :options="\App\Models\SocialMedia::all()->sortBy('type')"
-                                                        :valueWrapper="['id', 'name']"
-                                                        :disabledOption="__('Select Icon')"
-                                                    />
-
-                                                    <x-form.input
-                                                        type="text"
-                                                        name="content"
-                                                        :label="__('Url')"
-                                                        :value="(old('content') ? old('content') : (@$social ? $social->content : null))"
-                                                    />
-
-                                                </div>
-
-                                            </div>
+                                            <x-form.input
+                                                type="text"
+                                                name="content"
+                                                :label="__('Url')"
+                                                :value="(old('content') ? old('content') : (@$social ? $social->content : null))"
+                                            />
 
                                         </div>
 

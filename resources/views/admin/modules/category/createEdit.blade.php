@@ -9,7 +9,7 @@
 
                     @include('admin.layouts.breadcrumb', [
                         'title' => __('Category'),
-                        'description' => (@$category ? __('Edit') . ' ' . \Str::Lower(__('Category')) . ': ' . $category->name  : __('Category') . ' ' . \Str::Lower(__('Add'))),
+                        'description' => (@$category ? __('Edit') . ' ' . \Str::Lower(__('Category')) . ': ' . $category->name  : __('Category Add')),
                         'breadcrum' => [
                             __('Category') => route('category.index'),
                             (@$category ? __('Edit') . ' ' . \Str::Lower(__('Category')) . ': ' . $category->name  : __('Category') . ' ' . \Str::Lower(__('Add'))) => '#'
