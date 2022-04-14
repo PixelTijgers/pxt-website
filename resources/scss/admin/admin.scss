@@ -3,6 +3,11 @@
 @use './modules' as *;
 @use './layouts' as *;
 
+// Overwrite Template styles.
+.navbar {
+    z-index: 1050;
+}
+
 // Default styles.
 a {
     transition: all 0.15s ease-in 0s !important;
@@ -19,7 +24,7 @@ ul {
 }
 
 textarea {
-    height: 125px !important;
+    height: 150px !important;
     resize: none !important;
     line-height: 150% !important;
     word-spacing: 2px !important;

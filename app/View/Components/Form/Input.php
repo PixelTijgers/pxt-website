@@ -21,18 +21,18 @@ class Input extends Component
     public $name;
 
     /**
-     * The input label.
-     *
-     * @var string
-     */
-    public $label;
-
-    /**
      * The input value.
      *
      * @var string
      */
     public $value;
+
+    /**
+     * The input label.
+     *
+     * @var string
+     */
+    public $label;
 
     /**
      * The input id.
@@ -42,11 +42,32 @@ class Input extends Component
     public $id;
 
     /**
+     * The input description.
+     *
+     * @var string
+     */
+    public $description;
+
+    /**
      * The input class.
      *
      * @var string
      */
     public $class;
+
+    /**
+     * The input row (custom).
+     *
+     * @var boolean
+     */
+    public $row;
+
+    /**
+     * The input cols (custom).
+     *
+     * @var array
+     */
+    public $cols;
 
     /**
      * The required attribute.
@@ -56,27 +77,38 @@ class Input extends Component
     public $required;
 
     /**
-     * The input description.
+     * The readonly attribute.
      *
-     * @var string
+     * @var boolean
      */
-    public $description;
+    public $readonly;
+
+    /**
+     * The required attribute.
+     *
+     * @var boolean
+     */
+    public $disabled;
 
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($type, $name, $label, $value = null, $id = null, $class = null, $required = true, $description = null)
+    public function __construct($type, $name, $value = null, $label = null, $id = null, $description = false, $class = null, $row = false, $cols = [], $disabled = false, $readonly = false, $required = true)
     {
         $this->type = $type;
         $this->name = $name;
-        $this->label = $label;
         $this->value = $value;
+        $this->label = $label;
         $this->id = $id;
-        $this->class = $class;
-        $this->required = $required;
         $this->description = $description;
+        $this->class = $class;
+        $this->row = $row;
+        $this->cols = $cols;
+        $this->disabled = $disabled;
+        $this->readonly = $readonly;
+        $this->required = $required;
     }
 
     /**

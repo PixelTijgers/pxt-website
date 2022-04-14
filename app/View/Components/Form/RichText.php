@@ -7,60 +7,108 @@ use Illuminate\View\Component;
 class RichText extends Component
 {
     /**
-     * The input name.
-     *
-     * @var string
-     */
+    * The input name.
+    *
+    * @var string
+    */
     public $name;
 
     /**
-     * The input value.
-     *
-     * @var string
-     */
+    * The input value.
+    *
+    * @var string
+    */
     public $value;
 
     /**
-     * The input label.
-     *
-     * @var string
-     */
+    * The input label.
+    *
+    * @var string
+    */
     public $label;
 
     /**
-     * The input description.
-     *
-     * @var string
-     */
+    * The input id.
+    *
+    * @var string
+    */
+    public $id;
+
+    /**
+    * The input description.
+    *
+    * @var string
+    */
     public $description;
 
     /**
-     * The input class.
-     *
-     * @var string
-     */
+    * The input class.
+    *
+    * @var string
+    */
     public $class;
 
     /**
-     * The required attribute.
-     *
-     * @var boolean
-     */
+    * The input row (custom).
+    *
+    * @var boolean
+    */
+    public $row;
+
+    /**
+    * The input cols (custom).
+    *
+    * @var array
+    */
+    public $cols;
+
+    /**
+    * The required attribute.
+    *
+    * @var boolean
+    */
     public $required;
 
     /**
-     * Create a new component instance.
-     *
-     * @return void
-     */
-    public function __construct($name, $value = null, $label = null, $description = false, $class = null, $required = null)
+    * The readonly attribute.
+    *
+    * @var boolean
+    */
+    public $readonly;
+
+    /**
+    * The required attribute.
+    *
+    * @var boolean
+    */
+    public $disabled;
+
+    /**
+    * The maxLength attribute.
+    *
+    * @var boolean
+    */
+    public $maxLength;
+
+    /**
+    * Create a new component instance.
+    *
+    * @return void
+    */
+    public function __construct($name, $value = null, $label = null, $id = null, $description = false, $class = null, $row = false, $cols = [], $disabled = false, $readonly = false, $required = true, $maxLength = null)
     {
         $this->name = $name;
         $this->value = $value;
         $this->label = $label;
+        $this->id = $id;
         $this->description = $description;
         $this->class = $class;
+        $this->row = $row;
+        $this->cols = $cols;
+        $this->disabled = $disabled;
+        $this->readonly = $readonly;
         $this->required = $required;
+        $this->maxLength = $maxLength;
     }
 
     /**

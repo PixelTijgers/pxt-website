@@ -35,6 +35,10 @@ class PostFactory extends Factory
             'intro'             => $this->faker->paragraph(20),
             'content'           => $this->faker->paragraph(20),
 
+            'meta_title'        => $this->faker->sentence(8),
+            'meta_description'  => $this->faker->paragraph(15),
+            'meta_tags'         => 'Website, Webdesign, Design',
+
             'og_title'          => $this->faker->sentence(8),
             'og_description'    => $this->faker->paragraph(15),
             'og_url'            => \Str::slug($title),

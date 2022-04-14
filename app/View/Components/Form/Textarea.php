@@ -14,13 +14,6 @@ class Textarea extends Component
     public $name;
 
     /**
-     * The input name.
-     *
-     * @var string
-     */
-    public $required;
-
-    /**
      * The input value.
      *
      * @var string
@@ -33,6 +26,13 @@ class Textarea extends Component
      * @var string
      */
     public $label;
+
+    /**
+     * The input id.
+     *
+     * @var string
+     */
+    public $id;
 
     /**
      * The input description.
@@ -49,7 +49,42 @@ class Textarea extends Component
     public $class;
 
     /**
-     * The maxlength of the textarea.
+     * The input row (custom).
+     *
+     * @var boolean
+     */
+    public $row;
+
+    /**
+     * The input cols (custom).
+     *
+     * @var array
+     */
+    public $cols;
+
+    /**
+     * The required attribute.
+     *
+     * @var boolean
+     */
+    public $required;
+
+    /**
+     * The readonly attribute.
+     *
+     * @var boolean
+     */
+    public $readonly;
+
+    /**
+     * The required attribute.
+     *
+     * @var boolean
+     */
+    public $disabled;
+
+    /**
+     * The maxLength attribute.
      *
      * @var boolean
      */
@@ -60,14 +95,19 @@ class Textarea extends Component
      *
      * @return void
      */
-    public function __construct($name, $required = null, $value = null, $label = null, $description = false, $class = null, $maxLength = null)
+    public function __construct($name, $value = null, $label = null, $id = null, $description = false, $class = null, $row = false, $cols = [], $disabled = false, $readonly = false, $required = true, $maxLength = null)
     {
         $this->name = $name;
-        $this->required = $required;
         $this->value = $value;
         $this->label = $label;
+        $this->id = $id;
         $this->description = $description;
         $this->class = $class;
+        $this->row = $row;
+        $this->cols = $cols;
+        $this->disabled = $disabled;
+        $this->readonly = $readonly;
+        $this->required = $required;
         $this->maxLength = $maxLength;
     }
 

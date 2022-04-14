@@ -32,6 +32,12 @@ class CreatePostsTable extends Migration
             $table->text('intro');
             $table->text('content');
 
+            // Meta content.
+            $table->string('meta_title')->unique();
+            $table->text('meta_description');
+            $table->string('meta_tags');
+
+            // OG content.
             $table->string('og_title')->unique();
             $table->text('og_description');
             $table->string('og_url')->unique();

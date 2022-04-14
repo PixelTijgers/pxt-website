@@ -7,13 +7,6 @@ use Illuminate\View\Component;
 class File extends Component
 {
     /**
-     * The input label.
-     *
-     * @var string
-     */
-    public $label;
-
-    /**
      * The input name.
      *
      * @var string
@@ -21,18 +14,32 @@ class File extends Component
     public $name;
 
     /**
-     * The input file.
+     * The readonly attribute.
      *
-     * @var string
+     * @var boolean
      */
     public $file;
 
     /**
-     * The allowed input extensions.
+     * The required attribute.
+     *
+     * @var boolean
+     */
+    public $extensions;
+
+    /**
+     * The input label.
      *
      * @var string
      */
-    public $extensions;
+    public $label;
+
+    /**
+     * The input id.
+     *
+     * @var string
+     */
+    public $id;
 
     /**
      * The input description.
@@ -49,26 +56,59 @@ class File extends Component
     public $class;
 
     /**
+     * The input row (custom).
+     *
+     * @var boolean
+     */
+    public $row;
+
+    /**
      * The input cols (custom).
      *
      * @var array
      */
-    public $id;
+    public $cols;
+
+    /**
+     * The required attribute.
+     *
+     * @var boolean
+     */
+    public $required;
+
+    /**
+     * The readonly attribute.
+     *
+     * @var boolean
+     */
+    public $readonly;
+
+    /**
+     * The required attribute.
+     *
+     * @var boolean
+     */
+    public $disabled;
 
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($label = null, $name, $file = null, $extensions, $description = null, $class = null, $id = null)
+    public function __construct($name, $file, $extensions, $id = null, $label = null, $description = false, $class = null, $row = false, $cols = [], $disabled = false, $readonly = false, $required = true)
     {
-        $this->label = $label;
         $this->name = $name;
         $this->file = $file;
         $this->extensions = $extensions;
+        $this->id = $id;
+        $this->label = $label;
         $this->description = $description;
         $this->class = $class;
-        $this->id = $id;
+        $this->row = $row;
+        $this->cols = $cols;
+        $this->disabled = $disabled;
+        $this->readonly = $readonly;
+        $this->required = $required;
     }
 
     /**

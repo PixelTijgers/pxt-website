@@ -2,9 +2,18 @@
 
 }
 
+.table > :not(:first-child) {
+    border: none;
+}
+
 // Datatables.
 .table-responsive {
     overflow: hidden;
+
+    .table-striped > tbody > tr:nth-of-type(2n+1),
+    .table-striped > tbody > tr {
+        border: transparent !important
+    }
 
     & > :not(:first-child) {
         border: none;

@@ -32,6 +32,10 @@ class PostRequest extends FormRequest
             'administrator_id'  =>  'required|numeric|min:1',
             'category_id'       =>  'required|numeric|min:1',
 
+            'meta_title'        =>  'required|string|max:255|unique:pages,meta_title' . (@$this->post->id ? ',' . $this->post->id : null),
+            'meta_description'  =>  'required|min:1|max:160',
+            'meta_tags'         =>  'required|string|min:1',
+
             'og_title'          =>  'required|string|max:255',
             'og_description'    =>  'required|string|max:175',
             'og_url'            =>  'required|slug|max:255',
@@ -57,18 +61,6 @@ class PostRequest extends FormRequest
     }
 
     /**
-     * Get custom attributes for validator errors.
-     *
-     * @return array
-     */
-    public function attributes()
-    {
-        return [
-
-        ];
-    }
-
-    /**
      * Prepare the data for validation.
      *
      * @return void
@@ -77,7 +69,7 @@ class PostRequest extends FormRequest
     {
         // Merge into request.
         $this->merge([
-            'published'         => ($this->published == 'on' ? 1 : 0),
+            'published'         => ($this->published !== null ? 1 : 0),
             'published_at'      => \Carbon\Carbon::createFromFormat('d-m-Y H:i', $this->published_at)->toDateTimeString(),
             'unpublished_at'    => \Carbon\Carbon::createFromFormat('d-m-Y H:i', $this->unpublished_at)->toDateTimeString(),
         ]);

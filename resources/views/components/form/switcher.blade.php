@@ -1,30 +1,51 @@
-<div class="{{ $cssNs }} mb-3">
+<div class="{{ $cssNs }} mb-4 {{ (@$row === true ? ' row': null) }}">
 
-                                <label for="{{ @$id ? $id : $name }}" class="form-label">
-                                    <span>{{ $label }}:</span> @if($required === true)<span class="required">*</span>@endif
+    @if(@$label)
+    <label for="{{ @$id ? $id : $name }}" class="card-title form-label {{ (@$row === true ? (@$cols ? $cols[0] : 'col-2') : 'mb-2') }}">
 
-                                </label>
+        <span>{{ $label }}:</span> @if($required === true)<span class="required">*</span>@endif
 
-                                <div class="form-check form-switch mb-2">
+    </label>
+    @endif
 
-                                    <input
-                                        name="{{ $name }}"
-                                        type="checkbox"
-                                        class="form-check-input{{ (@$class === true ? ' ' . $class : null) }} @error($name) border-danger @enderror"
-                                        id="{{ $name }}"
-                                        {{ (old() ? (old($name) === 'on' ? 'checked' : null) : ($value === 1 ? 'checked' : null)) }}
-                                    />
+    <div class="{{ ($row ? (@$cols ? $cols[1] : 'col-10') : null) }}">
 
-                                    <label class="custom-control-label" for="{{ $name }}"></label>
+        <div class="form-check form-switch mb-2">
 
-                                </div>
-                                @if(@$description)
+            <input
+                type="checkbox"
+                name="{{ $name }}"
+                id="{{ @$id ? $id : $name }}"
+                placeholder="{{ $label }}"
+                class="form-check-input {{ @$class }} @error($name) border-danger @enderror"
+                value="{{ $value }}"
+                {{ (old() ? (old($name) === 'on' ? 'checked' : null) : ($value === 1 ? 'checked' : null)) }}
 
-                                <p class="card-description small mt-2 text-muted">{{ @$description }}</p>
-                                @endif
-                                @error($name)
+                @if($required)
+                    required
+                @endif
 
-                                <label id="{{ $name }}-error" class="error mt-2 small text-danger" for="{{ $name }}">{{ $message }}</label>
-                                @enderror
+                @if($readonly)
+                    readonly
+                @endif
 
-                            </div>
+                @if($disabled)
+                    disabled
+                @endif
+            />
+
+            <label class="custom-control-label" for="{{ @$id ? $id : $name }}"></label>
+
+        </div>
+
+        @if(@$description)
+        <p class="card-description small mt-2 text-muted">{{ @$description }}</p>
+        @endif
+
+        @error($name)
+        <label id="{{ $name }}-error" class="error mt-2 small text-danger" for="{{ $name }}">{{ $message }}</label>
+        @enderror
+
+    </div>
+
+</div>

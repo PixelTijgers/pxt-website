@@ -9,10 +9,10 @@
 
                     @include('admin.layouts.breadcrumb', [
                         'title' => __('Post'),
-                        'description' => (@$post ? __('Edit') . ' ' . \Str::Lower(__('Post')) : __('Post') . ' ' . __('Add')),
+                        'description' => (@$post ? __('Edit') . ' ' . \Str::Lower(__('Post')) : __('Message Add')),
                         'breadcrum' => [
                             __('Post') => route('post.index'),
-                            (@$post ? __('Edit') . ' ' . \Str::Lower(__('Post')) . ': ' . $post->title : __('Post') . ' ' . __('Add')) => '#'
+                            (@$post ? __('Edit') . ' ' . \Str::Lower(__('Post')) . ': ' . $post->title : __('Post') . ' ' . \Str::Lower(__('Add'))) => '#'
                         ],
                     ])
                     @if ($errors->any())
@@ -23,7 +23,15 @@
                     </div>
                     @endif
 
-                    <form class="form-content" method="post" action="{{ (@$post ? route('post.update', $post) : route('post.store')) }}">
+                    <form class="form-content" method="post" action="{{ (@$post ? route('post.update', $post) : route('post.store')) }}" enctype="multipart/form-data">
+
+                        @csrf
+
+                        @if(@$post)
+
+                        @method('PATCH')
+
+                        @endif
 
                         <div class="row">
 
@@ -35,14 +43,6 @@
 
                                         <div class="col-md-12">
 
-                                            @csrf
-
-                                            @if(@$post)
-
-                                            @method('PATCH')
-
-                                            @endif
-
                                             <ul class="nav nav-tabs nav-tabs-line" id="lineTab" role="tablist">
 
                                                 <li class="nav-item">
@@ -50,11 +50,11 @@
                                                 </li>
 
                                                 <li class="nav-item">
-                                                    <a class="nav-link" id="publication-line-tab" data-bs-toggle="tab" data-bs-target="#publication" role="tab" aria-controls="publication" aria-selected="true">{{ __('Publication') }}</a>
+                                                    <a class="nav-link" id="meta-line-tab" data-bs-toggle="tab" data-bs-target="#meta" role="tab" aria-controls="meta" aria-selected="true">{{ __('Meta') }}</a>
                                                 </li>
 
                                                 <li class="nav-item">
-                                                    <a class="nav-link" id="og-line-tab" data-bs-toggle="tab" data-bs-target="#og" role="tab" aria-controls="og" aria-selected="true">{{ __('Meta') }}</a>
+                                                    <a class="nav-link" id="og-line-tab" data-bs-toggle="tab" data-bs-target="#og" role="tab" aria-controls="og" aria-selected="true">{{ __('OG Tags') }}</a>
                                                 </li>
 
                                             </ul>
@@ -67,49 +67,19 @@
 
                                                 </div>
 
-                                                <div class="tab-pane fade" id="publication" role="tabpanel" aria-labelledby="publication-line-tab">
-
-                                                    @include('admin.modules.post.includes.publication')
-
-                                                </div>
-
-                                                <div class="tab-pane fade" id="og" role="tabpanel" aria-labelledby="og-line-tab">
+                                                <div class="tab-pane fade" id="meta" role="tabpanel" aria-labelledby="meta-line-tab">
 
                                                     @include('admin.modules.post.includes.meta')
 
                                                 </div>
 
+                                                <div class="tab-pane fade" id="og" role="tabpanel" aria-labelledby="og-line-tab">
+
+                                                    @include('admin.modules.post.includes.og')
+
+                                                </div>
+
                                             </div>
-
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <div class="row">
-
-                            <div class="col-md-12 grid-margin stretch-card">
-
-                                <div class="card">
-
-                                    <div class="card-body">
-
-                                        <div class="col-md-12">
-
-                                            <h6 class="card-title mt-4">{{ __('Image') }}</h6>
-
-                                            <x-form.file
-                                                name="postImage"
-                                                :label="__('Image')"
-                                                :file="(@$post ? $post->getFirstMediaUrl('postImage') : null)"
-                                                extensions="jpg jpeg png"
-                                                :description="__('Image Description')"
-                                            />
 
                                         </div>
 

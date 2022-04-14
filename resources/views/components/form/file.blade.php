@@ -1,61 +1,74 @@
-<div class="{{ $cssNs }} mb-3">
+<div class="{{ $cssNs }} mb-4 {{ (@$row === true ? ' row': null) }}">
 
-                                <label for="{{ @$id ? $id : $name }}" class="form-label">
-                                    <span>{{ $label }}:</span> <span class="required">*</span>
+    @if($label)
+    <label for="{{ @$id ? $id : $name }}" class="card-title form-label {{ (@$row === true ? (@$cols ? $cols[0] : 'col-2') : 'mb-2') }}">
 
-                                </label>
+        <span>{{ $label }}:</span> @if($required === true)<span class="required">*</span>@endif
 
-                                <div class="dropify-container {{ (@$row ? (@$cols ? $cols[1] : 'col-10') : null) }}">
-                                @if(@$file)
+    </label>
+    @endif
 
-                                    <input
-                                        type="hidden"
-                                        name="{{ $name }}CurrentImage"
-                                        value="{{ $file }}"
-                                    />
-                                @endif
+    <div class="dropify-container {{ (@$row ? (@$cols ? $cols[1] : 'col-10') : null) }}">
 
-                                    <input
-                                        type="file"
-                                        id="{{ (@$id ? $id : $name) }}"
-                                        class="dropify border {{ @$class }}"
-                                        name="{{ $name }}"
-                                        data-allowed-file-extensions="{{ $extensions }}"
-                                        @if(@$file)
-                                        data-default-file="{{ $file }}"
-                                        @endif
-                                    />
-                                    @if(@$description)
+    @if(@$file)
+    <input
+        type="hidden"
+        name="{{ $name }}CurrentImage"
+        value="{{ $file }}"
+    />
+    @endif
 
-                                    <p class="card-description small mt-2 text-muted">{{ $description }}</p>
-                                    @endif
-                                    @error($name)
+        <input
+            type="file"
+            name="{{ $name }}"
+            id="{{ @$id ? $id : $name }}"
+            placeholder="{{ $label }}"
+            class="border {{ @$class }} @error($name) border-danger @enderror"
+            data-allowed-file-extensions="{{ $extensions }}"
 
-                                    <label id="{{ $name }}-error" class="error mt-2 small text-danger" for="{{ $name }}">{{ $message }}</label>
-                                    @enderror
+            @if(@$file)
+                data-default-file="{{ $file }}"
+            @endif
 
-                                </div>
+            @if($required)
+                required
+            @endif
 
-                            </div>
+            @if($readonly)
+                readonly
+            @endif
 
-                            <script>
+            @if($disabled)
+                disabled
+            @endif
+        />
+        @if($description)
+        <p class="card-description small mt-2 text-muted">{{ $description }}</p>
+        @endif
 
-                                $(function() {
+        @error($name)
+        <label id="{{ $name }}-error" class="error mt-2 small text-danger" for="{{ $name }}">{{ $message }}</label>
+        @enderror
 
-                                    $('.dropify').dropify({
-                                        messages: {
-                                            'default': '{{ __('Dropify Default') }}',
-                                            'replace': '{{ __('Dropify Replace') }}',
-                                            'remove':  '{{ __('Dropify Remove') }}',
-                                            'error':   '{{ __('Dropify Image Format') }}'
-                                        },
-                                        error: {
-                                            'imageFormat': '{{ __('Dropify Default') }}'
-                                        }
-                                    })
-                                    .on('dropify.afterClear', function(event, element){
-                                        $('input[name="{{ $name }}CurrentImage"]').removeAttr('value');
-                                    });
-                                });
+    </div>
 
-                            </script>
+</div>
+
+<script>
+    $(function() {
+        $('#{{ @$id ? $id : $name }}').dropify({
+            messages: {
+                'default': '{{ __('Dropify Default') }}',
+                'replace': '{{ __('Dropify Replace') }}',
+                'remove':  '{{ __('Dropify Remove') }}',
+                'error':   '{{ __('Dropify Image Format') }}'
+            },
+            error: {
+                'imageFormat': '{{ __('Dropify Default') }}'
+            }
+        })
+        .on('dropify.afterClear', function(event, element){
+            $('input[name="{{ $name }}CurrentImage"]').removeAttr('value');
+        });
+    });
+</script>

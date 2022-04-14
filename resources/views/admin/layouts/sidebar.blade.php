@@ -44,7 +44,7 @@
                                 @can('modules.post.index')
 
                                 <li class="nav-item">
-                                    <a href="{{ url('/admin/modules/posts') }}" class="nav-link {{ active(['*/posts', '*/posts/*/edit']) }}">{{ __('Post') }}</a>
+                                    <a href="{{ url('/admin/modules/posts') }}" class="nav-link {{ active(['*/posts', '*/posts/create', '*/posts/*/edit']) }}">{{ __('Post') }}</a>
                                 </li>
                                 @endcan
                                 @can('modules.category.index')

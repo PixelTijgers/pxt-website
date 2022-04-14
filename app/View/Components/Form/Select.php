@@ -14,13 +14,6 @@ class Select extends Component
     public $name;
 
     /**
-     * Required value.
-     *
-     * @var string
-     */
-    public $required;
-
-    /**
      * The input value.
      *
      * @var string
@@ -28,25 +21,18 @@ class Select extends Component
     public $value;
 
     /**
-     * The input options.
-     *
-     * @var array
-     */
-    public $options;
-
-    /**
-     * The valuewrapper for the items.
-     *
-     * @var array
-     */
-    public $valueWrapper;
-
-    /**
      * The input label.
      *
      * @var string
      */
     public $label;
+
+    /**
+     * The input id.
+     *
+     * @var string
+     */
+    public $id;
 
     /**
      * The input description.
@@ -63,6 +49,55 @@ class Select extends Component
     public $class;
 
     /**
+     * The input row (custom).
+     *
+     * @var boolean
+     */
+    public $row;
+
+    /**
+     * The input cols (custom).
+     *
+     * @var array
+     */
+    public $cols;
+
+    /**
+     * The required attribute.
+     *
+     * @var boolean
+     */
+    public $required;
+
+    /**
+     * The readonly attribute.
+     *
+     * @var boolean
+     */
+    public $readonly;
+
+    /**
+     * The required attribute.
+     *
+     * @var boolean
+     */
+    public $disabled;
+
+    /**
+     * The input options.
+     *
+     * @var array
+     */
+    public $options;
+
+    /**
+     * The valuewrapper for the items.
+     *
+     * @var array
+     */
+    public $valueWrapper;
+
+    /**
      * The disabled attribute.
      *
      * @var string
@@ -74,17 +109,22 @@ class Select extends Component
      *
      * @return void
      */
-    public function __construct($name, $required, $value = null, $options = null, $valueWrapper = false, $label = null, $description = false, $class = null, $disabledOption = null)
+    public function __construct($name, $value = null, $label = null, $id = null, $description = false, $class = null, $row = false, $cols = [], $disabled = false, $readonly = false, $required = true, $disabledOption = null, $options = null, $valueWrapper = false,)
     {
         $this->name = $name;
-        $this->required = $required;
         $this->value = $value;
-        $this->options = $options;
-        $this->valueWrapper = $valueWrapper;
         $this->label = $label;
+        $this->id = $id;
         $this->description = $description;
         $this->class = $class;
+        $this->row = $row;
+        $this->cols = $cols;
+        $this->disabled = $disabled;
+        $this->readonly = $readonly;
+        $this->required = $required;
         $this->disabledOption = $disabledOption;
+        $this->options = $options;
+        $this->valueWrapper = $valueWrapper;
     }
 
     /**

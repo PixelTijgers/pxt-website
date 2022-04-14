@@ -1,38 +1,58 @@
-<div class="{{ $cssNs }} mb-3">
+<div class="{{ $cssNs }} mb-4 {{ (@$row === true ? ' row': null) }}">
 
-                                <label for="{{ @$id ? $id : $name }}" class="form-label">
+    @if(@$label)
+    <label for="{{ @$id ? $id : $name }}" class="card-title form-label {{ (@$row === true ? (@$cols ? $cols[0] : 'col-2') : 'mb-2') }}">
 
-                                    <span>{{ $label }}:</span> @if(@$required === true)<span class="required">*</span>@endif
+        <span>{{ $label }}:</span> @if($required === true)<span class="required">*</span>@endif
 
-                                </label>
+    </label>
+    @endif
 
-                                <textarea
-                                    id="{{ $name }}"
-                                    name="{{ $name }}"
-                                    class="form-control {{ @$class }} @error($name) border-danger @enderror"
-                                    placeholder="{{ $label }}">{{ $value }}</textarea>
-                                @if(@$description)
+    <div class="{{ ($row ? (@$cols ? $cols[1] : 'col-10') : null) }}">
 
-                                <p class="card-description small mt-2 text-muted">{{ @$description }}</p>
-                                @endif
-                                @error($name)
+        <textarea
+            autocomplete="off"
+            name="{{ $name }}"
+            id="{{ @$id ? $id : $name }}"
+            placeholder="{{ $label }}"
+            class="form-control {{ @$class }} @error($name) border-danger @enderror"
 
-                                <label id="{{ $name }}-error" class="error mt-2 small text-danger" for="{{ $name }}">{{ $message }}</label>
-                                @enderror
+            @if($required)
+                required
+            @endif
 
-                            </div>
+            @if($readonly)
+                readonly
+            @endif
 
-                            <script>
+            @if($disabled)
+                disabled
+            @endif
+        />{{ $value }}</textarea>
 
-                                ClassicEditor
-                                    .create( document.querySelector('#{{ $name }}'), {
+        @if(@$description)
+        <p class="card-description small mt-2 text-muted">{{ $description }}</p>
+        @endif
 
-                                    })
-                                    .then(editor => {
-                                        console.log(editor);
-                                    })
-                                    .catch( error => {
-                                        console.error(error);
-                                    });
+        @error($name)
+        <label id="{{ $name }}-error" class="error mt-2 small text-danger" for="{{ $name }}">{{ $message }}</label>
+        @enderror
 
-                            </script>
+    </div>
+
+</div>
+
+<script>
+
+    ClassicEditor
+        .create( document.querySelector('#{{ @$id ? $id : $name }}'), {
+
+        })
+        .then(editor => {
+            console.log(editor);
+        })
+        .catch( error => {
+            console.error(error);
+        });
+
+</script>

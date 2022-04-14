@@ -28,6 +28,13 @@ class Tag extends Component
     public $label;
 
     /**
+     * The input id.
+     *
+     * @var string
+     */
+    public $id;
+
+    /**
      * The input description.
      *
      * @var string
@@ -56,11 +63,11 @@ class Tag extends Component
     public $cols;
 
     /**
-     * The disabled attribute.
+     * The required attribute.
      *
      * @var boolean
      */
-    public $disabled;
+    public $required;
 
     /**
      * The readonly attribute.
@@ -74,18 +81,19 @@ class Tag extends Component
      *
      * @var boolean
      */
-    public $required;
+    public $disabled;
 
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($name, $value = null, $label = null, $description = false, $class = null, $row = true, $cols = [], $disabled = false, $readonly = false, $required = true)
+    public function __construct($name, $value = null, $label = null, $id = null, $description = false, $class = null, $row = false, $cols = [], $disabled = false, $readonly = false, $required = true)
     {
         $this->name = $name;
         $this->value = $value;
         $this->label = $label;
+        $this->id = $id;
         $this->description = $description;
         $this->class = $class;
         $this->row = $row;

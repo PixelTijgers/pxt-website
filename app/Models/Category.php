@@ -17,6 +17,11 @@ class Category extends Model
      */
     use HasRoles;
 
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var string[]
+     */
     protected $fillable = [
         'name',
     ];

@@ -1,57 +1,63 @@
-<div class="{{ $cssNs }} mb-3">
+<div class="{{ $cssNs }} mb-4 {{ (@$row === true ? ' row': null) }}">
 
-                                <label for="{{ @$id ? $id : $name }}" class="form-label">
-                                    <span>{{ $label }}:</span> @if($required === true)<span class="required">*</span>@endif
+    @if(@$label)
+    <label for="{{ @$id ? $id : $name }}" class="card-title form-label {{ (@$row === true ? (@$cols ? $cols[0] : 'col-2') : 'mb-2') }}">
 
-                                </label>
+        <span>{{ $label }}:</span> @if($required === true)<span class="required">*</span>@endif
 
-                                <div>
+    </label>
+    @endif
 
-                                    <input
-                                        type="text"
-                                        id="{{ $name }}"
-                                        name="{{ $name }}"
-                                        class="form-control{{ (@$class === true ? ' ' . $class : null) }} @error($name) border-danger @enderror"
-                                        autocomplete="off"
-                                        placeholder="{{ $label }}"
-                                        value="{{ $value }}"
-                                    />
-                                    @if(@$description)
+    <div class="{{ ($row ? (@$cols ? $cols[1] : 'col-10') : null) }}">
 
-                                    <p class="card-description small mt-2 text-muted">{{ $description }}</p>
-                                    @endif
-                                    @error($name)
+        <input
+            autocomplete="off"
+            type="text"
+            name="{{ $name }}"
+            id="{{ @$id ? $id : $name }}"
+            placeholder="{{ $label }}"
+            class="form-control {{ @$class }} @error($name) border-danger @enderror"
+            value="{{ $value }}"
 
-                                    <label id="{{ $name }}-error" class="error mt-2 small text-danger" for="{{ $name }}">{{ $message }}</label>
-                                    @enderror
+            @if($required)
+                required
+            @endif
 
-                                </div>
-                                @if(@$description)
+            @if($readonly)
+                readonly
+            @endif
 
-                                <p class="card-description small mt-2 text-muted">{{ @$description }}</p>
-                                @endif
-                                @error($name)
+            @if($disabled)
+                disabled
+            @endif
+        />
+        @if(@$description)
+        <p class="card-description small mt-2 text-muted">{{ @$description }}</p>
+        @endif
 
-                                <label id="{{ $name }}-error" class="error mt-2 small text-danger" for="{{ $name }}">{{ $message }}</label>
-                                @enderror
+        @error($name)
+        <label id="{{ $name }}-error" class="error mt-2 small text-danger" for="{{ $name }}">{{ $message }}</label>
+        @enderror
 
-                            </div>
+    </div>
 
-                            <script>
+</div>
 
-                                $(function() {
-                                    'use strict';
+<script>
 
-                                    $('#{{ $name }}').tagsInput({
-                                        'width': '100%',
-                                        'height': '75%',
-                                        'interactive': true,
-                                        'defaultText': 'Tag toevoegen',
-                                        'removeWithBackspace': true,
-                                        'minChars': 0,
-                                        'maxChars': 20,
-                                        'placeholderColor': '#666666'
-                                    });
-                                });
+    $(function() {
+        'use strict';
 
-                            </script>
+        $('#{{ @$id ? $id : $name }}').tagsInput({
+            'width': '100%',
+            'height': '75%',
+            'interactive': true,
+            'defaultText': '{{ __('Add Tag') }}',
+            'removeWithBackspace': true,
+            'minChars': 0,
+            'maxChars': 20,
+            'placeholderColor': '#666666'
+        });
+    });
+
+</script>

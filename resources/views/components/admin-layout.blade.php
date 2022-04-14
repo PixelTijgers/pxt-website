@@ -16,6 +16,7 @@
     <link href="{{ URL::asset('plugins/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet" />
     <link href="{{ URL::asset('plugins/dropify/dist/css/dropify.min.css') }}" rel="stylesheet" />
     <link href="{{ URL::asset('plugins/flag-icons/css/flag-icons.min.css') }}" rel="stylesheet" />
+    <link href="{{ URL::asset('plugins/jquery-tags-input/dist/jquery.tagsinput.min.css') }}" rel="stylesheet" />
     <link href="{{ URL::asset('plugins/perfect-scrollbar/css/perfect-scrollbar.css') }}" rel="stylesheet" />
     <link href="{{ URL::asset('plugins/select2/dist/css/select2.min.css') }}" rel="stylesheet" />
     <link href="{{ URL::asset('plugins/tempusdominus-bootstrap-4/build/css/tempusdominus-bootstrap-4.min.css') }}" rel="stylesheet" />
@@ -48,8 +49,8 @@
     <link href="{{ URL::asset(mix('css/admin/admin.css')) }}" rel="stylesheet" />
 
     <!-- Admin scripts -->
-    <script src="{{ URL::asset(URL::asset('js/admin/nobileUi.js')) }}" defer></script>
     <script src="{{ URL::asset(mix('js/admin/admin.js')) }}"></script>
+    <script src="{{ URL::asset(URL::asset('js/admin/nobileUi.js')) }}"></script>
     <script src="{{ URL::asset('plugins/tempusdominus-bootstrap-4/build/js/tempusdominus-bootstrap-4.min.js') }}"></script>
 </head>
 

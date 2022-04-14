@@ -156,7 +156,7 @@ class PostController extends Controller
         // Return back with message.
         return redirect()->route('post.index')->with([
                 'type' => 'success',
-                'message' => __('form.post') . __('admin.msg_add_success')
+                'message' => __('Item Add')
             ]
         );
     }
@@ -204,7 +204,7 @@ class PostController extends Controller
         // Return back with message.
         return redirect()->route('post.index')->with([
                 'type' => 'success',
-                'message' => __('form.post') . __('admin.msg_edit_success')
+                'message' => __('Item Edit')
             ]
         );
     }
@@ -223,7 +223,7 @@ class PostController extends Controller
         // Return back with message.
         return redirect()->back()->with([
             'type' => 'success',
-            'message' => __('form.post') . __('admin.msg_delete_success')
+            'message' => __('Item Delete')
         ]);
     }
 }

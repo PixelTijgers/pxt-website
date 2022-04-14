@@ -28,15 +28,40 @@ class Post extends Model implements HasMedia
     use InteractsWithMedia;
 
     /**
-     * The attributes that are translatable.
+     * The attributes that are mass assignable.
      *
-     * @var array
+     * @var string[]
      */
-    public $translatable = [
+    protected $fillable = [
+        'administrator_id',
+        'category_id',
         'slug',
         'title',
         'intro',
         'content',
+        'meta_title',
+        'meta_description',
+        'meta_tags',
+        'og_title',
+        'og_description',
+        'og_url',
+        'og_type',
+        'og_locale',
+        'published',
+        'published_at',
+        'unpublished_at'
+    ];
+
+    /**
+     * The attributes that should be cast.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'administrator_id' => 'boolean',
+        'category_id' => 'boolean',
+        'published_at' => 'datetime',
+        'unpublished_at' => 'datetime',
     ];
 
     /**

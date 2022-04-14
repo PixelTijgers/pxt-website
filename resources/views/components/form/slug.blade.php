@@ -1,56 +1,72 @@
-<div class="{{ $cssNs }} mb-3">
+<div class="{{ $cssNs }} mb-4 {{ (@$row === true ? ' row': null) }}">
 
-                                <label for="{{ @$id ? $id : $name }}" class="form-label">
-                                    <span>{{ $label }}:</span> @if($required === true)<span class="required">*</span>@endif
+    @if(@$label)
+    <label for="{{ @$id ? $id : $name }}" class="card-title form-label {{ (@$row === true ? (@$cols ? $cols[0] : 'col-2') : 'mb-2') }}">
 
-                                </label>
+        <span>{{ $label }}:</span> @if($required === true)<span class="required">*</span>@endif
 
-                                <div class="input-group">
+    </label>
+    @endif
 
-                                    <span class="input-group-text">
-                                        @if($model !== null)
-                                            @php
-                                                $prepend = @$modelName;
-                                                $slug = explode('/', $value);
-                                            @endphp
-                                        @else
-                                            @php
-                                                $prepend = null;
-                                                $slug = null;
-                                            @endphp
-                                        @endif
+    <div class="{{ ($row ? (@$cols ? $cols[1] : 'col-10') : null) }}">
 
-                                        {{ url('/') . ($prepend !== null ? $prepend->slug : null) . '/' }}
-                                    </span>
+        <div class="input-group">
 
-                                    <input
-                                        type="text"
-                                        id="{{ $name }}"
-                                        name="{{ $name }}"
-                                        class="form-control {{ @$class }} @error($name) form-control-danger @enderror"
-                                        autocomplete="off"
-                                        placeholder="{{ $label }}"
-                                        value="{{ ($slug !== null ? end($slug) : $slug) }}"
-                                    />
+            <span class="input-group-text">
+                @if($model !== null)
+                    @php
+                        $prepend = @$modelName;
+                        $slug = explode('/', $value);
+                    @endphp
+                @else
+                    @php
+                        $prepend = null;
+                        $slug = null;
+                    @endphp
+                @endif
 
-                                </div>
-                                @if(@$description)
+                {{ url('/') . ($prepend !== null ? $prepend->slug : null) . '/' }}
+            </span>
 
-                                <p class="card-description small mt-2 text-muted">{{ @$description }}</p>
-                                @endif
-                                @error($name)
+            <input
+                type="text"
+                id="{{ @$id ? $id : $name }}"
+                name="{{ $name }}"
+                class="form-control {{ @$class }} @error($name) form-control-danger @enderror"
+                autocomplete="off"
+                placeholder="{{ $label }}"
+                value="{{ ($slug !== null ? end($slug) : $slug) }}"
 
-                                <label id="{{ $name }}-error" class="error mt-2 small text-danger" for="{{ $name }}">{{ $message }}</label>
-                                @enderror
+                @if($required)
+                    required
+                @endif
 
-                            </div>
+                @if($readonly)
+                    readonly
+                @endif
 
-                            <script>
+                @if($disabled)
+                    disabled
+                @endif
+            />
 
-                                $(function() {
+        </div>
 
-                                    $('#{{ $name }}').slugify('#{{ $slugField }}');
+        @if(@$description)
 
-                                })
+        <p class="card-description small mt-2 text-muted">{{ @$description }}</p>
+        @endif
+        @error($name)
 
-                            </script>
+        <label id="{{ $name }}-error" class="error mt-2 small text-danger" for="{{ $name }}">{{ $message }}</label>
+        @enderror
+
+    </div>
+
+</div>
+
+<script>
+    $(function() {
+        $('#{{ $name }}').slugify('#{{ $slugField }}');
+    })
+</script>

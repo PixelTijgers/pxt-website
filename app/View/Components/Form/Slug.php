@@ -35,6 +35,13 @@ class Slug extends Component
     public $label;
 
     /**
+     * The input id.
+     *
+     * @var string
+     */
+    public $id;
+
+    /**
      * The input description.
      *
      * @var string
@@ -63,11 +70,11 @@ class Slug extends Component
     public $cols;
 
     /**
-     * The disabled attribute.
+     * The required attribute.
      *
      * @var boolean
      */
-    public $disabled;
+    public $required;
 
     /**
      * The readonly attribute.
@@ -81,7 +88,7 @@ class Slug extends Component
      *
      * @var boolean
      */
-    public $required;
+    public $disabled;
 
     /**
      * The model.
@@ -102,14 +109,19 @@ class Slug extends Component
      *
      * @return void
      */
-    public function __construct($slugField, $name, $value = null, $label = null, $description = false, $class = null, $required = true, $model = null, $modelName = null)
+    public function __construct($slugField, $name, $value = null, $label = null, $id = null, $description = false, $class = null, $row = false, $cols = [], $disabled = false, $readonly = false, $required = true, $model = null, $modelName = null)
     {
         $this->slugField = $slugField;
         $this->name = $name;
         $this->value = $value;
         $this->label = $label;
+        $this->id = $id;
         $this->description = $description;
         $this->class = $class;
+        $this->row = $row;
+        $this->cols = $cols;
+        $this->disabled = $disabled;
+        $this->readonly = $readonly;
         $this->required = $required;
         $this->model = $model;
         $this->modelName = $modelName;
