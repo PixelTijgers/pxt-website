@@ -1,5 +1,5 @@
 @section('meta')
-<title>{{ config('app.name') }} | {{ (@$category ? __('Edit') . ' ' . \Str::Lower(__('Category')) : __('Category') . ' ' . __('Add')) }}</title>
+<title>{{ config('app.name') }} | {{ (@$category ? __('Edit') . ' ' . \Str::Lower(__('Category')) . ': ' . $category->name  : __('Category') . ' ' . \Str::Lower(__('Add'))) }}</title>
     <meta name="description" content="{{ (@$category ? __('Category Edit') : __('Category Add')) }}" />
 @endsection
 
@@ -9,10 +9,10 @@
 
                     @include('admin.layouts.breadcrumb', [
                         'title' => __('Category'),
-                        'description' => (@$category ? __('Edit') . ' ' . \Str::Lower(__('Category')) : __('Category') . ' ' . __('Add')),
+                        'description' => (@$category ? __('Edit') . ' ' . \Str::Lower(__('Category')) . ': ' . $category->name  : __('Category') . ' ' . \Str::Lower(__('Add'))),
                         'breadcrum' => [
                             __('Category') => route('category.index'),
-                            (@$category ? __('Edit') . ' ' . \Str::Lower(__('Category')) : __('Category') . ' ' . __('Add')) => '#'
+                            (@$category ? __('Edit') . ' ' . \Str::Lower(__('Category')) . ': ' . $category->name  : __('Category') . ' ' . \Str::Lower(__('Add'))) => '#'
                         ],
                     ])
                     @if ($errors->any())
@@ -25,6 +25,14 @@
 
                     <form class="form-content" method="post" action="{{ (@$category ? route('category.update', $category) : route('category.store')) }}">
 
+                        @csrf
+
+                        @if(@$category)
+
+                        @method('PATCH')
+
+                        @endif
+
                         <div class="row">
 
                             <div class="col-md-12 grid-margin stretch-card">
@@ -35,28 +43,12 @@
 
                                         <div class="col-md-6">
 
-                                            @csrf
-
-                                            @if(@$category)
-
-                                            @method('PATCH')
-
-                                            @endif
-
-                                            <div>
-
-                                                <div>
-
-                                                    <x-form.input
-                                                        type="text"
-                                                        name="name"
-                                                        :label="__('Name')"
-                                                        :value="(old('name') ? old('name') : (@$category ? $category->name : null))"
-                                                    />
-
-                                                </div>
-
-                                            </div>
+                                            <x-form.input
+                                                type="text"
+                                                name="name"
+                                                :label="__('Name')"
+                                                :value="(old('name') ? old('name') : (@$category ? $category->name : null))"
+                                            />
 
                                         </div>
 

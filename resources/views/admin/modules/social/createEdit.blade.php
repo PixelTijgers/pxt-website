@@ -1,5 +1,5 @@
 @section('meta')
-<title>{{ config('app.name') }} | {{ (@$social ? __('Edit') . ' ' . \Str::Lower(__('Social Media')) : __('Social Media') . ' ' . __('Add')) }}</title>
+<title>{{ config('app.name') }} | {{ (@$social ? __('Edit') . ' ' . \Str::Lower(__('Social Media')) . ': ' . $social->name : __('Social Media') . ' ' . __('Add')) }}</title>
     <meta name="description" content="{{ (@$social ? __('Social Media Edit') : __('Social Media Add')) }}" />
 @endsection
 
