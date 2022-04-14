@@ -14,16 +14,9 @@ class Radio extends Component
     public $name;
 
     /**
-     * The input label.
-     *
-     * @var string
-     */
-    public $label;
-
-    /**
      * The input options.
      *
-     * @var string
+     * @var array
      */
     public $options;
 
@@ -35,25 +28,18 @@ class Radio extends Component
     public $value;
 
     /**
+     * The input label.
+     *
+     * @var string
+     */
+    public $label;
+
+    /**
      * The input id.
      *
      * @var string
      */
     public $id;
-
-    /**
-     * The input class.
-     *
-     * @var string
-     */
-    public $class;
-
-    /**
-     * The input wrapper class.
-     *
-     * @var string
-     */
-    public $wrapperClass;
 
     /**
      * The input description.
@@ -63,20 +49,66 @@ class Radio extends Component
     public $description;
 
     /**
+     * The input class.
+     *
+     * @var string
+     */
+    public $class;
+
+    /**
+     * The input row (custom).
+     *
+     * @var boolean
+     */
+    public $row;
+
+    /**
+     * The input cols (custom).
+     *
+     * @var array
+     */
+    public $cols;
+
+    /**
+     * The required attribute.
+     *
+     * @var boolean
+     */
+    public $required;
+
+    /**
+     * The readonly attribute.
+     *
+     * @var boolean
+     */
+    public $readonly;
+
+    /**
+     * The required attribute.
+     *
+     * @var boolean
+     */
+    public $disabled;
+
+    /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($name, $label, $options, $value = null, $id = null, $class = null, $wrapperClass = null, $description = null)
+    public function __construct($name, $options = null, $value = null, $label = null, $id = null, $description = false, $class = null, $row = false, $cols = [], $disabled = false, $readonly = false, $required = true)
     {
         $this->name = $name;
-        $this->label = $label;
         $this->options = $options;
         $this->value = $value;
+        $this->label = $label;
         $this->id = $id;
-        $this->class = $class;
-        $this->wrapperClass = $wrapperClass;
         $this->description = $description;
+        $this->class = $class;
+        $this->row = $row;
+        $this->cols = $cols;
+        $this->disabled = $disabled;
+        $this->readonly = $readonly;
+        $this->required = $required;
     }
 
     /**

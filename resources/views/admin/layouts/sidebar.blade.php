@@ -29,6 +29,16 @@
                         </a>
                     </li>
                     @endcan
+
+                    @can('modules.page.index')
+
+                    <li class="nav-item {{ active(['*/pages', '*/pages/*']) }}">
+                        <a href="{{ url('/admin/modules/pages') }}" class="nav-link">
+                            <i class="link-icon fa-regular fa-browsers"></i><span class="link-title">{{ __('Pages') }}</span>
+                        </a>
+                    </li>
+                    @endcan
+
                     @can(['modules.post.index', 'modules.category.index'])
 
                     <li class="nav-item {{ active(['*/posts', '*/posts/*', '*/categories', '*/categories/create','*/categories/*/edit']) }}">

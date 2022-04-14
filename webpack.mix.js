@@ -39,6 +39,7 @@ const ResourceMix = require('./resources/js/common/ResourceMix.js');
             'dropify/dist/js/dropify.min.js',
             'jquery/dist/jquery.min.js',
             'jquery-slugify/dist/slugify.min.js',
+            'jquery-sortable-lists/jquery-sortable-lists.js',
             'jquery-sticky/jquery.sticky.js',
             'jquery-tags-input/dist/jquery.tagsinput.min.js',
             'jquery-ui-dist/jquery-ui.min.js',

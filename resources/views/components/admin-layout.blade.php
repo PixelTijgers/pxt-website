@@ -28,6 +28,7 @@
     <script src="{{ URL::asset('plugins/bootstrap-maxlength/dist/bootstrap-maxlength.min.js') }}"></script>
     <script src="{{ URL::asset('plugins/dropify/dist/js/dropify.min.js') }}"></script>
     <script src="{{ URL::asset('plugins/jquery-slugify/dist/slugify.min.js') }}"></script>
+    <script src="{{ URL::asset('plugins/jquery-sortable-lists/jquery-sortable-lists.js') }}"></script>
     <script src="{{ URL::asset('plugins/jquery-tags-input/dist/jquery.tagsinput.min.js') }}"></script>
     <script src="{{ URL::asset('plugins/perfect-scrollbar/dist/perfect-scrollbar.min.js') }}"></script>
     <script src="{{ URL::asset('plugins/select2/dist/js/select2.full.min.js') }}"></script>

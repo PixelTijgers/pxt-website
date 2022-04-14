@@ -1,39 +1,47 @@
-<div class="{{ $cssNs }} {{ $wrapperClass }} mb-3">
+<div class="{{ $cssNs }} mb-4 {{ (@$row === true ? ' row': null) }}">
 
-                                <label for="{{ @$id ? $id : $name }}" class="form-label">
-                                    <span>{{ $label }}:</span> <span class="required">*</span>
+    @if(@$label)
+    <label for="{{ @$id ? $id : $name }}" class="card-title form-label {{ (@$row === true ? (@$cols ? $cols[0] : 'col-2') : 'mb-2') }}">
 
-                                </label>
-                                @foreach($options as $key => $option)
+        <span>{{ $label }}:</span> @if($required === true)<span class="required">*</span>@endif
 
-                                <div class="form-check mb-2">
+    </label>
+    @endif
 
-                                    <label class="form-check form-check-flat form-check-primary">
+    <div class="{{ ($row ? (@$cols ? $cols[1] : 'col-10') : null) }}">
 
-                                        <label class="form-check-label">
+        @foreach($options as $key => $option)
 
-                                            <input
-                                                type="checkbox"
-                                                name="{{ $name }}"
-                                                id="{{ @$id ? $id : $name }}"
-                                                class="form-check-input {{ @$class }} @error($name) border-danger @enderror"
-                                                value="{{ $key }}"
-                                                {{ (old(str_replace(array('[', ']'), '' , $name)) !== null ? (in_array($key, old(str_replace(array('[', ']'), '' , $name))) ? 'checked' : null) : ($values !== null && in_array($key, array_column($values->toArray(), 'id')) ? ' checked' : null)) }}
-                                            />
-                                            {{ $option }}
+        <div class="form-check mb-2">
 
-                                        </div>
-                                    </label>
+            <label class="form-check form-check-flat form-check-primary">
 
-                                </div>
-                                @endforeach
-                                @if(@$description)
+                <label class="form-check-label">
 
-                                <p class="card-description small mt-2 text-muted">{{ @$description }}</p>
-                                @endif
-                                @error($name)
+                    <input
+                        type="checkbox"
+                        name="{{ $name }}"
+                        id="{{ @$id ? $id : $name }}"
+                        class="form-check-input {{ @$class }} @error($name) border-danger @enderror"
+                        value="{{ $key }}"
+                        {{ (old(str_replace(array('[', ']'), '' , $name)) !== null ? (in_array($key, old(str_replace(array('[', ']'), '' , $name))) ? 'checked' : null) : ($values !== null && in_array($key, array_column($values->toArray(), 'id')) ? ' checked' : null)) }}
+                    />
+                    {{ $option }}
 
-                                <label id="{{ $name }}-error" class="error mt-2 small text-danger" for="{{ $name }}">{{ $message }}</label>
-                                @enderror
+                </div>
+            </label>
 
-                            </div>
+        </div>
+        @endforeach
+
+        @if(@$description)
+        <p class="card-description small mt-2 text-muted">{{ @$description }}</p>
+        @endif
+
+        @error($name)
+        <label id="{{ $name }}-error" class="error mt-2 small text-danger" for="{{ $name }}">{{ $message }}</label>
+        @enderror
+
+    </div>
+
+</div>

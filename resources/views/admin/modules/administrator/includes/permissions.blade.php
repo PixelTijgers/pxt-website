@@ -15,7 +15,7 @@
                     <div class="row">
 
                         <div class="form-group d-flex flex-wrap w-100">
-                            
+
                             @foreach($permissions as $route => $permissionArray)
 
                             <div class="grouped-permissions mt-3 col-3 {{ str_replace('modules.', '', $route) }}">
@@ -24,7 +24,6 @@
                                     <i class="fa-regular fa-{{ __('Icon ' . ucfirst(str_replace('modules.', '', $route))) }} mr-1"></i>
                                     {{ Str::upper(__(str_replace('modules.', '', $route))) }}
                                 </h6>
-
                                 @foreach($permissionArray as $permission)
 
                                 <div class="form-check mt-2 {{ ($loop->last ? 'mb-4' : null) }}">

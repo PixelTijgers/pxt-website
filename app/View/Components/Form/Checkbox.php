@@ -14,13 +14,6 @@ class Checkbox extends Component
     public $name;
 
     /**
-     * The input id.
-     *
-     * @var string
-     */
-    public $id;
-
-    /**
      * The input value.
      *
      * @var string
@@ -35,11 +28,25 @@ class Checkbox extends Component
     public $options;
 
     /**
+     * The input value.
+     *
+     * @var string
+     */
+    public $value;
+
+    /**
      * The input label.
      *
      * @var string
      */
     public $label;
+
+    /**
+     * The input id.
+     *
+     * @var string
+     */
+    public $id;
 
     /**
      * The input description.
@@ -54,21 +61,61 @@ class Checkbox extends Component
      * @var string
      */
     public $class;
-    
+
+    /**
+     * The input row (custom).
+     *
+     * @var boolean
+     */
+    public $row;
+
+    /**
+     * The input cols (custom).
+     *
+     * @var array
+     */
+    public $cols;
+
+    /**
+     * The required attribute.
+     *
+     * @var boolean
+     */
+    public $required;
+
+    /**
+     * The readonly attribute.
+     *
+     * @var boolean
+     */
+    public $readonly;
+
+    /**
+     * The required attribute.
+     *
+     * @var boolean
+     */
+    public $disabled;
+
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($name, $id = null, $values = null, $options = null, $label = null, $description = false, $class = null)
+    public function __construct($name, $values = null, $options = null, $value = null, $label = null, $id = null, $description = false, $class = null, $row = false, $cols = [], $disabled = false, $readonly = false, $required = true)
     {
         $this->name = $name;
-        $this->id = $id;
         $this->values = $values;
         $this->options = $options;
         $this->label = $label;
+        $this->id = $id;
         $this->description = $description;
         $this->class = $class;
+        $this->row = $row;
+        $this->cols = $cols;
+        $this->disabled = $disabled;
+        $this->readonly = $readonly;
+        $this->required = $required;
     }
 
     /**

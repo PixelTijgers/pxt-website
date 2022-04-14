@@ -1,6 +1,4 @@
 @role('superadmin')
-<h6 class="card-title">{{ __('Usertype') }}</h6>
-
 <x-form.radio
     name="role"
     wrapperClass="admin-permissions-switcher mb-5"

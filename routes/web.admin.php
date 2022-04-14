@@ -4,10 +4,11 @@
 use Illuminate\Support\Facades\Route;
 
 // Controllers.
-use App\Http\Controllers\Admin\Modules\DashboardController;
-use App\Http\Controllers\Admin\Modules\PostController;
-use App\Http\Controllers\Admin\Modules\CategoryController;
 use App\Http\Controllers\Admin\Modules\AdministratorController;
+use App\Http\Controllers\Admin\Modules\CategoryController;
+use App\Http\Controllers\Admin\Modules\DashboardController;
+use App\Http\Controllers\Admin\Modules\PageController;
+use App\Http\Controllers\Admin\Modules\PostController;
 use App\Http\Controllers\Admin\Modules\SocialController;
 
 /*
@@ -38,14 +39,18 @@ Route::middleware(['auth:sanctum', 'verified', 'admin.permission'])->prefix('adm
         // Init dashboard route(s).
         Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
+        // Init pages.
+        Route::resource('pages', PageController::class, ['names' => 'page']);
+        Route::post('pages/updateSortable', [PageController::class, 'updateSortable']);
+
         // Init posts.
-        Route::resource('posts', PostController::class, ['names' => 'post'])->except(['show']);
+        Route::resource('posts', PostController::class, ['names' => 'post']);
 
         // Init categories.
         Route::resource('categories', CategoryController::class, ['names' => 'category']);
 
         // Init social media route(s).
-        Route::resource('socials', SocialController::class, ['names' => 'social'])->except(['show']);
+        Route::resource('socials', SocialController::class, ['names' => 'social']);
         Route::post('socials/updateSortable', [SocialController::class, 'updateSortable']);
 
         // Init administrators route(s).

@@ -46,6 +46,8 @@
     "Website": "Website",
     "Article": "Artikel",
     "OG Image Description": "De optimale resolutie van een afbeelding is 1200:630 pixel. Je kunt enkel .jpg, .jpeg of .png uploaden.",
+    "Pages": "Pagina's",
+    "Pages Description": "Voeg hier nieuwe pagina's toe of wijzig deze. Hier kun je ook de volgorde van de pagina's wijzigen. Je kunt op deze manier ook de pagina's als subpagina's toevoegen.",
 
     "Demo": "Demo Gebruiker",
     "Editor": "Redacteur",
@@ -130,6 +132,19 @@
     "Icon Social": "share-nodes",
     "Icon Post": "newspaper",
     "Icon Category": "tags",
+    "Icon Page": "browsers",
+
+    "page": "Pagina's",
+    "post": "Artikelen",
+    "category": "Categorieën",
+    "social": "Social media",
+    "administrator": "Gebruikers",
+
+    "footer": "Footer",
+    "main": "Hoofdmenu",
+    "site-top": "Top menu",
+    "sub-footer": "Sub footer",
+    "standalone": "Losse pagina",
 
     "nl": "Nederlands",
     "en": "Engels",
