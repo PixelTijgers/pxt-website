@@ -366,7 +366,7 @@ common.View.create('admin.modules.page.CreateEdit', {
             opacity: 0.6,
             update: function() {
 
-                $('.sortable-ui li').each(function(index, element) {
+                $('#nestedImages li').each(function(index, element) {
                     $(this).find('.hidden-lft').val(index);
                 });
             }

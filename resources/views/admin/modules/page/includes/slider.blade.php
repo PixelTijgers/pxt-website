@@ -16,6 +16,30 @@
             :value="(old('meta_title') ? old('meta_title') : (@$page ? $page->meta_title : null))"
         />
 
+        <x-form.textarea
+            name="pageSlider[0][figcaption]"
+            maxLength="165"
+            :description="__('Intro Description')"
+            :label="__('Image') . ' ' . __('Figcation')"
+            :value="(old('og_description') ? old('og_description') : (@$page ? $page->og_description : null))"
+        />
+
+        <x-form.input
+            type="text"
+            name="pageSlider[0][alt]"
+            :label="__('Image') . ' ' . __('Alt')"
+            :value="(old('meta_title') ? old('meta_title') : (@$page ? $page->meta_title : null))"
+        />
+
+        <x-form.slug
+            name="pageSlider[0][slug]"
+            slugField="page_title"
+            :label="'OG ' . __('Url')"
+            :model="@$page"
+            :modelName="\App\Models\Post::where('id', @$page->parent_id)->first()"
+            :value="(old('og_url') ? old('og_url') : (@$page ? $page->og_url : null))"
+        />
+
         <button class="closeButton btn btn-danger" type="button">{{ __('Delete') }}</button>
 
     </li>

@@ -168,11 +168,9 @@ class PageController extends Controller
      */
     protected function processPageSlider($request, $model)
     {
-        dd($request);
         // Validate the pageslider input.
         $request->validate([
             'pageSlider.*._lft' => 'required|numeric|max:10',
-            'pageSlider.*.category_id' => 'required|numeric|max:10',
             'pageSlider.*.figcaption' => 'nullable|string|max:160',
             'pageSlider.*.title' => 'nullable|string|max:255',
             'pageSlider.*.slug' => 'nullable|slug|max:255',
