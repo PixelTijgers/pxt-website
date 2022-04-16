@@ -28,6 +28,13 @@ class Checkbox extends Component
     public $options;
 
     /**
+     * The input options translaten.
+     *
+     * @var array
+     */
+    public $optionsTranslated;
+
+    /**
      * The input value.
      *
      * @var string
@@ -102,11 +109,12 @@ class Checkbox extends Component
      *
      * @return void
      */
-    public function __construct($name, $values = null, $options = null, $value = null, $label = null, $id = null, $description = false, $class = null, $row = false, $cols = [], $disabled = false, $readonly = false, $required = true)
+    public function __construct($name, $values = null, $options = null, $optionsTranslated = false, $value = null, $label = null, $id = null, $description = false, $class = null, $row = false, $cols = [], $disabled = false, $readonly = false, $required = true)
     {
         $this->name = $name;
         $this->values = $values;
         $this->options = $options;
+        $this->optionsTranslated = $optionsTranslated;
         $this->label = $label;
         $this->id = $id;
         $this->description = $description;

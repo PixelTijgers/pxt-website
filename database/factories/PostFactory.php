@@ -45,7 +45,7 @@ class PostFactory extends Factory
             'og_type'           => 'website',
             'og_locale'         => 'nl_NL',
 
-            'published'         => \Arr::random([0,1]),
+            'status'            => 'published',
             'published_at'      => $this->faker->dateTimeBetween('-3 weeks', '+2 days'),
             'unpublished_at'    => $this->faker->dateTimeBetween('+3 days', '+3 weeks'),
         ];

@@ -41,7 +41,7 @@ class PageRequest extends FormRequest
             'og_type'           =>  'required|string|max:21|in:website,article',
             'og_locale'         =>  'required|string|max:21',
 
-            'published'         =>  'required|boolean|numeric|min:0|max:1',
+            'status'            =>  'required|string|in:archived,draft,published,unpublished',
             'published_at'      =>  'required|date_format:"Y-m-d H:i:s"',
             'unpublished_at'    =>  'nullable|after:published_at|date_format:"Y-m-d H:i:s"',
 
@@ -85,8 +85,8 @@ class PageRequest extends FormRequest
 
         // Merge into request.
         $this->merge([
-            'visible_in_menu'   => ($this->visible_in_menu == 'on' ? 1 : 0),
-            'published'         => ($this->published == 'on' ? 1 : 0),
+            'visible_in_menu'   => ($this->visible_in_menu !== null ? 1 : 0),
+            'published'         => ($this->published !== null ? 1 : 0),
             'published_at'      => \Carbon\Carbon::createFromFormat('d-m-Y H:i', $this->published_at)->toDateTimeString(),
             'unpublished_at'    => $unpublished_at,
         ]);

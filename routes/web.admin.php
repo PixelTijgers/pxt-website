@@ -40,7 +40,7 @@ Route::middleware(['auth:sanctum', 'verified', 'admin.permission'])->prefix('adm
         Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
         // Init pages.
-        Route::resource('pages', PageController::class, ['names' => 'page']);
+        Route::resource('pages', PageController::class, ['names' => 'page'])->except(['show']);
         Route::post('pages/updateSortable', [PageController::class, 'updateSortable']);
 
         // Init posts.

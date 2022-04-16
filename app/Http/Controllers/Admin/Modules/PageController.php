@@ -222,10 +222,7 @@ class PageController extends Controller
     public function store(PageRequest $request)
     {
         // Post data to database.
-        $page = Page::create([
-            'slug'  => '/' . $request->slug,
-            'og_slug' => '/' . $request->og_slug
-        ] + $request->validated());
+        $page = Page::create($request->validated());
 
         // Page OG image.
         $this->processImage($request, $page, 'ogImage');
@@ -238,13 +235,13 @@ class PageController extends Controller
             // Return back with message.
             return redirect()->back()->with([
                 'type' => 'danger',
-                'message' => __('admin.msg_select_nav')
+                'message' => __('Select Navigation')
             ])->withInput();
 
         // Return back with message.
         return redirect()->route('page.index')->with([
                 'type' => 'success',
-                'message' => __('form.page') . __('admin.msg_add_success')
+                'message' => __('Item Add')
             ]
         );
     }
@@ -276,14 +273,13 @@ class PageController extends Controller
             // Update the navigation menu.
             $page->navigation_menus()->sync($request->navigation_menu);
 
-            // Build the page slug.
-            $pageSlug = Page::where('id', $page->parent_id)->first();
-            $updatePageSlug = ($pageSlug !== null ? $pageSlug->slug . '/' . $request->slug : '/' . $request->slug);
+            // Build the page slug and OG URL.
+            $this->buildSlug($page);
 
             // Set data to save into database.
             $page->update([
                 'slug'  => $updatePageSlug,
-                'og_slug' => '/' . $request->og_slug,
+                'og_slug' => $og_slug,
                 'last_edited_administrator_id' => auth()->user()->id,
                 'last_edit_at' => \Carbon\Carbon::now(),
             ] + $request->validated());
@@ -292,7 +288,7 @@ class PageController extends Controller
             $this->processImage($request, $page, 'ogImage');
 
             // Page slides.
-            $this->processPageSlider($request, $page);
+            // $this->processPageSlider($request, $page);
 
             // Save data.
             $page->save();
@@ -301,13 +297,13 @@ class PageController extends Controller
             // Return back with message.
             return redirect()->back()->with([
                 'type' => 'danger',
-                'message' => __('admin.msg_select_nav')
+                'message' => __('Select Navigation')
             ])->withInput();
 
         // Return back with message.
         return redirect()->route('page.index')->with([
                 'type' => 'success',
-                'message' => __('form.page') . __('admin.msg_edit_success')
+                'message' => __('Item Edit')
             ]
         );
     }
@@ -320,6 +316,16 @@ class PageController extends Controller
      */
     public function destroy(Page $page)
     {
+        if($page->id === 1)
+        {
+            // Return back with message.
+            return redirect()->route('page.index')->with([
+                    'type' => 'dangen',
+                    'message' => __('Page Delete')
+                ]
+            );
+        }
+
         // Delete the page from the pivot table.
         NavigationMenuPage::where('page_id', $page->id)->delete();
 
@@ -329,7 +335,7 @@ class PageController extends Controller
         // Return back with message.
         return redirect()->back()->with([
             'type' => 'success',
-            'message' => __('form.page') . __('admin.msg_delete_success')
+            'message' => __('Item Delete')
         ]);
     }
 }

@@ -183,7 +183,10 @@ class PostController extends Controller
     public function update(PostRequest $request, Post $post)
     {
         // Set data to save into database.
-        $post->update($request->validated());
+        $post->update([
+            'last_edited_administrator_id' => auth()->user()->id,
+            'last_edit_at' => \Carbon\Carbon::now(),
+        ] + $request->validated());
 
         // Page header image.
         $this->processImage($request, $post, 'pageImage');

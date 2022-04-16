@@ -12,7 +12,7 @@
 
         @foreach($options as $key => $option)
 
-        <div class="form-check mb-2">
+        <div class="mb-2">
 
             <label class="form-check form-check-flat form-check-primary">
 
@@ -26,9 +26,8 @@
                         value="{{ $key }}"
                         {{ (old(str_replace(array('[', ']'), '' , $name)) !== null ? (in_array($key, old(str_replace(array('[', ']'), '' , $name))) ? 'checked' : null) : ($values !== null && in_array($key, array_column($values->toArray(), 'id')) ? ' checked' : null)) }}
                     />
-                    {{ $option }}
+                    {{ (@$optionsTranslated === true ? __($option) : $option) }}
 
-                </div>
             </label>
 
         </div>

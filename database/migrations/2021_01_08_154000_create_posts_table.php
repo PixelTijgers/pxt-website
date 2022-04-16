@@ -44,9 +44,14 @@ class CreatePostsTable extends Migration
             $table->string('og_type')->default('article');
             $table->string('og_locale')->default('nl_NL');
 
-            $table->boolean('published');
+            $table->string('status')->default('draft');
             $table->dateTime('published_at');
             $table->dateTime('unpublished_at')->nullable();
+
+            $table->bigInteger('last_edited_administrator_id')->unsigned()->nullable();
+            $table->foreign('last_edited_administrator_id')->references('id')->on('administrators')->onDelete('cascade');
+
+            $table->dateTime('last_edit_at')->nullable();
 
             // Generate timestamps (created_at, updated_at)
             $table->timestamps();

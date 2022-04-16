@@ -7,6 +7,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+// Enums
+use App\Enums\PublishedState;
+
 // Traits.
 use Spatie\MediaLibrary\MediaCollections\File;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
@@ -49,7 +52,9 @@ class Post extends Model implements HasMedia
         'og_locale',
         'published',
         'published_at',
-        'unpublished_at'
+        'unpublished_at',
+        'last_edited_administrator_id',
+        'last_edit_at',
     ];
 
     /**
@@ -60,8 +65,11 @@ class Post extends Model implements HasMedia
     protected $casts = [
         'administrator_id' => 'boolean',
         'category_id' => 'boolean',
+        'state' => PublishedState::class,
         'published_at' => 'datetime',
         'unpublished_at' => 'datetime',
+        'last_edited_administrator_id' => 'boolean',
+        'last_edit_at' => 'datetime',
     ];
 
     /**

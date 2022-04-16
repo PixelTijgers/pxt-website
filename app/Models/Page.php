@@ -79,12 +79,15 @@ class Page extends Model implements HasMedia
     /**
      * The attributes that should be cast.
      *
-     * @var array<string, string>
+     * @var array
      */
     protected $casts = [
+        'administrator_id' => 'boolean',
+        'category_id' => 'boolean',
         'state' => PublishedState::class,
         'published_at' => 'datetime',
         'unpublished_at' => 'datetime',
+        'last_edited_administrator_id' => 'boolean',
         'last_edit_at' => 'datetime',
     ];
 
