@@ -168,6 +168,7 @@ class PageController extends Controller
      */
     protected function processPageSlider($request, $model)
     {
+        dd($request);
         // Validate the pageslider input.
         $request->validate([
             'pageSlider.*._lft' => 'required|numeric|max:10',
@@ -186,7 +187,6 @@ class PageController extends Controller
 
             $pageSlide = PageSlide::create([
                 'page_id' => $model->id,
-                'category_id' => $slide['category_id'],
                 'title' => $slide['title'],
                 'figcaption' => $slide['figcaption'],
                 'alt' => $slide['alt'],
@@ -195,7 +195,7 @@ class PageController extends Controller
             ]);
 
             // Page OG image.
-            $this->processImage($request, $pageSlide, 'pageSliderImage');
+            // $this->processImage($request, $pageSlide, 'pageSliderImage');
         };
 
         return true;
@@ -221,8 +221,13 @@ class PageController extends Controller
      */
     public function store(PageRequest $request)
     {
+
+
         // Post data to database.
-        $page = Page::create($request->validated());
+        $page = Page::create([
+            'slug'  => $request->slug,
+            'og_slug' => $request->og_slug,
+        ] + $request->validated());
 
         // Page OG image.
         $this->processImage($request, $page, 'ogImage');
@@ -273,8 +278,18 @@ class PageController extends Controller
             // Update the navigation menu.
             $page->navigation_menus()->sync($request->navigation_menu);
 
-            // Build the page slug and OG URL.
-            $this->buildSlug($page);
+            // Build the page slug.
+            if($page->id === 1)
+            {
+                $updatePageSlug = '/';
+                $og_slug = $updatePageSlug;
+            }
+            else
+            {
+                $pageSlug = Page::where('id', $page->parent_id)->first();
+                $updatePageSlug = ($pageSlug !== null ? $pageSlug->slug . '/' . $request->slug : '/' . $request->slug);
+                $og_slug = ($pageSlug !== null ? $pageSlug->og_url . '/' . $request->slug : '/' . $request->slug);
+            }
 
             // Set data to save into database.
             $page->update([
@@ -288,7 +303,7 @@ class PageController extends Controller
             $this->processImage($request, $page, 'ogImage');
 
             // Page slides.
-            // $this->processPageSlider($request, $page);
+            $this->processPageSlider($request, $page);
 
             // Save data.
             $page->save();
@@ -320,7 +335,7 @@ class PageController extends Controller
         {
             // Return back with message.
             return redirect()->route('page.index')->with([
-                    'type' => 'dangen',
+                    'type' => 'danger',
                     'message' => __('Page Delete')
                 ]
             );

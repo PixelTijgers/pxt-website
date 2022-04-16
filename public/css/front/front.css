@@ -733,6 +733,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .right-0 {
   right: 0px;
 }
+.float-right {
+  float: right;
+}
 .mx-0 {
   margin-left: 0px;
   margin-right: 0px;
@@ -753,26 +756,20 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mt-2 {
   margin-top: 0.5rem;
 }
-.mt-5 {
-  margin-top: 1.25rem;
-}
 .mr-2 {
   margin-right: 0.5rem;
 }
 .mt-3 {
   margin-top: 0.75rem;
 }
-.mr-1 {
-  margin-right: 0.25rem;
-}
-.mb-5 {
-  margin-bottom: 1.25rem;
-}
 .mt-4 {
   margin-top: 1rem;
 }
 .mt-1 {
   margin-top: 0.25rem;
+}
+.mb-1 {
+  margin-bottom: 0.25rem;
 }
 .ml-1 {
   margin-left: 0.25rem;
@@ -792,8 +789,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 .-mt-px {
   margin-top: -1px;
 }
-.mb-1 {
-  margin-bottom: 0.25rem;
+.mt-5 {
+  margin-top: 1.25rem;
+}
+.mb-5 {
+  margin-bottom: 1.25rem;
+}
+.mr-1 {
+  margin-right: 0.25rem;
 }
 .flex {
   display: flex;

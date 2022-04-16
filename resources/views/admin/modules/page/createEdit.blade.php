@@ -3,6 +3,14 @@
     <meta name="description" content="{{ (@$page ? __('Edit') . ' ' . \Str::Lower(__('Page')) . ': ' . $page->title : __('Page') . ' ' . __('Add')) }}" />
 @endsection
 
+@push('styles')
+<link href="{{ URL::asset('plugins/jquery-ui-dist/jquery-ui.min.css') }}" rel="stylesheet" />
+@endpush
+
+@push('js')
+<script src="{{ URL::asset('plugins/jquery-ui-dist/jquery-ui.min.js') }}"></script>
+@endpush
+
 <x-adminLayout>
 
     <div class="{{ $cssNs }}">
@@ -57,6 +65,10 @@
                                                     <a class="nav-link" id="og-line-tab" data-bs-toggle="tab" data-bs-target="#og" role="tab" aria-controls="og" aria-selected="true">{{ __('OG Tags') }}</a>
                                                 </li>
 
+                                                <li class="nav-item">
+                                                    <a class="nav-link" id="slider-line-tab" data-bs-toggle="tab" data-bs-target="#slider" role="tab" aria-controls="slider" aria-selected="true">{{ __('Slider') }}</a>
+                                                </li>
+
                                             </ul>
 
                                             <div class="tab-content mt-3" id="lineTabContent">
@@ -76,6 +88,12 @@
                                                 <div class="tab-pane fade" id="og" role="tabpanel" aria-labelledby="og-line-tab">
 
                                                     @include('admin.modules.page.includes.og')
+
+                                                </div>
+
+                                                <div class="tab-pane fade" id="slider" role="tabpanel" aria-labelledby="slider-line-tab">
+
+                                                    @include('admin.modules.page.includes.slider')
 
                                                 </div>
 

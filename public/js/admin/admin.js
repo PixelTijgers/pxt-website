@@ -2353,6 +2353,7 @@ common.View.create('admin.modules.page.CreateEdit', {
     this.initTest();
     this.initCloneScript();
     this.initClone();
+    this.initSortable();
   },
   initTest: function initTest() {
     console.log('Init: admin.modules.page.CreateEdit');
@@ -2675,7 +2676,7 @@ common.View.create('admin.modules.page.CreateEdit', {
   },
   initClone: function initClone() {
     $('.addButton').cloneData({
-      mainContainerId: 'page-slider-container',
+      mainContainerId: 'nestedImages',
       cloneContainer: 'slider-item',
       removeButtonClass: 'closeButton',
       removeConfirm: false,
@@ -2696,6 +2697,18 @@ common.View.create('admin.modules.page.CreateEdit', {
       },
       beforeRemove: function beforeRemove() {
         console.warn(':: Before remove callback called');
+      }
+    });
+  },
+  initSortable: function initSortable() {
+    $('#nestedImages').sortable({
+      items: 'li',
+      cursor: 'grabbing',
+      opacity: 0.6,
+      update: function update() {
+        $('.sortable-ui li').each(function (index, element) {
+          $(this).find('.hidden-lft').val(index);
+        });
       }
     });
   }
