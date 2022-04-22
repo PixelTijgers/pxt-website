@@ -98,4 +98,15 @@ form.form-content {
             padding-left: 5px;
         }
     }
+
+    #nestedImages {
+        .slider-item {
+            .closeButton {
+                margin-right: 15px;
+            }
+            .btn-primary {
+                cursor: grab;
+            }
+        }
+    }
 }

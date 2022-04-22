@@ -13,7 +13,7 @@
     @if(@$file)
     <input
         type="hidden"
-        name="{{ $name }}CurrentImage"
+        name="{{ (@$duplicateName ? $duplicateName : $name . 'CurrentImage') }}"
         value="{{ $file }}"
     />
     @endif
@@ -23,7 +23,7 @@
             name="{{ $name }}"
             id="{{ @$id ? $id : $name }}"
             placeholder="{{ $label }}"
-            class="border {{ @$class }} @error($name) border-danger @enderror"
+            class="border {{ @$duplicateClass ? $duplicateClass :  'dropify' }} {{ @$class }} @error($name) border-danger @enderror"
             data-allowed-file-extensions="{{ $extensions }}"
 
             @if(@$file)
@@ -54,21 +54,16 @@
 
 </div>
 
-<script>
-    $(function() {
-        $('#{{ @$id ? $id : $name }}').dropify({
-            messages: {
-                'default': '{{ __('Dropify Default') }}',
-                'replace': '{{ __('Dropify Replace') }}',
-                'remove':  '{{ __('Dropify Remove') }}',
-                'error':   '{{ __('Dropify Image Format') }}'
-            },
-            error: {
-                'imageFormat': '{{ __('Dropify Default') }}'
-            }
-        })
-        .on('dropify.afterClear', function(event, element){
-            $('input[name="{{ $name }}CurrentImage"]').removeAttr('value');
+@if(@$duplicate === true)
+
+    <script>
+
+        dropify = $('.{{ @$duplicateClass ? $duplicateClass :  'dropify' }}').dropify({
+
         });
-    });
-</script>
+        dropify = dropify.data('dropify');
+        dropify.destroy();
+
+    </script>
+
+@endif

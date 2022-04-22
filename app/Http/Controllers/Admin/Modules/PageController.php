@@ -168,6 +168,7 @@ class PageController extends Controller
      */
     protected function processPageSlider($request, $model)
     {
+        /*
         // Validate the pageslider input.
         $request->validate([
             'pageSlider.*._lft' => 'required|numeric|max:10',
@@ -176,14 +177,18 @@ class PageController extends Controller
             'pageSlider.*.slug' => 'nullable|slug|max:255',
             'pageSlider.*.alt' => 'nullable|string|max:255',
         ]);
+        */
 
         // Delete previous slides to empty the table.
-        PageSlide::where('page_id', $model->id)->delete();
+        // PageSlide::where('page_id', $model->id)->delete();
 
         // Add new slides.
-        foreach($request->pageSlider as $slide) {
-
-            $pageSlide = PageSlide::create([
+        foreach(collect($request->pageSlider)->slice(1)->toArray() as $key => $slide)
+        {
+            $pageSlide = PageSlide::updateOrCreate([
+                'id' => @$slide['model_id']
+            ],
+            [
                 'page_id' => $model->id,
                 'title' => $slide['title'],
                 'figcaption' => $slide['figcaption'],
@@ -192,9 +197,15 @@ class PageController extends Controller
                 '_lft' => $slide['_lft'],
             ]);
 
-            // Page OG image.
-            // $this->processImage($request, $pageSlide, 'pageSliderImage');
+            if($request->hasFile('pageSlider.' . $key))
+            {
+                $pageSlide->addMediaFromRequest('pageSlider.' . $key)->toMediaCollection('pageSliderImage');
+            }
+
+            $modelIdCollection[] = (@$slide['model_id'] ? $slide['model_id'] : $pageSlide->id);
         };
+
+        PageSlide::whereNotIn('id', $modelIdCollection)->delete();
 
         return true;
     }
@@ -257,8 +268,11 @@ class PageController extends Controller
      */
     public function edit(Page $page)
     {
+        // Get the pageslides.
+        $pageSlides = PageSlide::where('page_id', $page->id)->orderBy('_lft', 'ASC')->get();
+
         // Init view.
-        return view('admin.modules.page.createEdit', compact('page'));
+        return view('admin.modules.page.createEdit', compact('page', 'pageSlides'));
     }
 
     /**

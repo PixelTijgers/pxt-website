@@ -68,7 +68,13 @@ common.View.create('admin.modules.page.CreateEdit', {
                         return false;
                     }
 
-                    $('#' + settings.mainContainerId).append(settings.template.first()[0].outerHTML);
+                    // $('#' + settings.mainContainerId).append(settings.template.first()[0].outerHTML);
+
+                    const reference = $(settings.template.first()[0].outerHTML);
+
+                    reference.appendTo('#' + settings.mainContainerId);
+
+                    $(reference.get(0)).removeClass('d-none');
 
                     _initializePlugins();
                     _updateAttributes();
@@ -77,7 +83,7 @@ common.View.create('admin.modules.page.CreateEdit', {
                     //$(settings.template.first()[0].outerHTML).trigger('afterRender');
                     ///$elem.closest('.' + widgetOptions.widgetContainer).triggerHandler(events.limitReached, widgetOptions.limit);
 
-                    settings.afterRender.call({index: settings.counterIndex});
+                    settings.afterRender.call({index: reference});
                     return false;
                 }
 
@@ -344,9 +350,11 @@ common.View.create('admin.modules.page.CreateEdit', {
             beforeRender: function () {
                 console.info(':: Before rendered callback called');
             },
-            afterRender: function () {
+            afterRender: function (event) {
                 console.info(':: After rendered callback called');
-                //$(".selectpicker").selectpicker('refresh');
+
+                $('.pageSlide').last().dropify({
+                });
             },
             afterRemove: function () {
                 console.warn(':: After remove callback called');

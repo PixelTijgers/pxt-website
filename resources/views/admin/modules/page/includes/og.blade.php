@@ -35,6 +35,15 @@
 
     <div class="col-md-4 offset-md-1">
 
+        <x-form.file
+            name="ogImage"
+            :label="'OG ' . __('Image')"
+            :file="(@$page ? $page->getFirstMediaUrl('ogImage') : null)"
+            extensions="jpg jpeg png"
+            :description="__('OG Image Description')"
+            :required="false"
+        />
+
         <x-form.select
             name="og_type"
             :label="'OG ' . __('Type')"
@@ -53,15 +62,6 @@
             :options="\App\Models\Locale::all()->sortBy('name')"
             :valueWrapper="['locale', 'name']"
             :disabledOption="__('Select Language')"
-        />
-
-        <x-form.file
-            name="ogImage"
-            :label="'OG ' . __('Image')"
-            :file="(@$page ? $page->getFirstMediaUrl('ogImage') : null)"
-            extensions="jpg jpeg png"
-            :description="__('OG Image Description')"
-            :required="false"
         />
 
     </div>

@@ -91,11 +91,32 @@ class File extends Component
     public $disabled;
 
     /**
+     * The duplicate attribute.
+     *
+     * @var boolean
+     */
+    public $duplicate;
+
+    /**
+     * The duplicate attribute.
+     *
+     * @var boolean
+     */
+    public $duplicateClass;
+
+    /**
+     * The duplicate attribute.
+     *
+     * @var boolean
+     */
+    public $duplicateName;
+
+    /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($name, $file, $extensions, $id = null, $label = null, $description = false, $class = null, $row = false, $cols = [], $disabled = false, $readonly = false, $required = true)
+    public function __construct($name, $file, $extensions, $id = null, $label = null, $description = false, $class = null, $row = false, $cols = [], $required = true, $readonly = false, $disabled = false, $duplicate = false, $duplicateClass = null, $duplicateName = null)
     {
         $this->name = $name;
         $this->file = $file;
@@ -106,9 +127,12 @@ class File extends Component
         $this->class = $class;
         $this->row = $row;
         $this->cols = $cols;
-        $this->disabled = $disabled;
-        $this->readonly = $readonly;
         $this->required = $required;
+        $this->readonly = $readonly;
+        $this->disabled = $disabled;
+        $this->duplicate = $duplicate;
+        $this->duplicateClass = $duplicateClass;
+        $this->duplicateName = $duplicateName;
     }
 
     /**

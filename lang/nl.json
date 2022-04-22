@@ -60,8 +60,11 @@
     "Page Delete": "Je kunt de homepagina niet verwijderen.",
     "Slider": "Afbeelding Slider",
     "Slider Description": "Je kunt verschillende afbeeldingen toevoegen aan de pagina. Deze afbeeldingen zullen te zien zijn in een afbeelding slider. De volgorde kun je zelf bepalen door te slepen met het icoontje.",
-    "Figcaption":"Bijschrift",
+    "Figcaption": "Bijschrift",
     "Alt": "Alternatieve titel",
+    "Add Slide": "Slide toevoegen",
+    "Delete Slide": "Slide verwijderen",
+    "Description": "Beschrijving",
 
     "Demo": "Demo Gebruiker",
     "Editor": "Redacteur",

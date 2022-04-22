@@ -83,11 +83,18 @@
             :description="__('Unpublished At Description')"
         />
 
-        <x-form.switcher
-            name="published"
-            :label="__('Published')"
-            :value="(old('published') === null ? (@$post ? $post->published : 1) : 0)"
-            :required="false"
+        <x-form.select
+            name="status"
+            :label="__('Status')"
+            :cols="['col-3', 'col-4']"
+            :value="(old('status') ? old('status') : (@$page ? $page->status : null))"
+            :options="[
+               'archived'   =>  __('Archived'),
+               'draft'   =>  __('Draft'),
+               'published' => __('Published'),
+               'unpublished'   =>  __('Unpublished')
+            ]"
+            :disabledOption="__('Select Status')"
         />
 
     </div>

@@ -1,47 +1,95 @@
 <h6 class="card-title mt-4">{{ __('Slider') }}</h6>
 <p class="mb-4 text-muted small">{{ __('Slider Description') }}</p>
 
-<button class="addButton btn btn-primary mb-3 float-right" type="button">{{ __('Add') }}</button>
+<button class="addButton btn btn-primary mb-3 float-right" type="button">{{ __('Add Slide') }}</button>
 
 <ul id="nestedImages" class="mt-4">
 
-    <li class="slider-item mb-3">
+    @include('admin.modules.page.includes.slider.template')
 
-        <input type="hidden" name="pageSlider[0][_lft]" value="0" class="hidden-lft"/>
+    @if(!$pageSlides->isEmpty())
 
-        <x-form.input
-            type="text"
-            name="pageSlider[0][title]"
-            :label="__('Image') . ' ' . __('Title')"
-            :value="(old('meta_title') ? old('meta_title') : (@$page ? $page->meta_title : null))"
-        />
+        @foreach($pageSlides as $key => $slide)
 
-        <x-form.textarea
-            name="pageSlider[0][figcaption]"
-            maxLength="165"
-            :description="__('Intro Description')"
-            :label="__('Image') . ' ' . __('Figcation')"
-            :value="(old('og_description') ? old('og_description') : (@$page ? $page->og_description : null))"
-        />
+            <li class="slider-item mb-3">
 
-        <x-form.input
-            type="text"
-            name="pageSlider[0][alt]"
-            :label="__('Image') . ' ' . __('Alt')"
-            :value="(old('meta_title') ? old('meta_title') : (@$page ? $page->meta_title : null))"
-        />
+                <div class="row">
 
-        <x-form.slug
-            name="pageSlider[0][slug]"
-            slugField="page_title"
-            :label="'OG ' . __('Url')"
-            :model="@$page"
-            :modelName="\App\Models\Post::where('id', @$page->parent_id)->first()"
-            :value="(old('og_url') ? old('og_url') : (@$page ? $page->og_url : null))"
-        />
+                    <div class="col-md-12 mb-3">
 
-        <button class="closeButton btn btn-danger" type="button">{{ __('Delete') }}</button>
+                        <div class="border-bottom d-flex justify-content-end w-full pb-3">
 
-    </li>
+                            <button class="closeButton btn btn-danger" type="button">{{ __('Delete Slide') }}</button>
+
+                            <span class="btn btn-primary ml-3"><i class="fa-solid fa-grip-dots-vertical"></i></span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-7">
+
+                        <input type="hidden" name="pageSlider[{{ $key }}][model_id]" value="{{ $slide->id }}" />
+                        <input type="hidden" name="pageSlider[{{ $key }}][_lft]" value="{{ $slide->_lft }}" class="hidden-lft"/>
+
+                        <x-form.slug
+                            name="pageSlider[{{ $key }}][slug]"
+                            slugField="page_title"
+                            :label="__('Url')"
+                            :model="@$page"
+                            :modelName="\App\Models\Post::where('id', @$page->parent_id)->first()"
+                            :required="false"
+                            :value="$slide->slug"
+                        />
+
+                        <x-form.input
+                            type="text"
+                            name="pageSlider[{{ $key }}][title]"
+                            :label="__('Title')"
+                            :required="false"
+                            :value="$slide->title"
+                        />
+
+                        <x-form.textarea
+                            name="pageSlider[{{ $key }}][figcaption]"
+                            maxLength="165"
+                            :label="__('Figcaption')"
+                            :required="false"
+                            :value="$slide->figcaption"
+                        />
+
+                    </div>
+
+                    <div class="col-md-5">
+
+                        <x-form.file
+                            name="pageSlider[{{ $key + 1 }}][pageSliderImage]"
+                            duplicateName="pageSlider[{{ $key }}][pageSliderImage][currentImage]"
+                            :label="__('Image')"
+                            :file="$slide->getFirstMediaUrl('pageSliderImage')"
+                            extensions="jpg jpeg png"
+                            :required="false"
+                            :duplicate="true"
+                            duplicateClass="pageSlide"
+                            :required="false"
+                        />
+
+                        <x-form.input
+                            type="text"
+                            name="pageSlider[{{ $key }}][alt]"
+                            :label="__('Description')"
+                            :required="false"
+                            :value="$slide->alt"
+                        />
+
+                    </div>
+
+                </div>
+
+            </li>
+
+        @endforeach
+
+    @endif
 
 </ul>

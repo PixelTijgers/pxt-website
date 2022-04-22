@@ -42,7 +42,7 @@ class PostRequest extends FormRequest
             'og_type'           =>  'required|string',
             'og_locale'         =>  'required|string',
 
-            'published'         =>  'required|boolean|numeric|min:0|max:1',
+            'status'            =>  'required|string|in:archived,draft,published,unpublished',
             'published_at'      =>  'required|date_format:"Y-m-d H:i:s"',
             'unpublished_at'    =>  'nullable|after:published_at|date_format:"Y-m-d H:i:s"',
         ];

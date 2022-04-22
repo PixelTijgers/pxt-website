@@ -2413,9 +2413,12 @@ common.View.create('admin.modules.page.CreateEdit', {
           if (settings.maxLimit != 0 && item_exists >= settings.maxLimit) {
             alert("More than " + settings.maxLimit + " degrees can\'t be added in one form. Please 'Add New'.");
             return false;
-          }
+          } // $('#' + settings.mainContainerId).append(settings.template.first()[0].outerHTML);
 
-          $('#' + settings.mainContainerId).append(settings.template.first()[0].outerHTML);
+
+          var reference = $(settings.template.first()[0].outerHTML);
+          reference.appendTo('#' + settings.mainContainerId);
+          $(reference.get(0)).removeClass('d-none');
 
           _initializePlugins();
 
@@ -2425,7 +2428,7 @@ common.View.create('admin.modules.page.CreateEdit', {
 
 
           settings.afterRender.call({
-            index: settings.counterIndex
+            index: reference
           });
           return false;
         };
@@ -2689,8 +2692,9 @@ common.View.create('admin.modules.page.CreateEdit', {
       beforeRender: function beforeRender() {
         console.info(':: Before rendered callback called');
       },
-      afterRender: function afterRender() {
-        console.info(':: After rendered callback called'); //$(".selectpicker").selectpicker('refresh');
+      afterRender: function afterRender(event) {
+        console.info(':: After rendered callback called');
+        $('.pageSlide').last().dropify({});
       },
       afterRemove: function afterRemove() {
         console.warn(':: After remove callback called');
@@ -34584,7 +34588,8 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
             return wordKey[2];
         },
         translate: function (number, withoutSuffix, key, isFuture) {
-            var wordKey = translator.words[key];
+            var wordKey = translator.words[key],
+                word;
 
             if (key.length === 1) {
                 // Nominativ
@@ -34592,7 +34597,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
                 return isFuture || withoutSuffix ? wordKey[0] : wordKey[1];
             }
 
-            const word = translator.correctGrammaticalCase(number, wordKey);
+            word = translator.correctGrammaticalCase(number, wordKey);
             // Nominativ
             if (key === 'yy' && withoutSuffix && word === 'годину') {
                 return number + ' година';
@@ -34729,7 +34734,8 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
             return wordKey[2];
         },
         translate: function (number, withoutSuffix, key, isFuture) {
-            var wordKey = translator.words[key];
+            var wordKey = translator.words[key],
+                word;
 
             if (key.length === 1) {
                 // Nominativ
@@ -34737,7 +34743,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
                 return isFuture || withoutSuffix ? wordKey[0] : wordKey[1];
             }
 
-            const word = translator.correctGrammaticalCase(number, wordKey);
+            word = translator.correctGrammaticalCase(number, wordKey);
             // Nominativ
             if (key === 'yy' && withoutSuffix && word === 'godinu') {
                 return number + ' godina';
@@ -37996,7 +38002,7 @@ webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
 
 /* module decorator */ module = __webpack_require__.nmd(module);
 //! moment.js
-//! version : 2.29.2
+//! version : 2.29.3
 //! authors : Tim Wood, Iskren Chernev, Moment.js contributors
 //! license : MIT
 //! momentjs.com
@@ -43631,7 +43637,7 @@ webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
 
     //! moment.js
 
-    hooks.version = '2.29.2';
+    hooks.version = '2.29.3';
 
     setHookCallback(createLocal);
 

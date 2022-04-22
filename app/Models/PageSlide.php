@@ -43,7 +43,7 @@ class PageSlide extends Model implements HasMedia
      */
     public function registerMediaCollections(): void
     {
-        $this->addMediaCollection('pageImage')->singleFile();
+        $this->addMediaCollection('pageSliderImage')->singleFile();
     }
 
     /**
@@ -52,8 +52,8 @@ class PageSlide extends Model implements HasMedia
      */
     public function registerMediaConversions(Media $media = null): void
     {
-        $this->addMediaConversion('pageImage')
+        $this->addMediaConversion('pageSliderImage')
             ->withResponsiveImages()
-            ->performOnCollections('pageImage');
+            ->performOnCollections('pageSliderImage');
     }
 }

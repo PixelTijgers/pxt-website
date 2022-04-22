@@ -52,6 +52,7 @@
     <!-- Admin scripts -->
     <script src="{{ URL::asset(mix('js/admin/admin.js')) }}"></script>
     <script src="{{ URL::asset(URL::asset('js/admin/nobileUi.js')) }}"></script>
+    <script src="{{ URL::asset(URL::asset('js/admin/dropify.js')) }}"></script>
     <script src="{{ URL::asset('plugins/tempusdominus-bootstrap-4/build/js/tempusdominus-bootstrap-4.min.js') }}"></script>
 </head>
 
