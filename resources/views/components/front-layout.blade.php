@@ -25,7 +25,7 @@
 
     <!-- Scripts -->
     <script src="{{ URL::asset(mix('js/front/front.js')) }}"></script>
-    <script src="{{ URL::asset('plugins/@fortawesome/fontawesome-pro/js/all.min.js') }}" defer></script>
+    <script src="{{ URL::asset('plugins/@fortawesome/fontawesome-pro/js/all.min.js') }}"></script>
     <script src="{{ URL::asset('plugins/jquery-sticky/jquery.sticky.js') }}"></script>
     <script src="{{ URL::asset('plugins/mburger-css/dist/mburger.js') }}" type="module"></script>
     <script src="{{ URL::asset('plugins/mmenu-js/dist/mmenu.js') }}"></script>
