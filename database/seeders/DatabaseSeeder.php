@@ -24,6 +24,8 @@ class DatabaseSeeder extends Seeder
             // Navigation seeders.
             NavigationMenuSeeder::class,
             Menu\MainSeeder::class,
+            Menu\FooterSeeder::class,
+            Menu\StandAloneSeeder::class,
 
             // Website seeders.
             CategorySeeder::class,

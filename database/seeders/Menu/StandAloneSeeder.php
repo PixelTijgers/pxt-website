@@ -13,7 +13,7 @@ use App\Models\Page;
 // Enums
 use App\Enums\PublishedState;
 
-class MainSeeder extends Seeder
+class StandAloneSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -24,34 +24,34 @@ class MainSeeder extends Seeder
     {
         $pages = [
             [
-                'page_title' => 'Home',
-                'menu_title' => 'Home',
-                'slug' => '/',
+                'page_title' => 'Algemene voorwaarden',
+                'menu_title' => 'Algemene voorwaarden',
+                'slug' => '/algemene-voorwaarden',
                 'content' => '<p>Dit is een stuk tekst.</p>',
 
-                'meta_title' => 'Home',
+                'meta_title' => 'Algemene voorwaarden',
                 'meta_description' => 'Dit is een stuk tekst.',
                 'meta_tags' => 'Website, Webdesign, Design',
 
-                'og_title' => 'Home',
+                'og_title' => 'Algemene voorwaarden',
                 'og_description' => 'Dit is een stuk tekst.',
-                'og_slug' => '/',
+                'og_slug' => '/algemene-voorwaarden',
                 'og_type' => 'website',
                 'og_locale' => 'nl_NL',
             ],
             [
-                'page_title' => 'Contact',
-                'menu_title' => 'Contact',
-                'slug' => '/contact',
+                'page_title' => 'Privacy Policy',
+                'menu_title' => 'Privacy Policy',
+                'slug' => '/privacy-policy',
                 'content' => '<p>Dit is een stuk tekst.</p>',
 
-                'meta_title' => 'Contact',
+                'meta_title' => 'Privacy Policy',
                 'meta_description' => 'Dit is een stuk tekst.',
                 'meta_tags' => 'Website, Webdesign, Design',
 
-                'og_title' => 'Contact',
+                'og_title' => 'Privacy Policy',
                 'og_description' => 'Dit is een stuk tekst.',
-                'og_slug' => '/contact',
+                'og_slug' => '/privacy-policy',
                 'og_type' => 'website',
                 'og_locale' => 'nl_NL',
             ],
@@ -69,8 +69,10 @@ class MainSeeder extends Seeder
                 ] + $page);
 
             // Sync with the navigation menu.
-            $createPage->navigation_menus()->sync([2]);
+            $createPage->navigation_menus()->sync([5]);
 
         }
+
     }
+
 }

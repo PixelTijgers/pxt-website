@@ -13,7 +13,7 @@ use App\Models\Page;
 // Enums
 use App\Enums\PublishedState;
 
-class MainSeeder extends Seeder
+class FooterSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -24,34 +24,34 @@ class MainSeeder extends Seeder
     {
         $pages = [
             [
-                'page_title' => 'Home',
-                'menu_title' => 'Home',
-                'slug' => '/',
+                'page_title' => 'Disclaimer',
+                'menu_title' => 'Disclaimer',
+                'slug' => '/disclaimer',
                 'content' => '<p>Dit is een stuk tekst.</p>',
 
-                'meta_title' => 'Home',
+                'meta_title' => 'Disclaimer',
                 'meta_description' => 'Dit is een stuk tekst.',
                 'meta_tags' => 'Website, Webdesign, Design',
 
-                'og_title' => 'Home',
+                'og_title' => 'Disclaimer',
                 'og_description' => 'Dit is een stuk tekst.',
-                'og_slug' => '/',
+                'og_slug' => '/disclaimer',
                 'og_type' => 'website',
                 'og_locale' => 'nl_NL',
             ],
             [
-                'page_title' => 'Contact',
-                'menu_title' => 'Contact',
-                'slug' => '/contact',
+                'page_title' => 'Cookie Policy',
+                'menu_title' => 'Cookie Policy',
+                'slug' => '/cookie-policy',
                 'content' => '<p>Dit is een stuk tekst.</p>',
 
-                'meta_title' => 'Contact',
+                'meta_title' => 'Cookie Policy',
                 'meta_description' => 'Dit is een stuk tekst.',
                 'meta_tags' => 'Website, Webdesign, Design',
 
-                'og_title' => 'Contact',
+                'og_title' => 'Cookie Policy',
                 'og_description' => 'Dit is een stuk tekst.',
-                'og_slug' => '/contact',
+                'og_slug' => '/cookie-policy',
                 'og_type' => 'website',
                 'og_locale' => 'nl_NL',
             ],
@@ -69,7 +69,7 @@ class MainSeeder extends Seeder
                 ] + $page);
 
             // Sync with the navigation menu.
-            $createPage->navigation_menus()->sync([2]);
+            $createPage->navigation_menus()->sync([4]);
 
         }
     }

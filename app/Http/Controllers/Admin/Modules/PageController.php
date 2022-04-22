@@ -205,7 +205,7 @@ class PageController extends Controller
             $modelIdCollection[] = (@$slide['model_id'] ? $slide['model_id'] : $pageSlide->id);
         };
 
-        PageSlide::whereNotIn('id', $modelIdCollection)->delete();
+        PageSlide::where('page_id', $model->id)->whereNotIn('id', $modelIdCollection)->delete();
 
         return true;
     }
