@@ -46,6 +46,8 @@
 
         {{ $slot }}
 
+        @include('front.layouts.sub-footer')
+
         @include('front.layouts.footer')
 
     </div>
