@@ -82,6 +82,7 @@
   outline: none;
   position: absolute;
   bottom: 75px;
+  transform: translateY(275px);
   width: 50px;
   z-index: 1;
 }
@@ -101,6 +102,10 @@
 .components-page-Slider .slick-slider .slick-prev:hover svg,
 .components-page-Slider .slick-slider .slick-next:hover svg {
   color: var(--clr-secondary-300) !important;
+}
+.components-page-Slider .slick-slider .slick-prev:before,
+.components-page-Slider .slick-slider .slick-next:before {
+  display: none;
 }
 .components-page-Slider .slick-slider .slick-prev {
   left: 10%;

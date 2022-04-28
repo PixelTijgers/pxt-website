@@ -32,14 +32,12 @@
                         <input type="hidden" name="pageSlider[{{ $key }}][model_id]" value="{{ $slide->id }}" />
                         <input type="hidden" name="pageSlider[{{ $key }}][_lft]" value="{{ $slide->_lft }}" class="hidden-lft"/>
 
-                        <x-form.slug
-                            name="pageSlider[{{ $key }}][slug]"
-                            slugField="page_title"
-                            :label="__('Url')"
-                            :model="@$page"
-                            :modelName="\App\Models\Post::where('id', @$page->parent_id)->first()"
+                        <x-form.input
+                            type="text"
+                            name="pageSlider[{{ $key }}][subtitle]"
+                            :label="__('Subtitle')"
                             :required="false"
-                            :value="$slide->slug"
+                            :value="$slide->subtitle"
                         />
 
                         <x-form.input
@@ -56,6 +54,16 @@
                             :label="__('Figcaption')"
                             :required="false"
                             :value="$slide->figcaption"
+                        />
+
+                        <x-form.slug
+                            name="pageSlider[{{ $key }}][slug]"
+                            slugField="page_title"
+                            :label="__('Url')"
+                            :model="@$page"
+                            :modelName="\App\Models\Post::where('id', @$page->parent_id)->first()"
+                            :required="false"
+                            :value="$slide->slug"
                         />
 
                     </div>

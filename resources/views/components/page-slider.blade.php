@@ -19,7 +19,7 @@
 
                     <div class="meta">
 
-                        <h4>Vrij in te vullen</h4>
+                        <h4>{{ $slide->subtitle }}</h4>
                         <h3>{{ $slide->title }}</h3>
                         <p>{{ $slide->figcaption }} </p>
                         <a href="{{ $slide->slug }}" class="btn">Lees meer <i class="fa-solid fa-angles-right"></i></a>

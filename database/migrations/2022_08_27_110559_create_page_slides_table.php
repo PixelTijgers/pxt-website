@@ -23,6 +23,7 @@ class CreatePageSlidesTable extends Migration
             $table->foreign('page_id')->references('id')->on('pages')->onDelete('cascade');
 
             // Table content.
+            $table->text('subtitle')->nullable();
             $table->text('title')->nullable();
             $table->text('figcaption')->nullable();
             $table->text('alt')->nullable();

@@ -30,6 +30,7 @@ class PageSlide extends Model implements HasMedia
      */
     protected $fillable = [
         'page_id',
+        'subtitle',
         'title',
         'figcaption',
         'alt',

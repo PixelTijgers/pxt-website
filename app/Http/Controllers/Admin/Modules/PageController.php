@@ -190,6 +190,7 @@ class PageController extends Controller
             ],
             [
                 'page_id' => $model->id,
+                'subtitle' => $slide['subtitle'],
                 'title' => $slide['title'],
                 'figcaption' => $slide['figcaption'],
                 'alt' => $slide['alt'],
