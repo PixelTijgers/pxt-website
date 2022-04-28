@@ -49,6 +49,7 @@ const ResourceMix = require('./resources/js/common/ResourceMix.js');
             'mmenu-light/dist/mmenu-light.polyfills.js',
             'perfect-scrollbar/dist/perfect-scrollbar.min.js',
             'select2/dist/js/select2.full.min.js',
+            'slick-slider/slick/slick.min.js',
             'speakingurl/lib/speakingurl.js',
             'sweetalert2/dist/sweetalert2.all.min.js',
             'tempusdominus-bootstrap-4/build/js/tempusdominus-bootstrap-4.min.js',
@@ -67,6 +68,8 @@ const ResourceMix = require('./resources/js/common/ResourceMix.js');
             'mmenu-light/dist/mmenu-light.css',
             'perfect-scrollbar/css/perfect-scrollbar.css',
             'select2/dist/css/select2.min.css',
+            'slick-slider/slick/slick.css',
+            'slick-slider/slick/slick-theme.css',
             'sweetalert2/dist/sweetalert2.min.css',
             'tempusdominus-bootstrap-4/build/css/tempusdominus-bootstrap-4.min.css',
             'toastr/build/toastr.min.css'

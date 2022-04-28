@@ -21,14 +21,16 @@
     <link rel="stylesheet" href="{{ URL::asset('plugins/flag-icons/css/flag-icons.min.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('plugins/mburger-css/dist/mburger.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('plugins/mmenu-js/dist/mmenu.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('plugins/slick-slider/slick/slick.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('plugins/slick-slider/slick/slick-theme.css') }}">
     <link rel="stylesheet" href="{{ URL::asset(mix('css/front/front.css')) }}">
 
     <!-- Scripts -->
     <script src="{{ URL::asset(mix('js/front/front.js')) }}"></script>
     <script src="{{ URL::asset('plugins/@fortawesome/fontawesome-pro/js/all.min.js') }}"></script>
-    <script src="{{ URL::asset('plugins/jquery-sticky/jquery.sticky.js') }}"></script>
     <script src="{{ URL::asset('plugins/mburger-css/dist/mburger.js') }}" type="module"></script>
     <script src="{{ URL::asset('plugins/mmenu-js/dist/mmenu.js') }}"></script>
+    <script src="{{ URL::asset('plugins/slick-slider/slick/slick.min.js') }}"></script>
 
     <!-- Page styles -->
     @stack('styles')

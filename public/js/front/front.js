@@ -2565,9 +2565,22 @@ _common_AutoloadViews__WEBPACK_IMPORTED_MODULE_0__["default"].load('../front', _
 common.View.create('front.modules.home.Index', {
   onDOMLoad: function onDOMLoad() {
     this.initTest();
+    this.initSlickslider();
   },
   initTest: function initTest() {
     console.log('Init: front.modules.home.Index');
+  },
+  initSlickslider: function initSlickslider() {
+    $('#pageSlider').slick({
+      arrows: true,
+      cssEase: 'linear',
+      dots: false,
+      fade: true,
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      speed: 500
+    });
   }
 });
 

@@ -21,7 +21,9 @@
 <x-front-layout>
 
         <main class="{{ $cssNs }} mx-auto max-w-screen-xl w-full">
-            
+
+            @include('components.page-slider')
+
             <h1>Test</h1>
 
         </main>
