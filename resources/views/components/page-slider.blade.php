@@ -1,30 +1,41 @@
 @if(\App\Models\PageSlide::where('page_id', $page->id)->get() != null)
 
-    <div class="{{ $cssNs }}" id="pageSlider">
+<div class="{{ $cssNs }}">
 
-        @foreach(\App\Models\PageSlide::where('page_id', $page->id)->orderBy('_lft', 'ASC')->get() as $pageSlide)
+    <div class="mx-auto max-w-screen-xl w-full">
 
-        <div>
+        <div id="pageSlider">
+            @foreach(\App\Models\PageSlide::where('page_id', $page->id)->orderBy('_lft', 'asc')->get() as $slide)
 
-            <a href="{{ $pageSlide->slug }}">
+            <div class="slide">
 
-                <figure class="{{ $pageSlide->class }}">
-                    
-                    <img
-                        src="{{ $pageSlide->getFirstMediaUrl('pageSliderImage') }}"
-                        alt="{{ $pageSlide->alt }}"
-                        title="{{ $pageSlide->title }}"
-                    />
-                    <figcaption>{{ $pageSlide->figcaption }}</figcaption>
+                <a href="{{ $slide->slug }}">
 
-                </figure>
+                    <figure>
 
-            </a>
+                        <img src="{{ $slide->getFirstMediaUrl('pageSliderImage') }}" alt="{{ $slide->alt }}"/>
+
+                    </figure>
+
+                    <div class="meta">
+
+                        <h4>Vrij in te vullen</h4>
+                        <h3>{{ $slide->title }}</h3>
+                        <p>{{ $slide->figcaption }} </p>
+                        <a href="{{ $slide->slug }}" class="btn">Lees meer <i class="fa-solid fa-angles-right"></i></a>
+
+                    </div>
+
+                </a>
+
+            </div>
+            @endforeach
 
         </div>
 
-        @endforeach
-
     </div>
+
+</div>
+
 
 @endif
