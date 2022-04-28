@@ -22,6 +22,8 @@
 
         <main class="{{ $cssNs }}">
 
+            <h1>Test</h1>
+
         </main>
 
 </x-front-layout>
