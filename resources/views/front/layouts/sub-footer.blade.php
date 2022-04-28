@@ -38,15 +38,15 @@
 
                         <ul class="contact">
 
-                            <li><i class="fa-solid fa-location-dot"></i> Vier Ambachtenstraat 5, 4551 HP Sas van Gent</li>
-                            <li><a href="mailto:{{ config('cms.front.details.email') }}"><i class="fa-solid fa-envelope"></i>{{ config('cms.front.details.email') }}</a></li>
-                            <li><a href="tel:{{ config('cms.front.details.phone') }}"><i class="fa-solid fa-mobile-screen"></i>{{ config('cms.front.details.mobile') }}</a></li>
+                            <li><i class="fa-solid fa-location-dot"></i> {{ $details->street }}, {{ $details->zip_code }} {{ $details->location }}</li>
+                            <li><a href="mailto:{{ config('cms.front.details.email') }}"><i class="fa-solid fa-envelope"></i>{{ $details->email }}</a></li>
+                            <li><a href="tel:{{ config('cms.front.details.phone') }}"><i class="fa-solid fa-mobile-screen"></i>{{ $details->mobile }}</a></li>
 
                         </ul>
 
                         <ul>
-                            <li><strong>Kvk:</strong> 12345678</li>
-                            <li><strong>Btw:</strong> NLB07 123455678</li>
+                            <li><strong>Kvk:</strong> {{ $details->coc }}</li>
+                            <li><strong>Btw:</strong> {{ $details->vat }}</li>
                         </ul>
 
                     </div>

@@ -70,9 +70,6 @@
   box-shadow: var(--shadow-primary);
   height: var(--nav-height);
 }
-.front-layouts-navigation-Desktop a.brand-logo {
-  padding-left: 18px;
-}
 .front-layouts-navigation-Desktop a.brand-logo figure img {
   height: var(--nav-brand-height);
   width: var(--nav-brand-width);
@@ -252,7 +249,7 @@
   margin-right: 3px;
 }
 .front-layouts-site-Top .contact-details li a {
-  transition: all 0.25s ease-in 0s;
+  transition: all 0.15s ease-in 0s;
   color: var(--clr-primary-300);
   font-size: 13px;
 }
@@ -310,7 +307,7 @@
 .front-layouts-sub-Footer .details ul li {
   color: var(--clr-white-100);
   font-family: var(--ff-fbase);
-  font-size: 1.05rem;
+  font-size: 0.99rem;
   letter-spacing: 0.025rem;
   line-height: 175%;
 }
@@ -1204,6 +1201,11 @@ body {
   flex-direction: column;
   font-family: var(--ff-base);
   font-size: 14px;
+  min-height: 100vh;
+}
+body #page-container {
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
 }
 body main {

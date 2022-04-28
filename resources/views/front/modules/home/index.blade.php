@@ -20,8 +20,8 @@
 
 <x-front-layout>
 
-        <main class="{{ $cssNs }}">
-
+        <main class="{{ $cssNs }} mx-auto max-w-screen-xl w-full">
+            
             <h1>Test</h1>
 
         </main>

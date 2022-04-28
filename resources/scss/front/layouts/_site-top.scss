@@ -30,7 +30,7 @@
 
             a {
 
-                @include hoverTransition(.25s, ease-in);
+                @include hoverTransition(.15s, ease-in);
 
                 color: var(--clr-primary-300);
                 font-size: 13px;
