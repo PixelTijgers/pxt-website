@@ -1,7 +1,7 @@
 <?php
 
 // Namespacing.
-namespace App\Http\ViewComposers;
+namespace app\Http\ViewComposers;
 
 // Facades.
 use App\Traits\HasRightsTrait;

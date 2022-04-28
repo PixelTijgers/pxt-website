@@ -11,6 +11,7 @@ class ViewComposerServiceProvider extends ServiceProvider
     public function boot()
     {
         // App ViewComposers
+        view::composer('front.*', \App\Http\ViewComposers\DetailsViewComposer::class);
         view::composer('*', \App\Http\Viewcomposers\NameSpaceViewComposer::class);
         view::composer('front/layouts/*', \App\Http\Viewcomposers\NavigationMenuViewComposer::class);
         view::composer('front/modules/*', \App\Http\Viewcomposers\PageViewComposer::class);
