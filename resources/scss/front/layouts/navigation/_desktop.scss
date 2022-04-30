@@ -69,8 +69,15 @@
                         border-radius: 20px 20px 0 0;
                     }
 
+                    &.active,
                     &:hover {
                         color: var(--clr-primary-300);
+                    }
+
+                    &.active {
+                        &:after {
+                            width: 100% !important;
+                        }
                     }
                 }
 

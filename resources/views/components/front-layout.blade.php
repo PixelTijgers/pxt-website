@@ -31,12 +31,13 @@
     <script src="{{ URL::asset('plugins/mburger-css/dist/mburger.js') }}" type="module"></script>
     <script src="{{ URL::asset('plugins/mmenu-js/dist/mmenu.js') }}"></script>
     <script src="{{ URL::asset('plugins/slick-slider/slick/slick.min.js') }}"></script>
+    <script src="https://polyfill.io/v3/polyfill.js?features=default"></script>
 
     <!-- Page styles -->
     @stack('styles')
 
     <!-- Page scripts -->
-    @stack('js')
+    @stack('scripts')
 
 </head>
 

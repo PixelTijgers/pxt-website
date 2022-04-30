@@ -9,6 +9,8 @@ use App\Http\Controllers\Front\SitemapController;
 
 // Module controllers.
 use App\Http\Controllers\Front\Modules\HomeController;
+use App\Http\Controllers\Front\Modules\ContactController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,6 +30,9 @@ Route::middleware(['underDevelopment'])->group(function() {
 
     // Home route.
     Route::get('/', [HomeController::class, 'index']);
+
+    // Contact route.
+    Route::get('/contact', [ContactController::class, 'index']);
 
     // Sitemap route.
     Route::get('/sitemap.xml', [SitemapController::class, 'index'])->name('sitemap');

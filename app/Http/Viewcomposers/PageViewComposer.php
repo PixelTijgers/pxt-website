@@ -25,7 +25,10 @@ class PageViewComposer
      */
     protected function getPage()
     {
+        // Get the path.
+        $getPath = (request()->path() != '/' ? '/' . request()->path() :  request()->path());
+
         // Check if the current page exists. Else throw an error and redirect to the 404 page.
-        return Page::where('slug', request()->path())->firstOrFail();
+        return Page::where('slug', $getPath)->firstOrFail();
     }
 }

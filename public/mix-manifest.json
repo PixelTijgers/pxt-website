@@ -1,8 +1,7 @@
 {
-    "/js/front/front.js": "/js/front/front.js?id=a8ae2e1e747bf80d3edc4e1a4751a35a",
+    "/js/front/front.js": "/js/front/front.js?id=1c0f50efea0a4d6dad4609a764a0a90f",
     "/js/admin/admin.js": "/js/admin/admin.js?id=2be4d55ac2173ba8a3ea7223819d1359",
     "/css/admin/admin.css": "/css/admin/admin.css?id=56d64b94193810950bcfa178d0a189a0",
-    "/css/front/front.css": "/css/front/front.css?id=5bf8f5c1fa2d6f71e17f9ddbd6193b79",
     "/plugins/@fortawesome/fontawesome-pro/js/all.min.js": "/plugins/@fortawesome/fontawesome-pro/js/all.min.js?id=2ae534bdf847fc08436c5974bd3f40d1",
     "/plugins/@popperjs/core/dist/umd/popper.js": "/plugins/@popperjs/core/dist/umd/popper.js?id=d6cf66824cc651177d7fe899b9501431",
     "/plugins/bootstrap/dist/js/bootstrap.min.js": "/plugins/bootstrap/dist/js/bootstrap.min.js?id=259e416ef6833be43801b8b68a93b008",
@@ -22,6 +21,7 @@
     "/plugins/mmenu-light/dist/mmenu-light.polyfills.js": "/plugins/mmenu-light/dist/mmenu-light.polyfills.js?id=47723ecca6dc042b4819473ee72697b4",
     "/plugins/perfect-scrollbar/dist/perfect-scrollbar.min.js": "/plugins/perfect-scrollbar/dist/perfect-scrollbar.min.js?id=f7bc88383997dc2709cbe1433d26f0b7",
     "/plugins/select2/dist/js/select2.full.min.js": "/plugins/select2/dist/js/select2.full.min.js?id=6426dee270758cbf5787d67da63427ef",
+    "/plugins/slick-slider/slick/slick.min.js": "/plugins/slick-slider/slick/slick.min.js?id=22f75416148991671e580d8f4d2a2387",
     "/plugins/speakingurl/lib/speakingurl.js": "/plugins/speakingurl/lib/speakingurl.js?id=23ee8ed8c15c130a87b18e040f88173c",
     "/plugins/sweetalert2/dist/sweetalert2.all.min.js": "/plugins/sweetalert2/dist/sweetalert2.all.min.js?id=54d16688ee51061d7dcc89f8c95bda97",
     "/plugins/tempusdominus-bootstrap-4/build/js/tempusdominus-bootstrap-4.min.js": "/plugins/tempusdominus-bootstrap-4/build/js/tempusdominus-bootstrap-4.min.js?id=8567c312d46e7d2aae5f3e9079629b1c",
@@ -38,7 +38,10 @@
     "/plugins/mmenu-light/dist/mmenu-light.css": "/plugins/mmenu-light/dist/mmenu-light.css?id=558113eef5c74f28a80515a44707c105",
     "/plugins/perfect-scrollbar/css/perfect-scrollbar.css": "/plugins/perfect-scrollbar/css/perfect-scrollbar.css?id=6f36b1309fbbde634a5d54dd1734274a",
     "/plugins/select2/dist/css/select2.min.css": "/plugins/select2/dist/css/select2.min.css?id=e71c39430469a3eea74514a2b48f6536",
+    "/plugins/slick-slider/slick/slick.css": "/plugins/slick-slider/slick/slick.css?id=f38b2db10e01b1572732a3191d538707",
+    "/plugins/slick-slider/slick/slick-theme.css": "/plugins/slick-slider/slick/slick-theme.css?id=f9faba678c4d6dcfdde69e5b11b37a2e",
     "/plugins/sweetalert2/dist/sweetalert2.min.css": "/plugins/sweetalert2/dist/sweetalert2.min.css?id=759be128100e76b7ba85e80d42179ccd",
     "/plugins/tempusdominus-bootstrap-4/build/css/tempusdominus-bootstrap-4.min.css": "/plugins/tempusdominus-bootstrap-4/build/css/tempusdominus-bootstrap-4.min.css?id=7f698af6d95e237f745c004ca2c7d617",
-    "/plugins/toastr/build/toastr.min.css": "/plugins/toastr/build/toastr.min.css?id=f284028c678041d687c6f1be6968f68a"
+    "/plugins/toastr/build/toastr.min.css": "/plugins/toastr/build/toastr.min.css?id=f284028c678041d687c6f1be6968f68a",
+    "/css/front/front.css": "/css/front/front.css?id=34db86ea68b02371b0ff8e70d8a24efd"
 }

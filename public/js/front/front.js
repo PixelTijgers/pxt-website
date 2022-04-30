@@ -2556,6 +2556,41 @@ _common_AutoloadViews__WEBPACK_IMPORTED_MODULE_0__["default"].load('../front', _
 
 /***/ }),
 
+/***/ "./resources/js/front/modules/contact/index.js":
+/*!*****************************************************!*\
+  !*** ./resources/js/front/modules/contact/index.js ***!
+  \*****************************************************/
+/***/ (() => {
+
+common.View.create('front.modules.contact.Index', {
+  onDOMLoad: function onDOMLoad() {
+    this.initTest();
+    this.initGoogleMaps();
+  },
+  initTest: function initTest() {
+    console.log('Init: front.modules.contact.Index');
+  },
+  initGoogleMaps: function initGoogleMaps() {
+    // The location of Uluru
+    var location = {
+      lat: 51.22716,
+      lng: 3.79249
+    }; // The map, centered at Uluru
+
+    var map = new google.maps.Map(document.getElementById("map"), {
+      zoom: 16,
+      center: location
+    }); // The marker, positioned at Uluru
+
+    var marker = new google.maps.Marker({
+      position: location,
+      map: map
+    });
+  }
+});
+
+/***/ }),
+
 /***/ "./resources/js/front/modules/home/index.js":
 /*!**************************************************!*\
   !*** ./resources/js/front/modules/home/index.js ***!
@@ -30923,6 +30958,7 @@ var map = {
 	"./common/load.js": "./resources/js/front/common/load.js",
 	"./common/mmenu.js": "./resources/js/front/common/mmenu.js",
 	"./front.js": "./resources/js/front/front.js",
+	"./modules/contact/index.js": "./resources/js/front/modules/contact/index.js",
 	"./modules/home/index.js": "./resources/js/front/modules/home/index.js"
 };
 

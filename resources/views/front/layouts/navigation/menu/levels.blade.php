@@ -1,8 +1,12 @@
+@php
+    $getPath = (request()->path() != '/' ? '/' . request()->path() :  request()->path());
+@endphp
+
         <ul>
 
 @foreach($navigationMenuPages as $navigationLink)
 
-            <li><a href="{{ url($navigationLink->slug) }}">{{ $navigationLink->menu_title }}</a>
+            <li><a href="{{ url($navigationLink->slug) }}" class="{{ ($getPath == $navigationLink->slug ? 'active' : null) }}">{{ $navigationLink->menu_title }}</a>
     @if(!$navigationLink->children->isEmpty())
 
                 <ul>

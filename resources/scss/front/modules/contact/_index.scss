@@ -1,0 +1,14 @@
+@use '../../abstracts' as a;
+@use '../../abstracts/mixins' as *;
+@use '../../abstracts/variables' as *;
+
+:root {
+
+}
+
+.front-modules-contact-Index {
+    #map {
+      height: 450px;
+      width: 100%;
+    }
+}
