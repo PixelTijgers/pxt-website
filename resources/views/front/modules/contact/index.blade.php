@@ -25,7 +25,19 @@
 
             <div id="map"></div>
 
-            <div class="mx-auto max-w-screen-xl w-full">
+            <div class="contact-container">
+
+                <div class="mx-auto max-w-screen-xl w-full">
+
+                    @include('front.layouts.breadcrumb', [
+                        'breadcrum' => [
+                            'Contact' => '/contact',
+                        ],
+                    ])
+
+                    <h1>{{ $page->page_title }}</h1>
+
+                </div>
 
             </div>
 
