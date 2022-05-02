@@ -10,6 +10,7 @@ use App\Http\Controllers\Front\SitemapController;
 // Module controllers.
 use App\Http\Controllers\Front\Modules\HomeController;
 use App\Http\Controllers\Front\Modules\ContactController;
+use App\Http\Controllers\Front\Modules\PageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,6 +34,12 @@ Route::middleware(['underDevelopment'])->group(function() {
 
     // Contact route.
     Route::get('/contact', [ContactController::class, 'index']);
+
+    // Contact route.
+    Route::get('/disclaimer', [PageController::class, 'index']);
+    Route::get('/privacybeleid', [PageController::class, 'index']);
+    Route::get('/cookie-policy', [PageController::class, 'index']);
+    Route::get('/algemene-voorwaarden', [PageController::class, 'index']);
 
     // Sitemap route.
     Route::get('/sitemap.xml', [SitemapController::class, 'index'])->name('sitemap');

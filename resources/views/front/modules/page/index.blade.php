@@ -16,32 +16,14 @@
 @endPushOnce
 
 @pushOnce('scripts')
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkztYqAeIxU5sTDcFtylmfkKPNAecyQrU&callback=initMap&v=weekly" defer></script>
 @endPushOnce
 
 <x-front-layout>
 
-        <main class="{{ $cssNs }}">
+        <main class="{{ $cssNs }} mx-auto max-w-screen-xl w-full">
 
-            <div id="map"></div>
-
-            <div class="contact-container">
-
-                <div class="mx-auto max-w-screen-xl w-full">
-
-                    @include('front.layouts.breadcrumb', [
-                        'breadcrum' => [
-                            'Contact' => '/contact',
-                        ],
-                    ])
-
-                    <h1>{{ $page->page_title }}</h1>
-
-                    {!! $page->description !!}
-
-                </div>
-
-            </div>
+            <h1>{{ $page->page_title}}</h1>
+            {!! $page->content !!}
 
         </main>
 
