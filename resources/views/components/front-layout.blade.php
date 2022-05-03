@@ -1,6 +1,19 @@
 <!doctype html>
-<html lang="{{ app()->getLocale() }}">
+<!--
 
+$$$$$$$\  $$\                     $$\   $$\     $$\
+$$  __$$\ \__|                    $$ |  $$ |    \__|
+$$ |  $$ |$$\ $$\   $$\  $$$$$$\  $$ |$$$$$$\   $$\ $$\  $$$$$$\   $$$$$$\   $$$$$$\   $$$$$$$\
+$$$$$$$  |$$ |\$$\ $$  |$$  __$$\ $$ |\_$$  _|  $$ |\__|$$  __$$\ $$  __$$\ $$  __$$\ $$  _____|
+$$  ____/ $$ | \$$$$  / $$$$$$$$ |$$ |  $$ |    $$ |$$\ $$ /  $$ |$$$$$$$$ |$$ |  \__|\$$$$$$\
+$$ |      $$ | $$  $$<  $$   ____|$$ |  $$ |$$\ $$ |$$ |$$ |  $$ |$$   ____|$$ |       \____$$\
+$$ |      $$ |$$  /\$$\ \$$$$$$$\ $$ |  \$$$$  |$$ |$$ |\$$$$$$$ |\$$$$$$$\ $$ |      $$$$$$$  |
+\__|      \__|\__/  \__| \_______|\__|   \____/ \__|$$ | \____$$ | \_______|\__|      \_______/
+                                              $$\   $$ |$$\   $$ |
+                                              \$$$$$$  |\$$$$$$  |
+                                               \______/  \______/
+-->
+<html lang="{{ app()->getLocale() }}">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -30,7 +43,7 @@
     <script src="{{ URL::asset('plugins/@fortawesome/fontawesome-pro/js/all.min.js') }}" data-search-pseudo-elements defer></script>
     <script src="{{ URL::asset('plugins/mburger-css/dist/mburger.js') }}" type="module"></script>
     <script src="{{ URL::asset('plugins/mmenu-js/dist/mmenu.js') }}"></script>
-    <script src="{{ URL::asset('plugins/slick-slider/slick/slick.min.js') }}"></script>
+    <script src="{{ URL::asset('plugins/slick-slider/slick/slick.min.js') }}" defer></script>
     <script src="https://polyfill.io/v3/polyfill.js?features=default"></script>
 
     <!-- Page styles -->

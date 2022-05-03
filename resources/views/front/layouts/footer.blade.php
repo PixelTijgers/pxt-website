@@ -28,7 +28,7 @@
 
         <div class="flex justify-between h-full copyright">
 
-            <nav class="flex justify-start w-1/2">
+            <nav class="flex justify-start w-8/12">
 
                 @include('front.layouts.navigation.menu.navigation-menu', [
                     'navigationMenu' => 'footer',
@@ -36,7 +36,7 @@
 
             </nav>
 
-            <div class="flex justify-end w-1/2">
+            <div class="flex justify-end w-4/12">
 
                 <p>© {{ config('app.name') }} 2021 - {{ date('Y') }}, alle rechten voorbehouden.</p>
 

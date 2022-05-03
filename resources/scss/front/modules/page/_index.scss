@@ -1,0 +1,55 @@
+:root {
+
+}
+
+.front-modules-page-Index {
+    .main-container {
+
+        h2 {
+            font-size: 34px;
+            margin-bottom: 20px;
+        }
+        h3 {
+            font-size: 26px;
+            font-weight: 300px;
+            margin-bottom: 5px;
+            letter-spacing: 0.05em;
+        }
+        h4 {
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 0.075em;
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+
+        ol,
+        ul {
+            font-family: var(--ff-base);
+            font-size: 18px;
+            margin-bottom: 40px;
+            padding-left: 50px;
+
+            li {
+                line-height: 30px;
+                list-style-type: numbered;
+
+                span {
+                    font-weight: 700;
+                }
+
+                ul {
+                    margin: 20px;
+                    li {
+                        list-style-type: disc;
+                    }
+                }
+            }
+        }
+
+        a {
+            color: var(--clr-secondary-300);
+            font-weight: 500;
+        }
+    }
+}

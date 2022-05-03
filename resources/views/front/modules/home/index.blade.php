@@ -20,11 +20,24 @@
 
 <x-front-layout>
 
-        <main class="{{ $cssNs }} mx-auto max-w-screen-xl w-full">
+        <main class="{{ $cssNs }}">
 
-            @include('components.page-slider')
+            <div class="mx-auto max-w-screen-xl w-full">
 
-            <h1>Test</h1>
+                @include('components.page-slider')
+
+            </div>
+
+            <div class="main-container">
+
+                <div class="mx-auto max-w-screen-xl w-full">
+
+                    <h2>{{ $page->page_title}} </h2>
+                    {!! $page->content !!}
+
+                </div>
+
+            </div>
 
         </main>
 

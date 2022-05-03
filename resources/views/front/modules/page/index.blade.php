@@ -20,11 +20,19 @@
 
 <x-front-layout>
 
-        <main class="{{ $cssNs }} mx-auto max-w-screen-xl w-full">
+    <main class="{{ $cssNs }}">
 
-            <h1>{{ $page->page_title}}</h1>
-            {!! $page->content !!}
+        <div class="main-container">
 
-        </main>
+            <div class="mx-auto max-w-screen-xl w-full">
+
+                <h2>{{ $page->page_title}} </h2>
+                {!! $page->content !!}
+
+            </div>
+
+        </div>
+
+    </main>
 
 </x-front-layout>

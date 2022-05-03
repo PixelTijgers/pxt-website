@@ -227,6 +227,24 @@
   display: none;
 }
 
+main h2 {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+main p {
+  color: var(--clr-black-500);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  margin-bottom: 40px;
+  word-spacing: 2px;
+}
+main .main-container {
+  background: var(--clr-white-100);
+  padding-top: 80px;
+  padding-bottom: 65px;
+}
+
 :root {
   --nav-height: 80px;
   --nav-brand-height: auto;
@@ -429,6 +447,10 @@
   color: var(--clr-secondary-300);
 }
 
+.front-layouts-Header {
+  z-index: 1;
+}
+
 :root {
   --tr-time: .15s;
   --ts-ease: ease-in-out;
@@ -570,8 +592,66 @@
   padding-top: 80px;
 }
 
+.front-modules-page-Index .main-container h2 {
+  font-size: 34px;
+  margin-bottom: 20px;
+}
+.front-modules-page-Index .main-container h3 {
+  font-size: 26px;
+  font-weight: 300px;
+  margin-bottom: 5px;
+  letter-spacing: 0.05em;
+}
+.front-modules-page-Index .main-container h4 {
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.075em;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+.front-modules-page-Index .main-container ol,
+.front-modules-page-Index .main-container ul {
+  font-family: var(--ff-base);
+  font-size: 18px;
+  margin-bottom: 40px;
+  padding-left: 50px;
+}
+.front-modules-page-Index .main-container ol li,
+.front-modules-page-Index .main-container ul li {
+  line-height: 30px;
+  list-style-type: numbered;
+}
+.front-modules-page-Index .main-container ol li span,
+.front-modules-page-Index .main-container ul li span {
+  font-weight: 700;
+}
+.front-modules-page-Index .main-container ol li ul,
+.front-modules-page-Index .main-container ul li ul {
+  margin: 20px;
+}
+.front-modules-page-Index .main-container ol li ul li,
+.front-modules-page-Index .main-container ul li ul li {
+  list-style-type: disc;
+}
+.front-modules-page-Index .main-container a {
+  color: var(--clr-secondary-300);
+  font-weight: 500;
+}
+
 .cookie-consent {
+  background: var(--clr-white-100);
+  box-shadow: var(--shadow-primary);
+  padding: 10px 15px;
   z-index: 2;
+}
+.cookie-consent p {
+  color: var(--clr-primary-300);
+}
+.cookie-consent a {
+  color: var(--clr-primary-300);
+}
+.cookie-consent a:hover {
+  color: var(--clr-secondary-300);
 }
 
 :root {
@@ -1075,8 +1155,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   left: 0px;
   right: 0px;
 }
-.bottom-0 {
-  bottom: 0px;
+.bottom-7 {
+  bottom: 1.75rem;
 }
 .top-0 {
   top: 0px;
@@ -1109,6 +1189,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .ml-3 {
   margin-left: 0.75rem;
+}
+.ml-5 {
+  margin-left: 1.25rem;
 }
 .mt-5 {
   margin-top: 1.25rem;
@@ -1212,6 +1295,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 .w-2\/12 {
   width: 16.666667%;
 }
+.w-8\/12 {
+  width: 66.666667%;
+}
+.w-4\/12 {
+  width: 33.333333%;
+}
 .max-w-7xl {
   max-width: 80rem;
 }
@@ -1283,14 +1372,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-border-opacity: 1;
   border-color: rgb(156 163 175 / var(--tw-border-opacity));
 }
-.bg-yellow-100 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(254 249 195 / var(--tw-bg-opacity));
-}
-.bg-yellow-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(250 204 21 / var(--tw-bg-opacity));
-}
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -1298,9 +1379,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-gray-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
-}
-.p-2 {
-  padding: 0.5rem;
 }
 .p-0 {
   padding: 0px;
@@ -1310,10 +1388,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .p-6 {
   padding: 1.5rem;
-}
-.px-6 {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
 }
 .px-4 {
   padding-left: 1rem;
@@ -1339,8 +1413,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
-.pb-2 {
-  padding-bottom: 0.5rem;
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 .pb-3 {
   padding-bottom: 0.75rem;
@@ -1377,10 +1452,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-black {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
-}
-.text-yellow-800 {
-  --tw-text-opacity: 1;
-  color: rgb(133 77 14 / var(--tw-text-opacity));
 }
 .text-gray-200 {
   --tw-text-opacity: 1;
@@ -1468,10 +1539,6 @@ body main h6 {
 }
 body main h1 {
   font-size: 48px;
-}
-.hover\:bg-yellow-300:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(253 224 71 / var(--tw-bg-opacity));
 }
 @media (prefers-color-scheme: dark) {
 

@@ -28,7 +28,7 @@ class StandAloneSeeder extends Seeder
                 'menu_title' => 'Disclaimer',
                 'slug' => '/disclaimer',
                 'content' => '
-                <p>Toegang tot en gebruik van de Pixeltijgers internetsite www.pixeltijgers.nl (hierna “site”) zijn onderworpen aan onderstaande voorwaarden, tenzij anders bepaald in aanvullende voorwaarden in betreffende applicatie of ander gedeelte van de site gesteld. Gebruik van deze site betekent de volledige aanvaarding van deze voorwaarden en aanvullende voorwaarden gesteld in de applicaties en andere delen van de site.</p>
+                <p>Toegang tot en gebruik van de Pixeltijgers internetsite <strong>www.pixeltijgers.nl</strong> (hierna “site”) zijn onderworpen aan onderstaande voorwaarden, tenzij anders bepaald in aanvullende voorwaarden in betreffende applicatie of ander gedeelte van de site gesteld. Gebruik van deze site betekent de volledige aanvaarding van deze voorwaarden en aanvullende voorwaarden gesteld in de applicaties en andere delen van de site.</p>
 
                 <p>1. Deze site en de informatie, namen, beelden, afbeeldingen, logo’s en iconen betreffende of verband houdend met Pixeltijgers of haar producten en diensten worden verstrekt “zoals zij zijn” zonder enige verklaring of bevestiging en zonder enigerlei garantie, al dan niet expliciet of impliciet, met inbegrip van, echter niet beperkt tot, de impliciete garantie van verhandelbaarheid, geschiktheid voor een bepaald doel of geen inbreuk vormend. De informatie die op deze site aangeboden wordt, is niet geschreven om aan uw persoonlijke behoeften te voldoen en u bent degene die ervoor verantwoordelijk is uzelf ervan te vergewissen of deze informatie voor uw doel geschikt is voordat u er gebruik van maakt.</p>
 
@@ -57,22 +57,21 @@ class StandAloneSeeder extends Seeder
                 'menu_title' => 'Algemene voorwaarden',
                 'slug' => '/algemene-voorwaarden',
                 'content' => '
-                <h2>Algemene voorwaarden Pixeltijgers </h2>
                 <ul>
-                    <li>E-mail: info@Pixeltijgers .nl</li>
-                    <li>Website: www.Pixeltijgers .nl</li>
+                    <li>E-mail: <a href="mailto:info@pixeltijgers.nl">info@pixeltijgers.nl</a></li>
+                    <li>Website: <a href="www.pixeltijgers.nl">www.pixeltijgers.nl</a></li>
                 </ul>
                 <h3>Definities</h3>
                     <ol>
-                        <li>Pixeltijgers :Pixeltijgers , gevestigd te Sas van Gent onder KvK nr. 80856772.</li>
-                        <li>Klant: degene met wie Pixeltijgers een overeenkomst is aangegaan.</li>
-                        <li>Partijen:Pixeltijgers  klant samen.</li>
-                        <li>Consument:Consument: een klant die tevens een individu is en die als privépersoon handelt.</li>
+                        <li><span>Pixeltijgers:</span> Pixeltijgers, gevestigd te Sas van Gent onder KvK nr. 80856772.</li>
+                        <li><span>Klant:</span> degene met wie Pixeltijgers een overeenkomst is aangegaan.</li>
+                        <li><span>Partijen:</span> Pixeltijgers klant samen.</li>
+                        <li><span>Consument:</span> Een klant die tevens een individu is en die als privépersoon handelt.</li>
                     </ol>
                 <h3>Toepasselijkheid algemene voorwaarden</h3>
                 <ol>
                 	<li>
-                	Deze voorwaarden zijn van toepassing op alle offertes, aanbiedingen, werkzaamheden, bestellingen, overeenkomsten en leveringen van diensten of producten door of namens Pixeltijgers .
+                	Deze voorwaarden zijn van toepassing op alle offertes, aanbiedingen, werkzaamheden, bestellingen, overeenkomsten en leveringen van diensten of producten door of namens Pixeltijgers.
                 	</li>
                 	<li>
                 	Partijen kunnen alleen afwijken van deze voorwaarden als zij dat uitdrukkelijk en schriftelijk zijn overeengekomen.
@@ -114,10 +113,10 @@ class StandAloneSeeder extends Seeder
                 	Alle prijzen die Pixeltijgers  hanteert voor zijn diensten, op zijn website of die anderszins kenbaar zijn gemaakt, kan Pixeltijgers  te allen tijde wijzigen.
                 	</li>
                 	<li>
-                	De prijs met betrekking tot een dienstverlening wordt door Pixeltijgers  vastgesteld op grond van de werkelijk bestede uren.
+                	De prijs met betrekking tot een dienstverlening wordt door Pixeltijgers vastgesteld op grond van de werkelijk bestede uren.
                 	</li>
                 	<li>
-                	De prijs wordt berekend volgens de gebruikelijke uurtarieven van Pixeltijgers , geldend voor de periode waarin hij de werkzaamheden verricht, tenzij een afwijkend uurtarief is overeengekomen.
+                	De prijs wordt berekend volgens de gebruikelijke uurtarieven van Pixeltijgers, geldend voor de periode waarin hij de werkzaamheden verricht, tenzij een afwijkend uurtarief is overeengekomen.
                 	</li>
                 	<li>
                 	Indien partijen voor een dienstverlening door Pixeltijgers een totaalbedrag zijn overeengekomen, is dit altijd een richtprijs, tenzij partijen uitdrukkelijk en schriftelijk een vaste prijs, waarvan niet kan worden afgeweken, zijn overeengekomen.
@@ -162,7 +161,7 @@ class StandAloneSeeder extends Seeder
                 	Betaalt de klant niet binnen de overeengekomen termijn, dan is Pixeltijgers  gerechtigd de wettelijke rente van 2% per maand voorniet-handelstransacties en de wettelijke rente van8% per maand voor handelstransacties in rekening te brengen vanaf de dag dat de klant in verzuim is, waarbij een gedeelte van een maand voor een hele maand wordt gerekend.
                 	</li>
                 	<li>
-                	Wanneer de klant in verzuim is, is hij bovendien buitengerechtelijke incassokosten en eventuele schadevergoeding verschuldigd aan Pixeltijgers .
+                	Wanneer de klant in verzuim is, is hij bovendien buitengerechtelijke incassokosten en eventuele schadevergoeding verschuldigd aan Pixeltijgers.
                 	</li>
                 	<li>
                 	De incassokosten worden berekend aan de hand van het Besluit vergoeding voor buitengerechtelijke incassokosten.
@@ -179,29 +178,29 @@ class StandAloneSeeder extends Seeder
                 </ol>
                 <h3>Herroepingsrecht</h3>
                 <ol>
-                	<li>Een consument kan een online aankoop gedurende een bedenktijd van 14 dagen zonder opgave van reden ontbinden op voorwaarde dat:</li>
-                </ol>
+                	<li>Een consument kan een online aankoop gedurende een bedenktijd van 14 dagen zonder opgave van reden ontbinden op voorwaarde dat:
+
                 <ul>
-                	<li>de dienst geen logies, reis, restaurantbedrijf, vervoer, cateringopdracht of vorm van vrijetijdsbesteding betreft</li>
-                	<li>het geen (opdracht tot) spoedreparatie betreft</li>
-                	<li>het geen weddenschappen en/of loterijen betreft</li>
-                	<li>de consument niet heeft afgezien van zijn herroepingsrecht</li>
-                	<li>het geen dienst betreft die met instemming van de klant volledig worden uitgevoerd binnen de 14 kalenderdagen bedenktijd en waarbij de klant uitdrukkelijk om de heeft verklaard van het herroepingsrecht af te zien</li>
+                	<li>De dienst geen logies, reis, restaurantbedrijf, vervoer, cateringopdracht of vorm van vrijetijdsbesteding betreft</li>
+                	<li>Het geen (opdracht tot) spoedreparatie betreft</li>
+                	<li>Het geen weddenschappen en/of loterijen betreft</li>
+                	<li>De consument niet heeft afgezien van zijn herroepingsrecht</li>
+                	<li>Het geen dienst betreft die met instemming van de klant volledig worden uitgevoerd binnen de 14 kalenderdagen bedenktijd en waarbij de klant uitdrukkelijk om de heeft verklaard van het herroepingsrecht af te zien</li>
                 </ul>
-                <ol>
+                </li>
                 	<li>
                 	De bedenktijd van 14 dagen zoals in lid 1 genoemd, vangt aan:
                 	<ul>
                 		<li>
-                		zodra de consument de overeenkomst levering van de dienst heeft gesloten
+                		Zodra de consument de overeenkomst levering van de dienst heeft gesloten
                 		</li>
                 		<li>
-                		zodra de consument bevestigd heeft dat hij digitale inhoud via internet gaat afnemen
+                		Zodra de consument bevestigd heeft dat hij digitale inhoud via internet gaat afnemen
                 		</li>
                 	</ul>
                 	</li>
                 	<li>
-                	De consument kan zijn beroep op het herroepingsrecht kenbaar maken via info@Pixeltijgers .nl, indien gewenst met behulp van het herroepingsformulier dat via de website van Pixeltijgers , www.Pixeltijgers .nl, kan worden gedownload.
+                	De consument kan zijn beroep op het herroepingsrecht kenbaar maken via <a href="mailto:info@pixeltijgers.nl">info@pixeltijgers.nl</a>, indien gewenst met behulp van het herroepingsformulier dat via de website van Pixeltijgers, www.pixeltijgers.nl, kan worden gedownload.
                 	</li>
                 </ol>
                 <h3>Opschortingsrecht</h3>
@@ -215,18 +214,16 @@ class StandAloneSeeder extends Seeder
 
                 	<ul>
                 		<li>
-                		geleverde zaken die noodzakelijk zijn voor de uitvoering van de onderliggende overeenkomst
+                		Geleverde zaken die noodzakelijk zijn voor de uitvoering van de onderliggende overeenkomst
                 		</li>
                 		<li>
-                		zaken van Pixeltijgers  die bij de klant aanwezig zijn
+                		Zaken van Pixeltijgers die bij de klant aanwezig zijn
                 		</li>
                 		<li>
-                		zaken die onder eigendomsvoorbehoud zijn geleverd
+                		Zaken die onder eigendomsvoorbehoud zijn geleverd
                 		</li>
                 	</ul>
                 	</li>
-                </ol>
-                <ol>
                 	<li>
                 	De klant geeft op eerste verzoek van Pixeltijgers de polis van deze verzekeringen ter inzage.
                 	</li>
@@ -248,7 +245,7 @@ class StandAloneSeeder extends Seeder
                 	Het is de verantwoordelijkheid van de klant dat Pixeltijgers tijdig kan beginnen aan de uitvoering van de overeenkomst.
                 	</li>
                 	<li>
-                	Indien de klant er niet voor heeft gezorgd datPixeltijgers tijdig kan beginnen aan de uitvoering van de overeenkomst, komen de daaruit voortvloeiende extra kosten en/of extra uren voor rekening van de klant.
+                	Indien de klant er niet voor heeft gezorgd dat Pixeltijgers tijdig kan beginnen aan de uitvoering van de overeenkomst, komen de daaruit voortvloeiende extra kosten en/of extra uren voor rekening van de klant.
                 	</li>
                 </ol>
                 <h3>Informatieverstrekking door de klant</h3>
@@ -317,10 +314,10 @@ class StandAloneSeeder extends Seeder
                 	De in dit artikel omschreven geheimhoudingsplicht geldt niet voor informatie:
                 	<ul>
                 		<li>
-                		die al openbaar was voordat de klant deze informatie vernam of die later openbaar is geworden zonder dat dit het gevolg was van een schending van de geheimhoudingsplicht van de klant
+                		Die al openbaar was voordat de klant deze informatie vernam of die later openbaar is geworden zonder dat dit het gevolg was van een schending van de geheimhoudingsplicht van de klant
                 		</li>
                 		<li>
-                		die door de klant openbaar gemaakt wordt op grond van een wettelijke plicht
+                		Die door de klant openbaar gemaakt wordt op grond van een wettelijke plicht
                 		</li>
                 	</ul>
                 	</li>
@@ -330,13 +327,12 @@ class StandAloneSeeder extends Seeder
                 <ol>
                 	<li>
                 	Indien de andere partij het artikel van deze algemene voorwaarden over geheimhouding of over intellectueel eigendom overtreedt, dan verbeurt hij voor elke overtreding ten behoeve van handelsnaam een onmiddellijk opeisbare boete.
-                	</li>
-                </ol>
+
                 <ul>
-                	<li>is de andere partij een consument dan bedraagt deze boete € 1.000</li>
-                	<li>is de andere partij een rechtspersoon dan bedraagt deze boete € 5.000</li>
+                	<li>Is de andere partij een consument dan bedraagt deze boete € 1.000</li>
+                	<li>Is de andere partij een rechtspersoon dan bedraagt deze boete € 5.000</li>
                 </ul>
-                <ol>
+                </li>
                 	<li>
                 	Daarnaast verbeurt de andere partij een bedrag ad 5% van het in lid 1 genoemde bedrag voor elke dag dat die overtreding voortduurt.
                 	</li>
@@ -373,7 +369,7 @@ class StandAloneSeeder extends Seeder
                 <h3>Ingebrekestelling</h3>
                 <ol>
                 	<li>
-                	De klant dient ingebrekestellingen schriftelijk kenbaar te maken aanPixeltijgers .
+                	De klant dient ingebrekestellingen schriftelijk kenbaar te maken aanPixeltijgers.
                 	</li>
                 	<li>
                 	Het is de verantwoordelijkheid van de klant dat een ingebrekestelling Pixeltijgers ook daadwerkelijk (tijdig) bereikt.
@@ -454,7 +450,7 @@ class StandAloneSeeder extends Seeder
                 <h3>Overgang van rechten</h3>
                 <ol>
                 	<li>
-                	Rechten van de klant uit een overeenkomst tussen partijen kunnen niet aan derden worden overgedragen zonder de voorafgaande schriftelijke instemming van Pixeltijgers .
+                	Rechten van de klant uit een overeenkomst tussen partijen kunnen niet aan derden worden overgedragen zonder de voorafgaande schriftelijke instemming van Pixeltijgers.
                 	</li>
                 	<li>
                 	Deze bepaling geldt als een beding met goederenrechtelijke werking zoals bedoeld in artikel 3:83, tweede lid, Burgerlijk Wetboek.
@@ -573,46 +569,46 @@ class StandAloneSeeder extends Seeder
 
                 <h3>3. Type cookies en hun doelstellingen</h3>
                 <p>Wij gebruiken de volgende type cookies:</p>
-                <p><strong>- Functionele cookies:</strong> hiermee kunnen we de website beter laten functioneren en is die gebruiksvriendelijker voor de bezoeker. Bijvoorbeeld: we slaan je inloggegevens op of wat je in je winkelmandje hebt gestopt.</p>
-                <p><strong>- Geanonimiseerde analytische cookies:</strong> deze zorgen ervoor dat iedere keer wanneer je een website bezoekt er een anonieme cookie wordt gegenereerd. Deze cookies weten of je de site al eerder bezocht hebt of niet. Alleen bij het eerste bezoek, wordt er een cookie aangemaakt, bij volgende bezoeken wordt er gebruikgemaakt van de reeds bestaande cookie. Deze cookie dient enkel voor statistische doeleinden. Zo kunnen daarmee de volgende data verzameld worden:</p>
+                <p><strong>Functionele cookies:</strong> hiermee kunnen we de website beter laten functioneren en is die gebruiksvriendelijker voor de bezoeker. Bijvoorbeeld: we slaan je inloggegevens op of wat je in je winkelmandje hebt gestopt.</p>
+                <p><strong>Geanonimiseerde analytische cookies:</strong> deze zorgen ervoor dat iedere keer wanneer je een website bezoekt er een anonieme cookie wordt gegenereerd. Deze cookies weten of je de site al eerder bezocht hebt of niet. Alleen bij het eerste bezoek, wordt er een cookie aangemaakt, bij volgende bezoeken wordt er gebruikgemaakt van de reeds bestaande cookie. Deze cookie dient enkel voor statistische doeleinden. Zo kunnen daarmee de volgende data verzameld worden:</p>
                 <ul>
-                    <li>het aantal unieke bezoekers</li>
-                    <li>hoe vaak gebruikers de site bezoeken</li>
-                    <li>welke pagina’s gebruikers bekijken</li>
-                    <li>hoelang gebruikers een bepaalde pagina bekijken</li>
-                    <li>bij welke pagina bezoekers de site verlaten </li>
+                    <li>Het aantal unieke bezoekers</li>
+                    <li>Hoe vaak gebruikers de site bezoeken</li>
+                    <li>Welke pagina’s gebruikers bekijken</li>
+                    <li>Hoelang gebruikers een bepaalde pagina bekijken</li>
+                    <li>Bij welke pagina bezoekers de site verlaten </li>
                 </ul>
-                <p>- Analytische cookies: deze zorgen ervoor dat iedere keer wanneer je een website bezoekt er een cookie wordt gegenereerd. Deze cookies weten of je de site al eerder bezocht hebt of niet. Alleen bij het eerste bezoek, wordt er een cookie aangemaakt, bij volgende bezoeken wordt er gebruikgemaakt van de reeds bestaande cookie. Deze cookie dient enkel voor statistische doeleinden. Zo kunnen daarmee de volgende data verzameld worden, zoals:</p>
+                <p><strong>Analytische cookies:</strong> deze zorgen ervoor dat iedere keer wanneer je een website bezoekt er een cookie wordt gegenereerd. Deze cookies weten of je de site al eerder bezocht hebt of niet. Alleen bij het eerste bezoek, wordt er een cookie aangemaakt, bij volgende bezoeken wordt er gebruikgemaakt van de reeds bestaande cookie. Deze cookie dient enkel voor statistische doeleinden. Zo kunnen daarmee de volgende data verzameld worden, zoals:</p>
                 <ul>
-                    <li>welke pagina\'s je hebt bekeken</li>
-                    <li>hoelang je op een bepaalde pagina bent gebleven</li>
-                    <li>bij welke pagina je de site hebt verlaten</li>
+                    <li>Welke pagina\'s je hebt bekeken</li>
+                    <li>Hoelang je op een bepaalde pagina bent gebleven</li>
+                    <li>Bij welke pagina je de site hebt verlaten</li>
                 </ul>
-                <p><strong>- Eigen tracking cookies:</strong> hierdoor kunnen wij te weten komen dat je naast onze website ook op de betreffende andere website(s) uit ons netwerk bent geweest. Het daardoor opgebouwde profiel is niet gekoppeld aan jouw naam, adres, e-mailadres en dergelijke, maar dient alleen om advertenties af te stemmen op jouw profiel, zodat deze zo veel mogelijk relevant voor je zijn. Voor deze cookies vragen wij jouw toestemming. Zonder jouw toestemming worden deze cookies dus niet geplaatst.</p>
-                <p><strong>- Tracking cookies van anderen:</strong> hiermee wordt bijgehouden welke pagina’s je bezoekt op internet om je persoonlijke profiel op te kunnen bouwen. Dit profiel wordt niet gekoppeld aan jouw naam, adres, e-mailadres en dergelijke zoals bij ons bekend, maar dient alleen om advertenties af te stemmen op jouw profiel zodat deze zo veel mogelijk relevant voor je zijn. Voor deze cookies vragen wij jouw toestemming. Zonder jouw toestemming worden deze cookies dus niet geplaatst.</p>
-                <p><strong>- Social media gerelateerde cookies:</strong> hiermee registreren social media zoals Facebook en LinkedIn welke artikels en pagina’s je deelt via hun sociale media sharing buttons. Ze kunnen ook tracking cookies bevatten die je surfgedrag op het web volgen.</p>
-                <p><strong>- Site verbetering cookies/ optimalisatie cookies:</strong> hiermee kunnen we verschillende versies van een webpagina testen om te kijken welke pagina het beste wordt bezocht.</p>
+                <p><strong>Eigen tracking cookies:</strong> hierdoor kunnen wij te weten komen dat je naast onze website ook op de betreffende andere website(s) uit ons netwerk bent geweest. Het daardoor opgebouwde profiel is niet gekoppeld aan jouw naam, adres, e-mailadres en dergelijke, maar dient alleen om advertenties af te stemmen op jouw profiel, zodat deze zo veel mogelijk relevant voor je zijn. Voor deze cookies vragen wij jouw toestemming. Zonder jouw toestemming worden deze cookies dus niet geplaatst.</p>
+                <p><strong>Tracking cookies van anderen:</strong> hiermee wordt bijgehouden welke pagina’s je bezoekt op internet om je persoonlijke profiel op te kunnen bouwen. Dit profiel wordt niet gekoppeld aan jouw naam, adres, e-mailadres en dergelijke zoals bij ons bekend, maar dient alleen om advertenties af te stemmen op jouw profiel zodat deze zo veel mogelijk relevant voor je zijn. Voor deze cookies vragen wij jouw toestemming. Zonder jouw toestemming worden deze cookies dus niet geplaatst.</p>
+                <p><strong>Social media gerelateerde cookies:</strong> hiermee registreren social media zoals Facebook en LinkedIn welke artikels en pagina’s je deelt via hun sociale media sharing buttons. Ze kunnen ook tracking cookies bevatten die je surfgedrag op het web volgen.</p>
+                <p><strong>Site verbetering cookies / optimalisatie cookies:</strong> hiermee kunnen we verschillende versies van een webpagina testen om te kijken welke pagina het beste wordt bezocht.</p>
                 <h3>4. Je rechten met betrekking tot je gegevens</h3>
-                <p>Je hebt het recht op inzage, rectificatie, beperking en verwijdering van persoonsgegevens. Daarnaast heb je recht van bezwaar tegen verwerking van persoonsgegevens en recht op gegevensoverdraagbaarheid. Je kunt deze rechten uitoefenen door ons een mail te sturen via <strong>info@pixeltijgers.nl</strong>. Om misbruik te voorkomen kunnen wij je daarbij vragen om je adequaat te identificeren. Wanneer het gaat om inzage in persoonsgegevens gekoppeld aan een cookie, vragen we je een kopie van het cookie in kwestie mee te sturen. Je kunt deze terugvinden in de instellingen van je browser.</p>
+                <p>Je hebt het recht op inzage, rectificatie, beperking en verwijdering van persoonsgegevens. Daarnaast heb je recht van bezwaar tegen verwerking van persoonsgegevens en recht op gegevensoverdraagbaarheid. Je kunt deze rechten uitoefenen door ons een mail te sturen via <a href="mailto:info@pixeltijgers.nl">info@pixeltijgers.nl</a>. Om misbruik te voorkomen kunnen wij je daarbij vragen om je adequaat te identificeren. Wanneer het gaat om inzage in persoonsgegevens gekoppeld aan een cookie, vragen we je een kopie van het cookie in kwestie mee te sturen. Je kunt deze terugvinden in de instellingen van je browser.</p>
                 <h3>5. Cookies blokkeren en verwijderen</h3>
                 <p>Je kunt cookies te allen tijde eenvoudig zelf blokkeren en verwijderen via je internetbrowser. Ook kun je je internetbrowser zodanig instellen dat je een bericht ontvangt als er een cookie wordt geplaatst. Je kunt ook aangeven dat bepaalde cookies niet geplaatst mogen worden. Bekijk voor deze mogelijkheid de helpfunctie van je browser. Als je de cookies in je browser verwijdert, kan dat gevolgen hebben voor het prettige gebruik van deze website.</p>
-                <p>Sommige tracking cookies worden geplaatst door derden die onder meer via onze website advertenties aan je vertonen. Deze cookies kan je centraal verwijderen via youronlinechoices.com</p>
+                <p>Sommige tracking cookies worden geplaatst door derden die onder meer via onze website advertenties aan je vertonen. Deze cookies kan je centraal verwijderen via <a href="https://youronlinechoices.com/" target="_blank">youronlinechoices.com</a></p>
                 <p>Wees je er wel van bewust dat als je geen cookies wilt, wij niet meer kunnen garanderen dat onze Website helemaal goed werkt. Het kan zijn dat enkele functies van de site verloren gaan of zelfs dat je de website helemaal niet meer kunt bezoeken. Daarnaast betekent het weigeren van cookies ook niet dat je helemaal geen advertenties meer te zien krijgt. De advertenties zijn dan alleen niet meer toegesneden op jouw interesses en kun daardoor vaker worden herhaald.</p>
                 <p>Hoe je je instellingen kunt aanpassen, verschilt per browser. Raadpleeg indien nodig de helpfunctie van jouw browser, of klik op één van de onderstaande links om direct naar de handleiding van je browser te gaan.</p>
                 <ul>
-                    <li>Firefox: https://support.mozilla.org/nl/kb/cookies-verwijderen-gegevens-wissen-websites-opgeslagen</li>
-                    <li>Google Chrome: https://support.google.com/chrome/answer/95647?co=GENIE.Platform=Desktop&hl=nl</li>
-                    <li>Internet Explorer: https://support.microsoft.com/nl-nl/kb/278835</li>
-                    <li>Safari op smart phone: https://support.apple.com/nl-nl/HT201265</li>
-                    <li>Safari op Mac: https://support.apple.com/nl-be/guide/safari/sfri11471/mac</li>
+                    <li>Firefox: <a href="https://support.mozilla.org/nl/kb/cookies-verwijderen-gegevens-wissen-websites-opgeslagen" target="_blank">https://support.mozilla.org/nl/kb/cookies-verwijderen-gegevens-wissen-websites-opgeslagen</a></li>
+                    <li>Google Chrome: <a href="https://support.google.com/chrome/answer/95647?co=GENIE.Platform=Desktop&hl=nl" target="_blank">https://support.google.com/chrome/answer/95647?co=GENIE.Platform=Desktop&hl=nl</a></li>
+                    <li>Internet Explorer: <a href="https://support.microsoft.com/nl-nl/kb/278835" target="_blank">https://support.microsoft.com/nl-nl/kb/278835</a></li>
+                    <li>Safari op smart phone: <a href="https://support.apple.com/nl-nl/HT201265" target="_blank">https://support.apple.com/nl-nl/HT201265</a></li>
+                    <li>Safari op Mac: <a href="https://support.apple.com/nl-be/guide/safari/sfri11471/mac" target="_blank">https://support.apple.com/nl-be/guide/safari/sfri11471/mac</a></li>
                 </ul>
                 <h3>6. Nieuwe ontwikkelingen en onvoorziene cookies</h3>
                 <p>De teksten van onze website kunnen op ieder moment worden aangepast door voortdurende ontwikkelingen. Dit geldt ook voor onze cookieverklaring. Neem deze verklaring daarom regelmatig door om op de hoogte te blijven van eventuele wijzigingen.</p>
                 <p>In blogartikelen kan gebruik worden gemaakt van content die op andere sites wordt gehost en op <strong>www.pixeltijgers.nl</strong> wordt ontsloten door middel van bepaalde codes (embedded content). Denk hierbij aan bijvoorbeeld YouTube video\'s. Deze codes maken vaak gebruik van cookies. Wij hebben echter geen controle op wat deze derde partijen met hun cookies doen.</p>
-                <p>Het kan ook voorkomen dat via onze websites cookies worden geplaatst door anderen, waarvan wijzelf niet altijd op de hoogte zijn. Kom je op onze website onvoorziene cookies tegen die je niet kunt terugvinden in ons overzicht? Laat het ons weten via <strong>info@pixeltijgers.nl</strong>. Je kan ook rechtstreeks contact opnemen met de derde partij en vraag welke cookies ze plaatsten, wat de reden daarvoor is, wat de levensduur van de cookie is en op welke manier ze je privacy gewaarborgd hebben.</p>
+                <p>Het kan ook voorkomen dat via onze websites cookies worden geplaatst door anderen, waarvan wijzelf niet altijd op de hoogte zijn. Kom je op onze website onvoorziene cookies tegen die je niet kunt terugvinden in ons overzicht? Laat het ons weten via <a href="mailto:info@pixeltijgers.nl">info@pixeltijgers.nl</a>. Je kan ook rechtstreeks contact opnemen met de derde partij en vraag welke cookies ze plaatsten, wat de reden daarvoor is, wat de levensduur van de cookie is en op welke manier ze je privacy gewaarborgd hebben.</p>
                 <h3>7. Slotopmerkingen</h3>
                 <p>Wij zullen deze verklaringen af en toe aan moeten passen, bijvoorbeeld wanneer we onze website aanpassen of de regels rondom cookies wijzigen. Je kunt deze webpagina raadplegen voor de laatste versie.</p>
-                <p>Mocht je nog vragen en/of opmerkingen hebben neem dan contact op met <strong>info@pixeltijgers.nl</strong></p>
+                <p>Mocht je nog vragen en/of opmerkingen hebben neem dan contact op met <a href="mailto:info@pixeltijgers.nl">info@pixeltijgers.nl</a></p>
                 ',
 
                 'meta_title' => 'Cookie Policy',
@@ -655,7 +651,7 @@ class StandAloneSeeder extends Seeder
                 ] + $page);
 
             // Sync with the navigation menu.
-            $createPage->navigation_menus()->sync([5]);
+            $createPage->navigation_menus()->sync([4,5]);
 
         }
 

@@ -1,31 +1,31 @@
-            <div class="{{ $cssNs }} hidden lg:block">
+<div class="{{ $cssNs }} hidden lg:block">
 
-                <div class="flex justify-between max-w-screen-xl mx-auto h-full">
+    <div class="flex justify-between max-w-screen-xl mx-auto h-full">
 
-                    <a href="{{ url('/') }}" class="brand-logo flex items-center w-3/12">
+        <a href="{{ url('/') }}" class="brand-logo flex items-center w-3/12">
 
-                        <figure>
+            <figure>
 
-                            <img src="{{ URL::asset('img/common/' . config('cms.common.settings.logo')) }}" alt="{{ config('app.name') }} Logo" />
+                <img src="{{ URL::asset('img/common/' . config('cms.common.settings.logo')) }}" alt="{{ config('app.name') }} Logo" />
 
-                        </figure>
+            </figure>
 
-                    </a>
+        </a>
 
-                    <nav class="flex justify-center w-6/12">
+        <nav class="flex justify-center w-6/12">
 
-                        @include('front.layouts.navigation.menu.navigation-menu', [
-                            'navigationMenu' => 'main',
-                        ])
+            @include('front.layouts.navigation.menu.navigation-menu', [
+                'navigationMenu' => 'main',
+            ])
 
-                    </nav>
+        </nav>
 
-                    <div class="flex w-3/12">
+        <div class="flex w-3/12">
 
-                        <x-social-media/>
+            <x-social-media/>
 
-                    </div>
+        </div>
 
-                </div>
+    </div>
 
-            </div>
+</div>
