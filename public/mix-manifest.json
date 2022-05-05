@@ -1,5 +1,5 @@
 {
-    "/js/front/front.js": "/js/front/front.js?id=1c0f50efea0a4d6dad4609a764a0a90f",
+    "/js/front/front.js": "/js/front/front.js?id=fa868bfce92838e1eca5c51e16160f3c",
     "/js/admin/admin.js": "/js/admin/admin.js?id=2be4d55ac2173ba8a3ea7223819d1359",
     "/css/admin/admin.css": "/css/admin/admin.css?id=56d64b94193810950bcfa178d0a189a0",
     "/plugins/@fortawesome/fontawesome-pro/js/all.min.js": "/plugins/@fortawesome/fontawesome-pro/js/all.min.js?id=2ae534bdf847fc08436c5974bd3f40d1",
@@ -43,5 +43,5 @@
     "/plugins/sweetalert2/dist/sweetalert2.min.css": "/plugins/sweetalert2/dist/sweetalert2.min.css?id=759be128100e76b7ba85e80d42179ccd",
     "/plugins/tempusdominus-bootstrap-4/build/css/tempusdominus-bootstrap-4.min.css": "/plugins/tempusdominus-bootstrap-4/build/css/tempusdominus-bootstrap-4.min.css?id=7f698af6d95e237f745c004ca2c7d617",
     "/plugins/toastr/build/toastr.min.css": "/plugins/toastr/build/toastr.min.css?id=f284028c678041d687c6f1be6968f68a",
-    "/css/front/front.css": "/css/front/front.css?id=173eca888ef2169af2082136810ed2ee"
+    "/css/front/front.css": "/css/front/front.css?id=f9117328b21837f6c330336030c6b7a5"
 }

@@ -2566,6 +2566,7 @@ common.View.create('front.modules.contact.Index', {
   onDOMLoad: function onDOMLoad() {
     this.initTest();
     this.initGoogleMaps();
+    this.initReCaptcha();
   },
   initTest: function initTest() {
     console.log('Init: front.modules.contact.Index');
@@ -2586,6 +2587,11 @@ common.View.create('front.modules.contact.Index', {
       position: location,
       map: map
     });
+  },
+  initReCaptcha: function initReCaptcha() {
+    function onSubmit(token) {
+      document.getElementById('contactForm').submit();
+    }
   }
 });
 

@@ -9,6 +9,9 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Adrianorosa\GeoLocation\GeoLocation;
 
+// Request
+use App\Http\Requests\ContactFormRequest;
+
 // Models.
 
 // Traits.
@@ -39,7 +42,7 @@ class ContactController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    protected function sendContactForm(Request $request)
+    protected function sendContactForm(ContactFormRequest $request)
     {
         // Get the IP adres of the user.
         $getIp = (request()->ip() !== '127.0.0.1 '? request()->ip : '141.134.161.188');

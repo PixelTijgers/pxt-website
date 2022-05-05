@@ -47,6 +47,16 @@
   border-color: #05a34a;
   background: rgb(5, 163, 74);
 }
+.alert.alert-danger {
+  border-color: #F6404F;
+  background: #F6404F;
+}
+
+label.error-message {
+  color: #F6404F !important;
+  font-size: 12px !important;
+  margin-top: -10px !important;
+}
 
 :root {
   --tr-time: .15s;
@@ -102,6 +112,14 @@ form .input-group input:focus,
 form .input-group textarea:focus {
   border-color: var(--clr-secondary-300);
   box-shadow: rgba(37, 47, 63, 0.1) 0px 4px 10px 0px;
+}
+form .input-group input.border-danger,
+form .input-group textarea.border-danger {
+  border-color: #F6404F !important;
+}
+form .input-group input.border-danger:focus,
+form .input-group textarea.border-danger:focus {
+  border-color: #F6404F !important;
 }
 form .input-group textarea {
   height: 150px;

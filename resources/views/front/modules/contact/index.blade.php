@@ -17,6 +17,7 @@
 
 @pushOnce('scripts')
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkztYqAeIxU5sTDcFtylmfkKPNAecyQrU&callback=initMap&v=weekly" defer></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
 @endPushOnce
 
 <x-front-layout>
@@ -42,7 +43,13 @@
 
                     <div class="w-8/12">
 
-                        @if(session('type'))
+                        @if ($errors->any())
+
+                            <div class="alert alert-danger" role="alert">
+                                Er is iets mis gegaan met de validatie van de gegevens.
+                            </div>
+
+                        @elseif(session('type'))
 
                             <div class="alert alert-success" role="alert">
                                 {{ session('message') }}
@@ -50,7 +57,7 @@
 
                         @endif
 
-                        <form method="post" action="{{ route('sendForm') }}" class="flex flex-col w-full">
+                        <form method="post" action="{{ route('sendForm') }}" class="flex flex-col w-full" id="contactForm">
 
                             @csrf()
 
@@ -59,14 +66,20 @@
                                 <div class="flex w-1/2 input-group mr-1">
 
                                     <label for="name">Naam: *</label>
-                                    <input type="text" name="name" placeholder="Naam" autofocus />
+                                    <input type="text" name="name" placeholder="Naam" @error('name') class="border-danger" @enderror autofocus value="{{ old('name') }}"/>
+                                    @error('name')
+                                        <label class="error-message">{{ $message }}</label>
+                                    @enderror
 
                                 </div>
 
                                 <div class="flex w-1/2 input-group ml-1">
 
                                     <label for="email">E-mail adres: *</label>
-                                    <input type="email" name="email" placeholder="E-mail adres" />
+                                    <input type="email" name="email" placeholder="E-mail adres" @error('email') class="border-danger" @enderror autofocus value="{{ old('email') }}"/>
+                                    @error('email')
+                                        <label class="error-message">{{ $message }}</label>
+                                    @enderror
 
                                 </div>
 
@@ -77,14 +90,20 @@
                                 <div class="flex w-1/2 input-group mr-1">
 
                                     <label for="company">Bedrijf: </label>
-                                    <input type="text" name="company" placeholder="Bedrijf" />
+                                    <input type="text" name="company" placeholder="Bedrijf" @error('company') class="border-danger" @enderror autofocus value="{{ old('company') }}"/>
+                                    @error('company')
+                                        <label class="error-message">{{ $message }}</label>
+                                    @enderror
 
                                 </div>
 
                                 <div class="flex w-1/2 input-group ml-1">
 
                                     <label for="website">Website: </label>
-                                    <input type="text" name="website" placeholder="Website" />
+                                    <input type="text" name="website" placeholder="Website" @error('website') class="border-danger" @enderror autofocus value="{{ old('website') }}"/>
+                                    @error('website')
+                                        <label class="error-message">{{ $message }}</label>
+                                    @enderror
 
                                 </div>
 
@@ -95,7 +114,10 @@
                                 <div class="flex w-full input-group">
 
                                     <label for="subject">Onderwerp: *</label>
-                                    <input type="text" name="subject" placeholder="Onderwerp" />
+                                    <input type="text" name="subject" placeholder="Onderwerp" @error('subject') class="border-danger" @enderror autofocus value="{{ old('subject') }}"/>
+                                    @error('subject')
+                                        <label class="error-message">{{ $message }}</label>
+                                    @enderror
 
                                 </div>
 
@@ -106,17 +128,29 @@
                                 <div class="flex w-full input-group">
 
                                     <label for="message">Bericht: *</label>
-                                    <textarea placeholder="Bericht" name="message"></textarea>
-
+                                    <textarea placeholder="Bericht" name="message" @error('message') class="border-danger" @enderror>{{ old('message') }}</textarea>
+                                    @error('message')
+                                        <label class="error-message">{{ $message }}</label>
+                                    @enderror
                                 </div>
 
                             </div>
 
                             <span>* Deze velden zijn verplicht.</span>
 
-                            <button type="submit" class="btn">Verzend</button>
+                            <button class="btn g-recaptcha"
+                                    data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" 
+                                    data-callback="onSubmit"
+                                    data-action="submit">Verzend</button>
 
                         </form>
+
+                        <script>
+                          function onSubmit(token) {
+                            document.getElementById('contactForm').submit();
+                          }
+                        </script>
+
 
                     </div>
 

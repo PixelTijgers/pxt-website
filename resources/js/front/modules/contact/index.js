@@ -4,6 +4,7 @@ common.View.create('front.modules.contact.Index', {
     {
         this.initTest();
         this.initGoogleMaps();
+        this.initReCaptcha();
     },
 
     initTest() {
@@ -11,7 +12,6 @@ common.View.create('front.modules.contact.Index', {
     },
 
     initGoogleMaps() {
-
         // The location of Uluru
         const location = { lat: 51.22716, lng: 3.79249 };
         // The map, centered at Uluru
@@ -24,6 +24,12 @@ common.View.create('front.modules.contact.Index', {
           position: location,
           map: map,
         });
+    },
+
+    initReCaptcha() {
+        function onSubmit(token) {
+         document.getElementById('contactForm').submit();
+       }
     },
 
 })

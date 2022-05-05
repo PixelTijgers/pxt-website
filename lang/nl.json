@@ -1,4 +1,8 @@
 {
+    "validation.numeric": ":Attribute moet een getal zijn.",
+    "validation.required": ":Attribute is verplicht.",
+    "validation.url": ":Attribute moet een geldige URL zijn.",
+
     "Login": "Inloggen",
     "Email": "E-mailadres",
     "Password": "Wachtwoord",
@@ -169,9 +173,5 @@
     "Unpublished": "Offline",
 
     "nl": "Nederlands",
-    "en": "Engels",
-
-    "validation.numeric": ":Attribute moet een getal zijn.",
-    "validation.required": ":Attribute is verplicht.",
-    "validation.url": ":Attribute moet een geldige URL zijn."
+    "en": "Engels"
 }

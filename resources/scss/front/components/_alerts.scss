@@ -15,4 +15,15 @@
         border-color: #05a34a;
         background: rgb(5, 163, 74);
     }
+
+    &.alert-danger {
+        border-color: #F6404F;
+        background: #F6404F;
+    }
+}
+
+label.error-message {
+    color: #F6404F !important;
+    font-size: 12px !important;
+    margin-top: -10px !important;
 }
