@@ -32,6 +32,23 @@
   --clr-black-500: hsl(0deg, 0%, 10%);
   --clr-black-600: hsl(0deg, 0%, 5%);
   --clr-black-700: hsl(0deg, 0%, 0%);
+}
+
+.alert {
+  border-radius: 0.25rem;
+  box-shadow: rgba(37, 47, 63, 0.1) 0px 4px 10px 0px;
+  color: #FFF;
+  font-size: 16px;
+  padding: 1rem;
+  margin-bottom: 30px;
+  width: 100%;
+}
+.alert.alert-success {
+  border-color: #05a34a;
+  background: rgb(5, 163, 74);
+}
+
+:root {
   --tr-time: .15s;
   --ts-ease: ease-in;
 }
@@ -84,6 +101,7 @@ form .input-group textarea {
 form .input-group input:focus,
 form .input-group textarea:focus {
   border-color: var(--clr-secondary-300);
+  box-shadow: rgba(37, 47, 63, 0.1) 0px 4px 10px 0px;
 }
 form .input-group textarea {
   height: 150px;

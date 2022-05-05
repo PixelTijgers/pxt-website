@@ -42,6 +42,14 @@
 
                     <div class="w-8/12">
 
+                        @if(session('type'))
+
+                            <div class="alert alert-success" role="alert">
+                                {{ session('message') }}
+                            </div>
+
+                        @endif
+
                         <form method="post" action="{{ route('sendForm') }}" class="flex flex-col w-full">
 
                             @csrf()

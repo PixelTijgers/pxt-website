@@ -33,6 +33,7 @@ form {
 
             &:focus {
                 border-color: var(--clr-secondary-300);
+                box-shadow: rgba(37, 47, 63, 0.1) 0px 4px 10px 0px;
             }
         }
 

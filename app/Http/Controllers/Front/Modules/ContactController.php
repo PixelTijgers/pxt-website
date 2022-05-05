@@ -49,13 +49,11 @@ class ContactController extends Controller
 
         Mail::to(config('cms.common.settings.email'))->send(new ContactForm($request, $details));
 
-        /*
         // Return back with message.
         return redirect()->route('contact.index')->with([
                 'type' => 'success',
                 'message' => 'Het bericht is met succes verzonden. We reageren zo spoedig mogelijk!'
             ]
         );
-        */
     }
 }
