@@ -39,6 +39,7 @@ return new class extends Migration
 
             $table->string('coc')->nullable();
             $table->string('vat')->nullable();
+            $table->string('bank')->nullable();
 
             // Generate timestaps (created_at, updated_at)
             $table->timestamps();

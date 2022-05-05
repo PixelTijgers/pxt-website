@@ -28,8 +28,9 @@ class DetailsSeeder extends Seeder
             'country' => 'Nederland',
             'email' => 'info@pixeltijgers.nl',
             'mobile' => '+31 (0)6 13 54 22 34',
-            'coc' => '12345678',
-            'vat' => 'NL12345678B01',
+            'coc' => '80856772',
+            'vat' => 'NL003498167B54',
+            'bank' => 'NL72 BUNQ 2049 7203 19',
         ]);
     }
 }

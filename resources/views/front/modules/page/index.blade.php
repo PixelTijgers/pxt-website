@@ -22,11 +22,20 @@
 
     <main class="{{ $cssNs }}">
 
+        <div class="sub-container">
+
+            <div class="mx-auto max-w-screen-xl w-full">
+
+                <h2>{{ $page->page_title }} </h2>
+
+            </div>
+
+        </div>
+
         <div class="main-container">
 
             <div class="mx-auto max-w-screen-xl w-full">
 
-                <h2>{{ $page->page_title}} </h2>
                 {!! $page->content !!}
 
             </div>

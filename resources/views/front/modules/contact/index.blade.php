@@ -139,7 +139,7 @@
                             <span>* Deze velden zijn verplicht.</span>
 
                             <button class="btn g-recaptcha"
-                                    data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" 
+                                    data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
                                     data-callback="onSubmit"
                                     data-action="submit">Verzend</button>
 
@@ -192,7 +192,8 @@
                                 <ul>
 
                                     <li><strong>KVK:</strong> {{ $details->coc }}</li>
-                                    <li><strong>btw-nummer:</strong> {{$details->vat }}</li>
+                                    <li><strong>Btw-nummer:</strong> {{ $details->vat }}</li>
+                                    <li><strong>Bank:</strong> {{ $details->bank }}</li>
 
                                 </ul>
 
