@@ -38,7 +38,7 @@
 
 .btn {
   transition: all var(--tr-time) var(--ts-ease) 0s;
-  background: var(--clr-secondary-300);
+  background: var(--clr-secondary-300) !important;
   border: 2px solid transparent;
   border-radius: 500px;
   color: var(--clr-white-100);
@@ -57,6 +57,48 @@
   box-shadow: inset 10em 0 0 0 var(--clr-primary-300);
   color: var(--clr-white-100);
   cursor: pointer;
+}
+
+form .input-group {
+  display: flex;
+  flex-direction: column;
+}
+form .input-group label {
+  color: var(--clr-primary-300);
+  margin-bottom: 6px;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 500;
+}
+form .input-group input,
+form .input-group textarea {
+  transition: all 0.25s ease-in 0s;
+  background: var(--clr-white-200);
+  border: 1px solid transparent;
+  border-radius: 4px;
+  font-size: 14px;
+  height: 45px;
+  margin-bottom: 20px;
+  padding: 0 20px;
+}
+form .input-group input:focus,
+form .input-group textarea:focus {
+  border-color: var(--clr-secondary-300);
+}
+form .input-group textarea {
+  height: 150px;
+  padding: 20px;
+  resize: none;
+}
+form span {
+  color: #AAA;
+  font-size: 12px;
+  font-style: italic;
+  margin-bottom: 30px;
+}
+form button {
+  max-width: 150px;
+  justify-content: center;
 }
 
 :root {
@@ -239,10 +281,53 @@ main p {
   margin-bottom: 40px;
   word-spacing: 2px;
 }
-main .main-container {
+main aside section {
+  width: 100%;
+}
+main aside section.widget {
+  background: #FBFBFD;
+  margin-top: 30px;
+  padding: 30px;
+}
+main aside section.widget:first-child {
+  margin-top: 0 !important;
+}
+main aside section.widget .widget-title {
+  border-bottom: 1px solid var(--clr-white-200);
+  padding-bottom: 7px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+main aside section.widget .widget-title h3 {
+  font-size: 16px;
+  line-height: 1.24;
+  margin-bottom: 0;
+}
+main aside section.widget .widget-content ul.social-media {
+  display: flex;
+  justify-content: center;
+}
+main aside section.widget .widget-content ul.social-media li {
+  margin: 5px;
+}
+main aside section.widget .widget-content ul.social-media li a svg {
+  font-size: 16px;
+}
+main aside section.widget .widget-content ul li {
+  color: var(--clr-black-500);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25px;
+  word-spacing: 2px;
+}
+main .main-container,
+main .sub-container {
   background: var(--clr-white-100);
   padding-top: 80px;
   padding-bottom: 65px;
+}
+main .sub-container {
+  background: var(--clr-white-200);
 }
 
 :root {
@@ -1289,14 +1374,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 .w-auto {
   width: auto;
 }
+.w-8\/12 {
+  width: 66.666667%;
+}
 .w-1\/2 {
   width: 50%;
 }
 .w-2\/12 {
   width: 16.666667%;
-}
-.w-8\/12 {
-  width: 66.666667%;
 }
 .w-4\/12 {
   width: 33.333333%;
@@ -1324,6 +1409,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+.flex-row {
+  flex-direction: row;
 }
 .flex-col {
   flex-direction: column;
@@ -1499,6 +1587,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 *::after {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
 }
 
 body {

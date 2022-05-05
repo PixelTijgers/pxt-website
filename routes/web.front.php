@@ -33,7 +33,8 @@ Route::middleware(['underDevelopment'])->group(function() {
     Route::get('/', [HomeController::class, 'index']);
 
     // Contact route.
-    Route::get('/contact', [ContactController::class, 'index']);
+    Route::get('/contact', [ContactController::class, 'index'])->name('contact.index');
+    Route::post('/contact/sendForm', [ContactController::class, 'sendContactForm'])->name('sendForm');
 
     // Contact route.
     Route::get('/disclaimer', [PageController::class, 'index']);

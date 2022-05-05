@@ -10,7 +10,7 @@
 .btn {
     @include hoverTransition(var(--tr-time), var(--ts-ease));
 
-    background: var(--clr-secondary-300);
+    background: var(--clr-secondary-300) !important;
     border: 2px solid transparent;
     border-radius: 500px;
     color: var(--clr-white-100);

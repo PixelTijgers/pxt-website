@@ -51,4 +51,7 @@ return [
 
     // Filename of the logo
     'logo' => 'pixeltijgers_logo.svg',
+
+    // Default contact form mail.
+    'email' => 'info@pixeltijgers.nl',
 ];
