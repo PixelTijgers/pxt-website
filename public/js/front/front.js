@@ -2511,12 +2511,8 @@ module.exports = {
 // Add DomLoader for Mmenu.
 document.addEventListener('DOMContentLoaded', function () {
   new Mmenu('#mobile-menu', {
-    'extensions': ['position-right']
-  }, {
-    offCanvas: {
-      page: {
-        selector: '#page-container'
-      }
+    "offCanvas": {
+      "position": "right"
     }
   });
 });

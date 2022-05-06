@@ -1,4 +1,4 @@
-<div class="{{ $cssNs }}">
+<div class="{{ $cssNs }} hidden lg:px-7 lg:block">
 
     <div class="mx-auto max-w-screen-xl w-full">
 

@@ -1,4 +1,4 @@
-<div class="{{ $cssNs }} flex justify-between w-full md:hidden">
+<div class="{{ $cssNs }} flex justify-between w-full lg:hidden">
 
     <a href="{{ url('/') }}" class="brand-logo flex items-center">
 
