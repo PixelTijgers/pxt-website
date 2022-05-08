@@ -138,9 +138,6 @@ form button {
 }
 
 :root {
-  --sl-height-sm: 600px;
-  --sl-height-md: 600px;
-  --sl-height-xl: 800px;
   --sl-sm-br: 0 0 10px 10px;
   --sl-br: 10px;
   --sl-br-img: 0 0 10px 10px;
@@ -151,7 +148,7 @@ form button {
 }
 
 .components-page-Slider {
-  padding-bottom: 75px;
+  padding-bottom: 150px;
 }
 @media only screen and (min-width: 1024px) {
   .components-page-Slider {
@@ -160,12 +157,8 @@ form button {
 }
 .components-page-Slider .slick-slider .slick-list {
   border-radius: var(--sl-br-img);
-  height: var(--sl-height-sm);
 }
 @media only screen and (min-width: 1024px) {
-  .components-page-Slider .slick-slider .slick-list {
-    height: var(--sl-height-xl);
-  }
   .components-page-Slider .slick-slider .slick-list .slick-track .slick-slide .slide figure img {
     border-radius: var(--sl-br-img);
   }
@@ -239,8 +232,8 @@ form button {
   }
 }
 .components-page-Slider .appendButtons {
-  position: relative;
-  top: -20px;
+  position: absolute;
+  bottom: -65px;
 }
 .components-page-Slider .appendButtons .slick-prev,
 .components-page-Slider .appendButtons .slick-next {
@@ -1485,14 +1478,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 .-mt-px {
   margin-top: -1px;
 }
+.mt-10 {
+  margin-top: 2.5rem;
+}
 .mt-7 {
   margin-top: 1.75rem;
 }
 .mb-1 {
   margin-bottom: 0.25rem;
-}
-.mt-10 {
-  margin-top: 2.5rem;
 }
 .flex {
   display: flex;
@@ -1541,12 +1534,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .w-auto {
   width: auto;
-}
-.w-8\/12 {
-  width: 66.666667%;
-}
-.w-1\/2 {
-  width: 50%;
 }
 .max-w-7xl {
   max-width: 80rem;
@@ -1835,6 +1822,26 @@ body main h1 {
   .md\:inline {
     display: inline;
   }
+
+  .md\:px-10 {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
+  .md\:px-2 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .md\:px-20 {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
+  .md\:px-16 {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
 }
 @media (min-width: 1024px) {
 
@@ -1862,28 +1869,28 @@ body main h1 {
     width: 33.333333%;
   }
 
-  .lg\:w-1\/2 {
-    width: 50%;
-  }
-
-  .lg\:w-2\/12 {
-    width: 16.666667%;
-  }
-
   .lg\:w-8\/12 {
     width: 66.666667%;
   }
 
-  .lg\:w-4\/12 {
-    width: 33.333333%;
+  .lg\:w-1\/2 {
+    width: 50%;
+  }
+
+  .lg\:w-full {
+    width: 100%;
   }
 
   .lg\:w-3\/12 {
     width: 25%;
   }
 
-  .lg\:w-full {
-    width: 100%;
+  .lg\:w-2\/12 {
+    width: 16.666667%;
+  }
+
+  .lg\:w-4\/12 {
+    width: 33.333333%;
   }
 
   .lg\:flex-row {
@@ -1909,11 +1916,6 @@ body main h1 {
   .lg\:px-7 {
     padding-left: 1.75rem;
     padding-right: 1.75rem;
-  }
-
-  .lg\:px-0 {
-    padding-left: 0px;
-    padding-right: 0px;
   }
 
   .lg\:px-8 {

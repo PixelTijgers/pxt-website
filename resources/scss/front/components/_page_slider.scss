@@ -4,10 +4,6 @@
 @use '../abstracts/variables' as *;
 
 :root{
-    --sl-height-sm: 600px;
-    --sl-height-md: 600px;
-    --sl-height-xl: 800px;
-
     --sl-sm-br: 0 0 10px 10px;
     --sl-br: 10px;
     --sl-br-img: 0 0 10px 10px;
@@ -20,7 +16,7 @@
 }
 
 .components-page-Slider {
-    padding-bottom: 75px;
+    padding-bottom: 150px;
 
     @include screen-size(lg) {
         margin-bottom: 125px;
@@ -30,11 +26,6 @@
 
         .slick-list {
             border-radius: var(--sl-br-img);
-            height: var(--sl-height-sm);
-
-            @include screen-size(lg) {
-                height: var(--sl-height-xl);
-            }
 
             .slick-track {
                 .slick-slide {
@@ -125,8 +116,8 @@
     }
 
     .appendButtons {
-        position: relative;
-            top: -20px;
+        position: absolute;
+            bottom: -65px;
 
         .slick-prev,
         .slick-next {
