@@ -1,4 +1,4 @@
-<div class="{{ $cssNs }} hidden lg:px-7 lg:block">
+<div class="{{ $cssNs }} hidden px-16 lg:block">
 
     <div class="flex justify-between max-w-screen-xl mx-auto h-full">
 

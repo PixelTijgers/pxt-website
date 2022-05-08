@@ -1,6 +1,6 @@
 <footer class="{{ $cssNs }}">
 
-    <div class="mx-auto max-w-screen-xl w-full px-5">
+    <div class="mx-auto max-w-screen-xl w-full px-5 md:px-16">
 
         <div class="flex justify-between h-full footer-top">
 
@@ -26,9 +26,9 @@
 
         </div>
 
-        <div class="flex flex-col lg:flex-row lg:justify-between h-full copyright">
+        <div class="flex flex-col xl:flex-row lg:justify-between h-full copyright">
 
-            <nav class="flex justify-start lg:justify-start w-full lg:w-8/12">
+            <nav class="flex justify-start w-full xl:w-8/12">
 
                 @include('front.layouts.navigation.menu.navigation-menu', [
                     'navigationMenu' => 'footer',
@@ -36,7 +36,7 @@
 
             </nav>
 
-            <div class="flex justify-start lg:justify-end w-full lg:w-4/12 mt-7 lg:mt-0">
+            <div class="flex justify-start xl:justify-end w-full xl:w-4/12 mt-7 xl:mt-0">
 
                 <p>© {{ config('app.name') }} 2021 - {{ date('Y') }}, alle rechten voorbehouden.</p>
 

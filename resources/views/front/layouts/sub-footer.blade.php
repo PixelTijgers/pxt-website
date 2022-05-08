@@ -1,10 +1,10 @@
-<div class="{{ $cssNs }} px-5">
+<div class="{{ $cssNs }} px-5 md:px-16">
 
     <div class="mx-auto max-w-screen-xl w-full">
 
-        <div class="flex justify-start h-full flex-col lg:flex-row">
+        <div class="flex flex-wrap lg:flex-nowrap justify-start h-full flex-col sm:flex-row">
 
-            <div class="flex justify-start flex-col w-full lg:w-1/4">
+            <div class="flex justify-start flex-col w-full sm:w-1/2 lg:w-1/3 xl:w-1/4">
 
                 <h2>Over {{ config('cms.front.details.app_name') }}</h2>
 
@@ -18,7 +18,7 @@
 
             </div>
 
-            <div class="flex justify-start flex-col w-full lg:w-1/3">
+            <div class="flex justify-start flex-col w-full sm:w-1/2 lg:w-1/3">
 
                 <h2>Expertises</h2>
 
@@ -32,7 +32,7 @@
 
             </div>
 
-            <div class="flex justify-start flex-col w-full lg:w-1/3 details">
+            <div class="flex justify-start flex-col w-full md:w1/4 lg:w-1/3 details">
 
                 <h2>Neem contact met ons op</h2>
 

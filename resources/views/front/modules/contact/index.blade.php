@@ -28,7 +28,7 @@
 
         <div class="main-container contact-container">
 
-            <div class="mx-auto max-w-screen-xl w-full px-5">
+            <div class="mx-auto max-w-screen-xl w-full px-5 md:px-16">
 
                 @include('front.layouts.breadcrumb', [
                     'breadcrum' => [
@@ -41,7 +41,7 @@
 
                 <div class="flex flex-col lg:flex-row w-full justify-between">
 
-                    <div class="w-full lg:w-8/12">
+                    <div class="w-full lg:w-1/2 xl:w-8/12">
 
                         @if ($errors->any())
 
@@ -63,7 +63,7 @@
 
                             <div class="flex flex-col lg:flex-row w-full">
 
-                                <div class="flex w-full lg:w-1/2 input-group mr-1">
+                                <div class="flex w-full lg:w-6/12 input-group mr-1">
 
                                     <label for="name">Naam: *</label>
                                     <input type="text" name="name" placeholder="Naam" @error('name') class="border-danger" @enderror autofocus value="{{ old('name') }}"/>
@@ -154,7 +154,7 @@
 
                     </div>
 
-                    <aside class="mt-10 lg:mt-0 w-full lg:w-3/12">
+                    <aside class="mt-10 lg:mt-0 w-full lg:w-5/12 xl:w-3/12">
 
                         <section class="widget">
 

@@ -22,15 +22,11 @@
 
     <main class="{{ $cssNs }}">
 
-        <div class="mx-auto max-w-screen-xl w-full">
-
-            @include('components.page-slider')
-
-        </div>
+        @include('components.page-slider')
 
         <div class="main-container">
 
-            <div class="mx-auto max-w-screen-xl w-full px-5">
+            <div class="mx-auto max-w-screen-xl w-full px-5 md:px-16">
 
                 <h2>{{ $page->page_title}} </h2>
                 {!! $page->content !!}

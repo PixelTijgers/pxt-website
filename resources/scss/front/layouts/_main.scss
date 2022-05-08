@@ -112,6 +112,11 @@ main {
         padding-top: 50px;
         padding-bottom: 35px;
 
+        @include screen-size(sm) {
+            padding-top: 65px;
+            padding-bottom: 50px;
+        }
+
         @include screen-size(lg) {
             padding-top: 80px;
             padding-bottom: 65px;
