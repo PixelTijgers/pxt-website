@@ -875,7 +875,10 @@ main .sub-container {
 }
 .front-modules-page-Index .main-container ol li ul li,
 .front-modules-page-Index .main-container ul li ul li {
-  list-style-type: disc;
+  list-style-type: square;
+}
+.front-modules-page-Index .main-container ul li {
+  list-style-type: square;
 }
 .front-modules-page-Index .main-container a {
   color: var(--clr-secondary-300);
@@ -1642,21 +1645,17 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
-.py-5 {
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
-}
 .px-5 {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
 }
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
 .py-3 {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-}
-.px-16 {
-  padding-left: 4rem;
-  padding-right: 4rem;
 }
 .py-4 {
   padding-top: 1rem;
@@ -1890,14 +1889,6 @@ body main h1 {
     width: 16.666667%;
   }
 
-  .lg\:w-8\/12 {
-    width: 66.666667%;
-  }
-
-  .lg\:w-4\/12 {
-    width: 33.333333%;
-  }
-
   .lg\:flex-row {
     flex-direction: row;
   }
@@ -1910,10 +1901,6 @@ body main h1 {
     align-items: center;
   }
 
-  .lg\:justify-start {
-    justify-content: flex-start;
-  }
-
   .lg\:justify-end {
     justify-content: flex-end;
   }
@@ -1922,19 +1909,9 @@ body main h1 {
     justify-content: space-between;
   }
 
-  .lg\:px-7 {
-    padding-left: 1.75rem;
-    padding-right: 1.75rem;
-  }
-
   .lg\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
-  }
-
-  .lg\:px-10 {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
   }
 }
 @media (min-width: 1280px) {
@@ -1963,17 +1940,8 @@ body main h1 {
     flex-direction: row;
   }
 
-  .xl\:justify-start {
-    justify-content: flex-start;
-  }
-
   .xl\:justify-end {
     justify-content: flex-end;
-  }
-
-  .xl\:px-5 {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
   }
 
   .xl\:px-0 {

@@ -28,19 +28,19 @@ class StandAloneSeeder extends Seeder
                 'menu_title' => 'Disclaimer',
                 'slug' => '/disclaimer',
                 'content' => '
-                <p>Toegang tot en gebruik van de Pixeltijgers internetsite <strong>www.pixeltijgers.nl</strong> (hierna “site”) zijn onderworpen aan onderstaande voorwaarden, tenzij anders bepaald in aanvullende voorwaarden in betreffende applicatie of ander gedeelte van de site gesteld. Gebruik van deze site betekent de volledige aanvaarding van deze voorwaarden en aanvullende voorwaarden gesteld in de applicaties en andere delen van de site.</p>
+                <p>Toegang tot en gebruik van de <strong>Pixeltijgers</strong> internetsite <strong>www.pixeltijgers.nl</strong> (hierna “site”) zijn onderworpen aan onderstaande voorwaarden, tenzij anders bepaald in aanvullende voorwaarden in betreffende applicatie of ander gedeelte van de site gesteld. Gebruik van deze site betekent de volledige aanvaarding van deze voorwaarden en aanvullende voorwaarden gesteld in de applicaties en andere delen van de site.</p>
 
-                <p>1. Deze site en de informatie, namen, beelden, afbeeldingen, logo’s en iconen betreffende of verband houdend met Pixeltijgers of haar producten en diensten worden verstrekt “zoals zij zijn” zonder enige verklaring of bevestiging en zonder enigerlei garantie, al dan niet expliciet of impliciet, met inbegrip van, echter niet beperkt tot, de impliciete garantie van verhandelbaarheid, geschiktheid voor een bepaald doel of geen inbreuk vormend. De informatie die op deze site aangeboden wordt, is niet geschreven om aan uw persoonlijke behoeften te voldoen en u bent degene die ervoor verantwoordelijk is uzelf ervan te vergewissen of deze informatie voor uw doel geschikt is voordat u er gebruik van maakt.</p>
+                <p>1. Deze site en de informatie, namen, beelden, afbeeldingen, logo’s en iconen betreffende of verband houdend met <strong>Pixeltijgers</strong> of haar producten en diensten worden verstrekt “zoals zij zijn” zonder enige verklaring of bevestiging en zonder enigerlei garantie, al dan niet expliciet of impliciet, met inbegrip van, echter niet beperkt tot, de impliciete garantie van verhandelbaarheid, geschiktheid voor een bepaald doel of geen inbreuk vormend. De informatie die op deze site aangeboden wordt, is niet geschreven om aan uw persoonlijke behoeften te voldoen en u bent degene die ervoor verantwoordelijk is uzelf ervan te vergewissen of deze informatie voor uw doel geschikt is voordat u er gebruik van maakt.</p>
 
-                <p>2. Pixeltijgers noch een van haar contractpartijen of werknemers is aansprakelijk voor enige schade van welke aard dan ook, met inbegrip van directe, bijzondere door de rechter toegewezen, indirecte of gevolgschade, die voortvloeit uit of in verband met de toegang tot of het gebruik van deze Site of het gebruik en verspreiding van informatie die op deze Site aanwezig is.</p>
+                <p>2. <strong>Pixeltijgers</strong> noch een van haar contractpartijen of werknemers is aansprakelijk voor enige schade van welke aard dan ook, met inbegrip van directe, bijzondere door de rechter toegewezen, indirecte of gevolgschade, die voortvloeit uit of in verband met de toegang tot of het gebruik van deze site of het gebruik en verspreiding van informatie die op deze site aanwezig is.</p>
 
-                <p>3. Deze site kan onjuistheden of typefouten bevatten, die na de ontdekking ervan door Pixeltijgers gecorrigeerd zullen worden naar Pixeltijgers’ goeddunken. Ook wordt de informatie op deze Site regelmatig bijgewerkt. Pixeltijgers behoudt zich het recht voor te allen tijde en zonder vooraankondiging wijzigingen, verbeteringen en/of veranderingen aan te brengen in de informatie, deze voorwaarden, namen, beelden, afbeeldingen, logo’s en iconen of de producten en diensten, waarnaar op deze Site verwezen wordt. Aangezien Internet onafhankelijk in stand wordt gehouden op duizenden sites overal ter wereld, is het mogelijk dat de informatie, namen, beelden, afbeeldingen, logo’s en iconen waartoe deze site toegang verleent afkomstig zijn van buiten de grenzen van deze site. Om deze reden sluit Pixeltijgers alle verplichtingen of verantwoordelijkheid uit inzake de gegevens die hetzij verkregen of verworven worden, hetzij toegankelijk zijn binnen, via of buiten deze site.</p>
+                <p>3. Deze site kan onjuistheden of typefouten bevatten, die na de ontdekking ervan door <strong>Pixeltijgers</strong> gecorrigeerd zullen worden naar <strong>Pixeltijgers</strong>’ goeddunken. Ook wordt de informatie op deze site regelmatig bijgewerkt. <strong>Pixeltijgers</strong> behoudt zich het recht voor te allen tijde en zonder vooraankondiging wijzigingen, verbeteringen en/of veranderingen aan te brengen in de informatie, deze voorwaarden, namen, beelden, afbeeldingen, logo’s en iconen of de producten en diensten, waarnaar op deze site verwezen wordt. Aangezien Internet onafhankelijk in stand wordt gehouden op duizenden sites overal ter wereld, is het mogelijk dat de informatie, namen, beelden, afbeeldingen, logo’s en iconen waartoe deze site toegang verleent afkomstig zijn van buiten de grenzen van deze site. Om deze reden sluit <strong>Pixeltijgers</strong> alle verplichtingen of verantwoordelijkheid uit inzake de gegevens die hetzij verkregen of verworven worden, hetzij toegankelijk zijn binnen, via of buiten deze site.</p>
 
-                <p>4. De handelsmerken, handelsnamen, beelden, logo’s en afbeeldingen die de producten en diensten van Pixeltijgers herkenbaar maken, alsmede het ontwerp, tekst en grafische mogelijkheden van de website zijn het eigendom van Pixeltijgers. Tenzij dit uitdrukkelijk is bepaald, zal niets van hetgeen hierin is vervat, worden uitgelegd als het verlenen van een licentie of recht uit hoofde van het auteursrecht of enig ander intellectueel eigendomsrecht van Pixeltijgers.</p>
+                <p>4. De handelsmerken, handelsnamen, beelden, logo’s en afbeeldingen die de producten en diensten van <strong>Pixeltijgers</strong> herkenbaar maken, alsmede het ontwerp, tekst en grafische mogelijkheden van de website zijn het eigendom van <strong>Pixeltijgers</strong>. Tenzij dit uitdrukkelijk is bepaald, zal niets van hetgeen hierin is vervat, worden uitgelegd als het verlenen van een licentie of recht uit hoofde van het auteursrecht of enig ander intellectueel eigendomsrecht van <strong>Pixeltijgers</strong>.</p>
 
-                <p>5. De op deze site genoemde producten en diensten zijn te allen tijde onderworpen aan de Algemene Voorwaarden.</p>
+                <p>5. De op deze site genoemde producten en diensten zijn te allen tijde onderworpen aan de <a href="'. url('/algemene-voorwaarden'). '">algemene voorwaarden</a>.</p>
 
-                <p>6. Alhoewel Pixeltijgers al het redelijkerwijs mogelijke in het werk stelt om deze site virusvrij te houden, kan zij hiervoor geen garantie geven en aansprakelijkheid voor virussen is uitgesloten. U wordt daarom geadviseerd alle op het Internet algemeen gangbare en mogelijke veiligheidsmaatregelen te nemen voordat u informatie van deze site ophaalt.</p>',
+                <p>6. Alhoewel <strong>Pixeltijgers</strong> al het redelijkerwijs mogelijke in het werk stelt om deze site virusvrij te houden, kan zij hiervoor geen garantie geven en aansprakelijkheid voor virussen is uitgesloten. U wordt daarom geadviseerd alle op het Internet algemeen gangbare en mogelijke veiligheidsmaatregelen te nemen voordat u informatie van deze site ophaalt.</p>',
 
                 'meta_title' => 'Disclaimer',
                 'meta_description' => 'Dit is een stuk tekst.',
@@ -57,16 +57,17 @@ class StandAloneSeeder extends Seeder
                 'menu_title' => 'Algemene voorwaarden',
                 'slug' => '/algemene-voorwaarden',
                 'content' => '
+                <h3>Contactgegevens</h3>
                 <ul>
-                    <li>E-mail: <a href="mailto:info@pixeltijgers.nl">info@pixeltijgers.nl</a></li>
-                    <li>Website: <a href="www.pixeltijgers.nl">www.pixeltijgers.nl</a></li>
+                    <li><span>E-mail:</span> <a href="mailto:info@pixeltijgers.nl">info@pixeltijgers.nl</a></li>
+                    <li><span>Website:</span> <a href="www.pixeltijgers.nl">www.pixeltijgers.nl</a></li>
                 </ul>
                 <h3>Definities</h3>
                     <ol>
-                        <li><span>Pixeltijgers:</span> Pixeltijgers, gevestigd te Sas van Gent onder KvK nr. 80856772.</li>
-                        <li><span>Klant:</span> degene met wie Pixeltijgers een overeenkomst is aangegaan.</li>
-                        <li><span>Partijen:</span> Pixeltijgers klant samen.</li>
-                        <li><span>Consument:</span> Een klant die tevens een individu is en die als privépersoon handelt.</li>
+                        <li><span>Pixeltijgers:</span> Pixeltijgers, gevestigd te Sas van Gent onder KvK nr. 80856772</li>
+                        <li><span>Klant:</span> Degene met wie Pixeltijgers een overeenkomst is aangegaan</li>
+                        <li><span>Partijen:</span> Pixeltijgers klant samen</li>
+                        <li><span>Consument:</span> Een klant die tevens een individu is en die als privépersoon handelt</li>
                     </ol>
                 <h3>Toepasselijkheid algemene voorwaarden</h3>
                 <ol>
@@ -83,7 +84,7 @@ class StandAloneSeeder extends Seeder
                 <h3>Aanbiedingen en offertes</h3>
                 <ol>
                 	<li>
-                	Aanbiedingen en offertes van Pixeltijger szijn vrijblijvend, tenzij daarin uitdrukkelijk anders vermeld.
+                	Aanbiedingen en offertes van Pixeltijgers zijn vrijblijvend, tenzij daarin uitdrukkelijk anders vermeld.
                 	</li>
                 	<li>
                 	Een aanbod of offerte is maximaal 1 maand geldig, tenzij een andere aanvaardingstermijn in het aanbod of de offerte staat vermeld.
@@ -143,10 +144,10 @@ class StandAloneSeeder extends Seeder
                 <h3>Betalingen en betalingstermijn</h3>
                 <ol>
                 	<li>
-                	Pixeltijgers mag bij het aangaan van de overeenkomst een aanbetaling tot 50% van het overeengekomen bedrag verlangen.
+                	Pixeltijgers mag bij het aangaan van de overeenkomst een aanbetaling tot 15% van het overeengekomen bedrag verlangen.
                 	</li>
                 	<li>
-                	De klant dient betalingen achteraf binnen 14 dagenna levering te hebben voldaan.
+                	De klant dient betalingen achteraf binnen 14 dagen na levering te hebben voldaan.
                 	</li>
                 	<li>
                 	Betalingstermijnen worden beschouwd als fatale betalingstermijnen. Dat betekent dat indien de klant het overeengekomen bedrag niet uiterlijk op de laatste dag van de betalingstermijn heeft voldaan, hij van rechtswege in verzuim en in gebreke is, zonder dat Pixeltijgers de klant een aanmaning hoeft te sturen c.q. in gebreke hoeft te stellen.
@@ -158,13 +159,13 @@ class StandAloneSeeder extends Seeder
                 <h3>Gevolgen niet tijdig betalen</h3>
                 <ol>
                 	<li>
-                	Betaalt de klant niet binnen de overeengekomen termijn, dan is Pixeltijgers  gerechtigd de wettelijke rente van 2% per maand voorniet-handelstransacties en de wettelijke rente van8% per maand voor handelstransacties in rekening te brengen vanaf de dag dat de klant in verzuim is, waarbij een gedeelte van een maand voor een hele maand wordt gerekend.
+                	Betaalt de klant niet binnen de overeengekomen termijn, dan is Pixeltijgers  gerechtigd de wettelijke rente van 2% per maand voorniet-handelstransacties en de wettelijke rente van 8% per maand voor handelstransacties in rekening te brengen vanaf de dag dat de klant in verzuim is, waarbij een gedeelte van een maand voor een hele maand wordt gerekend.
                 	</li>
                 	<li>
                 	Wanneer de klant in verzuim is, is hij bovendien buitengerechtelijke incassokosten en eventuele schadevergoeding verschuldigd aan Pixeltijgers.
                 	</li>
                 	<li>
-                	De incassokosten worden berekend aan de hand van het Besluit vergoeding voor buitengerechtelijke incassokosten.
+                	De incassokosten worden berekend aan de hand van het besluit vergoeding voor buitengerechtelijke incassokosten.
                 	</li>
                 	<li>
                 	Wanneer de klant niet tijdig betaalt, mag Pixeltijgers zijn verplichtingen opschorten totdat de klant aan zijn betalingsverplichting heeft voldaan.
@@ -173,40 +174,13 @@ class StandAloneSeeder extends Seeder
                 	In geval van liquidatie, faillissement, beslag of surseance van betaling aan de zijde van de klant, zijn de vorderingen van Pixeltijgers op de klant onmiddellijk opeisbaar.
                 	</li>
                 	<li>
-                	Weigert de klant zijn medewerking aan de uitvoering van de overeenkomst door Pixeltijgers , dan is hij nog steeds verplicht de afgesproken prijs aan Pixeltijgers te betalen.
-                	</li>
-                </ol>
-                <h3>Herroepingsrecht</h3>
-                <ol>
-                	<li>Een consument kan een online aankoop gedurende een bedenktijd van 14 dagen zonder opgave van reden ontbinden op voorwaarde dat:
-
-                <ul>
-                	<li>De dienst geen logies, reis, restaurantbedrijf, vervoer, cateringopdracht of vorm van vrijetijdsbesteding betreft</li>
-                	<li>Het geen (opdracht tot) spoedreparatie betreft</li>
-                	<li>Het geen weddenschappen en/of loterijen betreft</li>
-                	<li>De consument niet heeft afgezien van zijn herroepingsrecht</li>
-                	<li>Het geen dienst betreft die met instemming van de klant volledig worden uitgevoerd binnen de 14 kalenderdagen bedenktijd en waarbij de klant uitdrukkelijk om de heeft verklaard van het herroepingsrecht af te zien</li>
-                </ul>
-                </li>
-                	<li>
-                	De bedenktijd van 14 dagen zoals in lid 1 genoemd, vangt aan:
-                	<ul>
-                		<li>
-                		Zodra de consument de overeenkomst levering van de dienst heeft gesloten
-                		</li>
-                		<li>
-                		Zodra de consument bevestigd heeft dat hij digitale inhoud via internet gaat afnemen
-                		</li>
-                	</ul>
-                	</li>
-                	<li>
-                	De consument kan zijn beroep op het herroepingsrecht kenbaar maken via <a href="mailto:info@pixeltijgers.nl">info@pixeltijgers.nl</a>, indien gewenst met behulp van het herroepingsformulier dat via de website van Pixeltijgers, www.pixeltijgers.nl, kan worden gedownload.
+                	Weigert de klant zijn medewerking aan de uitvoering van de overeenkomst door Pixeltijgers, dan is hij nog steeds verplicht de afgesproken prijs aan Pixeltijgers te betalen.
                 	</li>
                 </ol>
                 <h3>Opschortingsrecht</h3>
                 <p>Tenzij de klant een consument is, doet de klant afstand van het recht om de nakoming van enige uit deze overeenkomst voortvloeiende verbintenis op te schorten.</p>
                 <h3>Verrekening</h3>
-                <p>Tenzij de klant een consument is, doet de klant afstand van zijn recht om een schuld aan Pixeltijgers  te verrekenen met een vordering op Pixeltijgers . </p>
+                <p>Tenzij de klant een consument is, doet de klant afstand van zijn recht om een schuld aan Pixeltijgers  te verrekenen met een vordering op Pixeltijgers.</p>
                 <h3>Verzekering</h3>
                 <ol>
                 	<li>
@@ -214,13 +188,13 @@ class StandAloneSeeder extends Seeder
 
                 	<ul>
                 		<li>
-                		Geleverde zaken die noodzakelijk zijn voor de uitvoering van de onderliggende overeenkomst
+                		Geleverde zaken die noodzakelijk zijn voor de uitvoering van de onderliggende overeenkomst.
                 		</li>
                 		<li>
-                		Zaken van Pixeltijgers die bij de klant aanwezig zijn
+                		Zaken van Pixeltijgers die bij de klant aanwezig zijn.
                 		</li>
                 		<li>
-                		Zaken die onder eigendomsvoorbehoud zijn geleverd
+                		Zaken die onder eigendomsvoorbehoud zijn geleverd.
                 		</li>
                 	</ul>
                 	</li>
@@ -251,7 +225,7 @@ class StandAloneSeeder extends Seeder
                 <h3>Informatieverstrekking door de klant</h3>
                 <ol>
                 	<li>
-                	De klant stelt alle informatie, gegevens en bescheiden die relevant zijn voor de correcte uitvoering van de overeenkomst tijdig en in gewenste vorm en op gewenste wijze beschik­baar aan Pixeltijgers .
+                	De klant stelt alle informatie, gegevens en bescheiden die relevant zijn voor de correcte uitvoering van de overeenkomst tijdig en in gewenste vorm en op gewenste wijze beschik­baar aan Pixeltijgers.
                 	</li>
                 	<li>
                 	De klant staat in voor de juistheid, volledigheid en betrouwbaarheid van de ter beschikking gestelde informatie, gegevens en bescheiden, ook indien deze van derden afkomstig zijn, voor zover uit de aard van de overeenkomst niet anders voortvloeit.
@@ -314,14 +288,14 @@ class StandAloneSeeder extends Seeder
                 	De in dit artikel omschreven geheimhoudingsplicht geldt niet voor informatie:
                 	<ul>
                 		<li>
-                		Die al openbaar was voordat de klant deze informatie vernam of die later openbaar is geworden zonder dat dit het gevolg was van een schending van de geheimhoudingsplicht van de klant
+                		Die al openbaar was voordat de klant deze informatie vernam of die later openbaar is geworden zonder dat dit het gevolg was van een schending van de geheimhoudingsplicht van de klant.
                 		</li>
                 		<li>
-                		Die door de klant openbaar gemaakt wordt op grond van een wettelijke plicht
+                		Die door de klant openbaar gemaakt wordt op grond van een wettelijke plicht.
                 		</li>
                 	</ul>
                 	</li>
-                	<li>De in dit artikel omschreven geheimhoudingsplicht geldt voor de duur van de onderliggende overeenkomst en voor een periode van 3 jaar na afloop daarvan.</li>
+                	<li>De in dit artikel omschreven geheimhoudingsplicht geldt voor de duur van de onderliggende overeenkomst en voor een periode van 3 jaar na afloop daarvan</li>
                 </ol>
                 <h3>Boetebeding</h3>
                 <ol>
@@ -329,10 +303,10 @@ class StandAloneSeeder extends Seeder
                 	Indien de andere partij het artikel van deze algemene voorwaarden over geheimhouding of over intellectueel eigendom overtreedt, dan verbeurt hij voor elke overtreding ten behoeve van handelsnaam een onmiddellijk opeisbare boete.
 
                 <ul>
-                	<li>Is de andere partij een consument dan bedraagt deze boete € 1.000</li>
-                	<li>Is de andere partij een rechtspersoon dan bedraagt deze boete € 5.000</li>
+                	<li>Is de andere partij een consument dan bedraagt deze boete € 1.000.</li>
+                	<li>Is de andere partij een rechtspersoon dan bedraagt deze boete € 5.000.</li>
                 </ul>
-                </li>
+              </li>
                 	<li>
                 	Daarnaast verbeurt de andere partij een bedrag ad 5% van het in lid 1 genoemde bedrag voor elke dag dat die overtreding voortduurt.
                 	</li>
@@ -418,7 +392,7 @@ class StandAloneSeeder extends Seeder
                 	Tot de in lid 1 genoemde overmachtsituatie worden ook - doch niet uitsluitend - gerekend: noodtoestand (zoals burgeroorlog, opstand, rellen, natuurrampen, etc.); wanprestaties en overmacht van toeleveranciers, bezorgers of andere derden; onverwachte stroom-, elektriciteits- internet-, computer- en telecomstoringen; computer­virussen, stakingen, overheidsmaatregelen, onvoorziene vervoersproblemen, slechte weersomstandigheden en werkonderbrekingen.
                 	</li>
                 	<li>
-                	Indien zich een overmachtsituatie voordoet waardoor Pixeltijgers  1 of meer verplichtingen naar de klant niet kan nakomen, dan worden die verplichtingen opgeschort totdat Pixeltijgers er weer aan kan voldoen.
+                	Indien zich een overmachtsituatie voordoet waardoor Pixeltijgers 1 of meer verplichtingen naar de klant niet kan nakomen, dan worden die verplichtingen opgeschort totdat Pixeltijgers er weer aan kan voldoen.
                 	</li>
                 	<li>
                 	Vanaf het moment dat een overmachtsituatie ten minste 30 kalenderdagen heeft geduurd, mogen beide partijen de overeenkomst schriftelijk geheel of gedeeltelijk ontbinden.
@@ -474,7 +448,7 @@ class StandAloneSeeder extends Seeder
                 	De Nederlandse rechter in het arrondissement waar Pixeltijgers is gevestigd / praktijk houdt / kantoor houdt is exclusief bevoegd om kennis te nemen van eventuele geschillen tussen partijen, tenzij de wet dwingend anders voorschrijft.
                 	</li>
                 </ol>
-                <strong>Opgesteld op 01 juni 2022.</strong>
+                <h4>Opgesteld op 01 juni 2022.</h4>
 
 ',
 
@@ -494,17 +468,10 @@ class StandAloneSeeder extends Seeder
                 'slug' => '/privacybeleid',
                 'content' => '
                 <p>Pixeltijgers geeft veel om uw privacy. Wij verwerken daarom uitsluitend gegevens die wij nodig hebben voor (het verbeteren van) onze dienstverlening en gaan zorgvuldig om met de informatie die wij over u en uw gebruik van onze diensten hebben verzameld. Wij stellen uw gegevens nooit voor commerciële doelstellingen ter beschikking aan derden.</p>
-                <p>Dit privacybeleid is van toepassing op het gebruik van de website en de daarop ontsloten dienstverlening van Pixeltijgers. De ingangsdatum voor de geldigheid van deze voorwaarden is 01/06/2022, met het publiceren van een nieuwe versie vervalt de geldigheid van alle voorgaande versies. Dit privacybeleid beschrijft welke gegevens over u door ons</p>
-                <p>worden verzameld, waar deze gegevens voor worden gebruikt en met wie en onder welke voorwaarden deze gegevens eventueel met derden kunnen worden gedeeld. Ook leggen wij aan u uit op welke wijze wij uw gegevens opslaan en hoe wij uw gegevens tegen misbruik beschermen en welke rechten u heeft met betrekking tot de door u aan ons verstrekte persoonsgegevens.</p>
+                <p>Dit privacybeleid is van toepassing op het gebruik van de website en de daarop ontsloten dienstverlening van Pixeltijgers. De ingangsdatum voor de geldigheid van deze voorwaarden is <strong>01/06/2022</strong>, met het publiceren van een nieuwe versie vervalt de geldigheid van alle voorgaande versies. Dit privacybeleid beschrijft welke gegevens over u door ons worden verzameld, waar deze gegevens voor worden gebruikt en met wie en onder welke voorwaarden deze gegevens eventueel met derden kunnen worden gedeeld. Ook leggen wij aan u uit op welke wijze wij uw gegevens opslaan en hoe wij uw gegevens tegen misbruik beschermen en welke rechten u heeft met betrekking tot de door u aan ons verstrekte persoonsgegevens.</p>
                 <p>Als u vragen heeft over ons privacybeleid kunt u contact opnemen met onze contactpersoon voor privacyzaken, u vindt de contactgegevens aan het einde van ons privacybeleid.</p>
                 <h2>Over de gegevensverwerking</h2>
                 <p>Hieronder kunt u lezen op welke wijze wij uw gegevens verwerken, waar wij deze (laten) opslaan, welke beveiligingstechnieken wij gebruiken en voor wie de gegevens inzichtelijk zijn.</p>
-                <h3>E-mail en mailinglijsten</h3>
-                <h4>MailChimp</h4>
-                <p>Onze website maakt gebruik van MailChimp, een derde partij die het e-mailverkeer afkomstig van onze website en het</p>
-                <p>verzenden van eventuele nieuwsbrieven afhandelt. Alle bevestigingsmails die u ontvangt van onze website en webformulieren worden verzonden via de servers van MailChimp. MailChimp zal uw naam en e-mailadres nooit voor eigen doeleinden gebruiken. Onderaan elke e-mail die geautomatiseerd via onze website is verzonden ziet u de ‘unsubscribe’ link. Als u hier op klikt zal u geen e-mail meer van onze website ontvangen. Dit kan de functionaliteit van onze website ernstig verminderen! Uw persoonsgegevens worden door MailChimp beveiligd opgeslagen.</p>
-                <p>MailChimp maakt gebruik van cookies en andere internettechnologieën die inzichtelijk maken of e-mails worden geopend en gelezen. MailChimp behoudt zich het recht voor om uw gegevens te gebruiken voor het verder verbeteren van de dienstverlening en in het kader daarvan informatie met derden te delen.</p>
-                <p>Wij maken voor ons reguliere zakelijke e-mailverkeer gebruik van de diensten van . Deze partij heeft passende technische en organisatorische maatregelen getroffen om misbruik, verlies en corruptie van uw en onze gegevens zoveel mogelijk te voorkomen. heeft geen toegang tot ons postvak en wij behandelen al ons e-mailverkeer vertrouwelijk.</p>
                 <h3>Doel van de gegevensverwerking</h3>
                 <h4>Algemeen doel van de verwerking</h4>
                 <p>Wij gebruiken uw gegevens uitsluitend ten behoeve van onze dienstverlening. Dat wil zeggen dat het doel van de verwerking altijd direct verband houdt met de opdracht die u verstrekt. Wij gebruiken uw gegevens niet voor (gerichte) marketing. Als u gegevens met ons deelt en wij gebruiken deze gegevens om &#8211; anders dan op uw verzoek &#8211; op een later moment contact met u op te nemen, vragen wij u hiervoor expliciet toestemming. Uw gegevens worden niet met derden gedeeld, anders dan om aan boekhoudkundige en overige administratieve verplichtingen te voldoen. Deze derden zijn allemaal tot geheimhouding gehouden op grond van de overeenkomst tussen hen en ons of een eed of wettelijke verplichting.</p>
@@ -518,14 +485,14 @@ class StandAloneSeeder extends Seeder
                 <p>Op grond van de geldende Nederlandse en Europese wetgeving heeft u als betrokkene bepaalde rechten met betrekking tot de persoonsgegevens die door of namens ons worden verwerkt. Wij leggen u hieronder uit welke rechten dit zijn en hoe u zich op deze rechten kunt beroepen.</p>
                 <p>In beginsel sturen wij om misbruik te voorkomen afschriften en kopieën van uw gegevens enkel naar uw bij ons reeds bekende e-mailadres. In het geval dat u de gegevens op een ander e-mailadres of bijvoorbeeld per post wenst te ontvangen, zullen wij u vragen zich te legitimeren. Wij houden een administratie bij van afgehandelde verzoeken, in het geval van een vergeetverzoek administreren wij geanonimiseerde gegevens. Alle afschriften en kopieën van gegevens ontvangt u in de machineleesbare gegevensindeling die wij binnen onze systemen hanteren.</p>
                 <p>U heeft te allen tijde het recht om een klacht in te dienen bij de Autoriteit Persoonsgegevens als u vermoedt dat wij uw persoonsgegevens op een verkeerde manier gebruiken.</p>
-                <p>Inzagerecht U heeft altijd het recht om de gegevens die wij (laten) verwerken en die betrekking hebben op uw persoon of daartoe herleidbaar zijn, in te zien. U kunt een verzoek met die strekking doen aan onze contactpersoon voor privacyzaken. U ontvangt dan binnen 30 dagen een reactie op uw verzoek. Als uw verzoek wordt ingewilligd sturen wij u op het bij ons bekende e-mailadres een kopie van alle gegevens met een overzicht van de verwerkers die deze gegevens onder zich hebben, onder vermelding van de categorie waaronder wij deze gegevens hebben opgeslagen.</p>
+                <h4>Inzagerecht</h4>
+                <p>U heeft altijd het recht om de gegevens die wij (laten) verwerken en die betrekking hebben op uw persoon of daartoe herleidbaar zijn, in te zien. U kunt een verzoek met die strekking doen aan onze contactpersoon voor privacyzaken. U ontvangt dan binnen 30 dagen een reactie op uw verzoek. Als uw verzoek wordt ingewilligd sturen wij u op het bij ons bekende e-mailadres een kopie van alle gegevens met een overzicht van de verwerkers die deze gegevens onder zich hebben, onder vermelding van de categorie waaronder wij deze gegevens hebben opgeslagen.</p>
                 <h4>Rectificatierecht</h4>
                 <p>U heeft altijd het recht om de gegevens die wij (laten) verwerken en die betrekking hebben op uw persoon of daartoe herleidbaar zijn, te laten aanpassen. U kunt een verzoek met die strekking doen aan onze contactpersoon voor privacyzaken. U ontvangt dan binnen 30 dagen een reactie op uw verzoek. Als uw verzoek wordt ingewilligd sturen wij u op het bij ons bekende e-mailadres een bevestiging dat de gegevens zijn aangepast.</p>
                 <h4>Recht op beperking van de verwerking</h4>
                 <p>U heeft altijd het recht om de gegevens die wij (laten) verwerken die betrekking hebben op uw persoon of daartoe herleidbaar zijn, te beperken. U kunt een verzoek met die strekking doen aan onze contactpersoon voor privacyzaken. U ontvangt dan binnen 30 dagen een reactie op uw verzoek. Als uw verzoek wordt ingewilligd sturen wij u op het bij ons bekende e-mailadres een bevestiging dat de gegevens tot u de beperking opheft niet langer worden verwerkt.</p>
                 <h4>Recht op overdraagbaarheid</h4>
-                <p>U heeft altijd het recht om de gegevens die wij (laten) verwerken en die betrekking hebben op uw persoon of daartoe herleidbaar zijn, door een andere partij te laten uitvoeren. U kunt een verzoek met die strekking doen aan onze contactpersoon voor privacyzaken. U ontvangt dan binnen 30 dagen een reactie op uw verzoek. Als uw verzoek wordt ingewilligd sturen wij u op het bij ons bekende e-mailadres afschriften of kopieën van alle gegevens over u die wij hebben verwerkt of in opdracht van ons door andere verwerkers of derden zijn verwerkt. Naar alle waarschijnlijkheid</p>
-                <p>kunnen wij in een dergelijk geval de dienstverlening niet langer voortzetten, omdat de veilige koppeling van databestanden dan niet langer kan worden gegarandeerd.</p>
+                <p>U heeft altijd het recht om de gegevens die wij (laten) verwerken en die betrekking hebben op uw persoon of daartoe herleidbaar zijn, door een andere partij te laten uitvoeren. U kunt een verzoek met die strekking doen aan onze contactpersoon voor privacyzaken. U ontvangt dan binnen 30 dagen een reactie op uw verzoek. Als uw verzoek wordt ingewilligd sturen wij u op het bij ons bekende e-mailadres afschriften of kopieën van alle gegevens over u die wij hebben verwerkt of in opdracht van ons door andere verwerkers of derden zijn verwerkt. Naar alle waarschijnlijkheid kunnen wij in een dergelijk geval de dienstverlening niet langer voortzetten, omdat de veilige koppeling van databestanden dan niet langer kan worden gegarandeerd.</p>
                 <h4>Recht van bezwaar en overige rechten</h4>
                 <p>U heeft in voorkomende gevallen het recht bezwaar te maken tegen de verwerking van uw persoonsgegevens door of in opdracht van Pixeltijgers. Als u bezwaar maakt zullen wij onmiddellijk de gegevensverwerking staken in afwachting van de afhandeling van uw bezwaar. Is uw bezwaar gegrond dat zullen wij afschriften en/of kopieën van gegevens die wij (laten) verwerken aan u ter beschikking stellen en daarna de verwerking blijvend staken.</p>
                 <p>U heeft bovendien het recht om niet aan geautomatiseerde individuele besluitvorming of profiling te worden onderworpen. Wij verwerken uw gegevens niet op zodanige wijze dat dit recht van toepassing is. Bent u van mening dat dit wel zo is, neem dan contact op met onze contactpersoon voor privacyzaken.</p>
@@ -543,7 +510,11 @@ class StandAloneSeeder extends Seeder
                 <p>In het geval dat softwareoplossingen van derde partijen gebruik maken van cookies is dit vermeld in deze privacyverklaring.</p>
                 <h3>Wijzigingen in het privacybeleid</h3>
                 <p>Wij behouden te allen tijde het recht ons privacybeleid te wijzigen. Op deze pagina vindt u echter altijd de meest recente versie. Als het nieuwe privacybeleid gevolgen heeft voor de wijze waarop wij reeds verzamelde gegevens met betrekking tot u verwerken, dan brengen wij u daarvan per e-mail op de hoogte.</p>
-                <h3>Contactgegevens</h3>',
+                <h3>Contactgegevens</h3>
+                <ul>
+                    <li><span>E-mail:</span> <a href="mailto:info@pixeltijgers.nl">info@pixeltijgers.nl</a></li>
+                    <li><span>Website:</span> <a href="www.pixeltijgers.nl">www.pixeltijgers.nl</a></li>
+                </ul>',
 
                 'meta_title' => 'Privacybeleid',
                 'meta_description' => 'Dit is een stuk tekst.',
@@ -576,7 +547,7 @@ class StandAloneSeeder extends Seeder
                     <li>Hoe vaak gebruikers de site bezoeken</li>
                     <li>Welke pagina’s gebruikers bekijken</li>
                     <li>Hoelang gebruikers een bepaalde pagina bekijken</li>
-                    <li>Bij welke pagina bezoekers de site verlaten </li>
+                    <li>Bij welke pagina bezoekers de site verlaten</li>
                 </ul>
                 <p><strong>Analytische cookies:</strong> deze zorgen ervoor dat iedere keer wanneer je een website bezoekt er een cookie wordt gegenereerd. Deze cookies weten of je de site al eerder bezocht hebt of niet. Alleen bij het eerste bezoek, wordt er een cookie aangemaakt, bij volgende bezoeken wordt er gebruikgemaakt van de reeds bestaande cookie. Deze cookie dient enkel voor statistische doeleinden. Zo kunnen daarmee de volgende data verzameld worden, zoals:</p>
                 <ul>
@@ -587,7 +558,7 @@ class StandAloneSeeder extends Seeder
                 <p><strong>Eigen tracking cookies:</strong> hierdoor kunnen wij te weten komen dat je naast onze website ook op de betreffende andere website(s) uit ons netwerk bent geweest. Het daardoor opgebouwde profiel is niet gekoppeld aan jouw naam, adres, e-mailadres en dergelijke, maar dient alleen om advertenties af te stemmen op jouw profiel, zodat deze zo veel mogelijk relevant voor je zijn. Voor deze cookies vragen wij jouw toestemming. Zonder jouw toestemming worden deze cookies dus niet geplaatst.</p>
                 <p><strong>Tracking cookies van anderen:</strong> hiermee wordt bijgehouden welke pagina’s je bezoekt op internet om je persoonlijke profiel op te kunnen bouwen. Dit profiel wordt niet gekoppeld aan jouw naam, adres, e-mailadres en dergelijke zoals bij ons bekend, maar dient alleen om advertenties af te stemmen op jouw profiel zodat deze zo veel mogelijk relevant voor je zijn. Voor deze cookies vragen wij jouw toestemming. Zonder jouw toestemming worden deze cookies dus niet geplaatst.</p>
                 <p><strong>Social media gerelateerde cookies:</strong> hiermee registreren social media zoals Facebook en LinkedIn welke artikels en pagina’s je deelt via hun sociale media sharing buttons. Ze kunnen ook tracking cookies bevatten die je surfgedrag op het web volgen.</p>
-                <p><strong>Site verbetering cookies / optimalisatie cookies:</strong> hiermee kunnen we verschillende versies van een webpagina testen om te kijken welke pagina het beste wordt bezocht.</p>
+                <p><strong>site verbetering cookies / optimalisatie cookies:</strong> hiermee kunnen we verschillende versies van een webpagina testen om te kijken welke pagina het beste wordt bezocht.</p>
                 <h3>4. Je rechten met betrekking tot je gegevens</h3>
                 <p>Je hebt het recht op inzage, rectificatie, beperking en verwijdering van persoonsgegevens. Daarnaast heb je recht van bezwaar tegen verwerking van persoonsgegevens en recht op gegevensoverdraagbaarheid. Je kunt deze rechten uitoefenen door ons een mail te sturen via <a href="mailto:info@pixeltijgers.nl">info@pixeltijgers.nl</a>. Om misbruik te voorkomen kunnen wij je daarbij vragen om je adequaat te identificeren. Wanneer het gaat om inzage in persoonsgegevens gekoppeld aan een cookie, vragen we je een kopie van het cookie in kwestie mee te sturen. Je kunt deze terugvinden in de instellingen van je browser.</p>
                 <h3>5. Cookies blokkeren en verwijderen</h3>
@@ -622,16 +593,16 @@ class StandAloneSeeder extends Seeder
                 'og_locale' => 'nl_NL',
             ],
             [
-                'page_title' => 'Sitemap',
-                'menu_title' => 'Sitemap',
-                'slug' => '/Sitemap',
+                'page_title' => 'sitemap',
+                'menu_title' => 'sitemap',
+                'slug' => '/sitemap',
                 'content' => '<p>Dit is een stuk tekst.</p>',
 
-                'meta_title' => 'Sitemap',
+                'meta_title' => 'sitemap',
                 'meta_description' => 'Dit is een stuk tekst.',
                 'meta_tags' => 'Website, Webdesign, Design',
 
-                'og_title' => 'Sitemap',
+                'og_title' => 'sitemap',
                 'og_description' => 'Dit is een stuk tekst.',
                 'og_slug' => '/sitemap',
                 'og_type' => 'website',
