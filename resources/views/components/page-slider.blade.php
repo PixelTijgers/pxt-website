@@ -2,7 +2,7 @@
 
 <div class="{{ $cssNs }}">
 
-    <div class="mx-auto max-w-screen-xl w-full">
+    <div class="mx-auto max-w-screen-xl w-full px-5">
 
         <div id="pageSlider">
             @foreach(\App\Models\PageSlide::where('page_id', $page->id)->orderBy('_lft', 'asc')->get() as $slide)
@@ -31,7 +31,11 @@
             </div>
             @endforeach
 
+
+
         </div>
+
+        <div class="appendButtons"></div>
 
     </div>
 

@@ -1,4 +1,5 @@
 @use '../abstracts' as a;
+@use '../abstracts/_media_queries' as *;
 @use '../abstracts/mixins' as *;
 @use '../abstracts/variables' as *;
 
@@ -19,8 +20,12 @@ main {
 
     }
     h2 {
-        font-size: 42px;
+        font-size: 28px;
         margin-bottom: 20px;
+
+        @include screen-size(lg) {
+            font-size: 42px;
+        }
     }
     h3 {
 
@@ -104,8 +109,13 @@ main {
     .main-container,
     .sub-container {
         background: var(--clr-white-100);
-        padding-top: 80px;
-        padding-bottom: 65px;
+        padding-top: 50px;
+        padding-bottom: 35px;
+
+        @include screen-size(lg) {
+            padding-top: 80px;
+            padding-bottom: 65px;
+        }
     }
 
     .sub-container {

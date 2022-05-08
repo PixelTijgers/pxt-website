@@ -28,7 +28,7 @@
 
         <div class="main-container contact-container">
 
-            <div class="mx-auto max-w-screen-xl w-full">
+            <div class="mx-auto max-w-screen-xl w-full px-5">
 
                 @include('front.layouts.breadcrumb', [
                     'breadcrum' => [
@@ -39,9 +39,9 @@
                 <h2>{{ $page->page_title}} </h2>
                 {!! $page->content !!}
 
-                <div class="flex flex-row w-full justify-between">
+                <div class="flex flex-col lg:flex-row w-full justify-between">
 
-                    <div class="w-8/12">
+                    <div class="w-full lg:w-8/12">
 
                         @if ($errors->any())
 
@@ -61,9 +61,9 @@
 
                             @csrf()
 
-                            <div class="flex flex-row w-full">
+                            <div class="flex flex-col lg:flex-row w-full">
 
-                                <div class="flex w-1/2 input-group mr-1">
+                                <div class="flex w-full lg:w-1/2 input-group mr-1">
 
                                     <label for="name">Naam: *</label>
                                     <input type="text" name="name" placeholder="Naam" @error('name') class="border-danger" @enderror autofocus value="{{ old('name') }}"/>
@@ -73,7 +73,7 @@
 
                                 </div>
 
-                                <div class="flex w-1/2 input-group ml-1">
+                                <div class="flex w-full lg:w-1/2 input-group ml-1">
 
                                     <label for="email">E-mail adres: *</label>
                                     <input type="email" name="email" placeholder="E-mail adres" @error('email') class="border-danger" @enderror autofocus value="{{ old('email') }}"/>
@@ -85,9 +85,9 @@
 
                             </div>
 
-                            <div class="flex flex-row w-full">
+                            <div class="flex flex-col lg:flex-row w-full">
 
-                                <div class="flex w-1/2 input-group mr-1">
+                                <div class="flex w-full lg:w-1/2 input-group mr-1">
 
                                     <label for="company">Bedrijf: </label>
                                     <input type="text" name="company" placeholder="Bedrijf" @error('company') class="border-danger" @enderror autofocus value="{{ old('company') }}"/>
@@ -97,7 +97,7 @@
 
                                 </div>
 
-                                <div class="flex w-1/2 input-group ml-1">
+                                <div class="flex w-full lg:w-1/2 input-group ml-1">
 
                                     <label for="website">Website: </label>
                                     <input type="text" name="website" placeholder="Website" @error('website') class="border-danger" @enderror autofocus value="{{ old('website') }}"/>
@@ -125,7 +125,7 @@
 
                             <div class="flex flex-row w-full">
 
-                                <div class="flex w-full input-group">
+                                <div class="flex w-full lg:w-full input-group">
 
                                     <label for="message">Bericht: *</label>
                                     <textarea placeholder="Bericht" name="message" @error('message') class="border-danger" @enderror>{{ old('message') }}</textarea>
@@ -154,7 +154,7 @@
 
                     </div>
 
-                    <aside class="w-3/12">
+                    <aside class="mt-10 lg:mt-0 w-full lg:w-3/12">
 
                         <section class="widget">
 
@@ -222,10 +222,6 @@
                 </div>
 
             </div>
-
-        </div>
-
-        <div class="sub-container">
 
         </div>
 

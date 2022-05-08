@@ -4,7 +4,7 @@ document.addEventListener(
         new Mmenu('#mobile-menu', {
                "offCanvas": {
                   "position": "right"
-               }
+              },
             });
     }
 );

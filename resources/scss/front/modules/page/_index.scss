@@ -1,3 +1,5 @@
+@use '../../abstracts/_media_queries' as *;
+
 :root {
 
 }
@@ -6,21 +8,41 @@
     .main-container {
 
         h2 {
-            font-size: 34px;
+            font-size: 26px;
             margin-bottom: 20px;
+
+            @include screen-size(lg) {
+                font-size: 34px;
+            }
         }
         h3 {
-            font-size: 26px;
+            font-size: 20px;
             font-weight: 300px;
             margin-bottom: 5px;
             letter-spacing: 0.05em;
+
+            @include screen-size(lg) {
+                font-size: 26px;
+            }
         }
         h4 {
-            font-size: 16px;
+            font-size: 14px;
             text-transform: uppercase;
             letter-spacing: 0.075em;
             margin-top: 10px;
             margin-bottom: 5px;
+
+            @include screen-size(lg) {
+                font-size: 16px;
+            }
+        }
+
+        p {
+            font-size: 16px;
+
+            @include screen-size(lg) {
+                font-size: 18px;
+            }
         }
 
         ol,

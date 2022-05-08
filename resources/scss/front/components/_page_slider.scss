@@ -1,10 +1,14 @@
 @use '../abstracts' as a;
+@use '../abstracts/_media_queries' as *;
 @use '../abstracts/mixins' as *;
 @use '../abstracts/variables' as *;
 
 :root{
+    --sl-height-sm: 600px;
+    --sl-height-md: 600px;
     --sl-height-xl: 800px;
 
+    --sl-sm-br: 0 0 10px 10px;
     --sl-br: 10px;
     --sl-br-img: 0 0 10px 10px;
 
@@ -16,9 +20,113 @@
 }
 
 .components-page-Slider {
-    margin-bottom: 125px;
+    padding-bottom: 75px;
+
+    @include screen-size(lg) {
+        margin-bottom: 125px;
+    }
 
     .slick-slider {
+
+        .slick-list {
+            border-radius: var(--sl-br-img);
+            height: var(--sl-height-sm);
+
+            @include screen-size(lg) {
+                height: var(--sl-height-xl);
+            }
+
+            .slick-track {
+                .slick-slide {
+                    .slide {
+                        @include screen-size(lg) {
+                            figure {
+                                img {
+                                    border-radius: var(--sl-br-img);
+                                }
+                            }
+                        }
+
+                        .meta {
+                            @include hoverTransition(.15s, ease-in);
+
+                            border-radius: var(--sl-sm-br);
+                            background: var(--clr-white-100);
+                            height: 350px;
+                            padding: var(--sl-meta-p-xl);
+                            z-index: 2;
+
+                            @include screen-size(lg) {
+                                border-radius: var(--sl-br);
+                                cursor: pointer;
+                                height: 325px;
+                                position: absolute;
+                                    bottom: -125px;
+                                    right: 100px;
+                                width: var(--sl-meta-w-xl);
+                            }
+
+                            &:hover {
+                                box-shadow: var(--shadow-primary);
+                            }
+
+                            h4 {
+                                color: var(--clr-secondary-300);
+                                font-size: 14px;
+                                font-weight: 300;
+                                margin-bottom: 15px;
+                            }
+
+                            h3 {
+                                font-size: 24px;
+                                line-height: 125%;
+
+                                @include screen-size(lg) {
+                                    font-size: 32px;
+                                }
+
+                                &::after {
+                                    background: var(--clr-secondary-300);
+                                    border-radius: 5px;
+                                    content: '';
+                                    display: block;
+                                    height: 2px;
+                                    margin: 10px 0 25px;
+                                    width: 50px;
+
+                                    @include screen-size(lg) {
+                                        height: 4px;
+                                        width: 100px;
+                                    }
+                                }
+                            }
+                            p {
+                                font-family: var(--ff-fbase);
+                                font-size: 16px;
+                                line-height: 175%;
+                                word-spacing: 3px;
+
+                                @include screen-size(lg) {
+                                    padding-right: 125px;
+                                }
+                            }
+                            a.btn {
+                                @include screen-size(lg) {
+                                    position: absolute;
+                                        right: -50px;
+                                        bottom: 50px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .appendButtons {
+        position: relative;
+            top: -20px;
 
         .slick-prev,
         .slick-next {
@@ -30,8 +138,6 @@
             height: 50px;
             outline: none;
             position: absolute;
-                bottom: 75px;
-            transform: translateY(275px);
             width: 50px;
             z-index: 1;
 
@@ -45,7 +151,7 @@
 
             &:hover {
                 background: var(--clr-white-100);
-                box-shadow: var(--bxs-base);
+                box-shadow: var(--shadow-primary);
                 border: 1px solid var(--clr-white-100);
 
                 svg {
@@ -58,77 +164,17 @@
             }
         }
         .slick-prev {
+            left: 0;
+
+            @include screen-size(lg) {
                 left: 10%;
+            }
         }
         .slick-next {
+            left: 70px;
+
+            @include screen-size(lg) {
                 left: 15%;
-        }
-        .slick-list {
-            border-radius: var(--sl-br-img);
-            height: var(--sl-height-xl);
-
-            .slick-track {
-                .slick-slide {
-                    .slide {
-                        figure {
-                            img {
-                                border-radius: var(--sl-br-img);
-                            }
-                        }
-                        .meta {
-                            @include hoverTransition(.15s, ease-in);
-
-                            background: var(--clr-white-100);
-                            border-radius: var(--sl-br);
-                            cursor: pointer;
-                            height: 325px;
-                            padding: var(--sl-meta-p-xl);
-                            position: absolute;
-                                bottom: -125px;
-                                right: 100px;
-                            width: var(--sl-meta-w-xl);
-                            z-index: 2;
-
-                            &:hover {
-                                box-shadow: var(--bxs-base);
-                            }
-
-                            h4 {
-                                color: var(--clr-secondary-300);
-                                font-size: 14px;
-                                font-weight: 300;
-                                margin-bottom: 15px;
-                            }
-
-                            h3 {
-                                font-size: 32px;
-                                line-height: 125%;
-
-                                &::after {
-                                    background: var(--clr-secondary-300);
-                                    border-radius: 5px;
-                                    content: '';
-                                    display: block;
-                                    height: 4px;
-                                    margin: 10px 0 25px;
-                                    width: 100px;
-                                }
-                            }
-                            p {
-                                font-family: var(--ff-fbase);
-                                font-size: 16px;
-                                line-height: 175%;
-                                padding-right: 125px;
-                                word-spacing: 3px;
-                            }
-                            a.btn {
-                                position: absolute;
-                                    right: -50px;
-                                    bottom: 50px;
-                            }
-                        }
-                    }
-                }
             }
         }
     }

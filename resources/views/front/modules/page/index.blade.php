@@ -24,7 +24,7 @@
 
         <div class="sub-container">
 
-            <div class="mx-auto max-w-screen-xl w-full">
+            <div class="mx-auto max-w-screen-xl w-full px-5">
 
                 <h2>{{ $page->page_title }} </h2>
 
@@ -34,7 +34,7 @@
 
         <div class="main-container">
 
-            <div class="mx-auto max-w-screen-xl w-full">
+            <div class="mx-auto max-w-screen-xl w-full px-5">
 
                 {!! $page->content !!}
 
