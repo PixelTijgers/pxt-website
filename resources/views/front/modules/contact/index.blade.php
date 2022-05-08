@@ -28,7 +28,7 @@
 
         <div class="main-container contact-container">
 
-            <div class="mx-auto max-w-screen-xl w-full px-5 md:px-16">
+            <div class="mx-auto max-w-screen-xl w-full px-5 md:px-16 xl:px-0">
 
                 @include('front.layouts.breadcrumb', [
                     'breadcrum' => [

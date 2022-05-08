@@ -1,4 +1,4 @@
-<div class="{{ $cssNs }} px-5 md:px-16">
+<div class="{{ $cssNs }} px-5 md:px-16 xl:px-0">
 
     <div class="mx-auto max-w-screen-xl w-full">
 

@@ -1,10 +1,10 @@
-<footer class="{{ $cssNs }}">
+<footer class="{{ $cssNs }} px-5 md:px-16 xl:px-0">
 
-    <div class="mx-auto max-w-screen-xl w-full px-5 md:px-16">
+    <div class="mx-auto max-w-screen-xl w-full">
 
         <div class="flex justify-between h-full footer-top">
 
-            <div class="flex flex-col w-full lg:justify-start lg:items-center lg:w-1/2">
+            <div class="flex flex-col w-full justify-start lg:w-1/2">
 
                 <a href="{{ url()->current() }}" class="brand-logo">
 

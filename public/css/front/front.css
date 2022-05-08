@@ -1931,6 +1931,11 @@ body main h1 {
     padding-left: 2rem;
     padding-right: 2rem;
   }
+
+  .lg\:px-10 {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
 }
 @media (min-width: 1280px) {
 
@@ -1958,7 +1963,21 @@ body main h1 {
     flex-direction: row;
   }
 
+  .xl\:justify-start {
+    justify-content: flex-start;
+  }
+
   .xl\:justify-end {
     justify-content: flex-end;
+  }
+
+  .xl\:px-5 {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .xl\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 }
