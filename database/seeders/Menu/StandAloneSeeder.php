@@ -593,16 +593,16 @@ class StandAloneSeeder extends Seeder
                 'og_locale' => 'nl_NL',
             ],
             [
-                'page_title' => 'sitemap',
-                'menu_title' => 'sitemap',
+                'page_title' => 'Sitemap',
+                'menu_title' => 'Sitemap',
                 'slug' => '/sitemap',
                 'content' => '<p>Dit is een stuk tekst.</p>',
 
-                'meta_title' => 'sitemap',
+                'meta_title' => 'Sitemap',
                 'meta_description' => 'Dit is een stuk tekst.',
                 'meta_tags' => 'Website, Webdesign, Design',
 
-                'og_title' => 'sitemap',
+                'og_title' => 'Sitemap',
                 'og_description' => 'Dit is een stuk tekst.',
                 'og_slug' => '/sitemap',
                 'og_type' => 'website',

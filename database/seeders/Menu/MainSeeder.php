@@ -27,7 +27,7 @@ class MainSeeder extends Seeder
                 'page_title' => 'Home',
                 'menu_title' => 'Home',
                 'slug' => '/',
-                'content' => '<p>Dit is een stuk tekst.</p>',
+                'content' => '<p>Dit is een zin, volgens wijsneus Naomi.</p>',
 
                 'meta_title' => 'Home',
                 'meta_description' => 'Dit is een stuk tekst.',
@@ -36,6 +36,38 @@ class MainSeeder extends Seeder
                 'og_title' => 'Home',
                 'og_description' => 'Dit is een stuk tekst.',
                 'og_slug' => '/',
+                'og_type' => 'website',
+                'og_locale' => 'nl_NL',
+            ],
+            [
+                'page_title' => 'Expertises',
+                'menu_title' => 'Expertises',
+                'slug' => '/expertises',
+                'content' => '<p>Dit is een stuk tekst.</p>',
+
+                'meta_title' => 'Expertises',
+                'meta_description' => 'Dit is een stuk tekst.',
+                'meta_tags' => 'Website, Webdesign, Design',
+
+                'og_title' => 'Expertises',
+                'og_description' => 'Dit is een stuk tekst.',
+                'og_slug' => '/expertises',
+                'og_type' => 'website',
+                'og_locale' => 'nl_NL',
+            ],
+            [
+                'page_title' => 'Over Pixeltijgers',
+                'menu_title' => 'Over Pixeltijgers',
+                'slug' => '/over-pixeltijgers',
+                'content' => '<p>Dit is een stuk tekst.</p>',
+
+                'meta_title' => 'Over Pixeltijgers',
+                'meta_description' => 'Dit is een stuk tekst.',
+                'meta_tags' => 'Website, Webdesign, Design',
+
+                'og_title' => 'Over Pixeltijgers',
+                'og_description' => 'Dit is een stuk tekst.',
+                'og_slug' => '/over-pixeltijgers',
                 'og_type' => 'website',
                 'og_locale' => 'nl_NL',
             ],

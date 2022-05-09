@@ -27,4 +27,14 @@ class PageController extends Controller
     {
         return view('front.modules.page.index');
     }
+
+    /**
+    * Display a listing of the page.
+    *
+    * @return \Illuminate\Http\Response
+    */
+    public function sitemap()
+    {
+        return view('front.modules.page.sitemap');
+    }
 }

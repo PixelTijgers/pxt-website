@@ -885,6 +885,33 @@ main .sub-container {
   font-weight: 500;
 }
 
+.front-modules-page-Sitemap ul {
+  padding-left: 20px;
+}
+.front-modules-page-Sitemap ul li {
+  font-size: 16px;
+  line-height: 25px;
+  list-style-type: square;
+}
+@media only screen and (min-width: 1024px) {
+  .front-modules-page-Sitemap ul li {
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+.front-modules-page-Sitemap ul li a {
+  color: var(--clr-primary-300);
+}
+.front-modules-page-Sitemap ul li a:hover {
+  color: var(--clr-secondary-300);
+}
+.front-modules-page-Sitemap ul li ul li {
+  list-style-type: square;
+}
+.front-modules-page-Sitemap ul li ul li ul li {
+  list-style-type: disc;
+}
+
 .cookie-consent {
   background: var(--clr-white-100);
   box-shadow: var(--shadow-primary);

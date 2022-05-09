@@ -41,6 +41,7 @@ Route::middleware(['underDevelopment'])->group(function() {
     Route::get('/privacybeleid', [PageController::class, 'index']);
     Route::get('/cookie-policy', [PageController::class, 'index']);
     Route::get('/algemene-voorwaarden', [PageController::class, 'index']);
+    Route::get('/sitemap', [PageController::class, 'sitemap']);
 
     // Sitemap route.
     Route::get('/sitemap.xml', [SitemapController::class, 'index'])->name('sitemap');
