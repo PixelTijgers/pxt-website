@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 // Facades.
 
 // Models.
+use App\Models\Page;
 
 // Traits
 

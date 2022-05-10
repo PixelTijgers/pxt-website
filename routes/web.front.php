@@ -36,11 +36,10 @@ Route::middleware(['underDevelopment'])->group(function() {
 
     // About route.
     Route::get('expertises', [ExpertisesController::class, 'index']);
-
-    // Route group: About.
-    Route::prefix('expertises')->group(function () {
-
-    });
+    Route::get('expertises/webdevelopment', [ExpertisesController::class, 'show']);
+    Route::get('expertises/grafisch-vormgeving', [ExpertisesController::class, 'show']);
+    Route::get('expertises/drukwerk', [ExpertisesController::class, 'show']);
+    Route::get('expertises/video-en-animatie', [ExpertisesController::class, 'show']);
 
     // About route.
     Route::get('over-pixeltijgers', [AboutController::class, 'index']);
