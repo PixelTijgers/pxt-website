@@ -54,6 +54,97 @@ class MainSeeder extends Seeder
                 'og_slug' => '/expertises',
                 'og_type' => 'website',
                 'og_locale' => 'nl_NL',
+
+                'children' => [
+                    [
+                        'page_title' => 'Webdevelopment',
+                        'menu_title' => 'Webdevelopment',
+                        'slug' => '/webdevelopment',
+                        'content' => '<p>Dit is een stuk tekst.</p>',
+
+                        'meta_title' => 'Webdevelopment',
+                        'meta_description' => 'Dit is een stuk tekst.',
+                        'meta_tags' => 'Website, Webdesign, Design',
+
+                        'og_title' => 'Webdevelopment',
+                        'og_description' => 'Dit is een stuk tekst.',
+                        'og_slug' => '/webdevelopment',
+                        'og_type' => 'website',
+                        'og_locale' => 'nl_NL',
+
+                        'status' => PublishedState::Published,
+                        'published_at' => now(),
+
+                        'last_edited_administrator_id' => 1,
+                        'last_edit_at' => now(),
+                    ],
+                    [
+                        'page_title' => 'Grafisch vormgeving',
+                        'menu_title' => 'Grafisch vormgeving',
+                        'slug' => '/grafisch-vormgeving',
+                        'content' => '<p>Dit is een stuk tekst.</p>',
+
+                        'meta_title' => 'Grafisch vormgeving',
+                        'meta_description' => 'Dit is een stuk tekst.',
+                        'meta_tags' => 'Website, Webdesign, Design',
+
+                        'og_title' => 'Grafisch vormgeving',
+                        'og_description' => 'Dit is een stuk tekst.',
+                        'og_slug' => '/grafisch-vormgeving',
+                        'og_type' => 'website',
+                        'og_locale' => 'nl_NL',
+
+                        'status' => PublishedState::Published,
+                        'published_at' => now(),
+
+                        'last_edited_administrator_id' => 1,
+                        'last_edit_at' => now(),
+                    ],
+                    [
+                        'page_title' => 'Drukwerk',
+                        'menu_title' => 'Drukwerk',
+                        'slug' => '/drukwerk',
+                        'content' => '<p>Dit is een stuk tekst.</p>',
+
+                        'meta_title' => 'Drukwerk',
+                        'meta_description' => 'Dit is een stuk tekst.',
+                        'meta_tags' => 'Website, Webdesign, Design',
+
+                        'og_title' => 'Drukwerk',
+                        'og_description' => 'Dit is een stuk tekst.',
+                        'og_slug' => '/drukwerk',
+                        'og_type' => 'website',
+                        'og_locale' => 'nl_NL',
+
+                        'status' => PublishedState::Published,
+                        'published_at' => now(),
+
+                        'last_edited_administrator_id' => 1,
+                        'last_edit_at' => now(),
+                    ],
+                    [
+                        'page_title' => 'Video en animatie',
+                        'menu_title' => 'Video en animatie',
+                        'slug' => '/video-en-animatie',
+                        'content' => '<p>Dit is een stuk tekst.</p>',
+
+                        'meta_title' => 'Video en animatie',
+                        'meta_description' => 'Dit is een stuk tekst.',
+                        'meta_tags' => 'Website, Webdesign, Design',
+
+                        'og_title' => 'Video en animatie',
+                        'og_description' => 'Dit is een stuk tekst.',
+                        'og_slug' => '/video-en-animatie',
+                        'og_type' => 'website',
+                        'og_locale' => 'nl_NL',
+
+                        'status' => PublishedState::Published,
+                        'published_at' => now(),
+
+                        'last_edited_administrator_id' => 1,
+                        'last_edit_at' => now(),
+                    ],
+                ]
             ],
             [
                 'page_title' => 'Over Pixeltijgers',
