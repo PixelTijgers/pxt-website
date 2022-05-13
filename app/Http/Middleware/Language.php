@@ -18,6 +18,7 @@ class Language
      */
     public function handle($request, Closure $next)
     {
+        // dd(app()->getLocale());
         if (session()->has('locale') && array_key_exists(session()->get('locale'), config('cms.common.settings.app_locales'))) {
             App::setLocale(session()->get('locale'));
         }
