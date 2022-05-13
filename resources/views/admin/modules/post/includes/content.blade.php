@@ -9,7 +9,7 @@
             type="text"
             name="title"
             :label="__('Title')"
-            :value="(old('title') ? old('title') : (@$post ? $post->title : null))"
+            :value="(old('title') ? old('title') : (@$invoice ? $invoice->title : null))"
         />
 
         <x-form.textarea
@@ -17,13 +17,13 @@
             maxLength="165"
             :description="__('Intro Description')"
             :label="__('Intro')"
-            :value="(old('intro') ? old('intro') : (@$post ? $post->intro : null))"
+            :value="(old('intro') ? old('intro') : (@$invoice ? $invoice->intro : null))"
         />
 
         <x-form.rich-text
             name="content"
             :label="__('Message')"
-            :value="(old('content') ? old('content') : (@$post ? $post->content : null))"
+            :value="(old('content') ? old('content') : (@$invoice ? $invoice->content : null))"
         />
 
         <x-form.slug
@@ -31,9 +31,9 @@
             slugField="title"
             :description="__('Url Description')"
             :label="__('Url')"
-            :model="@$post"
-            :modelName="\App\Models\Post::where('id', @$post->parent_id)->first()"
-            :value="(old('slug') ? old('slug') : (@$post ? $post->slug : null))"
+            :model="@$invoice"
+            :modelName="\App\Models\Post::where('id', @$invoice->parent_id)->first()"
+            :value="(old('slug') ? old('slug') : (@$invoice ? $invoice->slug : null))"
         />
 
     </div>
@@ -44,7 +44,7 @@
             extensions="jpg jpeg png"
             name="postImage"
             :label="__('Image')"
-            :file="(@$post ? $post->getFirstMediaUrl('postImage') : null)"
+            :file="(@$invoice ? $invoice->getFirstMediaUrl('postImage') : null)"
             :description="__('Image Description')"
             :required="false"
         />
@@ -53,7 +53,7 @@
             name="category_id"
             :label="__('Category')"
             :cols="['col-3', 'col-4']"
-            :value="(old('category_id') ? old('category_id') : (@$post ? $post->category_id : null))"
+            :value="(old('category_id') ? old('category_id') : (@$invoice ? $invoice->category_id : null))"
             :options="\App\Models\Category::all()->sortBy('name')"
             :valueWrapper="['id', 'name']"
             :disabledOption="__('Select Category')"
@@ -63,7 +63,7 @@
             name="administrator_id"
             :label="__('Author')"
             :cols="['col-3', 'col-4']"
-            :value="(old('administrator_id') ? old('administrator_id') : (@$post ? $post->administrator_id : null))"
+            :value="(old('administrator_id') ? old('administrator_id') : (@$invoice ? $invoice->administrator_id : null))"
             :options="\App\Models\Administrator::all()->sortBy('name')"
             :valueWrapper="['id', 'name']"
             :disabledOption="__('Select Administrator')"
@@ -72,14 +72,14 @@
         <x-form.date-time
             name="published_at"
             :label="__('Published At')"
-            :value="(old('published_at') ? old('published_at') : (@$post ? $post->published_at : null))"
+            :value="(old('published_at') ? old('published_at') : (@$invoice ? $invoice->published_at : null))"
             :description="__('Published At Description')"
         />
 
         <x-form.date-time
             name="unpublished_at"
             :label="__('Unpublished At')"
-            :value="(old('unpublished_at') ? old('unpublished_at') : (@$post ? $post->unpublished_at : null))"
+            :value="(old('unpublished_at') ? old('unpublished_at') : (@$invoice ? $invoice->unpublished_at : null))"
             :description="__('Unpublished At Description')"
         />
 
@@ -95,6 +95,12 @@
                'unpublished'   =>  __('Unpublished')
             ]"
             :disabledOption="__('Select Status')"
+        />
+
+        <x-form.switcher
+            name="is_payed"
+            :label="__('Payed')"
+            :value="(old('is_payed') ? old('is_payed') : (@$invoice ? $invoice->is_payed : null))"
         />
 
     </div>

@@ -78,6 +78,10 @@ class InvoiceController extends Controller
                         'data' => 'client.name'
                     ])
                     ->addColumn([
+                        'title' => __('Contactperson'),
+                        'data' => 'client.contact'
+                    ])
+                    ->addColumn([
                         'title' => __('Type'),
                         'data' => 'type'
                     ])
