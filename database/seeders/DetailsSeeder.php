@@ -8,7 +8,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 // Models.
-use App\Models\Details;
+use App\Models\Detail;
 
 class DetailsSeeder extends Seeder
 {
@@ -19,7 +19,7 @@ class DetailsSeeder extends Seeder
      */
     public function run()
     {
-        Details::create([
+        Detail::create([
             'name' => 'Pixeltijgers',
             'contact' => 'Michiel Elshout',
             'street' => 'Vier ambachtenstraat 5',

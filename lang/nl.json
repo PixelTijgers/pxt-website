@@ -133,6 +133,13 @@
     "Users Edit": "Wijzig je eigen gegevens of de gegevens van een andere gebruiker.",
     "Users Edit Description": "Wanneer een nieuwe gebruiker wordt toegevoegd, moet je zijn of haar gegevens invoeren. Het wachtwoord wordt niet per e-mail verzonden. Deze zul je zelf moeten doorgeven aan de gebruiker. De gebruiker zal dan nadien het wachtwoord zelf kunnen wijzigen. Enkel de Super Administrator zal de rechten kunnen verdelen van de gebruiker.",
 
+    "Client": "Klant",
+    "Clients": "Klanten",
+    "Clients Description": "Een overzicht met alle klanten en hun gegevens. Hier kun je ook klanten wijzigen of verwijderen.",
+    "Clients Add": "Voeg een nieuwe klant toe.",
+    "Clients Edit": "Wijzig de gegevens van je klant.",
+    "Clients Edit Description": "Wijzig de gegvens",
+
     "Profile": "Profiel",
     "Logout": "Uitloggen",
 

@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 // Controllers.
 use App\Http\Controllers\Admin\Modules\AdministratorController;
 use App\Http\Controllers\Admin\Modules\CategoryController;
+use App\Http\Controllers\Admin\Modules\ClientController;
 use App\Http\Controllers\Admin\Modules\DashboardController;
 use App\Http\Controllers\Admin\Modules\DetailController;
 use App\Http\Controllers\Admin\Modules\PageController;
@@ -56,6 +57,9 @@ Route::middleware(['auth:sanctum', 'verified', 'admin.permission'])->prefix('adm
 
         // Init details route(s).
         Route::resource('details', DetailController::class, ['names' => 'detail'])->except(['index', 'create', 'show', 'destroy']);
+
+        // Init client route(s).
+        Route::resource('clients', ClientController::class, ['names' => 'client']);
 
         // Init administrators route(s).
         Route::resource('administrators', AdministratorController::class, ['names' => 'administrator']);
