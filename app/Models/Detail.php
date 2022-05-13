@@ -45,6 +45,7 @@ class Detail extends Model
         'phone',
         'mobile',
         'vat',
-        'coc'
+        'coc',
+        'bank'
     ];
 }

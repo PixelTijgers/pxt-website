@@ -17,6 +17,7 @@ use App\Http\Requests\ClientRequest;
 // Traits
 use App\Traits\DataTableActionsTrait;
 use App\Traits\HasRightsTrait;
+use App\Traits\MediaHandlerTrait;
 
 class ClientController extends Controller
 {
@@ -26,6 +27,7 @@ class ClientController extends Controller
      */
     use DataTableActionsTrait;
     use HasRightsTrait;
+    use MediaHandlerTrait;
 
     /**
      * Display a listing of the resource.
@@ -40,7 +42,7 @@ class ClientController extends Controller
             ->editColumn('name', function(Client $client) {
 
                 if($client->getFirstMediaUrl('clientImage') !== '')
-                    $avatar = $client->getFirstMediaUrl('avatar');
+                    $avatar = $client->getFirstMediaUrl('clientImage');
                 else
                     $avatar = asset('img/admin/default_user.png');
 
@@ -116,7 +118,9 @@ class ClientController extends Controller
     public function store(ClientRequest $request)
     {
         // Post data to database.
-        Client::Create($request->validated());
+        $client = Client::Create($request->validated());
+
+        $this->manageInputMedia($client, 'clientImage');
 
         // Return back with message.
         return redirect()->route('client.index')->with([
@@ -149,6 +153,10 @@ class ClientController extends Controller
     {
         // Set data to save into database.
         $client->update($request->validated());
+
+        // Only change avatar when there's a file uploaded and upload avatar.
+        if($request->hasFile('clientImage'))
+            $this->manageInputMedia($client, 'clientImage');
 
         // Save data.
         $client->save();

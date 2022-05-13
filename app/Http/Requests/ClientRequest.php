@@ -40,16 +40,4 @@ class ClientRequest extends FormRequest
             'vat'           => 'nullable|string|vat_number|max:255',
         ];
     }
-
-    /**
-     * Prepare the data for validation.
-     *
-     * @return void
-     */
-    protected function prepareForValidation()
-    {
-        $this->merge([
-
-        ]);
-    }
 }

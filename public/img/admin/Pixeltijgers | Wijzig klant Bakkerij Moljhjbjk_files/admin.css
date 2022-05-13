@@ -1,0 +1,635 @@
+.components-auth-Layout .auth-side-wrapper {
+  height: 100%;
+  background-position: center center;
+  background-size: cover;
+  width: auto;
+}
+.components-auth-Layout .alert ul {
+  margin: 0;
+  padding: 0;
+}
+.components-auth-Layout .alert ul li {
+  list-style: none;
+}
+.components-auth-Layout .auth-form-wrapper .noble-ui-logo figure img {
+  height: auto;
+  width: 60% !important;
+}
+
+.button-group a,
+.button-group button {
+  margin-left: 15px;
+}
+
+.table > :not(:first-child) {
+  border: none;
+}
+
+.table-responsive {
+  overflow: hidden;
+}
+.table-responsive .table-striped > tbody > tr:nth-of-type(2n+1),
+.table-responsive .table-striped > tbody > tr {
+  border: transparent !important;
+}
+.table-responsive > :not(:first-child) {
+  border: none;
+}
+.table-responsive .actionHandler {
+  width: 70px !important;
+}
+.table-responsive .published {
+  width: 40px !important;
+}
+.table-responsive .btn {
+  border-radius: 50% !important;
+  margin-right: 5px !important;
+  height: 30px !important;
+  width: 30px !important;
+}
+.table-responsive .btn svg {
+  color: #FFF;
+  height: 12px !important;
+}
+.table-responsive .dataTables_wrapper.dt-bootstrap4 .dataTables_length select {
+  width: 50px !important;
+}
+.table-responsive .col-sm-12 {
+  padding-left: 0 !important;
+}
+.table-responsive .col-sm-12 .dataTable {
+  margin-bottom: 25px !important;
+}
+.table-responsive .col-sm-12 .dataTable th,
+.table-responsive .col-sm-12 .dataTable td {
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+  vertical-align: baseline;
+}
+.table-responsive .col-sm-12 .dataTable th .btn,
+.table-responsive .col-sm-12 .dataTable td .btn {
+  border-radius: 50% !important;
+  margin-right: 5px !important;
+  height: 30px !important;
+  width: 30px !important;
+}
+.table-responsive .col-sm-12 .dataTable th .btn svg,
+.table-responsive .col-sm-12 .dataTable td .btn svg {
+  color: #FFF;
+  height: 12px !important;
+}
+.table-responsive .col-sm-12 ul.pagination {
+  font-size: 12px !important;
+}
+.table-responsive .sortable-ui tr {
+  border-bottom: 1px solid #EEE;
+}
+
+.bootstrap-datetimepicker-widget.dropdown-menu.bottom:before,
+.bootstrap-datetimepicker-widget.dropdown-menu.bottom:after {
+  display: none !important;
+}
+
+.bootstrap-datetimepicker-widget .datepicker > div {
+  white-space: normal !important;
+}
+.bootstrap-datetimepicker-widget.dropdown-menu {
+  padding: 10px;
+  height: 320px;
+  width: 320px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+}
+.bootstrap-datetimepicker-widget.dropdown-menu.timepicker-sbs {
+  width: 600px;
+}
+.bootstrap-datetimepicker-widget.dropdown-menu.bottom:before {
+  border-bottom: 7px solid #e8ebf1;
+  border-bottom-color: #e8ebf1;
+}
+.bootstrap-datetimepicker-widget .timepicker-picker {
+  position: relative;
+  top: 30%;
+}
+.bootstrap-datetimepicker-widget .timepicker-picker .table-condensed a {
+  font-size: 20px;
+}
+.bootstrap-datetimepicker-widget .timepicker-picker .table-condensed .timepicker-hour,
+.bootstrap-datetimepicker-widget .timepicker-picker .table-condensed .separator,
+.bootstrap-datetimepicker-widget .timepicker-picker .table-condensed .timepicker-minute {
+  font-size: 25px;
+}
+.bootstrap-datetimepicker-widget .datepicker-months span,
+.bootstrap-datetimepicker-widget .datepicker-years span,
+.bootstrap-datetimepicker-widget .datepicker-decades span {
+  position: relative;
+}
+.bootstrap-datetimepicker-widget .datepicker-months span:before,
+.bootstrap-datetimepicker-widget .datepicker-years span:before,
+.bootstrap-datetimepicker-widget .datepicker-decades span:before {
+  content: "";
+  width: 38px;
+  height: 35px;
+  border-radius: 2px;
+  display: block;
+  vertical-align: middle;
+  position: absolute;
+  margin: auto;
+  z-index: -1;
+  top: 9px;
+  right: 0;
+  left: -3px;
+}
+.bootstrap-datetimepicker-widget .datepicker-months span.month:hover, .bootstrap-datetimepicker-widget .datepicker-months span.year:hover,
+.bootstrap-datetimepicker-widget .datepicker-years span.month:hover,
+.bootstrap-datetimepicker-widget .datepicker-years span.year:hover,
+.bootstrap-datetimepicker-widget .datepicker-decades span.month:hover,
+.bootstrap-datetimepicker-widget .datepicker-decades span.year:hover {
+  color: #FFF;
+}
+.bootstrap-datetimepicker-widget .datepicker-months span.month:hover:before, .bootstrap-datetimepicker-widget .datepicker-months span.year:hover:before,
+.bootstrap-datetimepicker-widget .datepicker-years span.month:hover:before,
+.bootstrap-datetimepicker-widget .datepicker-years span.year:hover:before,
+.bootstrap-datetimepicker-widget .datepicker-decades span.month:hover:before,
+.bootstrap-datetimepicker-widget .datepicker-decades span.year:hover:before {
+  background: #727cf5;
+  box-shadow: 3px 3px 6px 0 rgba(147, 127, 201, 0.2);
+  -webkit-box-shadow: 3px 3px 6px 0 rgba(147, 127, 201, 0.2);
+  -moz-box-shadow: 3px 3px 6px 0 rgba(147, 127, 201, 0.2);
+}
+.bootstrap-datetimepicker-widget .datepicker-months span.active,
+.bootstrap-datetimepicker-widget .datepicker-years span.active,
+.bootstrap-datetimepicker-widget .datepicker-decades span.active {
+  background: transparent;
+  text-shadow: none;
+}
+.bootstrap-datetimepicker-widget .datepicker-months span.active:before,
+.bootstrap-datetimepicker-widget .datepicker-years span.active:before,
+.bootstrap-datetimepicker-widget .datepicker-decades span.active:before {
+  background: #727cf5;
+  color: #FFF !important;
+  box-shadow: 3px 3px 6px 0 rgba(147, 127, 201, 0.2);
+  -webkit-box-shadow: 3px 3px 6px 0 rgba(147, 127, 201, 0.2);
+  -moz-box-shadow: 3px 3px 6px 0 rgba(147, 127, 201, 0.2);
+}
+.bootstrap-datetimepicker-widget .datepicker-years span:before,
+.bootstrap-datetimepicker-widget .datepicker-decades span:before {
+  width: 48px;
+  height: 45px;
+  top: 3px;
+}
+.bootstrap-datetimepicker-widget .timepicker-hours,
+.bootstrap-datetimepicker-widget .timepicker-minutes {
+  position: relative;
+  top: 25%;
+}
+.bootstrap-datetimepicker-widget .timepicker-hours .hour,
+.bootstrap-datetimepicker-widget .timepicker-minutes .hour {
+  font-size: 16px;
+  height: 35px !important;
+  line-height: 35px !important;
+}
+.bootstrap-datetimepicker-widget .timepicker-hours .hour:hover,
+.bootstrap-datetimepicker-widget .timepicker-hours .minute:hover,
+.bootstrap-datetimepicker-widget .timepicker-minutes .hour:hover,
+.bootstrap-datetimepicker-widget .timepicker-minutes .minute:hover {
+  background: none;
+}
+.bootstrap-datetimepicker-widget .timepicker-hours .hour:before,
+.bootstrap-datetimepicker-widget .timepicker-hours .minute:before,
+.bootstrap-datetimepicker-widget .timepicker-minutes .hour:before,
+.bootstrap-datetimepicker-widget .timepicker-minutes .minute:before {
+  content: "";
+  width: 38px;
+  height: 35px;
+  border-radius: 2px;
+  display: block;
+  margin: auto;
+  vertical-align: middle;
+  position: absolute;
+  top: 6px;
+  z-index: -1;
+  left: 0;
+  right: 0;
+}
+.bootstrap-datetimepicker-widget .timepicker-hours .hour:hover,
+.bootstrap-datetimepicker-widget .timepicker-hours .minute:hover,
+.bootstrap-datetimepicker-widget .timepicker-minutes .hour:hover,
+.bootstrap-datetimepicker-widget .timepicker-minutes .minute:hover {
+  background: transparent;
+  color: #FFF;
+}
+.bootstrap-datetimepicker-widget .timepicker-hours .hour:hover:before,
+.bootstrap-datetimepicker-widget .timepicker-hours .minute:hover:before,
+.bootstrap-datetimepicker-widget .timepicker-minutes .hour:hover:before,
+.bootstrap-datetimepicker-widget .timepicker-minutes .minute:hover:before {
+  background: #727cf5;
+  color: #FFF !important;
+  box-shadow: 3px 3px 6px 0 rgba(147, 127, 201, 0.2);
+  -webkit-box-shadow: 3px 3px 6px 0 rgba(147, 127, 201, 0.2);
+  -moz-box-shadow: 3px 3px 6px 0 rgba(147, 127, 201, 0.2);
+  top: 0px;
+}
+.bootstrap-datetimepicker-widget .timepicker-hours .minute,
+.bootstrap-datetimepicker-widget .timepicker-minutes .minute {
+  font-size: 16px;
+}
+.bootstrap-datetimepicker-widget .timepicker-hours .minute:before,
+.bootstrap-datetimepicker-widget .timepicker-minutes .minute:before {
+  width: 57px;
+  height: 54px;
+  top: 0;
+}
+.bootstrap-datetimepicker-widget table thead tr th {
+  border-bottom-width: 0;
+}
+.bootstrap-datetimepicker-widget table thead tr th:hover {
+  background: transparent !important;
+}
+.bootstrap-datetimepicker-widget table thead tr th.prev, .bootstrap-datetimepicker-widget table thead tr th.next {
+  color: #000;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  background: #ffffff;
+}
+.bootstrap-datetimepicker-widget table thead tr th.picker-switch {
+  color: #000;
+  background: #ffffff;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.bootstrap-datetimepicker-widget table td {
+  border: none !important;
+  position: relative;
+}
+.bootstrap-datetimepicker-widget table td span:hover {
+  background: transparent;
+}
+.bootstrap-datetimepicker-widget table td.day {
+  font-size: 0.9375rem;
+  padding: 0.5rem 0.45rem;
+  cursor: pointer;
+}
+.bootstrap-datetimepicker-widget table td.day:before {
+  border-bottom-color: transparent;
+  content: "";
+  width: 28px;
+  height: 25px;
+  border-radius: 2px;
+  display: block;
+  margin: auto;
+  vertical-align: middle;
+  position: absolute;
+  top: 6px;
+  z-index: -1;
+  left: 0;
+  right: 0;
+}
+.bootstrap-datetimepicker-widget table td.day:hover {
+  background: transparent;
+  color: #FFF;
+}
+.bootstrap-datetimepicker-widget table td.day:hover:before {
+  background: #727cf5;
+  color: #FFF !important;
+  box-shadow: 3px 3px 6px 0 rgba(147, 127, 201, 0.2);
+  -webkit-box-shadow: 3px 3px 6px 0 rgba(147, 127, 201, 0.2);
+  -moz-box-shadow: 3px 3px 6px 0 rgba(147, 127, 201, 0.2);
+  top: 5px;
+}
+.bootstrap-datetimepicker-widget table td.today {
+  background: transparent;
+  color: #FFF;
+}
+.bootstrap-datetimepicker-widget table td.today:before {
+  background: rgba(114, 124, 245, 0.5);
+  color: #FFF;
+  box-shadow: 3px 3px 6px 0 rgba(147, 127, 201, 0.2);
+  -webkit-box-shadow: 3px 3px 6px 0 rgba(147, 127, 201, 0.2);
+  -moz-box-shadow: 3px 3px 6px 0 rgba(147, 127, 201, 0.2);
+  top: 4px;
+  border-bottom-color: transparent !important;
+}
+.bootstrap-datetimepicker-widget table td.active {
+  background-color: transparent;
+  color: #FFF;
+  text-shadow: none;
+}
+.bootstrap-datetimepicker-widget table td.active:before {
+  background: #727cf5;
+  color: #FFF;
+  box-shadow: 3px 3px 6px 0 rgba(147, 127, 201, 0.2);
+  -webkit-box-shadow: 3px 3px 6px 0 rgba(147, 127, 201, 0.2);
+  -moz-box-shadow: 3px 3px 6px 0 rgba(147, 127, 201, 0.2);
+  top: 5px;
+}
+
+.dropify-container .dropify-wrapper .dropify-message .file-icon:before {
+  display: none;
+}
+
+form.form-content .row .form-label {
+  align-items: center;
+  display: flex;
+  margin-bottom: 0 !important;
+}
+form.form-content .form-label span.required {
+  color: rgb(101, 113, 255);
+}
+form.form-content .form-submit {
+  background: rgba(255, 255, 255, 0.75);
+  border-top: 1px solid #EEE;
+  display: flex;
+  height: 65px;
+  justify-content: flex-end;
+  padding: 15px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  z-index: 2;
+}
+form.form-content .form-submit button {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+form.form-content .form-control:focus {
+  border-color: #6571ff;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+form.form-content .ck.ck-content {
+  height: 450px;
+  max-height: 750px;
+}
+form.form-content .bootstrap-maxlength {
+  width: 90% !important;
+  position: initial !important;
+  max-width: 75px !important;
+}
+form.form-content div.tagsinput {
+  background-color: #ffffff;
+  border: 1px solid #E8EBF1;
+  border-radius: 2px;
+  color: #495057;
+  cursor: text;
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 400;
+  height: 40px !important;
+  line-height: 25px;
+  padding-top: 5px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  width: 100%;
+}
+form.form-content div.tagsinput:focus {
+  border-color: #6571ff;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+form.form-content div.tagsinput span.tag {
+  background: #727CF5;
+  border: 0;
+  color: #FFF;
+  margin: 2px 5px 0 0 !important;
+  padding: 6px 14px;
+  font-size: 0.8125rem;
+  font-family: inherit;
+  line-height: 1;
+}
+form.form-content div.tagsinput span.tag a {
+  color: #FFF !important;
+  position: relative;
+  top: -1px;
+}
+form.form-content div.tagsinput input {
+  color: #495057;
+  margin-bottom: -2px !important;
+  width: 100px !important;
+}
+form.form-content div.tagsinput #meta_tags_tag {
+  font-size: 14px;
+  padding-left: 5px;
+}
+form.form-content #nestedImages .slider-item .closeButton {
+  margin-right: 15px;
+}
+form.form-content #nestedImages .slider-item .btn-primary {
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.select2-container--bootstrap4 .select2-dropdown {
+  border-color: #6571ff;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+.select2-container--bootstrap4.select2-container--focus .select2-selection {
+  border-color: #6571ff;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+.select2-container--bootstrap4 .select2-results__option--highlighted, .select2-container--bootstrap4 .select2-results__option--highlighted.select2-results__option[aria-selected=true] {
+  background-color: #6571ff;
+}
+
+.navigationSelect .select2-container--bootstrap4 .select2-selection--single {
+  height: 38px !important;
+}
+.navigationSelect .select2-container--bootstrap4 .select2-selection--single .select2-selection__rendered {
+  line-height: 38px;
+}
+.navigationSelect .select2-container--bootstrap4.select2-container--focus .select2-selection {
+  display: block;
+  height: 38px !important;
+}
+
+.ui-sortable-handle {
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+.ui-sortable-handle td {
+  vertical-align: middle;
+}
+.ui-sortable-handle:active {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+.ui-sortable-handle .sortableHandler {
+  color: #727cf5;
+  font-size: 15px;
+}
+.ui-sortable-handle .sortableHandler svg {
+  margin-right: -2px;
+  margin-bottom: -2px;
+  font-size: 20px !important;
+}
+.ui-sortable-handle svg {
+  font-size: 20px !important;
+  margin-bottom: -2px !important;
+}
+
+.sortableLists,
+#s-l-base {
+  background: #FFF;
+  border: 1px solid #e8ebf1;
+  border-top: none;
+}
+.sortableLists .btn,
+#s-l-base .btn {
+  border-radius: 50% !important;
+  height: 30px !important;
+  width: 30px !important;
+}
+.sortableLists .btn svg,
+#s-l-base .btn svg {
+  color: #FFF;
+  height: 12px !important;
+}
+.sortableLists li,
+#s-l-base li {
+  align-items: center;
+  border-top: 1px solid #e8ebf1 !important;
+}
+.sortableLists li ul li div.pageElement,
+#s-l-base li ul li div.pageElement {
+  height: 45px;
+}
+.sortableLists li ul li div.pageElement .pageTitle,
+#s-l-base li ul li div.pageElement .pageTitle {
+  padding-left: 50px;
+}
+.sortableLists li ul li div.pageElement .pageTitle:before,
+#s-l-base li ul li div.pageElement .pageTitle:before {
+  font-family: "Font Awesome 5 Free";
+  color: rgba(80, 97, 238, 0.55);
+  content: "\f148";
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: 900;
+  transform: rotate(90deg);
+  margin-right: 10px;
+  margin-top: 1px;
+}
+.sortableLists li ul ul li div.pageElement .pageTitle,
+#s-l-base li ul ul li div.pageElement .pageTitle {
+  padding-left: 70px;
+}
+.sortableLists li.dragedElement,
+#s-l-base li.dragedElement {
+  background: #FFF;
+  border: 1px solid #e8ebf1;
+  cursor: move;
+  opacity: 0.65;
+}
+.sortableLists li.placeholderElement,
+#s-l-base li.placeholderElement {
+  background: rgba(80, 97, 238, 0.55);
+}
+.sortableLists li.hintClass,
+#s-l-base li.hintClass {
+  background: rgba(80, 97, 238, 0.15);
+}
+.sortableLists li div.pageElement,
+#s-l-base li div.pageElement {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+.sortableLists li div.pageElement .sortableHandler,
+#s-l-base li div.pageElement .sortableHandler {
+  align-items: center;
+  border-right: 1px solid #e8ebf1;
+  color: #5061EE;
+  cursor: move;
+  display: flex;
+  font-size: 20px;
+  height: 45px;
+  justify-content: center;
+  width: 40px;
+}
+.sortableLists li div.pageElement .sortableHandler svg,
+#s-l-base li div.pageElement .sortableHandler svg {
+  margin-right: 2px !important;
+}
+.sortableLists li div.pageElement .pageTitle,
+#s-l-base li div.pageElement .pageTitle {
+  padding-left: 20px;
+}
+.sortableLists li div.pageElement .actionHandler,
+#s-l-base li div.pageElement .actionHandler {
+  align-items: center;
+  border-left: 1px solid #e8ebf1;
+  cursor: move;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 45px;
+  padding: 0 5px;
+  position: absolute;
+  right: 0;
+  width: 80px;
+}
+
+.swal2-actions .swal2-styled {
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.form-switch .form-check-input {
+  transform: scale(1.3);
+}
+
+#toast-container > .toast-success {
+  background: #05a34a !important;
+  background-image: none !important;
+}
+
+.admin-modules-administrator-CreateEdit .grouped-permissions h6 {
+  border-bottom: 1px solid #EFEFEF;
+  padding-bottom: 7px;
+}
+
+.admin-layouts-Sidebar .sidebar-header a.sidebar-brand {
+  width: 75%;
+}
+.admin-layouts-Sidebar .sidebar-header a.sidebar-brand figure {
+  margin: 0;
+}
+.admin-layouts-Sidebar .sidebar-header a.sidebar-brand figure img {
+  height: auto;
+  margin: 0 0 0 -10px;
+  width: 100% !important;
+}
+
+.svg.icon-md {
+  height: 16px !important;
+  width: 16px !important;
+}
+
+.navbar {
+  z-index: 1050;
+}
+
+a {
+  transition: all 0.15s ease-in 0s !important;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+ul li {
+  list-style: none;
+  padding: 0;
+}
+
+textarea {
+  height: 150px !important;
+  resize: none !important;
+  line-height: 150% !important;
+  word-spacing: 2px !important;
+}

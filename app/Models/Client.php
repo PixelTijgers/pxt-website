@@ -31,6 +31,16 @@ class Client extends Model implements HasMedia
      */
     protected $fillable = [
         'name',
+        'contact',
+        'street',
+        'zip_code',
+        'location',
+        'country',
+        'email',
+        'phone',
+        'mobile',
+        'vat',
+        'coc'
     ];
 
     /**

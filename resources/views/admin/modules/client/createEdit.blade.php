@@ -23,7 +23,7 @@
         </div>
         @endif
 
-        <form class="form-content" method="post" action="{{ (@$client ? route('client.update', $client) : route('client.store')) }}">
+        <form class="form-content" method="post" action="{{ (@$client ? route('client.update', $client) : route('client.store')) }}" enctype="multipart/form-data">
 
             @csrf
 
@@ -139,6 +139,14 @@
                                 :value="(old('vat') ? old('vat') : (@$client ? $client->vat : null))"
                                 :row="true"
                                 :cols="['col-3', 'col-6']"
+                            />
+
+                            <x-form.file
+                                name="clientImage"
+                                :label="__('Image')"
+                                :file="(@$client ? $client->getFirstMediaUrl('clientImage') : null)"
+                                extensions="jpg jpeg png"
+                                :required="false"
                             />
 
                         </div>
