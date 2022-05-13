@@ -2,6 +2,13 @@
     "validation.numeric": ":Attribute moet een getal zijn.",
     "validation.required": ":Attribute is verplicht.",
     "validation.url": ":Attribute moet een geldige URL zijn.",
+    "validation.postal_code": "Ongeldige postcode.",
+    "validation.postal_code": "Ongeldige postcode.",
+    "validation.phone": "Telefoonnummer is niet geldig.",
+    "validation.phone": "Mobiel telefoonnummer is niet geldig.",
+    "validation.vat_number": "Ondernemingsnummer is niet geldig.",
+    "validation.iban": "Rekeningnummer is niet geldig.",
+    "validation.integer": "Dit kan alleen maar uit getallen bestaan.",
 
     "Login": "Inloggen",
     "Email": "E-mailadres",
