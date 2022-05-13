@@ -64,6 +64,7 @@ Route::middleware(['auth:sanctum', 'verified', 'admin.permission'])->prefix('adm
 
         // Init invoice route(s).
         Route::resource('invoices', InvoiceController::class, ['names' => 'invoice']);
+        Route::get('invoices/download/{invoice}', ['as' => 'invoice.download', 'uses' => 'App\Http\Controllers\Admin\Modules\InvoiceController@downloadInvoice']);
 
         // Init administrators route(s).
         Route::resource('administrators', AdministratorController::class, ['names' => 'administrator']);

@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 // Facades.
 use Yajra\Datatables\Datatables;
 use Yajra\DataTables\Html\Builder;
+use PDF;
 
 // Models.
 use App\Models\Invoice;
@@ -29,6 +30,20 @@ class InvoiceController extends Controller
      */
     use DataTableActionsTrait;
     use HasRightsTrait;
+
+    /**
+     * Download the invoice.
+     *
+     * @return \Illuminate\Http\Response
+     */
+     protected function downloadInvoice(Invoice $invoice) {
+
+         // selecting PDF view
+         $pdf = PDF::loadView('admin.modules.invoice.includes.invoice-view', array('data' => $invoice));
+
+         // download pdf file
+         return $pdf->download($invoice->id . '.pdf');
+     }
 
     /**
      * Display a listing of the resource.
@@ -105,6 +120,17 @@ class InvoiceController extends Controller
 
         // Init view.
         return view('admin.modules.invoice.index', compact('html'));
+    }
+
+    /**
+     * Show the selected invoice.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function show(Invoice $invoice)
+    {
+        // Init view.
+        return view('admin.modules.invoice.show', compact('invoice'));
     }
 
     /**

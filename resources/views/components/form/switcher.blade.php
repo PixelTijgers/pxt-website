@@ -18,7 +18,7 @@
                 id="{{ @$id ? $id : $name }}"
                 placeholder="{{ $label }}"
                 class="form-check-input {{ @$class }} @error($name) border-danger @enderror"
-                {{ (old() ? (old($name) === 'on' ? 'checked' : null) : ($value === 1 ? 'checked' : null)) }}
+                {{ (old() ? (old($name) === 'on' ? 'checked' : null) : ($value === true ? 'checked' : null)) }}
 
                 @if($required)
                     required

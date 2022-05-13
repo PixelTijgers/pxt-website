@@ -41,55 +41,33 @@
 
                         <div class="card-body">
 
-                            <x-form.input
-                                type="text"
-                                name="id"
-                                :label="__('Invoice ID')"
-                                :value="(old('id') ? old('id') : (@$invoice ? $invoice->id : null))"
-                                :row="true"
-                                :cols="['col-2', 'col-2']"
-                            />
+                            <ul class="nav nav-tabs nav-tabs-line" id="lineTab" role="tablist">
 
-                            <x-form.select
-                                name="client_id"
-                                :label="__('Client')"
-                                :row="true"
-                                :cols="['col-2', 'col-3']"
-                                :value="(old('client_id') ? old('client_id') : (@$invoice ? $invoice->client_id : null))"
-                                :options="\App\Models\Client::all()->sortBy('name')"
-                                :valueWrapper="['id', 'name']"
-                                :disabledOption="__('Select Client')"
-                            />
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="contact-line-tab" data-bs-toggle="tab" data-bs-target="#details" role="tab" aria-controls="details" aria-selected="true">{{ __('Details') }}</a>
+                                </li>
 
-                            <x-form.select
-                                name="type"
-                                :label="__('Type')"
-                                :row="true"
-                                :cols="['col-2', 'col-3']"
-                                :value="(old('type') ? old('type') : (@$invoice ? $invoice->type : null))"
-                                :options="[
-                                   'invoice'   =>  __('Invoice'),
-                                   'quotation'   =>  __('Quotation'),
-                                ]"
-                                :disabledOption="__('Select Type')"
-                            />
+                                <li class="nav-item">
+                                    <a class="nav-link" id="invoice-line-tab" data-bs-toggle="tab" data-bs-target="#invoice" role="tab" aria-controls="invoice" aria-selected="true">{{ __('Invoice') }}</a>
+                                </li>
 
-                            <x-form.date
-                                name="invoice_date"
-                                :label="__('Invoice Date')"
-                                :value="(old('invoice_date') ? old('invoice_date') : (@$invoice ? $invoice->invoice_date : null))"
-                                :row="true"
-                                :cols="['col-2', 'col-3']"
-                            />
+                            </ul>
 
-                            <x-form.switcher
-                                name="is_payed"
-                                :label="__('Payed')"
-                                :value="(old('is_payed') ? old('is_payed') : (@$invoice ? $invoice->is_payed : null))"
-                                :row="true"
-                                :cols="['col-2', 'col-3']"
-                                :required="false"
-                            />
+                            <div class="tab-content mt-3" id="lineTabContent">
+
+                                <div class="tab-pane fade show active" id="details" role="tabpanel" aria-labelledby="contact-line-tab">
+
+                                    @include('admin.modules.invoice.includes.details')
+
+                                </div>
+
+                                <div class="tab-pane fade" id="invoice" role="tabpanel" aria-labelledby="invoice-line-tab">
+
+                                    @include('admin.modules.invoice.includes.invoice')
+
+                                </div>
+
+                            </div>
 
                         </div>
 

@@ -8,6 +8,7 @@
         "php": "^8.1.2",
         "adrianorosa/laravel-geolocation": "^1.1",
         "axlon/laravel-postal-code-validation": "^3.3",
+        "barryvdh/laravel-dompdf": "^1.0",
         "danielebarbaro/laravel-vat-eu-validator": "^1.0",
         "guzzlehttp/guzzle": "^7.2",
         "imbue/laravel-active": "^1.0",
