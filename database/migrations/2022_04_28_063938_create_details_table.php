@@ -26,12 +26,11 @@ return new class extends Migration
             $table->string('location');
             $table->string('country');
 
-            $table->boolean('invoice_is_same')->default(1);
-            $table->string('iv_name')->nullable();
-            $table->string('iv_street')->nullable();
-            $table->string('iv_zip_code')->nullable();
-            $table->string('iv_location')->nullable();
-            $table->string('iv_country')->nullable();
+            $table->string('iv_name');
+            $table->string('iv_street');
+            $table->string('iv_zip_code');
+            $table->string('iv_location');
+            $table->string('iv_country');
 
             $table->string('email');
             $table->string('phone')->unique()->nullable();

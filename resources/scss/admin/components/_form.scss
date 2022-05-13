@@ -4,6 +4,13 @@
 
 form.form-content {
 
+    .row {
+        .form-label {
+            align-items: center;
+            display: flex;
+            margin-bottom: 0 !important;
+        }
+    }
     .form-label {
         span.required {
             color: rgb(101, 113, 255);

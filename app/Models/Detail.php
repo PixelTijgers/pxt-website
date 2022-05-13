@@ -9,13 +9,20 @@ use Illuminate\Database\Eloquent\Model;
 // Traits.
 use Spatie\Permission\Traits\HasRoles;
 
-class Details extends Model
+class Detail extends Model
 {
     /**
      * Traits
      *
      */
     use HasRoles;
+
+    /**
+     * The table associated with the model.
+     *
+     * @var string
+     */
+    protected $table = 'details';
 
     /**
      * The attributes that are mass assignable.
@@ -29,7 +36,6 @@ class Details extends Model
         'zip_code',
         'location',
         'country',
-        'invoice_is_same',
         'iv_name',
         'iv_street',
         'iv_zip_code',
@@ -40,15 +46,5 @@ class Details extends Model
         'mobile',
         'vat',
         'coc'
-    ];
-
-    /**
-     * The attributes that should be cast.
-     *
-     * @var array
-     */
-    protected $casts = [
-        'invoice_is_same' => 'boolean',
-        'category_id' => 'boolean',
     ];
 }

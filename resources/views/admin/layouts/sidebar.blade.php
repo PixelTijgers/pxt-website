@@ -80,6 +80,16 @@
                     </li>
                     @endcan
 
+                    <li class="nav-item nav-category">{{ config('app.name') }}</li>
+                    @can('modules.detail.edit')
+
+                    <li class="nav-item {{ active(['*/details', '*/details/*']) }}">
+                        <a href="{{ url('/admin/modules/details/1/edit') }}" class="nav-link">
+                            <i class="link-icon fa-solid fa-square-info"></i><span class="link-title">{{ __('Details') }}</span>
+                        </a>
+                    </li>
+                    @endcan
+
                     <li class="nav-item nav-category">{{ __('Admin') }}</li>
                     @can('modules.administrator.index')
 

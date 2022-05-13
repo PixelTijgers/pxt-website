@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "15677c5fd167fba2854a50cbd7117a1e",
+    "content-hash": "083ceaa47ebfd74382de346473712e12",
     "packages": [
         {
             "name": "adrianorosa/laravel-geolocation",
@@ -68,6 +68,73 @@
                 "source": "https://github.com/adrianorsouza/laravel-geolocation/tree/v1.1.0"
             },
             "time": "2022-04-30T17:36:24+00:00"
+        },
+        {
+            "name": "axlon/laravel-postal-code-validation",
+            "version": "v3.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/axlon/laravel-postal-code-validation.git",
+                "reference": "65048ba3c720808d862e501fb7a66a90c83bb0e4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/axlon/laravel-postal-code-validation/zipball/65048ba3c720808d862e501fb7a66a90c83bb0e4",
+                "reference": "65048ba3c720808d862e501fb7a66a90c83bb0e4",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "^5.5 || ^6.0 || ^7.0 || ^8.0|^9.0",
+                "illuminate/support": "^5.5 || ^6.0 || ^7.0 || ^8.0|^9.0",
+                "illuminate/validation": "^5.5 || ^6.0 || ^7.0 || ^8.0|^9.0",
+                "php": "^7.2 || ^8.0"
+            },
+            "require-dev": {
+                "guzzlehttp/guzzle": "^6.5 || ^7.0.1",
+                "mockery/mockery": "^1.3",
+                "phpunit/phpunit": "^8.5 || ^9.0",
+                "symfony/var-exporter": "^4.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "aliases": {
+                        "PostalCodes": "\\Axlon\\PostalCodeValidation\\Support\\Facades\\PostalCodes"
+                    },
+                    "providers": [
+                        "\\Axlon\\PostalCodeValidation\\ValidationServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Axlon\\PostalCodeValidation\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Choraimy Kroonstuiver",
+                    "homepage": "https://github.com/axlon"
+                }
+            ],
+            "description": "Worldwide postal code validation for Laravel and Lumen",
+            "keywords": [
+                "laravel",
+                "lumen",
+                "post code",
+                "postal code",
+                "validation",
+                "zip code"
+            ],
+            "support": {
+                "issues": "https://github.com/axlon/laravel-postal-code-validation/issues",
+                "source": "https://github.com/axlon/laravel-postal-code-validation/tree/v3.3.0"
+            },
+            "time": "2022-02-08T17:17:34+00:00"
         },
         {
             "name": "bacon/bacon-qr-code",
@@ -182,6 +249,86 @@
                 }
             ],
             "time": "2021-08-15T20:50:18+00:00"
+        },
+        {
+            "name": "danielebarbaro/laravel-vat-eu-validator",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/danielebarbaro/laravel-vat-eu-validator.git",
+                "reference": "81017faaab6ebc6a18f04e1fcc0339415a1ebbe8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/danielebarbaro/laravel-vat-eu-validator/zipball/81017faaab6ebc6a18f04e1fcc0339415a1ebbe8",
+                "reference": "81017faaab6ebc6a18f04e1fcc0339415a1ebbe8",
+                "shasum": ""
+            },
+            "require": {
+                "ext-soap": "*",
+                "illuminate/contracts": "^8.73|^9.2",
+                "illuminate/support": "^v8.83.2|^9.2",
+                "php": "^8.0|^8.1"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3.3",
+                "nunomaduro/collision": "^5.10|^6.0",
+                "nunomaduro/larastan": "^1.0|^2.0.1",
+                "orchestra/testbench": "^6.22|^7.0",
+                "phpstan/extension-installer": "^1.1",
+                "phpstan/phpstan-deprecation-rules": "^1.0",
+                "phpstan/phpstan-phpunit": "^1.0",
+                "phpunit/phpunit": "^9.5"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Danielebarbaro\\LaravelVatEuValidator\\VatValidatorServiceProvider"
+                    ],
+                    "aliases": {
+                        "VatValidator": "Danielebarbaro\\LaravelVatEuValidator\\Facades\\VatValidatorFacade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Danielebarbaro\\LaravelVatEuValidator\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Daniele Barbaro",
+                    "email": "barbaro.daniele@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A simple package that validates EU VAT numbers against the central ec.europa.eu database",
+            "homepage": "https://github.com/danielebarbaro/laravel-vat-eu-validator",
+            "keywords": [
+                "danielebarbaro",
+                "laravel",
+                "laravel-validator",
+                "laravel-vat-eu-validator",
+                "laravel-vat-validator",
+                "vat",
+                "vat-eu-validator",
+                "vat-validator"
+            ],
+            "support": {
+                "source": "https://github.com/danielebarbaro/laravel-vat-eu-validator/tree/v1.0.1"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/danielebarbaro",
+                    "type": "github"
+                }
+            ],
+            "time": "2022-03-01T07:18:49+00:00"
         },
         {
             "name": "dasprid/enum",
@@ -1199,6 +1346,75 @@
                 }
             ],
             "time": "2021-12-16T16:49:26+00:00"
+        },
+        {
+            "name": "intervention/validation",
+            "version": "3.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Intervention/validation.git",
+                "reference": "3f521652e5c3ddc80b7f39fd3f717960760afcc8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Intervention/validation/zipball/3f521652e5c3ddc80b7f39fd3f717960760afcc8",
+                "reference": "3f521652e5c3ddc80b7f39fd3f717960760afcc8",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/validation": "~7|~8|~9",
+                "php": "^7.3|^7.4|^8.0"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^1",
+                "phpunit/phpunit": "^9.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Intervention\\Validation\\Laravel\\ValidationServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Intervention\\Validation\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Oliver Vogel",
+                    "email": "oliver@intervention.io",
+                    "homepage": "https://intervention.io/"
+                }
+            ],
+            "description": "Additional validation rules for the Laravel framework",
+            "keywords": [
+                "BIC",
+                "IBAN",
+                "ISBN",
+                "ISIN",
+                "base64",
+                "creditcard",
+                "data-url",
+                "ean",
+                "gtin",
+                "laravel",
+                "luhn",
+                "ulid",
+                "validation",
+                "validator"
+            ],
+            "support": {
+                "issues": "https://github.com/Intervention/validation/issues",
+                "source": "https://github.com/Intervention/validation/tree/3.1.1"
+            },
+            "time": "2022-05-11T13:51:21+00:00"
         },
         {
             "name": "jaybizzle/crawler-detect",

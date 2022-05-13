@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\Modules\AdministratorController;
 use App\Http\Controllers\Admin\Modules\CategoryController;
 use App\Http\Controllers\Admin\Modules\DashboardController;
+use App\Http\Controllers\Admin\Modules\DetailController;
 use App\Http\Controllers\Admin\Modules\PageController;
 use App\Http\Controllers\Admin\Modules\PostController;
 use App\Http\Controllers\Admin\Modules\SocialController;
@@ -52,6 +53,9 @@ Route::middleware(['auth:sanctum', 'verified', 'admin.permission'])->prefix('adm
         // Init social media route(s).
         Route::resource('socials', SocialController::class, ['names' => 'social']);
         Route::post('socials/updateSortable', [SocialController::class, 'updateSortable']);
+
+        // Init details route(s).
+        Route::resource('details', DetailController::class, ['names' => 'detail'])->except(['index', 'create', 'show', 'destroy']);
 
         // Init administrators route(s).
         Route::resource('administrators', AdministratorController::class, ['names' => 'administrator']);

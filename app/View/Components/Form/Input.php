@@ -70,13 +70,6 @@ class Input extends Component
     public $cols;
 
     /**
-     * The required attribute.
-     *
-     * @var boolean
-     */
-    public $required;
-
-    /**
      * The readonly attribute.
      *
      * @var boolean
@@ -89,6 +82,13 @@ class Input extends Component
      * @var boolean
      */
     public $disabled;
+
+    /**
+     * The required attribute.
+     *
+     * @var boolean
+     */
+    public $required;
 
     /**
      * Create a new component instance.

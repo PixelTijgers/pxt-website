@@ -24,9 +24,14 @@
 
                 <nav>
 
-                    @include('front.layouts.navigation.menu.navigation-menu', [
-                        'navigationMenu' => 'footer',
-                    ])
+                    <ul>
+                        
+                        <li><a href="{{ url('expertises/webdevelopment') }}">Webdevelopment</a></li>
+                        <li><a href="{{ url('expertises/grafisch-vormgeving') }}">Grafisch vormgeving</a></li>
+                        <li><a href="{{ url('expertises/drukwerk') }}">Drukwerk</a></li>
+                        <li><a href="{{ url('expertises/video-en-animatie') }}">Video- en animatie</a></li>
+
+                    </ul>
 
                 </nav>
 
