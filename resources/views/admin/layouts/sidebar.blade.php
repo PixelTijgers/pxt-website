@@ -99,6 +99,15 @@
             </li>
             @endcan
 
+            @can('modules.invoice.index')
+
+            <li class="nav-item {{ active(['*/invoices', '*/invoices/*']) }}">
+                <a href="{{ url('/admin/modules/invoices') }}" class="nav-link">
+                    <i class="link-icon fa-solid fa-file-invoice"></i><span class="link-title">{{ __('Invoices') }}</span>
+                </a>
+            </li>
+            @endcan
+
             <li class="nav-item nav-category">{{ __('Admin') }}</li>
             @can('modules.administrator.index')
 

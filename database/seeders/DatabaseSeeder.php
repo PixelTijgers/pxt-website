@@ -43,6 +43,7 @@ class DatabaseSeeder extends Seeder
 
             // Call factories.
             \App\Models\Client::factory()->count(50)->create();
+            \App\Models\Invoice::factory()->count(50)->create();
             \App\Models\Post::factory()->count(150)->create();
         }
     }

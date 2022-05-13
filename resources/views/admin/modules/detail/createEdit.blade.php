@@ -57,13 +57,13 @@
 
                                 <div class="tab-pane fade show active" id="contact" role="tabpanel" aria-labelledby="contact-line-tab">
 
-                                    @include('admin.modules.details.includes.contact')
+                                    @include('admin.modules.detail.includes.contact')
 
                                 </div>
 
                                 <div class="tab-pane fade" id="invoice" role="tabpanel" aria-labelledby="invoice-line-tab">
 
-                                    @include('admin.modules.details.includes.invoice')
+                                    @include('admin.modules.detail.includes.invoice')
 
                                 </div>
 

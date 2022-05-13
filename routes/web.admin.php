@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\Modules\CategoryController;
 use App\Http\Controllers\Admin\Modules\ClientController;
 use App\Http\Controllers\Admin\Modules\DashboardController;
 use App\Http\Controllers\Admin\Modules\DetailController;
+use App\Http\Controllers\Admin\Modules\InvoiceController;
 use App\Http\Controllers\Admin\Modules\PageController;
 use App\Http\Controllers\Admin\Modules\PostController;
 use App\Http\Controllers\Admin\Modules\SocialController;
@@ -60,6 +61,9 @@ Route::middleware(['auth:sanctum', 'verified', 'admin.permission'])->prefix('adm
 
         // Init client route(s).
         Route::resource('clients', ClientController::class, ['names' => 'client']);
+
+        // Init invoice route(s).
+        Route::resource('invoices', InvoiceController::class, ['names' => 'invoice']);
 
         // Init administrators route(s).
         Route::resource('administrators', AdministratorController::class, ['names' => 'administrator']);

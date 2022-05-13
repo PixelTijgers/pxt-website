@@ -24,20 +24,20 @@ class DetailController extends Controller
      /**
       * Show the form for editing the specified resource.
       *
-      * @param  \App\Models\Detail  $details
+      * @param  \App\Models\Detail  $detail
       * @return \Illuminate\Http\Response
       */
      public function edit(Detail $detail)
      {
          // Init view.
-         return view('admin.modules.details.createEdit', compact('detail'));
+         return view('admin.modules.detail.createEdit', compact('detail'));
      }
 
      /**
       * Update the specified resource in storage.
       *
       * @param  \Illuminate\Http\Request  $request
-      * @param  \App\Models\Detail  $details
+      * @param  \App\Models\Detail  $detail
       * @return \Illuminate\Http\Response
       */
      public function update(DetailRequest $request, Detail $detail)
