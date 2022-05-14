@@ -42,8 +42,9 @@ class DatabaseSeeder extends Seeder
         if (\App::environment(['local', 'staging'])) {
 
             // Call factories.
-            \App\Models\Client::factory()->count(50)->create();
-            \App\Models\Invoice::factory()->count(50)->create();
+            \App\Models\Client::factory()->count(25)->create();
+            \App\Models\Invoice::factory()->count(100)->create();
+            \App\Models\InvoiceRule::factory()->count(500)->create();
             \App\Models\Post::factory()->count(150)->create();
         }
     }

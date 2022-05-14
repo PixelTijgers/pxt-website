@@ -13,20 +13,19 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('invoices', function (Blueprint $table) {
+        Schema::create('invoice_rules', function (Blueprint $table) {
 
             // Generate ID.
             $table->id();
 
             // Relations.
-            $table->bigInteger('client_id')->unsigned()->index();
-            $table->foreign('client_id')->references('id')->on('clients')->onDelete('cascade');
+            $table->bigInteger('invoice_id')->unsigned()->index();
+            $table->foreign('invoice_id')->references('id')->on('invoices')->onDelete('cascade');
 
             // Table content.
-            $table->bigInteger('id_invoice')->unsigned();
-            $table->date('invoice_date');
-            $table->integer('vat')->default(21);
-            $table->boolean('is_payed')->default(0);
+            $table->string('description');
+            $table->decimal('price', 9, 3);
+            $table->integer('amount')->default(1);
 
             // Generate timestaps (created_at, updated_at)
             $table->timestamps();
@@ -40,6 +39,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('invoices');
+        Schema::dropIfExists('invoice_rules');
     }
 };

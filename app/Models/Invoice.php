@@ -25,7 +25,7 @@ class Invoice extends Model
      * @var string[]
      */
     protected $fillable = [
-        'id',
+        'id_invoice',
         'client_id',
         'type',
         'invoice_date',
@@ -49,5 +49,14 @@ class Invoice extends Model
     public function client()
     {
         return $this->belongsTo(\App\Models\Client::class);
+    }
+
+    /**
+     * Model relations.
+     *
+     */
+    public function invoiceRules()
+    {
+        return $this->hasMany(\App\Models\InvoiceRules::class);
     }
 }

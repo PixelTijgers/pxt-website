@@ -41,6 +41,9 @@
 .table-responsive .published {
   width: 40px !important;
 }
+.table-responsive .download {
+  width: 40px !important;
+}
 .table-responsive .btn {
   border-radius: 50% !important;
   margin-right: 5px !important;
@@ -77,6 +80,15 @@
 .table-responsive .col-sm-12 .dataTable td .btn svg {
   color: #FFF;
   height: 12px !important;
+}
+.table-responsive .col-sm-12 .dataTable th .btn-primary,
+.table-responsive .col-sm-12 .dataTable td .btn-primary {
+  align-items: center;
+  border-radius: 5px !important;
+  display: flex;
+  height: 25px !important;
+  justify-content: center;
+  width: 40px !important;
 }
 .table-responsive .col-sm-12 ul.pagination {
   font-size: 12px !important;

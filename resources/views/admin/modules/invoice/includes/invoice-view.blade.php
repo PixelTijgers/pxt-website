@@ -261,11 +261,11 @@
             </ul>
 
             <ul class="invoice_details">
-                <li><strong>{{ $documentType }}datum: </strong>{{ Carbon\Carbon::parse($invoice['invoice_date'])->formatLocalized('%d-%m-%Y') }}</li>
-                <li><strong>{{ $documentType }}nummer: </strong>{{ $invoice['id'] }}</li>
+                <li><strong>Factuurdatum: </strong>{{ Carbon\Carbon::parse($invoice['invoice_date'])->formatLocalized('%d-%m-%Y') }}</li>
+                <li><strong>Factuurnummer: </strong>{{ $invoice['id_invoice'] }}</li>
             </ul>
 
-            <div class="head"><p>{{ $documentType }}</p></div>
+            <div class="head"><p>Factuur</p></div>
 
             <div class="invoice_rules">
 
@@ -286,19 +286,16 @@
 
                     <tbody>
 
-                        <tr>
-                            <td><strong>Dit is een omschrijving</strong></td>
-                            <td class="price">€500,00</td>
-                            <td class="amount">1</td>
-                            <td class="total">€500,00</td>
-                        </tr>
+                    @foreach($invoiceRules as $invoiceRule)
 
                         <tr>
-                            <td><strong>Dit is een omschrijving</strong></td>
-                            <td class="price">€500,00</td>
-                            <td class="amount">1</td>
-                            <td class="total">€500,00</td>
+                            <td><strong>{{ $invoiceRule['description'] }}</strong></td>
+                            <td class="price">€ {{ number_format($invoiceRule['price'], 2, ',', '.') }}</td>
+                            <td class="amount">{{ $invoiceRule['amount'] }}</td>
+                            <td class="total">€ {{ number_format($invoiceRule['price'] * $invoiceRule['amount'], 2, ',', '.') }}</td>
                         </tr>
+
+                    @endforeach
 
                     </tbody>
 
@@ -308,21 +305,21 @@
                             <td>Subtotaal</td>
                             <td class="price"></td>
                             <td class="amount"></td>
-                            <td class="total">€1500,00</td>
+                            <td class="total">€ {{ number_format($calculateTotal, 2, ',', '.') }}</td>
                         </tr>
 
                         <tr>
-                            <td>BTW 21%</td>
+                            <td>{{ ($invoice['vat'] > 0 ? 'BTW ' . $invoice['vat'] . '%': 'Geen / Vrijgesteld') }}</td>
                             <td class="price"></td>
                             <td class="amount"></td>
-                            <td class="total">€315,00</td>
+                            <td class="total">€ {{ ($invoice['vat'] > 0 ? number_format($calculateVat, 2, ',', '.') : '0,00') }}</td>
                         </tr>
 
                         <tr>
                             <td>Totaal</td>
                             <td class="price"></td>
                             <td class="amount"></td>
-                            <td class="total">€1815,00</td>
+                            <td class="total">€ {{ number_format((float) $calculateTotal + $calculateVat, 2, ',', '.') }}</td>
                         </tr>
 
                     </tfoot>

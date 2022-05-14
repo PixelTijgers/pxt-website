@@ -13,6 +13,7 @@ use PDF;
 use App\Models\Client;
 use App\Models\Detail;
 use App\Models\Invoice;
+use App\Models\InvoiceRule;
 
 // Request
 use App\Http\Requests\InvoiceRequest;
@@ -40,20 +41,28 @@ class InvoiceController extends Controller
      */
      protected function downloadInvoice(Invoice $invoice) {
 
-        // Get the type.
-        $documentType = $invoice->type === 'invoice' ? __('Invoice') : __('Quotation');
-
         // Get the company details.
         $details = Detail::find(1)->firstOrFail();
 
         // Get the client details.
         $client = Client::where('id', $invoice->client_id)->firstOrFail();
 
+        $invoiceRules = InvoiceRule::where('invoice_id', $invoice->id)->get();
+
+        $calculateSum = array();
+
+        foreach($invoiceRules as $invoiceRule) {
+            $calculateSum[] = $invoiceRule['price'] * $invoiceRule['amount'];
+        }
+
+        $calculateTotal = array_sum($calculateSum);
+        $calculateVat = ($invoice['vat'] === 21 ? ($calculateTotal / 100) * 21  :  ($invoice['vat'] === 9 ? ($calculateTotal / 100) * 9 : 0));
+
         // selecting PDF view
-        $pdf = PDF::loadView('admin.modules.invoice.includes.invoice-view', array('invoice' => $invoice, 'details' => $details, 'client' => $client, 'documentType' => $documentType));
+        $pdf = PDF::loadView('admin.modules.invoice.includes.invoice-view', array('invoice' => $invoice, 'details' => $details, 'client' => $client, 'invoiceRules' => $invoiceRules, 'calculateTotal' => $calculateTotal, 'calculateVat' => $calculateVat));
 
         // download pdf file
-        return $pdf->download($invoice->id . '.pdf');
+        return $pdf->download($invoice->id_invoice . '.pdf');
      }
 
     /**
@@ -66,11 +75,11 @@ class InvoiceController extends Controller
         // Init datatables.
         if (request()->ajax()) {
             return DataTables::of(Invoice::query()->with(['client']))
-            ->editColumn('type', function(Invoice $invoice) {
-                return __(ucfirst($invoice->type));
-            })
             ->editColumn('invoice_date', function(Invoice $invoice) {
-                return $invoice->invoice_date->formatLocalized('%e %B %Y');
+                return $invoice->invoice_date->formatLocalized('%d-%m-%Y');
+            })
+            ->editColumn('id', function(Invoice $invoice) {
+                return '<a title="Download Factuur" class="btn btn-primary btn-reset" href="' . route('invoice.download', $invoice->id) . '" target="_blank"><i class="fa-solid fa-download"></i></a>';
             })
             ->editColumn('is_payed', function(Invoice $invoice) {
                 if($invoice->is_payed === true)
@@ -87,6 +96,7 @@ class InvoiceController extends Controller
                     '</div>';
             })
             ->rawColumns([
+                'id',
                 'is_payed',
                 'action'
             ])
@@ -96,8 +106,13 @@ class InvoiceController extends Controller
         // Set values.
         $html = $builder
                     ->addColumn([
-                        'title' => __('Invoice ID'),
-                        'data' => 'id'
+                        'title' => __('#'),
+                        'data' => 'id',
+                        'class' => 'download'
+                    ])
+                    ->addColumn([
+                        'title' => 'Factuur',
+                        'data' => 'id_invoice'
                     ])
                     ->addColumn([
                         'title' => __('Client'),
@@ -106,10 +121,6 @@ class InvoiceController extends Controller
                     ->addColumn([
                         'title' => __('Contactperson'),
                         'data' => 'client.contact'
-                    ])
-                    ->addColumn([
-                        'title' => __('Type'),
-                        'data' => 'type'
                     ])
                     ->addColumn([
                         'title' => __('Date'),
@@ -126,7 +137,7 @@ class InvoiceController extends Controller
                     ])
                     ->parameters([
                         'order' =>
-                            [0,'asc']
+                            [4,'desc']
                     ]);
 
         // Init view.

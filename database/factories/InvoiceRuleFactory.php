@@ -8,18 +8,19 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 
 // Models
 use App\Models\Invoice;
+use App\Models\InvoiceRule;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Invoice>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\InvoiceRule>
  */
-class InvoiceFactory extends Factory
+class InvoiceRuleFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = Invoice::class;
+    protected $model = InvoiceRule::class;
 
     /**
      * Define the model's default state.
@@ -29,11 +30,10 @@ class InvoiceFactory extends Factory
     public function definition()
     {
         return [
-            'client_id' => random_int(1, 25),
-            'id_invoice' => '2021' . random_int(1000, 9999),
-            'invoice_date' => $this->faker->dateTimeBetween('-3 weeks', '+2 days'),
-            'is_payed' => \Arr::random([0,1]),
-            'vat' => \Arr::random([0, 9, 21]),
+            'invoice_id' => Invoice::select('id')->orderByRaw("RAND()")->first(),
+            'description' => $this->faker->sentence(6),
+            'price' => random_int(50, 150),
+            'amount' => random_int(1, 10),
         ];
     }
 }
