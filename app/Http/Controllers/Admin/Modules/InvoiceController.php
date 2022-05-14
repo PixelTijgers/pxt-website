@@ -10,6 +10,8 @@ use Yajra\DataTables\Html\Builder;
 use PDF;
 
 // Models.
+use App\Models\Client;
+use App\Models\Detail;
 use App\Models\Invoice;
 
 // Request
@@ -38,11 +40,20 @@ class InvoiceController extends Controller
      */
      protected function downloadInvoice(Invoice $invoice) {
 
-         // selecting PDF view
-         $pdf = PDF::loadView('admin.modules.invoice.includes.invoice-view', array('data' => $invoice));
+        // Get the type.
+        $documentType = $invoice->type === 'invoice' ? __('Invoice') : __('Quotation');
 
-         // download pdf file
-         return $pdf->download($invoice->id . '.pdf');
+        // Get the company details.
+        $details = Detail::find(1)->firstOrFail();
+
+        // Get the client details.
+        $client = Client::where('id', $invoice->client_id)->firstOrFail();
+
+        // selecting PDF view
+        $pdf = PDF::loadView('admin.modules.invoice.includes.invoice-view', array('invoice' => $invoice, 'details' => $details, 'client' => $client, 'documentType' => $documentType));
+
+        // download pdf file
+        return $pdf->download($invoice->id . '.pdf');
      }
 
     /**
