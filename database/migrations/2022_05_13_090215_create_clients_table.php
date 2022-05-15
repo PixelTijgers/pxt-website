@@ -29,8 +29,7 @@ return new class extends Migration
             $table->string('phone')->unique()->nullable();
             $table->string('mobile')->unique();
 
-            $table->string('coc')->nullable();
-            $table->string('vat')->nullable();
+            $table->string('vat')->unique()->nullable();
 
             // Generate timestaps (created_at, updated_at)
             $table->timestamps();

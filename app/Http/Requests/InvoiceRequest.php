@@ -24,10 +24,10 @@ class InvoiceRequest extends FormRequest
     public function rules()
     {
         return [
-            'id'            => 'required|string|digits:8',
+            'id_invoice'    => 'required|string|digits:8',
             'client_id'     => 'required|numeric|integer',
-            'type'          => 'required|string|in:invoice,quotation',
             'invoice_date'  => 'required|date_format:"Y-m-d H:i:s"',
+            'vat'           => 'required|numeric|integer|in:0,9,21',
             'is_payed'      => 'required|boolean',
         ];
     }

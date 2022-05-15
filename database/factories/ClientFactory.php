@@ -38,7 +38,6 @@ class ClientFactory extends Factory
             'email'     => $this->faker->email(),
             'phone'     => $this->faker->phoneNumber(),
             'mobile'    => $this->faker->phoneNumber(),
-            'coc'       => random_int(10000000, 99999999),
             'vat'       => $this->faker->vat(),
         ];
     }

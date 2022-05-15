@@ -7,7 +7,7 @@
 
     @include('admin.modules.page.includes.slider.template')
 
-    @if(!$pageSlides->isEmpty())
+    @if(!$z->isEmpty())
 
         @foreach($pageSlides as $key => $slide)
 

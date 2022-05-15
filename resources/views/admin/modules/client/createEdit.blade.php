@@ -125,15 +125,6 @@
 
                             <x-form.input
                                 type="text"
-                                name="coc"
-                                :label="__('COC')"
-                                :value="(old('coc') ? old('coc') : (@$client ? $client->coc : null))"
-                                :row="true"
-                                :cols="['col-3', 'col-6']"
-                            />
-
-                            <x-form.input
-                                type="text"
                                 name="vat"
                                 :label="__('VAT')"
                                 :value="(old('vat') ? old('vat') : (@$client ? $client->vat : null))"

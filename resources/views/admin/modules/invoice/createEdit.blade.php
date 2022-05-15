@@ -63,7 +63,7 @@
 
                                 <div class="tab-pane fade" id="invoice" role="tabpanel" aria-labelledby="invoice-line-tab">
 
-                                    @include('admin.modules.invoice.includes.invoice')
+                                    @include('admin.modules.invoice.includes.invoice', ['invoiceRules' => $invoiceRules])
 
                                 </div>
 

@@ -65,6 +65,30 @@ class InvoiceController extends Controller
         return $pdf->download($invoice->id_invoice . '.pdf');
      }
 
+     /**
+      * Process the invoice rules.
+      *
+      * @return \Illuminate\Http\Response
+      */
+     protected function processInvoiceRules($request, $model)
+     {
+         // Delete the older invoice rules.
+         InvoiceRule::where('invoice_id', $model->id)->delete();
+
+         // Add new rules.
+         foreach($request->invoiceRule as $key => $rule)
+         {
+             InvoiceRule::create([
+                 'invoice_id' => $model->id,
+                 'description' => $rule['description'],
+                 'price' => $rule['price'],
+                 'amount' => $rule['amount']
+             ]);
+         }
+
+         return true;
+     }
+
     /**
      * Display a listing of the resource.
      *
@@ -175,7 +199,10 @@ class InvoiceController extends Controller
     public function store(InvoiceRequest $request)
     {
         // Post data to database.
-        Invoice::Create($request->validated());
+        $invoice = Invoice::Create($request->validated());
+
+        // Post invoice rules to database.
+        $this->processInvoiceRules($request, $invoice);
 
         // Return back with message.
         return redirect()->route('invoice.index')->with([
@@ -193,8 +220,11 @@ class InvoiceController extends Controller
      */
     public function edit(Invoice $invoice)
     {
+        // Get the invoice rules.
+        $invoiceRules = InvoiceRule::where('invoice_id', $invoice->id)->get();
+
         // Init view.
-        return view('admin.modules.invoice.createEdit', compact('invoice'));
+        return view('admin.modules.invoice.createEdit', compact('invoice', 'invoiceRules'));
     }
 
     /**
@@ -208,6 +238,9 @@ class InvoiceController extends Controller
     {
         // Set data to save into database.
         $invoice->update($request->validated());
+
+        // Post invoice rules to database.
+        $this->processInvoiceRules($request, $invoice);
 
         // Save data.
         $invoice->save();

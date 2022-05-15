@@ -1,10 +1,10 @@
 <x-form.input
     type="text"
-    name="id"
+    name="id_invoice"
     :label="__('Invoice ID')"
-    :value="(old('id') ? old('id') : (@$invoice ? $invoice->id : null))"
+    :value="(old('id_invoice') ? old('id_invoice') : (@$invoice ? $invoice->id_invoice : null))"
     :row="true"
-    :cols="['col-2', 'col-2']"
+    :cols="['col-2', 'col-3']"
 />
 
 <x-form.select
@@ -18,25 +18,26 @@
     :disabledOption="__('Select Client')"
 />
 
-<x-form.select
-    name="type"
-    :label="__('Type')"
-    :row="true"
-    :cols="['col-2', 'col-3']"
-    :value="(old('type') ? old('type') : (@$invoice ? $invoice->type : null))"
-    :options="[
-       'invoice'   =>  __('Invoice'),
-       'quotation'   =>  __('Quotation'),
-    ]"
-    :disabledOption="__('Select Type')"
-/>
-
 <x-form.date
     name="invoice_date"
     :label="__('Invoice Date')"
     :value="(old('invoice_date') ? old('invoice_date') : (@$invoice ? $invoice->invoice_date : null))"
     :row="true"
     :cols="['col-2', 'col-3']"
+/>
+
+<x-form.select
+    name="vat"
+    :label="__('BTW')"
+    :row="true"
+    :cols="['col-2', 'col-3']"
+    :value="(old('vat') ? old('vat') : (@$invoice ? $invoice->vat : null))"
+    :options="[
+       '0'   =>  'Geen / Vrijgesteld',
+       '9'   =>  '9%',
+       '21'  => '21%',
+    ]"
+    :disabledOption="__('Select Status')"
 />
 
 <x-form.switcher

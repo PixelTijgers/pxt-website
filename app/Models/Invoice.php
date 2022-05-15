@@ -27,7 +27,7 @@ class Invoice extends Model
     protected $fillable = [
         'id_invoice',
         'client_id',
-        'type',
+        'vat',
         'invoice_date',
         'is_payed'
     ];
@@ -38,6 +38,7 @@ class Invoice extends Model
      * @var array
      */
     protected $casts = [
+        'vat' => 'integer',
         'invoice_date' => 'datetime',
         'is_payed' => 'boolean',
     ];

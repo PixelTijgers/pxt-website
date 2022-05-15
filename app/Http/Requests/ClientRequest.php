@@ -32,12 +32,11 @@ class ClientRequest extends FormRequest
             'street'        => 'required|string|max:255',
             'zip_code'      => 'required|string|postal_code:NL,BE|max:255',
             'location'      => 'required|string|max:255',
-            'country'       => 'required|string|max:255',
+            'country'       => 'required|string|in:Nederland,België|max:255',
             'email'         => 'required|email|string|max:255',
             'phone'         => 'nullable|phone|string|max:255',
             'mobile'        => 'required|phone|string|max:255',
-            'coc'           => 'nullable|string|integer|digits:8',
-            'vat'           => 'nullable|string|vat_number|max:255',
+            'vat'           => 'nullable|string|vat_number|max:255|unique:clients,vat' . (@$this->client->id ? ',' . $this->client->id : null)',
         ];
     }
 }
