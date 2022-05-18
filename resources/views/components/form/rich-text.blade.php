@@ -74,6 +74,20 @@
 
         $('.note-btn').attr('data-bs-toggle', 'dropdown').attr('data-bs-auto-close', 'inside');
 
+        $('.note-dropdown-menu').on('click', function() {
+
+            if($(this).hasClass('show') === true)
+            {
+                $(this).parent().children(':first-child').removeClass('show');
+                $(this).removeClass('show');
+            }
+            else
+            {
+                $(this).parent().children(':first-child').addClass('show');
+                $(this).addClass('show');
+            }
+        });
+
     });
 
 </script>
