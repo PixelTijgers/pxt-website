@@ -1,11 +1,11 @@
 {
     "/js/front/front.js": "/js/front/front.js?id=8542b5695f79998ba1d8198ff43ed05e",
-    "/js/admin/admin.js": "/js/admin/admin.js?id=0fb4524b5db6df997d453d5063c7d96b",
-    "/css/admin/admin.css": "/css/admin/admin.css?id=31e7282645158a64c8d0c7fcbc8b1d91",
+    "/js/admin/admin.js": "/js/admin/admin.js?id=796579e2dc95607540c565f12af4a494",
+    "/css/admin/admin.css": "/css/admin/admin.css?id=7636272789a15b1029c9a98da065d92d",
     "/css/front/front.css": "/css/front/front.css?id=a71a8cd8acdcd24af61c71dca632a90e",
     "/plugins/@fortawesome/fontawesome-pro/js/all.min.js": "/plugins/@fortawesome/fontawesome-pro/js/all.min.js?id=2ae534bdf847fc08436c5974bd3f40d1",
     "/plugins/@popperjs/core/dist/umd/popper.js": "/plugins/@popperjs/core/dist/umd/popper.js?id=d6cf66824cc651177d7fe899b9501431",
-    "/plugins/bootstrap/dist/js/bootstrap.min.js": "/plugins/bootstrap/dist/js/bootstrap.min.js?id=259e416ef6833be43801b8b68a93b008",
+    "/plugins/bootstrap/dist/js/bootstrap.bundle.min.js": "/plugins/bootstrap/dist/js/bootstrap.bundle.min.js?id=7ccd9d390d31af98110f74f842ea9b32",
     "/plugins/bootstrap-maxlength/dist/bootstrap-maxlength.min.js": "/plugins/bootstrap-maxlength/dist/bootstrap-maxlength.min.js?id=c3cffa5b91856ba016197cd63a809d72",
     "/plugins/datatables.net/js/jquery.dataTables.min.js": "/plugins/datatables.net/js/jquery.dataTables.min.js?id=956dea3b4723e257896f3b82381fb333",
     "/plugins/datatables.net-bs4/js/dataTables.bootstrap4.min.js": "/plugins/datatables.net-bs4/js/dataTables.bootstrap4.min.js?id=96f750faaeb4e9645855c7daaa1b25cf",
@@ -25,6 +25,7 @@
     "/plugins/slick-slider/slick/slick.min.js": "/plugins/slick-slider/slick/slick.min.js?id=22f75416148991671e580d8f4d2a2387",
     "/plugins/speakingurl/lib/speakingurl.js": "/plugins/speakingurl/lib/speakingurl.js?id=23ee8ed8c15c130a87b18e040f88173c",
     "/plugins/sweetalert2/dist/sweetalert2.all.min.js": "/plugins/sweetalert2/dist/sweetalert2.all.min.js?id=54d16688ee51061d7dcc89f8c95bda97",
+    "/plugins/summernote/dist/summernote-bs5.min.js": "/plugins/summernote/dist/summernote-bs5.min.js?id=f7a4a95bab5596c101db5ba3283d477c",
     "/plugins/tempusdominus-bootstrap-4/build/js/tempusdominus-bootstrap-4.min.js": "/plugins/tempusdominus-bootstrap-4/build/js/tempusdominus-bootstrap-4.min.js?id=8567c312d46e7d2aae5f3e9079629b1c",
     "/plugins/toastr/build/toastr.min.js": "/plugins/toastr/build/toastr.min.js?id=8ee1218b09fb02d43fcf0b84e30637ad",
     "/plugins/@ttskch/select2-bootstrap4-theme/dist/select2-bootstrap4.min.css": "/plugins/@ttskch/select2-bootstrap4-theme/dist/select2-bootstrap4.min.css?id=7ed3ddd7edad962a6c18d6dcd4dc3fa3",
@@ -42,6 +43,7 @@
     "/plugins/slick-slider/slick/slick.css": "/plugins/slick-slider/slick/slick.css?id=f38b2db10e01b1572732a3191d538707",
     "/plugins/slick-slider/slick/slick-theme.css": "/plugins/slick-slider/slick/slick-theme.css?id=f9faba678c4d6dcfdde69e5b11b37a2e",
     "/plugins/sweetalert2/dist/sweetalert2.min.css": "/plugins/sweetalert2/dist/sweetalert2.min.css?id=759be128100e76b7ba85e80d42179ccd",
+    "/plugins/summernote/dist/summernote-bs5.min.css": "/plugins/summernote/dist/summernote-bs5.min.css?id=ee2ed521422ecf1009b29e4b6908ad61",
     "/plugins/tempusdominus-bootstrap-4/build/css/tempusdominus-bootstrap-4.min.css": "/plugins/tempusdominus-bootstrap-4/build/css/tempusdominus-bootstrap-4.min.css?id=7f698af6d95e237f745c004ca2c7d617",
     "/plugins/toastr/build/toastr.min.css": "/plugins/toastr/build/toastr.min.css?id=f284028c678041d687c6f1be6968f68a"
 }

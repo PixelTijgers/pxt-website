@@ -21,6 +21,10 @@
   margin-left: 15px;
 }
 
+.btn-light:active, .btn-light:focus, .btn-light:hover {
+  border-color: #6571ff;
+}
+
 .table > :not(:first-child) {
   border: none;
 }
@@ -342,7 +346,7 @@
   display: none;
 }
 
-form.form-content .row .form-label {
+form.form-content .row > .form-label {
   align-items: center;
   display: flex;
   margin-bottom: 0 !important;

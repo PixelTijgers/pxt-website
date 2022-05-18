@@ -65,16 +65,8 @@ class Page extends Model implements HasMedia
         'last_edit_at',
         'visible_in_menu',
         '_lft',
-        '_rgt',
         'parent_id'
     ];
-
-    /**
-     * The attributes that aren't mass assignable.
-     *
-     * @var array
-     */
-    protected $guarded = [];
 
     /**
      * The attributes that should be cast.
@@ -82,13 +74,14 @@ class Page extends Model implements HasMedia
      * @var array
      */
     protected $casts = [
-        'administrator_id' => 'boolean',
-        'category_id' => 'boolean',
+        'administrator_id' => 'integer',
+        'category_id' => 'integer',
         'state' => PublishedState::class,
         'published_at' => 'datetime',
         'unpublished_at' => 'datetime',
-        'last_edited_administrator_id' => 'boolean',
+        'last_edited_administrator_id' => 'integer',
         'last_edit_at' => 'datetime',
+        'visible_in_menu' => 'boolean',
     ];
 
     /**

@@ -27,14 +27,14 @@ class MainSeeder extends Seeder
                 'page_title' => 'Home',
                 'menu_title' => 'Home',
                 'slug' => '/',
-                'content' => '<p>Dit is een zin, volgens wijsneus Naomi.</p>',
+                'content' => '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi erat libero, rhoncus vel convallis et, hendrerit in lorem. Fusce pulvinar eget libero sed congue. Ut at ex vestibulum, eleifend libero nec, egestas ipsum. Donec sed ultricies libero, in varius arcu. Maecenas sodales mauris risus, eget bibendum quam lacinia ut. Etiam vitae diam eget est vehicula pellentesque eu dignissim mi. Maecenas et iaculis massa, quis rutrum mauris. Nunc pharetra tortor in tellus efficitur, in aliquam purus dignissim.</p>',
 
                 'meta_title' => 'Home',
-                'meta_description' => 'Dit is een stuk tekst.',
+                'meta_description' => 'Sed a dolor libero. Curabitur euismod, nunc ut interdum pretium, quam diam cursus lectus, a pellentesque nisi justo vulputate sapien.',
                 'meta_tags' => 'Website, Webdesign, Design',
 
                 'og_title' => 'Home',
-                'og_description' => 'Dit is een stuk tekst.',
+                'og_description' => 'Sed a dolor libero. Curabitur euismod, nunc ut interdum pretium, quam diam cursus lectus, a pellentesque nisi justo vulputate sapien.',
                 'og_slug' => '/',
                 'og_type' => 'website',
                 'og_locale' => 'nl_NL',
@@ -192,7 +192,7 @@ class MainSeeder extends Seeder
                 ] + $page);
 
             // Sync with the navigation menu.
-            $createPage->navigation_menus()->sync([2]);
+            $createPage->navigation_menus()->sync([1]);
 
         }
     }

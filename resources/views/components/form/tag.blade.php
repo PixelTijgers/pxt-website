@@ -52,7 +52,7 @@
             'width': '100%',
             'height': '75%',
             'interactive': true,
-            'defaultText': '{{ __('Add Tag') }}',
+            'defaultText': '{{ __('Tag Add') }}',
             'removeWithBackspace': true,
             'minChars': 0,
             'maxChars': 20,

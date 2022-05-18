@@ -6,7 +6,7 @@
 
             <div class="border-bottom d-flex justify-content-end w-full pb-3">
 
-                <button class="closeButton btn btn-danger" type="button">{{ __('Delete Slide') }}</button>
+                <button class="closeButton btn btn-danger" type="button">{{ __('Slide Delete') }}</button>
 
                 <span class="btn btn-primary ml-3"><i class="fa-solid fa-grip-dots-vertical"></i></span>
 
@@ -33,9 +33,9 @@
             />
 
             <x-form.textarea
-                name="pageSlider[0][figcaption]"
+                name="pageSlider[0][caption]"
                 maxLength="165"
-                :label="__('Figcaption')"
+                :label="__('Caption')"
                 :required="false"
             />
 
@@ -61,12 +61,13 @@
                 :duplicate="true"
                 duplicateClass="pageSlide"
                 :required="false"
+                :description="__('Image Description')"
             />
 
             <x-form.input
                 type="text"
                 name="pageSlider[0][alt]"
-                :label="__('Description')"
+                :label="__('Image Alt')"
                 :required="false"
             />
 

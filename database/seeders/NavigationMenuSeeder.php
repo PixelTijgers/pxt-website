@@ -21,9 +21,6 @@ class NavigationMenuSeeder extends Seeder
     {
         $menus = [
             [
-                'name' => 'site-top'
-            ],
-            [
                 'name' => 'main'
             ],
             [

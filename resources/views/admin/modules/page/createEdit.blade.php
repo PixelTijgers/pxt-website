@@ -1,14 +1,13 @@
 @section('meta')
-<title>{{ config('app.name') }} | {{ (@$page ? __('Edit') . ' ' . \Str::Lower(__('Page')) . ': ' . $page->title : __('Page') . ' ' . __('Add')) }}</title>
-    <meta name="description" content="{{ (@$page ? __('Edit') . ' ' . \Str::Lower(__('Page')) . ': ' . $page->title : __('Page') . ' ' . __('Add')) }}" />
+    <title>{{ config('app.name') }} | {{ (@$page ? __('Edit') . ' ' . \Str::Lower(__('Page')) . ': ' . $page->page_title : __('Page') . ' ' . __('Add')) }}</title>
 @endsection
 
 @push('styles')
-<link href="{{ URL::asset('plugins/jquery-ui-dist/jquery-ui.min.css') }}" rel="stylesheet" />
+    <link href="{{ URL::asset('plugins/jquery-ui-dist/jquery-ui.min.css') }}" rel="stylesheet" />
 @endpush
 
 @push('js')
-<script src="{{ URL::asset('plugins/jquery-ui-dist/jquery-ui.min.js') }}"></script>
+    <script src="{{ URL::asset('plugins/jquery-ui-dist/jquery-ui.min.js') }}"></script>
 @endpush
 
 <x-adminLayout>
@@ -16,19 +15,21 @@
     <div class="{{ $cssNs }}">
 
     @include('admin.layouts.breadcrumb', [
-        'title' => __('Page'),
-        'description' => (@$page ? __('Edit') . ' ' . \Str::Lower(__('Page')) : __('Message Add')),
+        'title' => __('Pages'),
+        'description' => (@$page ? __('Page Introduction Edit') : __('Message Add')),
         'breadcrum' => [
-            __('Page') => route('page.index'),
-            (@$page ? __('Edit') . ' ' . \Str::Lower(__('Page')) . ': ' . $page->title : __('Page') . ' ' . \Str::Lower(__('Add'))) => '#'
+            __('Pages') => route('page.index'),
+            (@$page ? __('Edit') . ' ' . \Str::Lower(__('Page')) . ': ' . $page->page_title : __('Page') . ' ' . \Str::Lower(__('Add'))) => '#'
         ],
     ])
-    @if ($errors->any())
 
-    <div class="alert alert-fill-danger alert-dismissible fade show" role="alert">
-        {{ __('Item Error') }}
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="btn-close"></button>
-    </div>
+    @if($errors->any())
+
+        <div class="alert alert-fill-danger alert-dismissible fade show" role="alert">
+            {{ __('Alert Error') }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="btn-close"></button>
+        </div>
+
     @endif
 
     <form class="form-content" method="post" action="{{ (@$page ? route('page.update', $page) : route('page.store')) }}" enctype="multipart/form-data">
@@ -94,7 +95,8 @@
                                 <div class="tab-pane fade" id="slider" role="tabpanel" aria-labelledby="slider-line-tab">
 
                                     @include('admin.modules.page.includes.slider', [
-                                        'pageSlides' => $pageSlides
+                                        'page' => @$page,
+                                        'pageSlides' => @$pageSlides
                                     ])
 
                                 </div>

@@ -1,5 +1,5 @@
 <h6 class="card-title mt-4">{{ __('OG Tags') }}</h6>
-<p class="mb-4 text-muted small">{{ __('OG Description') }}</p>
+<p class="mb-4 text-muted small">{{ __('OG Introduction') }}</p>
 
 <div class="row">
 
@@ -15,19 +15,19 @@
         <x-form.textarea
             name="og_description"
             maxLength="165"
-            :description="__('Intro Description')"
+            :description="__('OG Description')"
             :label="'OG ' . __('Description')"
             :value="(old('og_description') ? old('og_description') : (@$page ? $page->og_description : null))"
         />
 
-        @if($page->id !== 1)
+        @if(@$page->id !== 1)
         <x-form.slug
-            name="og_url"
+            name="og_slug"
             slugField="page_title"
             :label="'OG ' . __('Url')"
             :model="@$page"
             :modelName="\App\Models\Post::where('id', @$page->parent_id)->first()"
-            :value="(old('og_url') ? old('og_url') : (@$page ? $page->og_url : null))"
+            :value="(old('og_slug') ? old('og_slug') : (@$page ? $page->og_slug : null))"
         />
         @endif
 

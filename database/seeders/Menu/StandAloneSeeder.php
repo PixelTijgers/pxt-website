@@ -622,7 +622,7 @@ class StandAloneSeeder extends Seeder
                 ] + $page);
 
             // Sync with the navigation menu.
-            $createPage->navigation_menus()->sync([4,5]);
+            $createPage->navigation_menus()->sync([3,4]);
 
         }
 

@@ -345,7 +345,6 @@ common.View.create('admin.modules.page.CreateEdit', {
             maxLimit: 10,
             defaultRender: 1,
             init: function () {
-                console.info(':: Initialize Plugin ::');
             },
             beforeRender: function () {
                 console.info(':: Before rendered callback called');

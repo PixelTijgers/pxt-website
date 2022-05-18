@@ -25,7 +25,7 @@ class CreatePageSlidesTable extends Migration
             // Table content.
             $table->text('subtitle')->nullable();
             $table->text('title')->nullable();
-            $table->text('figcaption')->nullable();
+            $table->text('caption')->nullable();
             $table->text('alt')->nullable();
             $table->string('slug')->nullable()->unique();
             NestedSet::columns($table);

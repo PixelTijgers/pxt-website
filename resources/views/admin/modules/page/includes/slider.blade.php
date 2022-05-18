@@ -1,13 +1,13 @@
-<h6 class="card-title mt-4">{{ __('Slider') }}</h6>
-<p class="mb-4 text-muted small">{{ __('Slider Description') }}</p>
+<h6 class="card-title mt-4">{{ __('Page Slider') }}</h6>
+<p class="mb-4 text-muted small">{{ __('Page Slider Introduction') }}</p>
 
-<button class="addButton btn btn-primary mb-3 float-right" type="button">{{ __('Add Slide') }}</button>
+<button class="addButton btn btn-primary mb-3 float-right" type="button">{{ __('Slide Add') }}</button>
 
 <ul id="nestedImages" class="mt-4">
 
     @include('admin.modules.page.includes.slider.template')
 
-    @if(!$z->isEmpty())
+    @if(@$page && !$pageSlides->isEmpty())
 
         @foreach($pageSlides as $key => $slide)
 
@@ -19,7 +19,7 @@
 
                         <div class="border-bottom d-flex justify-content-end w-full pb-3">
 
-                            <button class="closeButton btn btn-danger" type="button">{{ __('Delete Slide') }}</button>
+                            <button class="closeButton btn btn-danger" type="button">{{ __('Slide Delete') }}</button>
 
                             <span class="btn btn-primary ml-3"><i class="fa-solid fa-grip-dots-vertical"></i></span>
 
@@ -49,11 +49,11 @@
                         />
 
                         <x-form.textarea
-                            name="pageSlider[{{ $key }}][figcaption]"
+                            name="pageSlider[{{ $key }}][caption]"
                             maxLength="165"
-                            :label="__('Figcaption')"
+                            :label="__('Caption')"
                             :required="false"
-                            :value="$slide->figcaption"
+                            :value="$slide->caption"
                         />
 
                         <x-form.slug
@@ -80,12 +80,13 @@
                             :duplicate="true"
                             duplicateClass="pageSlide"
                             :required="false"
+                            :description="__('Image Description')"
                         />
 
                         <x-form.input
                             type="text"
                             name="pageSlider[{{ $key }}][alt]"
-                            :label="__('Description')"
+                            :label="__('Image Alt')"
                             :required="false"
                             :value="$slide->alt"
                         />

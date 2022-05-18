@@ -8,3 +8,11 @@
         margin-left: 15px;
     }
 }
+
+.btn-light {
+    &:active,
+    &:focus,
+    &:hover {
+        border-color: #6571ff;
+    }
+}

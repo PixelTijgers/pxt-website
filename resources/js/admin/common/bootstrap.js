@@ -14,7 +14,7 @@ try {
     require('moment-duration-format');
 
     // Init ckEditor
-    window.ClassicEditor = require('@ckeditor/ckeditor5-build-classic');
+    // window.ClassicEditor = require('@ckeditor/ckeditor5-build-classic');
 
 
 } catch (e) {}

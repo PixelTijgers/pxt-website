@@ -44,15 +44,36 @@
 
 <script>
 
+    /*
     ClassicEditor
-        .create( document.querySelector('#{{ @$id ? $id : $name }}'), {
+    .create(document.querySelector('#{{ @$id ? $id : $name }}'), {
 
-        })
-        .then(editor => {
-            console.log(editor);
-        })
-        .catch( error => {
-            console.error(error);
+    });
+    */
+
+    $(document).ready(function() {
+
+        $('#{{ @$id ? $id : $name }}').summernote({
+            height: 450,
+            tabsize: 2,
+            toolbar: [
+                ['style', ['style']],
+                ['font', ['bold', 'underline', 'clear']],
+                ['para', ['ul', 'ol', 'paragraph']],
+                ['insert', ['link', 'picture', 'video']],
+                ['view', ['fullscreen', 'codeview', 'help']]
+            ],
+            popover: {
+                image: [
+                    ['image', ['resizeFull', 'resizeHalf', 'resizeQuarter', 'resizeNone']],
+                    ['float', ['floatLeft', 'floatRight', 'floatNone']],
+                    ['remove', ['removeMedia']]
+                ]
+            }
         });
+
+        $('.note-btn').attr('data-bs-toggle', 'dropdown').attr('data-bs-auto-close', 'inside');
+
+    });
 
 </script>

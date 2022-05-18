@@ -32,7 +32,7 @@ const ResourceMix = require('./resources/js/common/ResourceMix.js');
             // Scripts
             '@fortawesome/fontawesome-pro/js/all.min.js',
             '@popperjs/core/dist/umd/popper.js',
-            'bootstrap/dist/js/bootstrap.min.js',
+            'bootstrap/dist/js/bootstrap.bundle.min.js',
             'bootstrap-maxlength/dist/bootstrap-maxlength.min.js',
             'datatables.net/js/jquery.dataTables.min.js',
             'datatables.net-bs4/js/dataTables.bootstrap4.min.js',
@@ -52,6 +52,7 @@ const ResourceMix = require('./resources/js/common/ResourceMix.js');
             'slick-slider/slick/slick.min.js',
             'speakingurl/lib/speakingurl.js',
             'sweetalert2/dist/sweetalert2.all.min.js',
+            'summernote/dist/summernote-bs5.min.js',
             'tempusdominus-bootstrap-4/build/js/tempusdominus-bootstrap-4.min.js',
             'toastr/build/toastr.min.js',
 
@@ -71,6 +72,7 @@ const ResourceMix = require('./resources/js/common/ResourceMix.js');
             'slick-slider/slick/slick.css',
             'slick-slider/slick/slick-theme.css',
             'sweetalert2/dist/sweetalert2.min.css',
+            'summernote/dist/summernote-bs5.min.css',
             'tempusdominus-bootstrap-4/build/css/tempusdominus-bootstrap-4.min.css',
             'toastr/build/toastr.min.css'
         ]);

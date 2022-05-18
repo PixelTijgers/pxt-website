@@ -19,12 +19,13 @@
     <link href="{{ URL::asset('plugins/jquery-tags-input/dist/jquery.tagsinput.min.css') }}" rel="stylesheet" />
     <link href="{{ URL::asset('plugins/perfect-scrollbar/css/perfect-scrollbar.css') }}" rel="stylesheet" />
     <link href="{{ URL::asset('plugins/select2/dist/css/select2.min.css') }}" rel="stylesheet" />
+    <link href="{{ URL::asset('plugins/summernote/dist/summernote-bs4.min.css') }}" rel="stylesheet" />
     <link href="{{ URL::asset('plugins/tempusdominus-bootstrap-4/build/css/tempusdominus-bootstrap-4.min.css') }}" rel="stylesheet" />
     <link href="{{ URL::asset('plugins/@ttskch/select2-bootstrap4-theme/dist/select2-bootstrap4.min.css') }}" rel="stylesheet" />
 
     <!-- Plugins Scripts -->
     <script src="{{ URL::asset('plugins/jquery/dist/jquery.min.js') }}"></script>
-    <script src="{{ URL::asset('plugins/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+    <script src="{{ URL::asset('plugins/bootstrap/dist/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ URL::asset('plugins/bootstrap-maxlength/dist/bootstrap-maxlength.min.js') }}"></script>
     <script src="{{ URL::asset('plugins/dropify/dist/js/dropify.min.js') }}"></script>
     <script src="{{ URL::asset('plugins/jquery-slugify/dist/slugify.min.js') }}"></script>
@@ -32,9 +33,9 @@
     <script src="{{ URL::asset('plugins/jquery-tags-input/dist/jquery.tagsinput.min.js') }}"></script>
     <script src="{{ URL::asset('plugins/perfect-scrollbar/dist/perfect-scrollbar.min.js') }}"></script>
     <script src="{{ URL::asset('plugins/select2/dist/js/select2.full.min.js') }}"></script>
+    <script src="{{ URL::asset('plugins/summernote/dist/summernote-bs4.min.js') }}" defer></script>
     <script src="{{ URL::asset('plugins/speakingurl/lib/speakingurl.js') }}"></script>
     <script src="{{ URL::asset('plugins/@fortawesome/fontawesome-pro/js/all.min.js') }}"></script>
-    <script src="{{ URL::asset('plugins/@popperjs/core/dist/umd/popper.js') }}"></script>
 
     <!-- Page styles -->
     @stack('styles')

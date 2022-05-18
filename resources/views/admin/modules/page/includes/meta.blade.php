@@ -1,5 +1,5 @@
 <h6 class="card-title mt-4">{{ __('Meta') }}</h6>
-<p class="mb-4 text-muted small">{{ __('Meta Description') }}</p>
+<p class="mb-4 text-muted small">{{ __('Meta Introduction') }}</p>
 
 <x-form.input
     type="text"
@@ -12,7 +12,7 @@
 <x-form.textarea
     name="meta_description"
     maxLength="165"
-    :description="__('Meta Description 2')"
+    :description="__('Meta Description')"
     :label="'Meta ' . __('Description')"
     :value="(old('meta_description') ? old('meta_description') : (@$page ? $page->meta_description : null))"
 />

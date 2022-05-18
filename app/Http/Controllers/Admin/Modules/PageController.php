@@ -27,8 +27,8 @@ class PageController extends Controller
      * Traits
      *
      */
-    use HasRightsTrait;
-    use MediaHandlerTrait;
+    use HasRightsTrait,
+        MediaHandlerTrait;
 
     /**
      * Display a listing of the resource.
@@ -41,7 +41,7 @@ class PageController extends Controller
         if(request()->input('navigationMenuId') !== null)
             $navigationMenuId = request()->input('navigationMenuId');
         else
-            $navigationMenuId = 2;
+            $navigationMenuId = 1;
 
         // Return the navigation menu and menu pages.
         $navigationMenu = $this->getNavigationMenu($navigationMenuId);
@@ -168,23 +168,10 @@ class PageController extends Controller
      */
     protected function processPageSlider($request, $model)
     {
-        /*
-        // Validate the pageslider input.
-        $request->validate([
-            'pageSlider.*._lft' => 'required|numeric|max:10',
-            'pageSlider.*.figcaption' => 'nullable|string|max:160',
-            'pageSlider.*.title' => 'nullable|string|max:255',
-            'pageSlider.*.slug' => 'nullable|slug|max:255',
-            'pageSlider.*.alt' => 'nullable|string|max:255',
-        ]);
-        */
-
-        // Delete previous slides to empty the table.
-        // PageSlide::where('page_id', $model->id)->delete();
-
-        // Add new slides.
+        // Loop through slides.
         foreach(collect($request->pageSlider)->slice(1)->toArray() as $key => $slide)
         {
+            // Check if the current model exists. Else add the new slide to the database.
             $pageSlide = PageSlide::updateOrCreate([
                 'id' => @$slide['model_id']
             ],
@@ -192,22 +179,26 @@ class PageController extends Controller
                 'page_id' => $model->id,
                 'subtitle' => $slide['subtitle'],
                 'title' => $slide['title'],
-                'figcaption' => $slide['figcaption'],
+                'caption' => $slide['caption'],
                 'alt' => $slide['alt'],
                 'slug' => $slide['slug'],
                 '_lft' => $slide['_lft'],
             ]);
 
+            // Add new file.
             if($request->hasFile('pageSlider.' . $key))
             {
                 $pageSlide->addMediaFromRequest('pageSlider.' . $key)->toMediaCollection('pageSliderImage');
             }
 
+            // Add the new model to an array.
             $modelIdCollection[] = (@$slide['model_id'] ? $slide['model_id'] : $pageSlide->id);
         };
 
+        // Remove model entries which are not in the array.
         PageSlide::where('page_id', $model->id)->whereNotIn('id', $modelIdCollection)->delete();
 
+        // Return true if succes.
         return true;
     }
 
@@ -231,8 +222,6 @@ class PageController extends Controller
      */
     public function store(PageRequest $request)
     {
-
-
         // Post data to database.
         $page = Page::create([
             'slug'  => $request->slug,
@@ -242,6 +231,11 @@ class PageController extends Controller
         // Page OG image.
         $this->processImage($request, $page, 'ogImage');
 
+        // Check if the pageSlider is empty.
+        if(collect($request->pageSlider)->slice(1)->isEmpty() === false)
+            // Page slides.
+            $this->processPageSlider($request, $page);
+
         // Check if any navigation menu item is selected.
         if ($request->navigation_menu !== null)
             // Update the navigation menu.
@@ -250,13 +244,13 @@ class PageController extends Controller
             // Return back with message.
             return redirect()->back()->with([
                 'type' => 'danger',
-                'message' => __('Select Navigation')
+                'message' => __('Alert Navigation')
             ])->withInput();
 
         // Return back with message.
         return redirect()->route('page.index')->with([
                 'type' => 'success',
-                'message' => __('Item Add')
+                'message' => __('Alert Add')
             ]
         );
     }
@@ -285,7 +279,7 @@ class PageController extends Controller
      */
     public function update(PageRequest $request, Page $page)
     {
-                // Check if any navigation menu item is selected.
+        // Check if any navigation menu item is selected.
         if ($request->navigation_menu !== null)
         {
             // Update the navigation menu.
@@ -315,8 +309,10 @@ class PageController extends Controller
             // Page OG image.
             $this->processImage($request, $page, 'ogImage');
 
-            // Page slides.
-            $this->processPageSlider($request, $page);
+            // Check if the pageSlider is empty.
+            if(collect($request->pageSlider)->slice(1)->isEmpty() === false)
+                // Page slides.
+                $this->processPageSlider($request, $page);
 
             // Save data.
             $page->save();
@@ -325,13 +321,13 @@ class PageController extends Controller
             // Return back with message.
             return redirect()->back()->with([
                 'type' => 'danger',
-                'message' => __('Select Navigation')
+                'message' => __('Alert Select Navigation')
             ])->withInput();
 
         // Return back with message.
         return redirect()->route('page.index')->with([
                 'type' => 'success',
-                'message' => __('Item Edit')
+                'message' => __('Alert Edit')
             ]
         );
     }
@@ -349,7 +345,7 @@ class PageController extends Controller
             // Return back with message.
             return redirect()->route('page.index')->with([
                     'type' => 'danger',
-                    'message' => __('Page Delete')
+                    'message' => __('Alert Page Delete')
                 ]
             );
         }
@@ -363,7 +359,7 @@ class PageController extends Controller
         // Return back with message.
         return redirect()->back()->with([
             'type' => 'success',
-            'message' => __('Item Delete')
+            'message' => __('Alert Delete')
         ]);
     }
 }
