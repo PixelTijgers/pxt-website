@@ -41,28 +41,4 @@ class CategoryRequest extends FormRequest
             'name.unique' => 'Er is al een categorie met deze naam.',
         ];
     }
-
-    /**
-     * Get custom attributes for validator errors.
-     *
-     * @return array
-     */
-    public function attributes()
-    {
-        return [
-
-        ];
-    }
-
-    /**
-     * Prepare the data for validation.
-     *
-     * @return void
-     */
-    protected function prepareForValidation()
-    {
-        $this->merge([
-
-        ]);
-    }
 }

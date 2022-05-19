@@ -14,12 +14,14 @@
                 (@$post ? __('Edit') . ' ' . \Str::Lower(__('Post')) . ': ' . $post->title : __('Post') . ' ' . \Str::Lower(__('Add'))) => '#'
             ],
         ])
+        
         @if ($errors->any())
 
-        <div class="alert alert-fill-danger alert-dismissible fade show" role="alert">
-            {{ __('Alert Error') }}
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="btn-close"></button>
-        </div>
+            <div class="alert alert-fill-danger alert-dismissible fade show" role="alert">
+                {{ __('Alert Error') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="btn-close"></button>
+            </div>
+
         @endif
 
         <form class="form-content" method="post" action="{{ (@$post ? route('post.update', $post) : route('post.store')) }}" enctype="multipart/form-data">

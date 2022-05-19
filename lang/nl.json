@@ -38,8 +38,10 @@
 
     "Category": "Categorie",
     "Categories": "Categorieën",
-    "Categories Description": "Een overzicht met alle categorieën voor die je kunt selecteren bij de artikelen.",
-    "Category Add": "Voeg een nieuwe categorie toe.",
+    "Category Introduction": "Een overzicht met alle categorieën voor die je kunt selecteren bij de artikelen.",
+    "Category Introduction Add": "Voeg een nieuwe categorie toe.",
+    "Category Introduction Edit": "Wijzig de geselecteerde categorie.",
+    "Content Introduction Category": "Je kunt categorieën toevoegen of wijzigen. Deze categorieën zijn te gebruiken bij de artikelen.",
     "Category Select": "Selecteer categorie",
 
     "Author": "Auteur",

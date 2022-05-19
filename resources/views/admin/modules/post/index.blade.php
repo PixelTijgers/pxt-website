@@ -27,12 +27,14 @@
                 __('Posts') => '#',
             ],
         ])
+        
         @if(session('type'))
 
-        <div class="alert alert-fill-{{ session('type') }} alert-dismissible fade show" role="alert">
-            {{ session('message') }}
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="btn-close"></button>
-        </div>
+            <div class="alert alert-fill-{{ session('type') }} alert-dismissible fade show" role="alert">
+                {{ session('message') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="btn-close"></button>
+            </div>
+
         @endif
 
         <div class="row">
@@ -44,13 +46,15 @@
                     <div class="card-body">
 
                         <div class="row">
+
                             @can('modules.post.add')
 
-                            <div class="col-md-12 d-flex justify-content-end mb-4">
+                                <div class="col-md-12 d-flex justify-content-end mb-4">
 
-                                <a href="{{ route('post.create') }}" class="btn btn-primary">{{ __('Post') }} {{ strtolower(__('Add')) }}</a>
+                                    <a href="{{ route('post.create') }}" class="btn btn-primary">{{ __('Post') }} {{ strtolower(__('Add')) }}</a>
 
-                            </div>
+                                </div>
+
                             @endcan
 
                         </div>

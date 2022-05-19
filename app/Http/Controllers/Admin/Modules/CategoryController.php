@@ -24,8 +24,8 @@ class CategoryController extends Controller
      * Traits
      *
      */
-    use DataTableActionsTrait;
-    use HasRightsTrait;
+    use DataTableActionsTrait,
+        HasRightsTrait;
 
     /**
      * Display a listing of the resource.
@@ -92,7 +92,7 @@ class CategoryController extends Controller
         // Return back with message.
         return redirect()->route('category.index')->with([
                 'type' => 'success',
-                'message' => __('Item Add')
+                'message' => __('Alert Add')
             ]
         );
     }
@@ -127,7 +127,7 @@ class CategoryController extends Controller
         // Return back with message.
         return redirect()->route('category.index')->with([
                 'type' => 'success',
-                'message' => __('Item Edit')
+                'message' => __('Alert Edit')
             ]
         );
     }
@@ -146,7 +146,7 @@ class CategoryController extends Controller
         // Return back with message.
         return redirect()->back()->with([
             'type' => 'success',
-            'message' => __('Item Delete')
+            'message' => __('Alert Delete')
         ]);
     }
 }
