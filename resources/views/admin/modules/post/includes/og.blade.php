@@ -41,7 +41,7 @@
                'website'   =>  __('Website'),
                'article'   =>  __('Article'),
             ]"
-            :disabledOption="__('Select Type')"
+            :disabledOption="__('Type Select')"
         />
 
         <x-form.select
@@ -50,7 +50,7 @@
             :value="(old('og_locale') ? old('og_locale') : (@$post ? $post->og_locale : null))"
             :options="\App\Models\Locale::all()->sortBy('name')"
             :valueWrapper="['locale', 'name']"
-            :disabledOption="__('Select Language')"
+            :disabledOption="__('Language Select')"
         />
 
         <x-form.file

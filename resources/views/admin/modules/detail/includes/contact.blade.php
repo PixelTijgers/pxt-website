@@ -1,3 +1,6 @@
+<h6 class="card-title mt-4">{{ __('Contact') }}</h6>
+<p class="mb-4 text-muted small">{{ __('Content Introduction Details') }}</p>
+
 <x-form.input
     type="text"
     name="name"

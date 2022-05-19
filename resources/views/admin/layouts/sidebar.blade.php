@@ -44,7 +44,7 @@
             <li class="nav-item {{ active(['*/posts', '*/posts/*', '*/categories', '*/categories/create','*/categories/*/edit']) }}">
                 <a class="nav-link" data-bs-toggle="collapse" href="#posts" role="button" aria-expanded="false" aria-controls="posts">
                     <i class="link-icon fa-regular fa-newspaper"></i>
-                    <span class="link-title">{{ __('Articles') }}</span>
+                    <span class="link-title">{{ __('Posts') }}</span>
                      <i class="link-arrow fa-regular fa-chevron-down"></i>
                 </a>
 

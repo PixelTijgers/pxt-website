@@ -54,6 +54,10 @@
     "Content Introduction Social Media": "De gebruikers van je website worden automatisch naar een externe pagina geleid wanneer deze op een social media klikken. Voeg daarom altijd een juiste URL toe.",
     "Category Social Media": "Selecteer social media",
 
+    "Details": "Bedrijfsgegevens",
+    "Content Introduction Details": "Wijzig de gegevens van je bedrijf. Let wel op dat de gegevens actueel en correct zijn.",
+    "Content Introduction Details Address": "Vul hier het factuuradres in. Ook als deze gelijk is aan het postadres. Dit adres zal dan op de facturen komen te staan.",
+
     "Client": "Klant",
     "Clients": "Klanten",
     "Clients Introduction": "Een overzicht met alle klanten en hun gegevens. Hier kun je ook klanten wijzigen of verwijderen.",
@@ -93,7 +97,6 @@
     "Country": "Land",
     "Date": "Datum",
     "Description": "Beschrijving",
-    "Details": "Bedrijfsgegevens",
     "Email": "E-mailadres",
     "Feedback": "Feedback?",
     "Feedback Send": "Laat het ons weten!",
