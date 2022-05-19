@@ -29,6 +29,16 @@ class Social extends Model
     ];
 
     /**
+     * The attributes that should be cast.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'social_media_id' => 'integer',
+        'parent_id' => 'integer',
+    ];
+
+    /**
     * Model relations.
     *
     */

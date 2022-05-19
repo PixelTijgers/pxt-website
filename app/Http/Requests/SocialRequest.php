@@ -30,40 +30,4 @@ class SocialRequest extends FormRequest
             'content'           =>  'required|string|url|unique:socials,content' . (@$this->social->id ? ',' . $this->social->id : null),
         ];
     }
-
-    /**
-     * Get the error messages for the defined validation rules.
-     *
-     * @return array
-     */
-    public function messages()
-    {
-        return [
-
-        ];
-    }
-
-    /**
-     * Get custom attributes for validator errors.
-     *
-     * @return array
-     */
-    public function attributes()
-    {
-        return [
-
-        ];
-    }
-
-    /**
-     * Prepare the data for validation.
-     *
-     * @return void
-     */
-    protected function prepareForValidation()
-    {
-        $this->merge([
-
-        ]);
-    }
 }

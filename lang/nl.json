@@ -44,6 +44,13 @@
     "Content Introduction Category": "Je kunt categorieën toevoegen of wijzigen. Deze categorieën zijn te gebruiken bij de artikelen.",
     "Category Select": "Selecteer categorie",
 
+    "Social Media": "Social Media",
+    "Social Media Introduction": "Een overzicht met alle actieve social media. Je kunt de volgorde wijzigen door deze te verslepen en op te slaan.",
+    "Social Media Introduction Add": "Voeg een nieuwe social media toe.",
+    "Social Media Introduction Edit": "Wijzig de geselecteerde social media.",
+    "Content Introduction Social Media": "De gebruikers van je website worden automatisch naar een externe pagina geleid wanneer deze op een social media klikken. Voeg daarom altijd een juiste URL toe.",
+    "Category Social Media": "Selecteer social media",
+
     "Author": "Auteur",
     "Author Select": "Selecteer auteur",
     "Caption": "Bijschrift",
@@ -171,10 +178,7 @@
 
     "Articles": "Artikelen",
 
-    "Social Media": "Social Media",
-    "Social Media Description": "Een overzicht met alle actieve social media kanalen. Je kunt de volgorde wijzigen door deze te verslepen en op te slaan.",
-    "Social Media Add": "Voeg een nieuw social media kanaal toe.",
-    "Social Media Edit": "Wijzig hier het geselecteerde social media kanaal.",
+
 
     "Admin": "Beheer",
 
