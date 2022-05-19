@@ -2394,9 +2394,12 @@ common.View.create('admin.modules.invoice.CreateEdit', {
           if (settings.maxLimit != 0 && item_exists >= settings.maxLimit) {
             alert("More than " + settings.maxLimit + " degrees can\'t be added in one form. Please 'Add New'.");
             return false;
-          }
+          } // $('#' + settings.mainContainerId).append(settings.template.first()[0].outerHTML);
 
-          $('#' + settings.mainContainerId).append(settings.template.first()[0].outerHTML);
+
+          var reference = $(settings.template.first()[0].outerHTML);
+          reference.appendTo('#' + settings.mainContainerId);
+          $(reference.get(0)).removeClass('d-none');
 
           _initializePlugins();
 
@@ -2406,7 +2409,7 @@ common.View.create('admin.modules.invoice.CreateEdit', {
 
 
           settings.afterRender.call({
-            index: settings.counterIndex
+            index: reference
           });
           return false;
         };
@@ -2422,6 +2425,9 @@ common.View.create('admin.modules.invoice.CreateEdit', {
           $('#' + settings.mainContainerId).addClass('clone-data');
           $('#' + settings.mainContainerId + ' .' + settings.cloneContainer).each(function (parent_index, item) {
             $(this).attr('data-index', parent_index).addClass(settings.copyClass);
+          });
+          $('#' + settings.mainContainerId + ' .' + settings.cloneContainer + ' .hidden-lft').each(function (parent_index, item) {
+            $(this).val(parent_index);
           });
           $('.' + settings.cloneContainer + '.' + settings.copyClass).each(function (parent_index, item) {
             $(item).find('[for]').each(function () {
@@ -2511,12 +2517,6 @@ common.View.create('admin.modules.invoice.CreateEdit', {
               $(this).removeAttr("checked");
             } else if ($(this).is('select')) {
               $(this).find('option:selected').removeAttr("selected");
-            } else if ($(this).is('file')) {
-              $(this).parents('.fileinput').find('.previewing').attr('src', SITE_CONSTANT['DEFAULT_IMAGE_ADMIN']);
-              $(this).parents('.fileinput').find('.fileinput-preview img').attr('src', SITE_CONSTANT['DEFAULT_IMAGE_ADMIN']);
-              $(this).parents('.fileinput').find('.check-file-remove').hide();
-              $(this).parents('.fileinput').find('.check-file-change').hide();
-              $(this).parents('.fileinput').find('.check-file-select').show();
             } else if ($(this).is('textarea')) {
               $(this).html("");
             } else {
@@ -2621,17 +2621,15 @@ common.View.create('admin.modules.invoice.CreateEdit', {
           var count = _count();
 
           if (count > settings.minLimit) {
-            if (settings.removeConfirm) {
-              if (confirm(settings.removeConfirmMessage)) {
-                $elem.parents('.' + settings.cloneContainer).slideUp(function () {
-                  $(this).remove();
+            $elem.parents('.' + settings.cloneContainer).slideUp(function () {
+              $(this).remove();
 
-                  _updateAttributes();
+              _updateAttributes();
 
-                  settings.afterRemove.call(this); //_initializePlugins();
-                });
-              }
-            }
+              settings.afterRemove.call(this);
+
+              _initializePlugins();
+            });
           } else {
             alert('you must have at least one item.');
           }
@@ -2668,22 +2666,7 @@ common.View.create('admin.modules.invoice.CreateEdit', {
       removeConfirm: false,
       minLimit: 1,
       maxLimit: 10,
-      defaultRender: 1,
-      init: function init() {
-        console.info(':: Initialize Plugin ::');
-      },
-      beforeRender: function beforeRender() {
-        console.info(':: Before rendered callback called');
-      },
-      afterRender: function afterRender(event) {
-        console.info(':: After rendered callback called');
-      },
-      afterRemove: function afterRemove() {
-        console.warn(':: After remove callback called');
-      },
-      beforeRemove: function beforeRemove() {
-        console.warn(':: Before remove callback called');
-      }
+      defaultRender: 1
     });
   }
 });

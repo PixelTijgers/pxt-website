@@ -67,7 +67,13 @@ common.View.create('admin.modules.invoice.CreateEdit', {
                         return false;
                     }
 
-                    $('#' + settings.mainContainerId).append(settings.template.first()[0].outerHTML);
+                    // $('#' + settings.mainContainerId).append(settings.template.first()[0].outerHTML);
+
+                    const reference = $(settings.template.first()[0].outerHTML);
+
+                    reference.appendTo('#' + settings.mainContainerId);
+
+                    $(reference.get(0)).removeClass('d-none');
 
                     _initializePlugins();
                     _updateAttributes();
@@ -76,7 +82,7 @@ common.View.create('admin.modules.invoice.CreateEdit', {
                     //$(settings.template.first()[0].outerHTML).trigger('afterRender');
                     ///$elem.closest('.' + widgetOptions.widgetContainer).triggerHandler(events.limitReached, widgetOptions.limit);
 
-                    settings.afterRender.call({index: settings.counterIndex});
+                    settings.afterRender.call({index: reference});
                     return false;
                 }
 
@@ -94,6 +100,9 @@ common.View.create('admin.modules.invoice.CreateEdit', {
                         $(this).attr('data-index', parent_index).addClass(settings.copyClass);
                     });
 
+                    $('#' + settings.mainContainerId + ' .' + settings.cloneContainer + ' .hidden-lft').each(function(parent_index, item){
+                        $(this).val(parent_index)
+                    });
 
                     $('.' + settings.cloneContainer + '.' + settings.copyClass).each(function(parent_index, item) {
                         $(item).find('[for]').each(function(){
@@ -185,12 +194,6 @@ common.View.create('admin.modules.invoice.CreateEdit', {
                             $(this).removeAttr("checked");
                         } else if($(this).is('select')) {
                             $(this).find('option:selected').removeAttr("selected");
-                        } else if($(this).is('file')) {
-                                $(this).parents('.fileinput').find('.previewing').attr('src', SITE_CONSTANT['DEFAULT_IMAGE_ADMIN']);
-                                $(this).parents('.fileinput').find('.fileinput-preview img').attr('src', SITE_CONSTANT['DEFAULT_IMAGE_ADMIN']);
-                                $(this).parents('.fileinput').find('.check-file-remove').hide();
-                                $(this).parents('.fileinput').find('.check-file-change').hide();
-                                $(this).parents('.fileinput').find('.check-file-select').show();
                         } else if($(this).is('textarea')) {
                             $(this).html("");
                         } else {
@@ -292,16 +295,12 @@ common.View.create('admin.modules.invoice.CreateEdit', {
 
                     var count = _count();
                     if (count > settings.minLimit) {
-                        if(settings.removeConfirm){
-                            if(confirm(settings.removeConfirmMessage)){
-                                $elem.parents('.' + settings.cloneContainer).slideUp(function(){
-                                    $(this).remove();
-                                    _updateAttributes();
-                                    settings.afterRemove.call(this);
-                                    //_initializePlugins();
-                                });
-                            }
-                        }
+                        $elem.parents('.' + settings.cloneContainer).slideUp(function(){
+                            $(this).remove();
+                            _updateAttributes();
+                            settings.afterRemove.call(this);
+                            _initializePlugins();
+                        });
                     }else{
                         alert('you must have at least one item.');
                     }
@@ -344,22 +343,6 @@ common.View.create('admin.modules.invoice.CreateEdit', {
             minLimit: 1,
             maxLimit: 10,
             defaultRender: 1,
-            init: function () {
-                console.info(':: Initialize Plugin ::');
-            },
-            beforeRender: function () {
-                console.info(':: Before rendered callback called');
-            },
-            afterRender: function (event) {
-                console.info(':: After rendered callback called');
-            },
-            afterRemove: function () {
-                console.warn(':: After remove callback called');
-            },
-            beforeRemove: function () {
-                console.warn(':: Before remove callback called');
-            }
-
         });
     },
 })

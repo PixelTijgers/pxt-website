@@ -207,7 +207,7 @@ class InvoiceController extends Controller
         // Return back with message.
         return redirect()->route('invoice.index')->with([
                 'type' => 'success',
-                'message' => __('Item Add')
+                'message' => __('Alert Add')
             ]
         );
     }
@@ -248,7 +248,7 @@ class InvoiceController extends Controller
         // Return back with message.
         return redirect()->route('invoice.index')->with([
                 'type' => 'success',
-                'message' => __('Item Edit')
+                'message' => __('Alert Edit')
             ]
         );
     }
@@ -267,7 +267,7 @@ class InvoiceController extends Controller
         // Return back with message.
         return redirect()->back()->with([
             'type' => 'success',
-            'message' => __('Item Delete')
+            'message' => __('Alert Delete')
         ]);
     }
 }
