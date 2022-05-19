@@ -8,19 +8,21 @@
     <div class="{{ $cssNs }}">
 
         @include('admin.layouts.breadcrumb', [
-            'title' => __('Client'),
+            'title' => __('Clients'),
             'description' => (@$client ? __('Edit') . ' ' . \Str::Lower(__('Client')) . ': ' . $client->name  : __('Client Add')),
             'breadcrum' => [
-                __('Client') => route('client.index'),
+                __('Clients') => route('client.index'),
                 (@$client ? __('Edit') . ' ' . \Str::Lower(__('Client')) . ': ' . $client->name  : __('Client') . ' ' . \Str::Lower(__('Add'))) => '#'
             ],
         ])
+
         @if ($errors->any())
 
-        <div class="alert alert-fill-danger alert-dismissible fade show" role="alert">
-            {{ __('Item Error') }}
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="btn-close"></button>
-        </div>
+            <div class="alert alert-fill-danger alert-dismissible fade show" role="alert">
+                {{ __('Alert Error') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="btn-close"></button>
+            </div>
+
         @endif
 
         <form class="form-content" method="post" action="{{ (@$client ? route('client.update', $client) : route('client.store')) }}" enctype="multipart/form-data">
@@ -40,6 +42,9 @@
                     <div class="card">
 
                         <div class="card-body">
+
+                            <h6 class="card-title mt-4">{{ __('Clients') }}</h6>
+                            <p class="mb-4 text-muted small">{{ __('Content Introduction Clients') }}</p>
 
                             <x-form.input
                                 type="text"

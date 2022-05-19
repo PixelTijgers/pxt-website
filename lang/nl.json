@@ -63,7 +63,8 @@
     "Clients Introduction": "Een overzicht met alle klanten en hun gegevens. Hier kun je ook klanten wijzigen of verwijderen.",
     "Clients Introduction Add": "Voeg een nieuwe klant toe.",
     "Clients Introduction Edit": "Wijzig de gegevens van je klant.",
-    "Clients Edit Description": "Wijzig de gegvens",
+    "Clients Edit Description": "Wijzig de gegvens.",
+    "Content Introduction Clients": "Je kunt de gegevens van je klant aanpassen. Deze gegevens worden automatisch ingeladen wanneer je de klant selecteerd bij het maken van een factuur.",
 
     "Invoice": "Factuur",
     "Invoices": "Facturen",

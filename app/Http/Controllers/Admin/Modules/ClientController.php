@@ -25,9 +25,9 @@ class ClientController extends Controller
      * Traits
      *
      */
-    use DataTableActionsTrait;
-    use HasRightsTrait;
-    use MediaHandlerTrait;
+    use DataTableActionsTrait,
+        HasRightsTrait,
+        MediaHandlerTrait;
 
     /**
      * Display a listing of the resource.
@@ -125,7 +125,7 @@ class ClientController extends Controller
         // Return back with message.
         return redirect()->route('client.index')->with([
                 'type' => 'success',
-                'message' => __('Item Add')
+                'message' => __('Alert Add')
             ]
         );
     }
@@ -164,7 +164,7 @@ class ClientController extends Controller
         // Return back with message.
         return redirect()->route('client.index')->with([
                 'type' => 'success',
-                'message' => __('Item Edit')
+                'message' => __('Alert Edit')
             ]
         );
     }
@@ -183,7 +183,7 @@ class ClientController extends Controller
         // Return back with message.
         return redirect()->back()->with([
             'type' => 'success',
-            'message' => __('Item Delete')
+            'message' => __('Alert Delete')
         ]);
     }
 }

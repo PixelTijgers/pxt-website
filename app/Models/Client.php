@@ -20,9 +20,9 @@ class Client extends Model implements HasMedia
      * Traits
      *
      */
-     use HasFactory;
-     use HasRoles;
-     use InteractsWithMedia;
+     use HasFactory,
+         HasRoles,
+         InteractsWithMedia;
 
     /**
      * The attributes that are mass assignable.
