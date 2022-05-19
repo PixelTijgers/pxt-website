@@ -31,4 +31,15 @@ class InvoiceRule extends Model
          'price',
          'amount',
      ];
+
+     /**
+      * The attributes that should be cast.
+      *
+      * @var array
+      */
+     protected $casts = [
+         'id' => 'integer',
+         'invoice_id' => 'integer',
+         'price' => 'float',
+     ];
 }

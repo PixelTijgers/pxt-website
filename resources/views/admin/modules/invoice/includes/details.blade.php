@@ -1,3 +1,6 @@
+<h6 class="card-title mt-4">{{ __('Details') }}</h6>
+<p class="mb-4 text-muted small">{{ __('Content Introduction Details') }}</p>
+
 <x-form.input
     type="text"
     name="id_invoice"
@@ -15,7 +18,7 @@
     :value="(old('client_id') ? old('client_id') : (@$invoice ? $invoice->client_id : null))"
     :options="\App\Models\Client::all()->sortBy('name')"
     :valueWrapper="['id', 'name']"
-    :disabledOption="__('Select Client')"
+    :disabledOption="__('Client Select')"
 />
 
 <x-form.date

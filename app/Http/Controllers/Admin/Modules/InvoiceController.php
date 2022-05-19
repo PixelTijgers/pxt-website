@@ -81,7 +81,7 @@ class InvoiceController extends Controller
              InvoiceRule::create([
                  'invoice_id' => $model->id,
                  'description' => $rule['description'],
-                 'price' => $rule['price'],
+                 'price' => number_format((float) $rule['price'], 3),
                  'amount' => $rule['amount']
              ]);
          }

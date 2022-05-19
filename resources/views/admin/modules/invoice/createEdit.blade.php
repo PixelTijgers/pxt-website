@@ -1,6 +1,5 @@
 @section('meta')
 <title>{{ config('app.name') }} | {{ (@$invoice ? __('Edit') . ' ' . \Str::Lower(__('Invoice')) . ': ' . $invoice->name  : __('Invoice') . ' ' . \Str::Lower(__('Add'))) }}</title>
-    <meta name="description" content="{{ (@$invoice ? __('Invoice Edit') : __('Invoice Add')) }}" />
 @endsection
 
 <x-adminLayout>
@@ -15,12 +14,14 @@
                 (@$invoice ? __('Edit') . ' ' . \Str::Lower(__('Invoice')) . ': ' . $invoice->name  : __('Invoice') . ' ' . \Str::Lower(__('Add'))) => '#'
             ],
         ])
+
         @if ($errors->any())
 
-        <div class="alert alert-fill-danger alert-dismissible fade show" role="alert">
-            {{ __('Item Error') }}
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="btn-close"></button>
-        </div>
+            <div class="alert alert-fill-danger alert-dismissible fade show" role="alert">
+                {{ __('Item Error') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="btn-close"></button>
+            </div>
+
         @endif
 
         <form class="form-content" method="post" action="{{ (@$invoice ? route('invoice.update', $invoice) : route('invoice.store')) }}">
@@ -63,7 +64,7 @@
 
                                 <div class="tab-pane fade" id="invoice" role="tabpanel" aria-labelledby="invoice-line-tab">
 
-                                    @include('admin.modules.invoice.includes.invoice', ['invoiceRules' => $invoiceRules])
+                                    @include('admin.modules.invoice.includes.invoice', ['invoiceRules' => @$invoiceRules])
 
                                 </div>
 

@@ -6,29 +6,41 @@
 
             <div class="border-bottom d-flex justify-content-end w-full pb-3">
 
-                <button class="closeButton btn btn-danger" type="button">{{ __('Delete Slide') }}</button>
+                <button class="closeButton btn btn-danger" type="button">{{ __('Slide Delete') }}</button>
 
             </div>
 
         </div>
 
-        <x-form.textarea
-            name="invoiceRule[0][description]"
-            maxLength="100"
-            :label="__('description')"
-        />
+        <div class="row">
 
-        <x-form.input
-            type="text"
-            name="invoiceRule[0][price]"
-            :label="__('Price')"
-        />
+            <div class="col-6">
 
-        <x-form.input
-            type="text"
-            name="invoiceRule[0][amount]"
-            :label="__('Amount')"
-        />
+                <x-form.textarea
+                    name="invoiceRule[0][description]"
+                    maxLength="100"
+                    :label="__('Caption')"
+                />
+
+            </div>
+
+            <div class="offset-1 col-3">
+
+                <x-form.input
+                    type="text"
+                    name="invoiceRule[0][price]"
+                    :label="__('Price')"
+                />
+
+                <x-form.input
+                    type="text"
+                    name="invoiceRule[0][amount]"
+                    :label="__('Amount')"
+                />
+
+            </div>
+
+        </div>
 
     </div>
 
