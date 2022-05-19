@@ -27,8 +27,9 @@ class PostRequest extends FormRequest
     {
         return [
             'title'             =>  'required|string|max:255|unique:posts,title' . (@$this->post->id ? ',' . $this->post->id : null),
-            'intro'             =>  'required|string|max:255',
+            'caption'           =>  'required|string|max:255',
             'content'           =>  'required|string',
+            'slug'              =>  'sometimes|required|slug|max:255|unique:pages,slug' . (@$this->post->id ? ',' . $this->post->id : null),
             'administrator_id'  =>  'required|numeric|min:1',
             'category_id'       =>  'required|numeric|min:1',
 
@@ -37,10 +38,10 @@ class PostRequest extends FormRequest
             'meta_tags'         =>  'required|string|min:1',
 
             'og_title'          =>  'required|string|max:255',
-            'og_description'    =>  'required|string|max:175',
-            'og_url'            =>  'required|slug|max:255',
-            'og_type'           =>  'required|string',
-            'og_locale'         =>  'required|string',
+            'og_description'    =>  'required|string|max:160',
+            'og_slug'           =>  'sometimes|required|slug|unique:pages,og_slug' . (@$this->post->id ? ',' . $this->post->id : null),
+            'og_type'           =>  'required|string|max:21|in:website,article',
+            'og_locale'         =>  'required|string|max:21',
 
             'status'            =>  'required|string|in:archived,draft,published,unpublished',
             'published_at'      =>  'required|date_format:"Y-m-d H:i:s"',
@@ -67,11 +68,13 @@ class PostRequest extends FormRequest
      */
     protected function prepareForValidation()
     {
+        // Format unpublished at.
+        $unpublished_at = ($this->unpublished_at !== null ? \Carbon\Carbon::createFromFormat('d-m-Y H:i', $this->unpublished_at)->toDateTimeString(): null);
+
         // Merge into request.
         $this->merge([
-            'published'         => ($this->published !== null ? 1 : 0),
             'published_at'      => \Carbon\Carbon::createFromFormat('d-m-Y H:i', $this->published_at)->toDateTimeString(),
-            'unpublished_at'    => \Carbon\Carbon::createFromFormat('d-m-Y H:i', $this->unpublished_at)->toDateTimeString(),
+            'unpublished_at'    => $unpublished_at,
         ]);
     }
 }

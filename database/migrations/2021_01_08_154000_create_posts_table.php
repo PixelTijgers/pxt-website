@@ -29,8 +29,8 @@ class CreatePostsTable extends Migration
             // Table content.
             $table->string('slug')->unique();
             $table->text('title');
-            $table->text('intro');
-            $table->text('content');
+            $table->text('caption');
+            $table->mediumtext('content');
 
             // Meta content.
             $table->string('meta_title')->unique();
@@ -40,7 +40,7 @@ class CreatePostsTable extends Migration
             // OG content.
             $table->string('og_title')->unique();
             $table->text('og_description');
-            $table->string('og_url')->unique();
+            $table->string('og_slug')->unique();
             $table->string('og_type')->default('article');
             $table->string('og_locale')->default('nl_NL');
 

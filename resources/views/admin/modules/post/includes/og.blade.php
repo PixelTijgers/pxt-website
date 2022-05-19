@@ -1,5 +1,5 @@
 <h6 class="card-title mt-4">{{ __('OG Tags') }}</h6>
-<p class="mb-4 text-muted small">{{ __('OG Description') }}</p>
+<p class="mb-4 text-muted small">{{ __('OG Introduction') }}</p>
 
 <div class="row">
 
@@ -15,18 +15,18 @@
         <x-form.textarea
             name="og_description"
             maxLength="165"
-            :description="__('Intro Description')"
+            :description="__('OG Description')"
             :label="'OG ' . __('Description')"
             :value="(old('og_description') ? old('og_description') : (@$post ? $post->og_description : null))"
         />
 
         <x-form.slug
-            name="og_url"
+            name="og_slug"
             slugField="title"
             :label="'OG ' . __('Url')"
             :model="@$post"
             :modelName="\App\Models\Post::where('id', @$post->parent_id)->first()"
-            :value="(old('og_url') ? old('og_url') : (@$post ? $post->og_url : null))"
+            :value="(old('og_slug') ? old('og_slug') : (@$post ? $post->og_slug : null))"
         />
 
     </div>

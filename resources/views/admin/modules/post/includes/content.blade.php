@@ -1,29 +1,29 @@
-<h6 class="card-title mt-4">{{ __('Message') }}</h6>
-<p class="mb-4 text-muted small">{{ __('Message Description') }}</p>
+<h6 class="card-title mt-4">{{ __('Content') }}</h6>
+<p class="mb-4 text-muted small">{{ __('Content Introduction Post') }}</p>
 
 <div class="row">
 
-    <div class="col-md-7">
+    <div class="col-md-8">
 
         <x-form.input
             type="text"
             name="title"
             :label="__('Title')"
-            :value="(old('title') ? old('title') : (@$invoice ? $invoice->title : null))"
+            :value="(old('title') ? old('title') : (@$post ? $post->title : null))"
         />
 
         <x-form.textarea
-            name="intro"
+            name="caption"
             maxLength="165"
-            :description="__('Intro Description')"
-            :label="__('Intro')"
-            :value="(old('intro') ? old('intro') : (@$invoice ? $invoice->intro : null))"
+            :description="__('Caption Description')"
+            :label="__('Caption')"
+            :value="(old('caption') ? old('caption') : (@$post ? $post->caption : null))"
         />
 
         <x-form.rich-text
             name="content"
-            :label="__('Message')"
-            :value="(old('content') ? old('content') : (@$invoice ? $invoice->content : null))"
+            :label="__('Content')"
+            :value="(old('content') ? old('content') : (@$post ? $post->content : __('CKEditor Onload')))"
         />
 
         <x-form.slug
@@ -31,20 +31,20 @@
             slugField="title"
             :description="__('Url Description')"
             :label="__('Url')"
-            :model="@$invoice"
-            :modelName="\App\Models\Post::where('id', @$invoice->parent_id)->first()"
-            :value="(old('slug') ? old('slug') : (@$invoice ? $invoice->slug : null))"
+            :model="@$post"
+            :modelName="\App\Models\Post::where('id', @$post->parent_id)->first()"
+            :value="(old('slug') ? old('slug') : (@$post ? $post->slug : null))"
         />
 
     </div>
 
-    <div class="col-md-4 offset-md-1">
+    <div class="col-md-3 offset-md-1">
 
         <x-form.file
             extensions="jpg jpeg png"
             name="postImage"
             :label="__('Image')"
-            :file="(@$invoice ? $invoice->getFirstMediaUrl('postImage') : null)"
+            :file="(@$post ? $post->getFirstMediaUrl('postImage') : null)"
             :description="__('Image Description')"
             :required="false"
         />
@@ -53,54 +53,49 @@
             name="category_id"
             :label="__('Category')"
             :cols="['col-3', 'col-4']"
-            :value="(old('category_id') ? old('category_id') : (@$invoice ? $invoice->category_id : null))"
+            :value="(old('category_id') ? old('category_id') : (@$post ? $post->category_id : null))"
             :options="\App\Models\Category::all()->sortBy('name')"
             :valueWrapper="['id', 'name']"
-            :disabledOption="__('Select Category')"
+            :disabledOption="__('Category Select')"
         />
 
         <x-form.select
             name="administrator_id"
             :label="__('Author')"
             :cols="['col-3', 'col-4']"
-            :value="(old('administrator_id') ? old('administrator_id') : (@$invoice ? $invoice->administrator_id : null))"
+            :value="(old('administrator_id') ? old('administrator_id') : (@$post ? $post->administrator_id : null))"
             :options="\App\Models\Administrator::all()->sortBy('name')"
             :valueWrapper="['id', 'name']"
-            :disabledOption="__('Select Administrator')"
+            :disabledOption="__('Author Select')"
         />
 
         <x-form.date-time
             name="published_at"
             :label="__('Published At')"
-            :value="(old('published_at') ? old('published_at') : (@$invoice ? $invoice->published_at : null))"
+            :value="(old('published_at') ? old('published_at') : (@$post ? $post->published_at : null))"
             :description="__('Published At Description')"
         />
 
         <x-form.date-time
             name="unpublished_at"
             :label="__('Unpublished At')"
-            :value="(old('unpublished_at') ? old('unpublished_at') : (@$invoice ? $invoice->unpublished_at : null))"
+            :value="(old('unpublished_at') ? old('unpublished_at') : (@$post ? $post->unpublished_at : null))"
             :description="__('Unpublished At Description')"
+            :required="false"
         />
 
         <x-form.select
             name="status"
             :label="__('Status')"
             :cols="['col-3', 'col-4']"
-            :value="(old('status') ? old('status') : (@$page ? $page->status : null))"
+            :value="(old('status') ? old('status') : (@$post ? $post->status : null))"
             :options="[
-               'archived'   =>  __('Archived'),
-               'draft'   =>  __('Draft'),
-               'published' => __('Published'),
-               'unpublished'   =>  __('Unpublished')
+               'archived' =>  __('Select Archived'),
+               'draft' =>  __('Select Draft'),
+               'published' => __('Select Published'),
+               'unpublished'   =>  __('Select Unpublished')
             ]"
             :disabledOption="__('Select Status')"
-        />
-
-        <x-form.switcher
-            name="is_payed"
-            :label="__('Payed')"
-            :value="(old('is_payed') ? old('is_payed') : (@$invoice ? $invoice->is_payed : null))"
         />
 
     </div>

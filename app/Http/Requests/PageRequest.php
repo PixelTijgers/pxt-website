@@ -37,7 +37,7 @@ class PageRequest extends FormRequest
 
             'og_title'          =>  'required|string|max:255',
             'og_description'    =>  'required|string|max:160',
-            'og_url'            =>  'sometimes|required|slug|unique:pages,og_slug' . (@$this->page->id ? ',' . $this->page->id : null),
+            'og_slug'           =>  'sometimes|required|slug|unique:pages,og_slug' . (@$this->page->id ? ',' . $this->page->id : null),
             'og_type'           =>  'required|string|max:21|in:website,article',
             'og_locale'         =>  'required|string|max:21',
 

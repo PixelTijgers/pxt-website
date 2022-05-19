@@ -85,6 +85,18 @@ class Page extends Model implements HasMedia
     ];
 
     /**
+     * The attributes that should be mutated to dates.
+     *
+     * @var array
+     */
+    protected $dates = [
+        'published_at',
+        'unpublished_at',
+        'created_at',
+        'updated_at',
+    ];
+
+    /**
      * Model relations.
      *
      */

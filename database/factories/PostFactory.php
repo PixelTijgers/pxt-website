@@ -32,7 +32,7 @@ class PostFactory extends Factory
             'category_id'       => \Arr::random([1,2]),
             'slug'              => \Str::slug($title),
             'title'             => $this->faker->sentence(8),
-            'intro'             => $this->faker->paragraph(20),
+            'caption'           => $this->faker->paragraph(2),
             'content'           => $this->faker->paragraph(20),
 
             'meta_title'        => $this->faker->sentence(8),
@@ -40,12 +40,12 @@ class PostFactory extends Factory
             'meta_tags'         => 'Website, Webdesign, Design',
 
             'og_title'          => $this->faker->sentence(8),
-            'og_description'    => $this->faker->paragraph(15),
-            'og_url'            => \Str::slug($title),
+            'og_description'    => $this->faker->paragraph(2),
+            'og_slug'            => \Str::slug($title),
             'og_type'           => 'website',
             'og_locale'         => 'nl_NL',
 
-            'status'            => 'published',
+            'status'            => \Arr::random(['archived','draft','published','unpublished']),
             'published_at'      => $this->faker->dateTimeBetween('-3 weeks', '+2 days'),
             'unpublished_at'    => $this->faker->dateTimeBetween('+3 days', '+3 weeks'),
         ];

@@ -1,20 +1,20 @@
 @section('meta')
-    <title>{{ config('app.name') }} | {{ __('Pages') }}</title>
+<title>{{ config('app.name') }} | {{ __('Pages') }}</title>
 @endsection
 
 @push('styles')
-    <link href="{{ URL::asset('plugins/jquery-ui-dist/jquery-ui.min.css') }}" rel="stylesheet" />
-    <link href="{{ URL::asset('plugins/sweetalert2/dist/sweetalert2.min.css') }}" rel="stylesheet" />
-    <link href="{{ URL::asset('plugins/toastr/build/toastr.min.css') }}" rel="stylesheet" />
+<link href="{{ URL::asset('plugins/jquery-ui-dist/jquery-ui.min.css') }}" rel="stylesheet" />
+<link href="{{ URL::asset('plugins/sweetalert2/dist/sweetalert2.min.css') }}" rel="stylesheet" />
+<link href="{{ URL::asset('plugins/toastr/build/toastr.min.css') }}" rel="stylesheet" />
 @endpush
 
 @push('js')
-    <script src="{{ URL::asset('plugins/jquery-ui-dist/jquery-ui.min.js') }}"></script>
-    <script src="{{ URL::asset('plugins/sweetalert2/dist/sweetalert2.all.min.js') }}"></script>
-    <script src="{{ URL::asset('js/admin/sweetalert/' . app()->getLocale() . '.sweetalert.js') }}"></script>
-    <script src="{{ URL::asset('plugins/toastr/build/toastr.min.js') }}"></script>
-    <!-- @UGLY TODO: Insert Pseudo Elements Font Awesome 6 SVG -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="{{ URL::asset('plugins/jquery-ui-dist/jquery-ui.min.js') }}"></script>
+<script src="{{ URL::asset('plugins/sweetalert2/dist/sweetalert2.all.min.js') }}"></script>
+<script src="{{ URL::asset('js/admin/sweetalert/' . app()->getLocale() . '.sweetalert.js') }}"></script>
+<script src="{{ URL::asset('plugins/toastr/build/toastr.min.js') }}"></script>
+<!-- @UGLY TODO: Insert Pseudo Elements Font Awesome 6 SVG -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 @endpush
 
 <x-adminLayout>
@@ -55,9 +55,9 @@
                                     <select class="form-control form-control-sm" id="navigationMenuId" name="navigationMenuId" onchange="this.form.submit()">
                                         <option class="disabled" disabled>Selecteer een optie</option>
 
-                                        @foreach(\App\Models\NavigationMenu::all()->sortBy('name') as $option => $value)
+                                        @foreach(\App\Models\NavigationMenu::all()->sortBy('id') as $option => $value)
 
-                                            <option value="{{ $value['id'] }}" @if(request()->input('navigationMenuId') == $value['id']) selected @elseif(request()->input('navigationMenuId') == null && $value['id'] == 2) selected @endif>{{ __($value['name']) }}</option>
+                                            <option value="{{ $value['id'] }}" @if(request()->input('navigationMenuId') == $value['id']) selected @elseif(request()->input('navigationMenuId') == null && $value['id'] == 1) selected @endif>{{ __($value['name']) }}</option>
 
                                         @endforeach()
 

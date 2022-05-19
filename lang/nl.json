@@ -27,11 +27,28 @@
     "Pages": "Pagina's",
     "Page": "Pagina",
     "Page Introduction": "Voeg een nieuwe pagina toe of wijzig een pagina. Hier kun je ook de volgorde van de pagina's aanpassen.",
+    "Page Introduction Add": "Voeg een nieuwe pagina toe.",
     "Page Introduction Edit": "Wijzig de inhoud van de pagina.",
 
+    "Post": "Bericht",
+    "Posts": "Berichten",
+    "Post Introduction": "Een overzicht met alle artikelen. Je kunt een nieuwe artikel plaatsen, wijzigen of verwijderen.",
+    "Post Introduction Add": "Voeg een nieuw artikel toe.",
+    "Post Introduction Edit": "Wijzig de inhoud van het artikel.",
+
+    "Category": "Categorie",
+    "Categories": "Categorieën",
+    "Categories Description": "Een overzicht met alle categorieën voor die je kunt selecteren bij de artikelen.",
+    "Category Add": "Voeg een nieuwe categorie toe.",
+    "Category Select": "Selecteer categorie",
+
+    "Author": "Auteur",
+    "Author Select": "Selecteer auteur",
     "Caption": "Bijschrift",
+    "Caption Description": "Houd de beschrijving kort en bondig. Het is optimaal voor de beschrijving dat deze onder de 165 karakters blijft en de kern van het artikel weergeeft.",
     "Content": "Inhoud",
-    "Content Introduction": "Hieronder kun je de inhoud van de pagina wijzigen en zichtbaar maken de voor de bezoeker. Je kunt een afbeeldingen toevoegen aan de pagina en de pagina direct online zetten. Wil je dat de pagina op een bepaalde datum en tijdstip online gezet wordt? Dan kun je deze instellen en komt deze automatisch online te staan.",
+    "Content Introduction": "Hieronder kun je de inhoud van de pagina wijzigen en zichtbaar maken de voor de bezoeker. Je kunt afbeeldingen toevoegen aan de pagina en de pagina direct online zetten. Wil je dat de pagina op een bepaalde datum en tijdstip online gezet wordt? Dan kun je deze instellen en komt deze automatisch online te staan.",
+    "Content Introduction Post": "Hieronder kun je de inhoud van het artikel wijzigen en zichtbaar maken de voor de bezoeker. Je kunt een afbeelding toevoegen aan het artikel en het artikel direct online zetten. Wil je dat het artikel op een bepaalde datum en tijdstip online gezet wordt? Dan kun je deze instellen en komt deze automatisch online te staan.",
     "Index": "Overzicht",
     "Image": "Afbeelding",
     "Image Alt": "Afbeelding beschrijving",
@@ -70,9 +87,6 @@
     "sub-footer": "Sub footer",
     "standalone": "Losse pagina",
 
-    "Message": "Bericht",
-    "Message Add": "Voeg een nieuw bericht toe.",
-
     "Login": "Inloggen",
     "Email": "E-mailadres",
     "Password": "Wachtwoord",
@@ -87,7 +101,6 @@
     "Icon": "Icoon",
 
     "Title": "Titel",
-    "Author": "Auteur",
 
     "Intro": "Introductie",
     "Intro Description": "Houd de introductie kort en bondig. Het is optimaal voor de introductie dat deze onder de 165 karakters blijft en de kern van het bericht weergeeft.",
@@ -95,8 +108,8 @@
     "Actions": "Acties",
     "General": "Algemene gegevens",
     "Select Icon": "Selecteer icoon",
-    "Select Category": "Selecteer categorie",
-    "Select Administrator": "Selecteer auteur",
+
+
 
 
     "Language": "Taal",
@@ -155,13 +168,6 @@
 
 
     "Articles": "Artikelen",
-    "Post": "Bericht",
-    "Posts": "Berichten",
-    "Posts Description": "Een overzicht met alle artikelen. Je kunt een nieuwe artikel plaatsen, wijzigen of verwijderen.",
-    "Category": "Categorie",
-    "Categories": "Categorieën",
-    "Categories Description": "Een overzicht met alle categorieën voor die je kunt selecteren bij de artikelen.",
-    "Category Add": "Voeg een nieuwe categorie toe.",
 
     "Social Media": "Social Media",
     "Social Media Description": "Een overzicht met alle actieve social media kanalen. Je kunt de volgorde wijzigen door deze te verslepen en op te slaan.",
@@ -237,5 +243,6 @@
     "validation.phone": "Mobiel telefoonnummer is niet geldig.",
     "validation.vat_number": "Ondernemingsnummer is niet geldig.",
     "validation.iban": "Rekeningnummer is niet geldig.",
-    "validation.integer": "Dit kan alleen maar uit getallen bestaan."
+    "validation.integer": "Dit kan alleen maar uit getallen bestaan.",
+    "validation.in": "Je moet een optie selecteren."
 }

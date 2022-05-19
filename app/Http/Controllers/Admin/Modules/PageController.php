@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 
 // Facades.
 use Illuminate\Support\Facades\Validator;
+use League\HTMLToMarkdown\HtmlConverter;
 
 // Models.
 use App\Models\Page;
@@ -298,8 +299,13 @@ class PageController extends Controller
                 $og_slug = ($pageSlug !== null ? $pageSlug->og_url . '/' . $request->slug : '/' . $request->slug);
             }
 
+            // Convert Content.
+            // $convertContent = new HtmlConverter();
+            // $convertContent->convert()
+
             // Set data to save into database.
             $page->update([
+                'content' => $request->content,
                 'slug'  => $updatePageSlug,
                 'og_slug' => $og_slug,
                 'last_edited_administrator_id' => auth()->user()->id,

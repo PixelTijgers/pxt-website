@@ -1,13 +1,13 @@
 @section('meta')
-    <title>{{ config('app.name') }} | {{ (@$page ? __('Edit') . ' ' . \Str::Lower(__('Page')) . ': ' . $page->page_title : __('Page') . ' ' . __('Add')) }}</title>
+<title>{{ config('app.name') }} | {{ (@$page ? __('Edit') . ' ' . \Str::Lower(__('Page')) . ': ' . $page->page_title : __('Page') . ' ' . __('Add')) }}</title>
 @endsection
 
 @push('styles')
-    <link href="{{ URL::asset('plugins/jquery-ui-dist/jquery-ui.min.css') }}" rel="stylesheet" />
+<link href="{{ URL::asset('plugins/jquery-ui-dist/jquery-ui.min.css') }}" rel="stylesheet" />
 @endpush
 
 @push('js')
-    <script src="{{ URL::asset('plugins/jquery-ui-dist/jquery-ui.min.js') }}"></script>
+<script src="{{ URL::asset('plugins/jquery-ui-dist/jquery-ui.min.js') }}"></script>
 @endpush
 
 <x-adminLayout>
@@ -16,7 +16,7 @@
 
     @include('admin.layouts.breadcrumb', [
         'title' => __('Pages'),
-        'description' => (@$page ? __('Page Introduction Edit') : __('Message Add')),
+        'description' => (@$page ? __('Page Introduction Edit') : __('Page Introduction Add')),
         'breadcrum' => [
             __('Pages') => route('page.index'),
             (@$page ? __('Edit') . ' ' . \Str::Lower(__('Page')) . ': ' . $page->page_title : __('Page') . ' ' . \Str::Lower(__('Add'))) => '#'

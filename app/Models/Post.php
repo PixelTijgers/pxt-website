@@ -26,9 +26,19 @@ class Post extends Model implements HasMedia
      * Traits
      *
      */
-    use HasFactory;
-    use HasRoles;
-    use InteractsWithMedia;
+    use HasFactory,
+        HasRoles,
+        InteractsWithMedia;
+
+    /**
+     * The "booted" method of the model.
+     *
+     * @return void
+     */
+    protected static function booted()
+    {
+        return static::addGlobalScope(new PublishedScope);
+    }
 
     /**
      * The attributes that are mass assignable.
@@ -40,17 +50,17 @@ class Post extends Model implements HasMedia
         'category_id',
         'slug',
         'title',
-        'intro',
+        'caption',
         'content',
         'meta_title',
         'meta_description',
         'meta_tags',
         'og_title',
         'og_description',
-        'og_url',
+        'og_slug',
         'og_type',
         'og_locale',
-        'published',
+        'status',
         'published_at',
         'unpublished_at',
         'last_edited_administrator_id',
@@ -63,8 +73,8 @@ class Post extends Model implements HasMedia
      * @var array
      */
     protected $casts = [
-        'administrator_id' => 'boolean',
-        'category_id' => 'boolean',
+        'administrator_id' => 'integer',
+        'category_id' => 'integer',
         'state' => PublishedState::class,
         'published_at' => 'datetime',
         'unpublished_at' => 'datetime',
@@ -99,23 +109,13 @@ class Post extends Model implements HasMedia
     }
 
     /**
-    * Model functions.
-    *
-    */
-    protected static function boot()
-    {
-        parent::boot();
-
-        return static::addGlobalScope(new PublishedScope);
-    }
-
-    /**
      * Register the files into the database with the given collection.
      *
      */
     public function registerMediaCollections(): void
     {
         $this->addMediaCollection('postImage')->singleFile();
+        $this->addMediaCollection('ogImage')->singleFile();
     }
 
     /**

@@ -28,9 +28,9 @@ class PostController extends Controller
      * Traits
      *
      */
-    use DataTableActionsTrait;
-    use HasRightsTrait;
-    use MediaHandlerTrait;
+    use DataTableActionsTrait,
+        HasRightsTrait,
+        MediaHandlerTrait;
 
     /**
      * Process the image request.
@@ -42,7 +42,6 @@ class PostController extends Controller
      */
     protected function processImage($request, $model, $imageName)
     {
-        dd($request, !$request->filled($imageName . 'CurrentImage'));
         // Only change page image when there's a file uploaded.
         if($request->exists($imageName . 'CurrentImage') && !$request->filled($imageName . 'CurrentImage'))
             // Delete image.
@@ -68,8 +67,8 @@ class PostController extends Controller
             ->editColumn('published_at', function(Post $post) {
                 return Carbon::parse($post->published_at)->formatLocalized('%e %B %Y om %H:%M');
             })
-            ->editColumn('published', function(Post $post) {
-                if($post->published_at < Carbon::now() && $post->published === 1)
+            ->editColumn('status', function(Post $post) {
+                if($post->published_at < Carbon::now() && $post->status === 'published')
                     return '<span class="badge bg-success d-block"><i class="fas fa-check"></i></span>';
                 else
                     return '<span class="badge bg-danger d-block"><i class="fas fa-times"></i></span>';
@@ -83,7 +82,7 @@ class PostController extends Controller
                     '</div>';
             })
             ->rawColumns([
-                'published',
+                'status',
                 'action'
             ])
             ->make(true);
@@ -108,8 +107,8 @@ class PostController extends Controller
                         'data' => 'published_at',
                     ])
                     ->addColumn([
-                        'title' => __('Published'),
-                        'data' => 'published',
+                        'title' => __('Status'),
+                        'data' => 'status',
                         'class' => 'published'
                     ])
                     ->addAction([
@@ -149,7 +148,7 @@ class PostController extends Controller
         $post = Post::Create($request->validated());
 
         // Page header image.
-        $this->processImage($request, $post, 'pageImage');
+        $this->processImage($request, $post, 'postImage');
 
         // Page OG image.
         $this->processImage($request, $post, 'ogImage');
@@ -157,7 +156,7 @@ class PostController extends Controller
         // Return back with message.
         return redirect()->route('post.index')->with([
                 'type' => 'success',
-                'message' => __('Item Add')
+                'message' => __('Alert Add')
             ]
         );
     }
@@ -190,7 +189,7 @@ class PostController extends Controller
         ] + $request->validated());
 
         // Page header image.
-        $this->processImage($request, $post, 'pageImage');
+        $this->processImage($request, $post, 'postImage');
 
         // Page OG image.
         $this->processImage($request, $post, 'ogImage');
@@ -198,17 +197,10 @@ class PostController extends Controller
         // Save data.
         $post->save();
 
-        // Only change image when there's a file uploaded.
-        if($request->exists('postImageCurrentImage') && !$request->filled('postImageCurrentImage'))
-            $post->clearMediaCollection('postImage');
-        elseif($request->hasFile('postImage'))
-            // Upload post image.
-            $this->manageInputMedia($post, 'postImage');
-
         // Return back with message.
         return redirect()->route('post.index')->with([
                 'type' => 'success',
-                'message' => __('Item Edit')
+                'message' => __('Alert Edit')
             ]
         );
     }
@@ -227,7 +219,7 @@ class PostController extends Controller
         // Return back with message.
         return redirect()->back()->with([
             'type' => 'success',
-            'message' => __('Item Delete')
+            'message' => __('Alert Delete')
         ]);
     }
 }
