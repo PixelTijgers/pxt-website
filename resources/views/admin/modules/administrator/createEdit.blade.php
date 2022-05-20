@@ -9,24 +9,27 @@
 
                     @include('admin.layouts.breadcrumb', [
                         'title' => __('Users'),
-                        'description' => (@$administrator ? __('Users Edit') : __('Users Add')),
+                        'description' => (@$post ? __('Users Introduction Edit') : __('Users Introduction Add')),
                         'breadcrum' => [
                             __('Users') => route('administrator.index'),
                             (@$administrator ? __('Edit') . ' ' . \Str::Lower(__('User')) . ': ' . $administrator->name : __('User') . ' ' . \Str::Lower(__('Add'))) => '#'
                         ],
                     ])
+
                     @if(session('type'))
 
-                    <div class="alert alert-fill-{{ session('type') }} alert-dismissible fade show" role="alert">
-                        {{ session('message') }}
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="btn-close"></button>
-                    </div>
+                        <div class="alert alert-fill-{{ session('type') }} alert-dismissible fade show" role="alert">
+                            {{ session('message') }}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="btn-close"></button>
+                        </div>
+
                     @elseif ($errors->any())
 
-                    <div class="alert alert-fill-danger alert-dismissible fade show" role="alert">
-                        {{ __('Item Error') }}
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="btn-close"></button>
-                    </div>
+                        <div class="alert alert-fill-danger alert-dismissible fade show" role="alert">
+                            {{ __('Alert Error') }}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="btn-close"></button>
+                        </div>
+
                     @endif
 
                     <form class="form-content" method="post" action="{{ (@$administrator ? route('administrator.update', $administrator) : route('administrator.store')) }}" enctype="multipart/form-data">
@@ -51,8 +54,8 @@
 
                                             <div class="col-md-12">
 
-                                                <h6 class="card-title">{{ (@$administrator ? __('Edit') . ' ' . \Str::Lower(__('User')) . ': ' . $administrator->name : __('User') . ' ' . \Str::Lower(__('Add'))) }}</h6>
-                                                <p class="text-muted mb-4">{{ __('Users Edit Description') }}</p>
+                                                <h6 class="card-title">{{ __('General') }}</h6>
+                                                <p class="text-muted mb-4">{{ __('Users Introduction Edit Description') }}</p>
 
                                             </div>
 

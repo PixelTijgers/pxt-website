@@ -7,14 +7,14 @@ namespace app\Http\ViewComposers;
 use Illuminate\View\View;
 
 // Models.
-use App\Models\Details;
+use App\Models\Detail;
 
 class DetailsViewComposer
 {
     public function compose(View $view)
     {
         // Get all the company information.
-        $details = Details::where('id', 1)->first();
+        $details = Detail::where('id', 1)->first();
 
         // Pass variable to view.
         $view->with('details', $details);

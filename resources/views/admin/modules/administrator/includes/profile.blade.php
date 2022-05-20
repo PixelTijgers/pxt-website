@@ -1,5 +1,3 @@
-<h6 class="card-title">{{ __('General') }}</h6>
-
 <x-form.input
     type="text"
     name="name"
@@ -37,6 +35,6 @@
 <x-form.input
     type="password"
     name="password_confirmation"
-    :label="__('Repeat Password')"
+    :label="__('Password Repeat')"
     :required="false"
 />

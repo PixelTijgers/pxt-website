@@ -10,7 +10,8 @@
 
                 <div class="col-md-12">
 
-                    <h6 class="card-title">Gebruikersrechten</h6>
+                    <h6 class="card-title">{{ __('User Rights') }}</h6>
+                    <p class="text-muted mb-4">{{ __('Content Introduction Users Rights') }}</p>
 
                     <div class="row">
 

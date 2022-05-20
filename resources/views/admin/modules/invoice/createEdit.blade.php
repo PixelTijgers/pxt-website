@@ -1,5 +1,5 @@
 @section('meta')
-<title>{{ config('app.name') }} | {{ (@$invoice ? __('Edit') . ' ' . \Str::Lower(__('Invoice')) . ': ' . $invoice->name  : __('Invoice') . ' ' . \Str::Lower(__('Add'))) }}</title>
+<title>{{ config('app.name') }} | {{ (@$invoice ? __('Edit') . ' ' . \Str::Lower(__('Invoice')) . ': #' . $invoice->id_invoice  : __('Invoice') . ' ' . \Str::Lower(__('Add'))) }}</title>
 @endsection
 
 <x-adminLayout>
@@ -8,10 +8,10 @@
 
         @include('admin.layouts.breadcrumb', [
             'title' => __('Invoice'),
-            'description' => (@$invoice ? __('Edit') . ' ' . \Str::Lower(__('Invoice')) . ': ' . $invoice->name  : __('Invoice Add')),
+            'description' => (@$invoice ? __('Edit') . ' ' . \Str::Lower(__('Invoice')) . ': #' . $invoice->id_invoice  : __('Invoice Add')),
             'breadcrum' => [
                 __('Invoice') => route('invoice.index'),
-                (@$invoice ? __('Edit') . ' ' . \Str::Lower(__('Invoice')) . ': ' . $invoice->name  : __('Invoice') . ' ' . \Str::Lower(__('Add'))) => '#'
+                (@$invoice ? __('Edit') . ' ' . \Str::Lower(__('Invoice')) . ': #' . $invoice->id_invoice  : __('Invoice') . ' ' . \Str::Lower(__('Add'))) => '#'
             ],
         ])
 

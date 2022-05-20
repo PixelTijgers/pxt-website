@@ -22,7 +22,7 @@ common.View.create('admin.modules.administrator.CreateEdit', {
             $('input.destroy').prop('disabled', true).prop('checked', false);
         }
 
-        if(role == 'moderator')
+        if(role == 'editor')
         {
             $('.post input[type="checkbox"]').prop('disabled', false).prop('checked', true);
             $('.administrator input').prop('disabled', true).prop('checked', false);
@@ -39,17 +39,18 @@ common.View.create('admin.modules.administrator.CreateEdit', {
         $('.admin-permissions-switcher input').on('change', function(){
 
             var role = $('input[name="role"]:checked').val();
+            console.log($(this));
 
-            if(role == 'administrator')
+            if(role === 'administrator')
             {
                 $('input[type="checkbox"]').prop('disabled', false).prop('checked', true);
             }
-            else if(role == 'moderator')
+            else if(role === 'editor')
             {
                 $('.post input[type="checkbox"]').prop('disabled', false).prop('checked', true);
                 $('.administrator input').prop('disabled', true).prop('checked', false);
             }
-            else if(role == 'user')
+            else if(role === 'user')
             {
                 $('.administrator input').prop('disabled', true).prop('checked', false);
                 $('input.destroy').prop('disabled', true).prop('checked', false);
